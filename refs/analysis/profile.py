@@ -24,7 +24,37 @@ for i in REFS:
     words = []
     for tt in [r['t'] for r in r3 if r.get('text_iou',1.) < 0.35 and r.get('text_area',0) > 0]:
         if not words or tt-words[-1] > 0.12: words.append(tt)
-    per_ref[i] = {
+    # речь: паузы между словами и привязка склеек к стыкам слов
+    wj = pathlib.Path(f'analysis/ref{i}-words.json')
+    sp = {}
+    if wj.exists():
+        w = json.loads(wj.read_text(encoding='utf-8'))
+        gaps = [round(w[k]['s']-w[k-1]['e'],3) for k in range(1,len(w))]
+        gaps = [g for g in gaps if g >= 0]
+        bounds = [(w[k-1]['e']+w[k]['s'])/2 for k in range(1,len(w))]
+        d = [min(abs(c-b) for b in bounds) for c in m] if bounds and m else []
+        sp = {"words_per_min_spoken": round(len(w)/float(t[-1])*60),
+              "pause_p90_s": round(float(np.percentile(gaps,90)),3) if gaps else None,
+              "pause_p99_s": round(float(np.percentile(gaps,99)),3) if gaps else None,
+              "pauses_over_300ms": sum(1 for g in gaps if g > 0.3),
+              "speech_share": round(sum(x['e']-x['s'] for x in w)/float(t[-1]),2),
+              "cuts_on_word_boundary_share": round(sum(1 for x in d if x <= 0.12)/len(d),2) if d else None}
+    # перебивки: верхняя вставка, удержавшаяся дольше 1.5 с
+    rows2 = json.loads(pathlib.Path(f'analysis/ref{i}-probe2.json').read_text(encoding='utf-8'))
+    tt = [r['t'] for r in rows2]; slv = [r['split'] for r in rows2]
+    runs, cur = [], []
+    for k, y in enumerate(slv):
+        if y is not None and (not cur or abs(y-cur[-1][1]) <= 2.0): cur.append((tt[k], y))
+        else:
+            if len(cur) >= 2: runs.append(cur)
+            cur = [(tt[k], y)] if y is not None else []
+    if len(cur) >= 2: runs.append(cur)
+    stable = [r for r in runs if r[-1][0]-r[0][0] >= 1.5]
+    ins = {"insert_share_of_runtime": round(sum(r[-1][0]-r[0][0] for r in stable)/float(t[-1]),2),
+           "insert_len_s": med([r[-1][0]-r[0][0] for r in stable]) if stable else None,
+           "insert_border_pct": med([np.median([q[1] for q in r]) for r in stable]) if stable else None}
+
+    per_ref[i] = {**sp, **ins,
         "eye_pct": med([f['eye_pct'] for f in full]),
         "face_cx_pct": med([f['cx_pct'] for f in full]),
         "face_h_pct": med([f['h_pct'] for f in full]),

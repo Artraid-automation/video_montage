@@ -15,6 +15,78 @@
   },
   "units": "проценты от высоты кадра, если не указано иное",
   "profile": {
+    "words_per_min_spoken": {
+      "value": 191.0,
+      "range": [
+        180,
+        198
+      ],
+      "n_refs": 4
+    },
+    "pause_p90_s": {
+      "value": 0.09,
+      "range": [
+        0.08,
+        0.1
+      ],
+      "n_refs": 4
+    },
+    "pause_p99_s": {
+      "value": 0.23,
+      "range": [
+        0.2,
+        0.28
+      ],
+      "n_refs": 4
+    },
+    "pauses_over_300ms": {
+      "value": 0.0,
+      "range": [
+        0,
+        3
+      ],
+      "n_refs": 4
+    },
+    "speech_share": {
+      "value": 0.93,
+      "range": [
+        0.92,
+        0.94
+      ],
+      "n_refs": 4
+    },
+    "cuts_on_word_boundary_share": {
+      "value": 0.8,
+      "range": [
+        0.76,
+        0.85
+      ],
+      "n_refs": 4
+    },
+    "insert_share_of_runtime": {
+      "value": 0.23,
+      "range": [
+        0.15,
+        0.3
+      ],
+      "n_refs": 4
+    },
+    "insert_len_s": {
+      "value": 2.2,
+      "range": [
+        2.0,
+        2.6
+      ],
+      "n_refs": 4
+    },
+    "insert_border_pct": {
+      "value": 47.45,
+      "range": [
+        44.0,
+        56.1
+      ],
+      "n_refs": 4
+    },
     "eye_pct": {
       "value": 31.88,
       "range": [
@@ -130,6 +202,15 @@
   },
   "per_ref": {
     "1": {
+      "words_per_min_spoken": 186,
+      "pause_p90_s": 0.1,
+      "pause_p99_s": 0.28,
+      "pauses_over_300ms": 3,
+      "speech_share": 0.92,
+      "cuts_on_word_boundary_share": 0.85,
+      "insert_share_of_runtime": 0.15,
+      "insert_len_s": 2.6,
+      "insert_border_pct": 44.0,
       "eye_pct": 31.85,
       "face_cx_pct": 51.06,
       "face_h_pct": 25.52,
@@ -146,6 +227,15 @@
       "single_line_share": 0.89
     },
     "2": {
+      "words_per_min_spoken": 180,
+      "pause_p90_s": 0.082,
+      "pause_p99_s": 0.25,
+      "pauses_over_300ms": 0,
+      "speech_share": 0.93,
+      "cuts_on_word_boundary_share": 0.77,
+      "insert_share_of_runtime": 0.26,
+      "insert_len_s": 2.0,
+      "insert_border_pct": 45.7,
       "eye_pct": 31.9,
       "face_cx_pct": 53.89,
       "face_h_pct": 24.69,
@@ -162,6 +252,15 @@
       "single_line_share": 0.9
     },
     "3": {
+      "words_per_min_spoken": 196,
+      "pause_p90_s": 0.1,
+      "pause_p99_s": 0.22,
+      "pauses_over_300ms": 0,
+      "speech_share": 0.93,
+      "cuts_on_word_boundary_share": 0.76,
+      "insert_share_of_runtime": 0.21,
+      "insert_len_s": 2.2,
+      "insert_border_pct": 49.2,
       "eye_pct": 32.33,
       "face_cx_pct": 52.04,
       "face_h_pct": 29.9,
@@ -178,6 +277,15 @@
       "single_line_share": 0.8
     },
     "4": {
+      "words_per_min_spoken": 198,
+      "pause_p90_s": 0.08,
+      "pause_p99_s": 0.2,
+      "pauses_over_300ms": 0,
+      "speech_share": 0.94,
+      "cuts_on_word_boundary_share": 0.83,
+      "insert_share_of_runtime": 0.3,
+      "insert_len_s": 2.2,
+      "insert_border_pct": 56.1,
       "eye_pct": 28.13,
       "face_cx_pct": 54.07,
       "face_h_pct": 23.65,
