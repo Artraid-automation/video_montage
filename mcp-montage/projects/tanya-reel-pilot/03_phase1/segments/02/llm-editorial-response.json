@@ -1,0 +1,18 @@
+{
+  "schema_version": 2,
+  "prompt_version": "gate1-editorial-cohesion.v2",
+  "segment_id": "02",
+  "splits": [],
+  "decisions": [
+    {"id": "u0001", "kind": "keep", "reason": null},
+    {"id": "u0002", "kind": "keep", "reason": null},
+    {"id": "u0004", "kind": "keep", "reason": null},
+    {"id": "u0005", "kind": "keep", "reason": null},
+    {"id": "u0010", "kind": "keep", "reason": null}
+  ],
+  "narrative_summary": "Правило 10%: приоритет → в день зарплаты отложи десятую → 60→6 → другой банк → через год сумма ощутима. Один чистый take setup, без ретейков.",
+  "risks": [
+    "Seg 02 почти дублирует setup seg 03 — на склейке ролика выбрать один setup (скорее 02 или 03), не оба подряд.",
+    "MOTION «60→6» только если агент явно поставит brief на KEEP-якорь после авторского ОК."
+  ]
+}

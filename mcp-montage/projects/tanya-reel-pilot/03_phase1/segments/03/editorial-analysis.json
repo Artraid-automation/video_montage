@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "kind": "editorial-analysis",
+  "worker_version": "editorial-analysis-v6",
+  "source_transcript_sha256": "sha256:d8766bdb753560b550d4a2f41d0a7042355859db29af4130affcd2236ec174de",
+  "thresholds": {
+    "pause_s": 0.8,
+    "repetition_similarity": 0.86,
+    "block_pause_s": 5.0
+  },
+  "verdict": "CANDIDATES_PROPOSED",
+  "pause_candidates": [
+    {
+      "id": "pause-u0012-u0014",
+      "after_utterance_id": "u0012",
+      "before_utterance_id": "u0014",
+      "start_s": 32.24,
+      "end_s": 47.75,
+      "duration_s": 15.51,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0014-u0019",
+      "after_utterance_id": "u0014",
+      "before_utterance_id": "u0019",
+      "start_s": 62.17,
+      "end_s": 70.92,
+      "duration_s": 8.75,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0037-u0042",
+      "after_utterance_id": "u0037",
+      "before_utterance_id": "u0042",
+      "start_s": 260.45,
+      "end_s": 267.23,
+      "duration_s": 6.78,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0056-u0058",
+      "after_utterance_id": "u0056",
+      "before_utterance_id": "u0058",
+      "start_s": 397.24,
+      "end_s": 398.04,
+      "duration_s": 0.8,
+      "reason": "inter-utterance-pause"
+    }
+  ],
+  "repetition_candidates": [],
+  "take_candidates": [
+    {
+      "id": "take-prefix-по-u0014-u0019",
+      "take_group": "prefix-по-u0014-u0019",
+      "utterance_ids": [
+        "u0014",
+        "u0019"
+      ],
+      "recommended_keep": "u0019",
+      "recommended_cut": [
+        "u0014"
+      ],
+      "reason": "latest-similar-prefix"
+    },
+    {
+      "id": "take-prefix-деньги-u0037-u0058",
+      "take_group": "prefix-деньги-u0037-u0058",
+      "utterance_ids": [
+        "u0037",
+        "u0042",
+        "u0055",
+        "u0056",
+        "u0058"
+      ],
+      "recommended_keep": "u0058",
+      "recommended_cut": [
+        "u0037",
+        "u0042",
+        "u0055",
+        "u0056"
+      ],
+      "reason": "latest-similar-prefix"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "pause-u0012-u0014",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0014-u0019",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0037-u0042",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0056-u0058",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "take-prefix-по-u0014-u0019",
+      "kind": "take",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "take-prefix-деньги-u0037-u0058",
+      "kind": "take",
+      "decision": "REVIEW"
+    }
+  ]
+}

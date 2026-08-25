@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "kind": "gate2",
+  "project_id": "slava-reel-pilot",
+  "revision": 1,
+  "gate1_approval": {
+    "kind": "approval",
+    "path": "06_state/approvals/gate1-r000074.json",
+    "sha256": "sha256:1377ffe6565610479c0160172defe313c4159a6e53a5f285d86a0b7462b2e5fd",
+    "size_bytes": 880
+  },
+  "review": {
+    "kind": "gate2-review",
+    "path": "04_phase2/review.md",
+    "sha256": "sha256:daaff3ae299ab7162ae13d9fce64aa98db64a6851637da3359d01118f40f02b2",
+    "size_bytes": 2307
+  },
+  "film_continuity": {
+    "kind": "film-continuity",
+    "path": "04_phase2/film-continuity.json",
+    "sha256": "sha256:a2cbc20785f2dc3310c9d39df1a71c51f4a761662c4437eb74cd46d9f1bc26f4",
+    "size_bytes": 735
+  },
+  "segments": [
+    {
+      "id": "01",
+      "render": {
+        "kind": "segment-render",
+        "path": "04_phase2/segments/01/review.mp4",
+        "sha256": "sha256:6be522f2c687570b51894680c6e43cea44d6f4b93dd7058fd8f755a77a870f7b",
+        "size_bytes": 20613622
+      },
+      "expected_transcript": {
+        "kind": "expected-transcript",
+        "path": "04_phase2/segments/01/expected-transcript.json",
+        "sha256": "sha256:ea8440df85b95cb17377033d7874f232922340bb2edcba12082a3e568fd2e279",
+        "size_bytes": 38996
+      },
+      "rendered_transcript": {
+        "kind": "rendered-transcript",
+        "path": "04_phase2/segments/01/rendered-transcript.json",
+        "sha256": "sha256:5416983624b5d4c17618d7de10f2bc9ea7793dad41b0e6c47951bd2fa36b586b",
+        "size_bytes": 35645
+      },
+      "verification": {
+        "kind": "transcript-verification",
+        "path": "04_phase2/segments/01/verification.json",
+        "sha256": "sha256:ea32d3c329db87801d641cd490e6424462ef077fdcd38f1357fe3e26d0885050",
+        "size_bytes": 7340
+      },
+      "qc": {
+        "kind": "segment-qc",
+        "path": "04_phase2/segments/01/qc.json",
+        "sha256": "sha256:bca8deb24cd408a8f71620a0399af7e6804609b65701a6fb6f9a68375a85379f",
+        "size_bytes": 32638
+      },
+      "fixes": {
+        "kind": "fixes",
+        "path": "04_phase2/segments/01/fixes.md",
+        "sha256": "sha256:373ff32332a92f57304b07f80babd03d78e3bc532fd0eddf67b955c692045104",
+        "size_bytes": 11
+      }
+    }
+  ]
+}

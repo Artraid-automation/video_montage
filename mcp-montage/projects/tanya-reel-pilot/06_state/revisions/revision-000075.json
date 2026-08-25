@@ -1,0 +1,64 @@
+{
+  "schema_version": 2,
+  "gate": "gate2",
+  "created_at": "2026-07-20T06:08:44.061352+00:00",
+  "fixes": [
+    {
+      "id": "fix-001",
+      "kind": "speech",
+      "segment_id": "01",
+      "description": "transcript-reviewed",
+      "status": "OPEN",
+      "blocking": false,
+      "operation": "transcript-reviewed",
+      "arguments": {}
+    },
+    {
+      "id": "fix-001",
+      "kind": "speech",
+      "segment_id": "02",
+      "description": "transcript-reviewed",
+      "status": "OPEN",
+      "blocking": false,
+      "operation": "transcript-reviewed",
+      "arguments": {}
+    },
+    {
+      "id": "fix-001",
+      "kind": "speech",
+      "segment_id": "03",
+      "description": "transcript-reviewed",
+      "status": "OPEN",
+      "blocking": false,
+      "operation": "transcript-reviewed",
+      "arguments": {}
+    }
+  ],
+  "rule_candidates": [],
+  "source_files": [
+    "04_phase2/segments/01/fixes.md",
+    "04_phase2/segments/02/fixes.md",
+    "04_phase2/segments/03/fixes.md"
+  ],
+  "outcomes": [
+    {
+      "fix_id": "fix-001",
+      "status": "APPLIED",
+      "before_sha256": "sha256:37253cfaed7f8335870c0b3685d8863f335063623bd136b61515829426ae684c",
+      "after_sha256": "sha256:84690054a03db9f06a42d68b1be24eaebcbbcfa4542ea4170108fb8ad0d1eb72"
+    },
+    {
+      "fix_id": "fix-001",
+      "status": "APPLIED",
+      "before_sha256": "sha256:a03eb4f75f1ae24dc4d13756aa67dd3ec4314c4b6da6468d2efd063aa4141a58",
+      "after_sha256": "sha256:93876170734f132d25125efbf4d408c608d56ad66ac75912ca79dd6147710d7a"
+    },
+    {
+      "fix_id": "fix-001",
+      "status": "APPLIED",
+      "before_sha256": "sha256:5d119c8b8d42b25e7597c484f0beb92ba34c62ed99039ba9a1b263b718115801",
+      "after_sha256": "sha256:b89fed8eb6b0083a1d6ba1880cf506a8c145dcced975e7683f1436349bc014c9"
+    }
+  ],
+  "rule_proposals_added": []
+}

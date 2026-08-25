@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "kind": "telegram-delivery",
+  "worker_version": "telegram-delivery-v1",
+  "enabled": true,
+  "grade": "dankoe",
+  "width": 1080,
+  "height": 1920,
+  "speed_factor": 1.15,
+  "send_as": "document",
+  "source_path": "05_final/grades/master-dankoe.mp4",
+  "artifact": {
+    "kind": "telegram-delivery",
+    "path": "05_final/delivery/tg-dankoe-1080x1920-x1p15.mp4",
+    "sha256": "sha256:976e69fbc3886424f50fc63a905416ddb6015278fa1c151a0882596ec00d66ad",
+    "size_bytes": 24281109
+  },
+  "size_bytes": 24281109,
+  "verdict": "SENT",
+  "send": {
+    "status": "OK",
+    "message_id": 21
+  }
+}

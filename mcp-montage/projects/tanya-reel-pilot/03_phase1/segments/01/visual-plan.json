@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "kind": "visual-plan",
+  "worker_version": "visual-planner-v4",
+  "segment_id": "01",
+  "scenes": [
+    {
+      "id": "1a",
+      "anchor": "u0001",
+      "type": "motion",
+      "brief": "Индикатор счёта ползёт к «0 ₽» / пустой кошелёк. Зачем: Боль «на нуле» должна читаться глазом, пока звучит хук — не после фразы",
+      "asset": null,
+      "resolution": "CONFIGURED",
+      "origin": "AGENT",
+      "status": "PROPOSED"
+    },
+    {
+      "id": "1b",
+      "anchor": "u0004",
+      "type": "motion",
+      "brief": "Иконки паники поверх речи: горящая голова → искать/занять → тушение. Зачем: Кульминация open; оверлей кроет всю «экстренную» клаузу, без вспышки на 1с",
+      "asset": null,
+      "resolution": "CONFIGURED",
+      "origin": "AGENT",
+      "status": "PROPOSED"
+    }
+  ],
+  "searches": [],
+  "status": "PROPOSED",
+  "transcript_sha256": "sha256:84690054a03db9f06a42d68b1be24eaebcbbcfa4542ea4170108fb8ad0d1eb72"
+}

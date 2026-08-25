@@ -1,0 +1,1022 @@
+{
+  "schema_version": 1,
+  "duration_s": 50.419999999999995,
+  "words": [
+    {
+      "id": "expected-000001",
+      "text": "все",
+      "start_s": 0.0,
+      "end_s": 0.5599999999999987,
+      "source_word_id": "w000038"
+    },
+    {
+      "id": "expected-000002",
+      "text": "мы",
+      "start_s": 0.5599999999999987,
+      "end_s": 0.8199999999999967,
+      "source_word_id": "w000039"
+    },
+    {
+      "id": "expected-000003",
+      "text": "приходим",
+      "start_s": 0.8199999999999967,
+      "end_s": 1.3999999999999986,
+      "source_word_id": "w000040"
+    },
+    {
+      "id": "expected-000004",
+      "text": "на",
+      "start_s": 1.3999999999999986,
+      "end_s": 1.6199999999999974,
+      "source_word_id": "w000041"
+    },
+    {
+      "id": "expected-000005",
+      "text": "людей",
+      "start_s": 1.6199999999999974,
+      "end_s": 1.9399999999999977,
+      "source_word_id": "w000042"
+    },
+    {
+      "id": "expected-000006",
+      "text": "важны",
+      "start_s": 2.219999999999999,
+      "end_s": 2.6199999999999974,
+      "source_word_id": "w000043"
+    },
+    {
+      "id": "expected-000007",
+      "text": "люди",
+      "start_s": 2.6199999999999974,
+      "end_s": 3.84,
+      "source_word_id": "w000044"
+    },
+    {
+      "id": "expected-000008",
+      "text": "которые",
+      "start_s": 4.119999999999997,
+      "end_s": 4.779999999999998,
+      "source_word_id": "w000045"
+    },
+    {
+      "id": "expected-000009",
+      "text": "появляются",
+      "start_s": 4.779999999999998,
+      "end_s": 5.459999999999997,
+      "source_word_id": "w000046"
+    },
+    {
+      "id": "expected-000010",
+      "text": "в",
+      "start_s": 5.459999999999997,
+      "end_s": 5.619999999999997,
+      "source_word_id": "w000047"
+    },
+    {
+      "id": "expected-000011",
+      "text": "нашей",
+      "start_s": 5.619999999999997,
+      "end_s": 5.799999999999997,
+      "source_word_id": "w000048"
+    },
+    {
+      "id": "expected-000012",
+      "text": "жизни",
+      "start_s": 5.799999999999997,
+      "end_s": 6.199999999999999,
+      "source_word_id": "w000049"
+    },
+    {
+      "id": "expected-000013",
+      "text": "когда",
+      "start_s": 6.199999999999999,
+      "end_s": 6.379999999999999,
+      "source_word_id": "w000050"
+    },
+    {
+      "id": "expected-000014",
+      "text": "в",
+      "start_s": 6.379999999999999,
+      "end_s": 6.84,
+      "source_word_id": "w000051"
+    },
+    {
+      "id": "expected-000015",
+      "text": "моей",
+      "start_s": 6.84,
+      "end_s": 6.919999999999998,
+      "source_word_id": "w000052"
+    },
+    {
+      "id": "expected-000016",
+      "text": "жизни",
+      "start_s": 6.919999999999998,
+      "end_s": 7.159999999999997,
+      "source_word_id": "w000053"
+    },
+    {
+      "id": "expected-000017",
+      "text": "появился",
+      "start_s": 7.159999999999997,
+      "end_s": 7.539999999999999,
+      "source_word_id": "w000054"
+    },
+    {
+      "id": "expected-000018",
+      "text": "общество",
+      "start_s": 7.539999999999999,
+      "end_s": 8.259999999999998,
+      "source_word_id": "w000055"
+    },
+    {
+      "id": "expected-000019",
+      "text": "я",
+      "start_s": 8.319999999999997,
+      "end_s": 8.399999999999999,
+      "source_word_id": "w000056"
+    },
+    {
+      "id": "expected-000020",
+      "text": "пришла",
+      "start_s": 8.399999999999999,
+      "end_s": 8.779999999999998,
+      "source_word_id": "w000057"
+    },
+    {
+      "id": "expected-000021",
+      "text": "про",
+      "start_s": 8.779999999999998,
+      "end_s": 9.059999999999999,
+      "source_word_id": "w000058"
+    },
+    {
+      "id": "expected-000022",
+      "text": "женщины",
+      "start_s": 9.059999999999999,
+      "end_s": 9.739999999999998,
+      "source_word_id": "w000059"
+    },
+    {
+      "id": "expected-000023",
+      "text": "и",
+      "start_s": 9.739999999999998,
+      "end_s": 10.479999999999997,
+      "source_word_id": "w000060"
+    },
+    {
+      "id": "expected-000024",
+      "text": "это",
+      "start_s": 10.479999999999997,
+      "end_s": 10.819999999999997,
+      "source_word_id": "w000061"
+    },
+    {
+      "id": "expected-000025",
+      "text": "был",
+      "start_s": 10.819999999999997,
+      "end_s": 11.02,
+      "source_word_id": "w000062"
+    },
+    {
+      "id": "expected-000026",
+      "text": "мой",
+      "start_s": 11.02,
+      "end_s": 11.2,
+      "source_word_id": "w000063"
+    },
+    {
+      "id": "expected-000027",
+      "text": "первый",
+      "start_s": 11.2,
+      "end_s": 11.459999999999997,
+      "source_word_id": "w000064"
+    },
+    {
+      "id": "expected-000028",
+      "text": "опыт",
+      "start_s": 11.459999999999997,
+      "end_s": 11.879999999999999,
+      "source_word_id": "w000065"
+    },
+    {
+      "id": "expected-000029",
+      "text": "я",
+      "start_s": 11.879999999999999,
+      "end_s": 11.919999999999998,
+      "source_word_id": "w000066"
+    },
+    {
+      "id": "expected-000030",
+      "text": "увидела",
+      "start_s": 11.879999999999999,
+      "end_s": 12.259999999999998,
+      "source_word_id": "w000067"
+    },
+    {
+      "id": "expected-000031",
+      "text": "много",
+      "start_s": 12.259999999999998,
+      "end_s": 12.68,
+      "source_word_id": "w000068"
+    },
+    {
+      "id": "expected-000032",
+      "text": "активных",
+      "start_s": 12.68,
+      "end_s": 13.68,
+      "source_word_id": "w000069"
+    },
+    {
+      "id": "expected-000033",
+      "text": "энергичных",
+      "start_s": 13.739999999999995,
+      "end_s": 14.280000000000001,
+      "source_word_id": "w000070"
+    },
+    {
+      "id": "expected-000034",
+      "text": "женщин",
+      "start_s": 14.280000000000001,
+      "end_s": 14.939999999999998,
+      "source_word_id": "w000071"
+    },
+    {
+      "id": "expected-000035",
+      "text": "и",
+      "start_s": 14.939999999999998,
+      "end_s": 15.239999999999995,
+      "source_word_id": "w000072"
+    },
+    {
+      "id": "expected-000036",
+      "text": "подумала",
+      "start_s": 15.239999999999995,
+      "end_s": 15.780000000000001,
+      "source_word_id": "w000073"
+    },
+    {
+      "id": "expected-000037",
+      "text": "что",
+      "start_s": 16.019999999999996,
+      "end_s": 16.14,
+      "source_word_id": "w000074"
+    },
+    {
+      "id": "expected-000038",
+      "text": "интересно",
+      "start_s": 16.14,
+      "end_s": 16.72,
+      "source_word_id": "w000075"
+    },
+    {
+      "id": "expected-000039",
+      "text": "но",
+      "start_s": 17.099999999999994,
+      "end_s": 17.22,
+      "source_word_id": "w000076"
+    },
+    {
+      "id": "expected-000040",
+      "text": "это",
+      "start_s": 17.22,
+      "end_s": 17.439999999999998,
+      "source_word_id": "w000077"
+    },
+    {
+      "id": "expected-000041",
+      "text": "наверное",
+      "start_s": 17.46,
+      "end_s": 17.759999999999998,
+      "source_word_id": "w000078"
+    },
+    {
+      "id": "expected-000042",
+      "text": "и",
+      "start_s": 18.0,
+      "end_s": 18.04,
+      "source_word_id": "w000079"
+    },
+    {
+      "id": "expected-000043",
+      "text": "не",
+      "start_s": 18.0,
+      "end_s": 18.099999999999994,
+      "source_word_id": "w000080"
+    },
+    {
+      "id": "expected-000044",
+      "text": "мое",
+      "start_s": 18.099999999999994,
+      "end_s": 18.419999999999995,
+      "source_word_id": "w000081"
+    },
+    {
+      "id": "expected-000045",
+      "text": "буквально",
+      "start_s": 18.419999999999995,
+      "end_s": 18.879999999999995,
+      "source_word_id": "w000082"
+    },
+    {
+      "id": "expected-000046",
+      "text": "через",
+      "start_s": 18.879999999999995,
+      "end_s": 19.199999999999996,
+      "source_word_id": "w000083"
+    },
+    {
+      "id": "expected-000047",
+      "text": "полгода",
+      "start_s": 19.199999999999996,
+      "end_s": 19.919999999999995,
+      "source_word_id": "w000084"
+    },
+    {
+      "id": "expected-000048",
+      "text": "я",
+      "start_s": 19.919999999999995,
+      "end_s": 20.739999999999995,
+      "source_word_id": "w000085"
+    },
+    {
+      "id": "expected-000049",
+      "text": "познакомилась",
+      "start_s": 20.739999999999995,
+      "end_s": 21.459999999999994,
+      "source_word_id": "w000086"
+    },
+    {
+      "id": "expected-000050",
+      "text": "с",
+      "start_s": 21.459999999999994,
+      "end_s": 21.959999999999994,
+      "source_word_id": "w000087"
+    },
+    {
+      "id": "expected-000051",
+      "text": "лидером",
+      "start_s": 21.959999999999994,
+      "end_s": 22.299999999999997,
+      "source_word_id": "w000088"
+    },
+    {
+      "id": "expected-000052",
+      "text": "сообщества",
+      "start_s": 22.299999999999997,
+      "end_s": 22.819999999999993,
+      "source_word_id": "w000089"
+    },
+    {
+      "id": "expected-000053",
+      "text": "который",
+      "start_s": 22.9,
+      "end_s": 22.999999999999993,
+      "source_word_id": "w000090"
+    },
+    {
+      "id": "expected-000054",
+      "text": "привлекла",
+      "start_s": 22.999999999999993,
+      "end_s": 23.519999999999996,
+      "source_word_id": "w000091"
+    },
+    {
+      "id": "expected-000055",
+      "text": "мне",
+      "start_s": 23.519999999999996,
+      "end_s": 23.72,
+      "source_word_id": "w000092"
+    },
+    {
+      "id": "expected-000056",
+      "text": "своей",
+      "start_s": 23.72,
+      "end_s": 23.959999999999994,
+      "source_word_id": "w000093"
+    },
+    {
+      "id": "expected-000057",
+      "text": "открытостью",
+      "start_s": 23.959999999999994,
+      "end_s": 25.019999999999996,
+      "source_word_id": "w000094"
+    },
+    {
+      "id": "expected-000058",
+      "text": "ирудиции",
+      "start_s": 25.159999999999997,
+      "end_s": 25.939999999999998,
+      "source_word_id": "w000095"
+    },
+    {
+      "id": "expected-000059",
+      "text": "вдохновение",
+      "start_s": 26.299999999999997,
+      "end_s": 26.799999999999997,
+      "source_word_id": "w000096"
+    },
+    {
+      "id": "expected-000060",
+      "text": "а",
+      "start_s": 26.919999999999995,
+      "end_s": 26.959999999999994,
+      "source_word_id": "w000097"
+    },
+    {
+      "id": "expected-000061",
+      "text": "самым",
+      "start_s": 26.919999999999995,
+      "end_s": 27.08,
+      "source_word_id": "w000098"
+    },
+    {
+      "id": "expected-000062",
+      "text": "главным",
+      "start_s": 27.08,
+      "end_s": 27.279999999999994,
+      "source_word_id": "w000099"
+    },
+    {
+      "id": "expected-000063",
+      "text": "влиянием",
+      "start_s": 27.279999999999994,
+      "end_s": 27.839999999999996,
+      "source_word_id": "w000100"
+    },
+    {
+      "id": "expected-000064",
+      "text": "на",
+      "start_s": 27.839999999999996,
+      "end_s": 28.179999999999993,
+      "source_word_id": "w000101"
+    },
+    {
+      "id": "expected-000065",
+      "text": "других",
+      "start_s": 28.179999999999993,
+      "end_s": 29.08,
+      "source_word_id": "w000102"
+    },
+    {
+      "id": "expected-000066",
+      "text": "участников",
+      "start_s": 29.08,
+      "end_s": 29.379999999999995,
+      "source_word_id": "w000103"
+    },
+    {
+      "id": "expected-000067",
+      "text": "я",
+      "start_s": 29.379999999999995,
+      "end_s": 29.459999999999994,
+      "source_word_id": "w000104"
+    },
+    {
+      "id": "expected-000068",
+      "text": "поняла",
+      "start_s": 29.459999999999994,
+      "end_s": 29.72,
+      "source_word_id": "w000105"
+    },
+    {
+      "id": "expected-000069",
+      "text": "что",
+      "start_s": 29.799999999999997,
+      "end_s": 29.939999999999998,
+      "source_word_id": "w000106"
+    },
+    {
+      "id": "expected-000070",
+      "text": "я",
+      "start_s": 29.939999999999998,
+      "end_s": 29.999999999999993,
+      "source_word_id": "w000107"
+    },
+    {
+      "id": "expected-000071",
+      "text": "хочу",
+      "start_s": 29.999999999999993,
+      "end_s": 30.159999999999997,
+      "source_word_id": "w000108"
+    },
+    {
+      "id": "expected-000072",
+      "text": "быть",
+      "start_s": 30.159999999999997,
+      "end_s": 30.319999999999993,
+      "source_word_id": "w000109"
+    },
+    {
+      "id": "expected-000073",
+      "text": "в",
+      "start_s": 30.319999999999993,
+      "end_s": 30.439999999999998,
+      "source_word_id": "w000110"
+    },
+    {
+      "id": "expected-000074",
+      "text": "команде",
+      "start_s": 30.439999999999998,
+      "end_s": 30.779999999999994,
+      "source_word_id": "w000111"
+    },
+    {
+      "id": "expected-000075",
+      "text": "такого",
+      "start_s": 30.779999999999994,
+      "end_s": 31.04,
+      "source_word_id": "w000112"
+    },
+    {
+      "id": "expected-000076",
+      "text": "лидера",
+      "start_s": 31.04,
+      "end_s": 31.619999999999997,
+      "source_word_id": "w000113"
+    },
+    {
+      "id": "expected-000077",
+      "text": "таким",
+      "start_s": 31.619999999999997,
+      "end_s": 31.919999999999995,
+      "source_word_id": "w000114"
+    },
+    {
+      "id": "expected-000078",
+      "text": "образом",
+      "start_s": 31.919999999999995,
+      "end_s": 32.62,
+      "source_word_id": "w000115"
+    },
+    {
+      "id": "expected-000079",
+      "text": "мой",
+      "start_s": 32.62,
+      "end_s": 33.36,
+      "source_word_id": "w000116"
+    },
+    {
+      "id": "expected-000080",
+      "text": "путь",
+      "start_s": 33.36,
+      "end_s": 33.62,
+      "source_word_id": "w000117"
+    },
+    {
+      "id": "expected-000081",
+      "text": "знакомства",
+      "start_s": 33.62,
+      "end_s": 34.16,
+      "source_word_id": "w000118"
+    },
+    {
+      "id": "expected-000082",
+      "text": "начался",
+      "start_s": 34.16,
+      "end_s": 34.46,
+      "source_word_id": "w000119"
+    },
+    {
+      "id": "expected-000083",
+      "text": "с",
+      "start_s": 34.46,
+      "end_s": 34.68,
+      "source_word_id": "w000120"
+    },
+    {
+      "id": "expected-000084",
+      "text": "того",
+      "start_s": 34.68,
+      "end_s": 34.9,
+      "source_word_id": "w000121"
+    },
+    {
+      "id": "expected-000085",
+      "text": "что",
+      "start_s": 35.1,
+      "end_s": 35.32,
+      "source_word_id": "w000122"
+    },
+    {
+      "id": "expected-000086",
+      "text": "я",
+      "start_s": 35.32,
+      "end_s": 35.62,
+      "source_word_id": "w000123"
+    },
+    {
+      "id": "expected-000087",
+      "text": "вошла",
+      "start_s": 35.62,
+      "end_s": 35.919999999999995,
+      "source_word_id": "w000124"
+    },
+    {
+      "id": "expected-000088",
+      "text": "в",
+      "start_s": 35.919999999999995,
+      "end_s": 36.019999999999996,
+      "source_word_id": "w000125"
+    },
+    {
+      "id": "expected-000089",
+      "text": "команду",
+      "start_s": 36.019999999999996,
+      "end_s": 36.86,
+      "source_word_id": "w000126"
+    },
+    {
+      "id": "expected-000090",
+      "text": "и",
+      "start_s": 36.86,
+      "end_s": 37.12,
+      "source_word_id": "w000127"
+    },
+    {
+      "id": "expected-000091",
+      "text": "некоторое",
+      "start_s": 37.12,
+      "end_s": 37.62,
+      "source_word_id": "w000128"
+    },
+    {
+      "id": "expected-000092",
+      "text": "время",
+      "start_s": 37.62,
+      "end_s": 37.879999999999995,
+      "source_word_id": "w000129"
+    },
+    {
+      "id": "expected-000093",
+      "text": "пришло",
+      "start_s": 37.879999999999995,
+      "end_s": 38.32,
+      "source_word_id": "w000130"
+    },
+    {
+      "id": "expected-000094",
+      "text": "в",
+      "start_s": 38.32,
+      "end_s": 38.44,
+      "source_word_id": "w000131"
+    },
+    {
+      "id": "expected-000095",
+      "text": "мою",
+      "start_s": 38.44,
+      "end_s": 38.559999999999995,
+      "source_word_id": "w000132"
+    },
+    {
+      "id": "expected-000096",
+      "text": "жизнь",
+      "start_s": 38.559999999999995,
+      "end_s": 38.739999999999995,
+      "source_word_id": "w000133"
+    },
+    {
+      "id": "expected-000097",
+      "text": "экзесидвижение",
+      "start_s": 38.739999999999995,
+      "end_s": 39.62,
+      "source_word_id": "w000134"
+    },
+    {
+      "id": "expected-000098",
+      "text": "чему",
+      "start_s": 39.68,
+      "end_s": 39.86,
+      "source_word_id": "w000135"
+    },
+    {
+      "id": "expected-000099",
+      "text": "я",
+      "start_s": 39.86,
+      "end_s": 39.94,
+      "source_word_id": "w000136"
+    },
+    {
+      "id": "expected-000100",
+      "text": "бесконечно",
+      "start_s": 39.94,
+      "end_s": 40.519999999999996,
+      "source_word_id": "w000137"
+    },
+    {
+      "id": "expected-000101",
+      "text": "счастлива",
+      "start_s": 40.519999999999996,
+      "end_s": 41.26,
+      "source_word_id": "w000138"
+    },
+    {
+      "id": "expected-000102",
+      "text": "потому",
+      "start_s": 41.3,
+      "end_s": 41.5,
+      "source_word_id": "w000139"
+    },
+    {
+      "id": "expected-000103",
+      "text": "что",
+      "start_s": 41.5,
+      "end_s": 41.9,
+      "source_word_id": "w000140"
+    },
+    {
+      "id": "expected-000104",
+      "text": "именно",
+      "start_s": 41.9,
+      "end_s": 43.04,
+      "source_word_id": "w000141"
+    },
+    {
+      "id": "expected-000105",
+      "text": "экзесидвижение",
+      "start_s": 43.04,
+      "end_s": 44.160000000000004,
+      "source_word_id": "w000142"
+    },
+    {
+      "id": "expected-000106",
+      "text": "силы",
+      "start_s": 44.160000000000004,
+      "end_s": 44.63999999999999,
+      "source_word_id": "w000143"
+    },
+    {
+      "id": "expected-000107",
+      "text": "сообществ",
+      "start_s": 44.63999999999999,
+      "end_s": 45.13999999999999,
+      "source_word_id": "w000144"
+    },
+    {
+      "id": "expected-000108",
+      "text": "дало",
+      "start_s": 45.13999999999999,
+      "end_s": 45.35999999999999,
+      "source_word_id": "w000145"
+    },
+    {
+      "id": "expected-000109",
+      "text": "мне",
+      "start_s": 45.35999999999999,
+      "end_s": 45.63999999999999,
+      "source_word_id": "w000146"
+    },
+    {
+      "id": "expected-000110",
+      "text": "возможность",
+      "start_s": 45.63999999999999,
+      "end_s": 46.419999999999995,
+      "source_word_id": "w000147"
+    },
+    {
+      "id": "expected-000111",
+      "text": "быть",
+      "start_s": 46.419999999999995,
+      "end_s": 46.71999999999999,
+      "source_word_id": "w000148"
+    },
+    {
+      "id": "expected-000112",
+      "text": "смелее",
+      "start_s": 46.71999999999999,
+      "end_s": 47.300000000000004,
+      "source_word_id": "w000149"
+    },
+    {
+      "id": "expected-000113",
+      "text": "ярче",
+      "start_s": 47.839999999999996,
+      "end_s": 48.21999999999999,
+      "source_word_id": "w000150"
+    },
+    {
+      "id": "expected-000114",
+      "text": "узнавать",
+      "start_s": 48.32,
+      "end_s": 48.57999999999999,
+      "source_word_id": "w000151"
+    },
+    {
+      "id": "expected-000115",
+      "text": "каждый",
+      "start_s": 48.57999999999999,
+      "end_s": 48.85999999999999,
+      "source_word_id": "w000152"
+    },
+    {
+      "id": "expected-000116",
+      "text": "раз",
+      "start_s": 48.85999999999999,
+      "end_s": 49.18,
+      "source_word_id": "w000153"
+    },
+    {
+      "id": "expected-000117",
+      "text": "про",
+      "start_s": 49.18,
+      "end_s": 49.4,
+      "source_word_id": "w000154"
+    },
+    {
+      "id": "expected-000118",
+      "text": "себя",
+      "start_s": 49.4,
+      "end_s": 49.63999999999999,
+      "source_word_id": "w000155"
+    },
+    {
+      "id": "expected-000119",
+      "text": "новые",
+      "start_s": 49.63999999999999,
+      "end_s": 49.98,
+      "source_word_id": "w000156"
+    },
+    {
+      "id": "expected-000120",
+      "text": "грани",
+      "start_s": 49.98,
+      "end_s": 50.419999999999995,
+      "source_word_id": "w000157"
+    }
+  ],
+  "utterances": [
+    {
+      "source_entry_id": "u0006",
+      "start_s": 0.0,
+      "end_s": 6.199999999999999,
+      "text": "Все мы приходим на людей, важны люди, которые появляются в нашей жизни.",
+      "word_ids": [
+        "expected-000001",
+        "expected-000002",
+        "expected-000003",
+        "expected-000004",
+        "expected-000005",
+        "expected-000006",
+        "expected-000007",
+        "expected-000008",
+        "expected-000009",
+        "expected-000010",
+        "expected-000011",
+        "expected-000012"
+      ],
+      "caption_timing": "source-words"
+    },
+    {
+      "source_entry_id": "u0007",
+      "start_s": 6.199999999999999,
+      "end_s": 11.879999999999999,
+      "text": "Когда в моей жизни появился общество, я пришла PRO Женщин и это был мой первый опыт.",
+      "word_ids": [
+        "expected-000013",
+        "expected-000014",
+        "expected-000015",
+        "expected-000016",
+        "expected-000017",
+        "expected-000018",
+        "expected-000019",
+        "expected-000020",
+        "expected-000021",
+        "expected-000022",
+        "expected-000023",
+        "expected-000024",
+        "expected-000025",
+        "expected-000026",
+        "expected-000027",
+        "expected-000028"
+      ],
+      "caption_timing": "source-words"
+    },
+    {
+      "source_entry_id": "u0009",
+      "start_s": 11.879999999999999,
+      "end_s": 18.419999999999995,
+      "text": "Я увидела много активных, энергичных женщин и подумала, что интересно, но это, наверное, и не мое.",
+      "word_ids": [
+        "expected-000029",
+        "expected-000030",
+        "expected-000031",
+        "expected-000032",
+        "expected-000033",
+        "expected-000034",
+        "expected-000035",
+        "expected-000036",
+        "expected-000037",
+        "expected-000038",
+        "expected-000039",
+        "expected-000040",
+        "expected-000041",
+        "expected-000042",
+        "expected-000043",
+        "expected-000044"
+      ],
+      "caption_timing": "source-words"
+    },
+    {
+      "source_entry_id": "u0011",
+      "start_s": 18.419999999999995,
+      "end_s": 29.379999999999995,
+      "text": "Буквально через полгода я познакомилась с лидером сообщества, который привлекла мне своей открытостью, ирудиции, вдохновение, а самым главным влиянием на других участников.",
+      "word_ids": [
+        "expected-000045",
+        "expected-000046",
+        "expected-000047",
+        "expected-000048",
+        "expected-000049",
+        "expected-000050",
+        "expected-000051",
+        "expected-000052",
+        "expected-000053",
+        "expected-000054",
+        "expected-000055",
+        "expected-000056",
+        "expected-000057",
+        "expected-000058",
+        "expected-000059",
+        "expected-000060",
+        "expected-000061",
+        "expected-000062",
+        "expected-000063",
+        "expected-000064",
+        "expected-000065",
+        "expected-000066"
+      ],
+      "caption_timing": "source-words"
+    },
+    {
+      "source_entry_id": "u0014",
+      "start_s": 29.379999999999995,
+      "end_s": 31.619999999999997,
+      "text": "Я поняла, что я хочу быть в команде такого лидера.",
+      "word_ids": [
+        "expected-000067",
+        "expected-000068",
+        "expected-000069",
+        "expected-000070",
+        "expected-000071",
+        "expected-000072",
+        "expected-000073",
+        "expected-000074",
+        "expected-000075",
+        "expected-000076"
+      ],
+      "caption_timing": "source-words"
+    },
+    {
+      "source_entry_id": "u0015",
+      "start_s": 31.619999999999997,
+      "end_s": 50.419999999999995,
+      "text": "Таким образом мой путь знакомства начался с того, что я вошла в команду и некоторое время пришло в мою жизнь X10 Движение, чему я бесконечно счастлива, потому что именно X10 Движение силы сообществ дало мне возможность быть смелее, ярче, узнавать каждый раз про себя новые грани.",
+      "word_ids": [
+        "expected-000077",
+        "expected-000078",
+        "expected-000079",
+        "expected-000080",
+        "expected-000081",
+        "expected-000082",
+        "expected-000083",
+        "expected-000084",
+        "expected-000085",
+        "expected-000086",
+        "expected-000087",
+        "expected-000088",
+        "expected-000089",
+        "expected-000090",
+        "expected-000091",
+        "expected-000092",
+        "expected-000093",
+        "expected-000094",
+        "expected-000095",
+        "expected-000096",
+        "expected-000097",
+        "expected-000098",
+        "expected-000099",
+        "expected-000100",
+        "expected-000101",
+        "expected-000102",
+        "expected-000103",
+        "expected-000104",
+        "expected-000105",
+        "expected-000106",
+        "expected-000107",
+        "expected-000108",
+        "expected-000109",
+        "expected-000110",
+        "expected-000111",
+        "expected-000112",
+        "expected-000113",
+        "expected-000114",
+        "expected-000115",
+        "expected-000116",
+        "expected-000117",
+        "expected-000118",
+        "expected-000119",
+        "expected-000120"
+      ],
+      "caption_timing": "source-words"
+    }
+  ]
+}

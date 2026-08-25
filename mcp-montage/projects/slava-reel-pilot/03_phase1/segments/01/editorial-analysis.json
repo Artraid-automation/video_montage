@@ -1,0 +1,1522 @@
+{
+  "schema_version": 1,
+  "kind": "editorial-analysis",
+  "worker_version": "editorial-analysis-v6",
+  "source_transcript_sha256": "sha256:2754c68b2b1f02af50ecec3783977caeb793d7df78a5d52f895e12f153e6a1cb",
+  "thresholds": {
+    "pause_s": 0.8,
+    "repetition_similarity": 0.86,
+    "block_pause_s": 5.0
+  },
+  "verdict": "CANDIDATES_PROPOSED",
+  "pause_candidates": [
+    {
+      "id": "pause-u0001-u0002",
+      "after_utterance_id": "u0001",
+      "before_utterance_id": "u0002",
+      "start_s": 4.11,
+      "end_s": 7.97,
+      "duration_s": 3.86,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0002-u0003",
+      "after_utterance_id": "u0002",
+      "before_utterance_id": "u0003",
+      "start_s": 9.85,
+      "end_s": 11.41,
+      "duration_s": 1.56,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0003-u0004",
+      "after_utterance_id": "u0003",
+      "before_utterance_id": "u0004",
+      "start_s": 12.05,
+      "end_s": 12.99,
+      "duration_s": 0.94,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0004-u0005",
+      "after_utterance_id": "u0004",
+      "before_utterance_id": "u0005",
+      "start_s": 15.99,
+      "end_s": 17.41,
+      "duration_s": 1.42,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0006-u0007",
+      "after_utterance_id": "u0006",
+      "before_utterance_id": "u0007",
+      "start_s": 21.99,
+      "end_s": 23.11,
+      "duration_s": 1.12,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0007-u0008",
+      "after_utterance_id": "u0007",
+      "before_utterance_id": "u0008",
+      "start_s": 23.49,
+      "end_s": 24.33,
+      "duration_s": 0.84,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0008-u0010",
+      "after_utterance_id": "u0008",
+      "before_utterance_id": "u0010",
+      "start_s": 25.71,
+      "end_s": 27.4,
+      "duration_s": 1.69,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0010-u0011",
+      "after_utterance_id": "u0010",
+      "before_utterance_id": "u0011",
+      "start_s": 32.6,
+      "end_s": 33.54,
+      "duration_s": 0.94,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0013-u0014",
+      "after_utterance_id": "u0013",
+      "before_utterance_id": "u0014",
+      "start_s": 42.28,
+      "end_s": 43.4,
+      "duration_s": 1.12,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0014-u0016",
+      "after_utterance_id": "u0014",
+      "before_utterance_id": "u0016",
+      "start_s": 48.4,
+      "end_s": 52.27,
+      "duration_s": 3.87,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0016-u0017",
+      "after_utterance_id": "u0016",
+      "before_utterance_id": "u0017",
+      "start_s": 55.27,
+      "end_s": 56.25,
+      "duration_s": 0.98,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0017-u0018",
+      "after_utterance_id": "u0017",
+      "before_utterance_id": "u0018",
+      "start_s": 61.21,
+      "end_s": 62.65,
+      "duration_s": 1.44,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0020-u0022",
+      "after_utterance_id": "u0020",
+      "before_utterance_id": "u0022",
+      "start_s": 70.13,
+      "end_s": 71.69,
+      "duration_s": 1.56,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0022-u0023",
+      "after_utterance_id": "u0022",
+      "before_utterance_id": "u0023",
+      "start_s": 73.31,
+      "end_s": 76.38,
+      "duration_s": 3.07,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0023-u0024",
+      "after_utterance_id": "u0023",
+      "before_utterance_id": "u0024",
+      "start_s": 77.94,
+      "end_s": 84.04,
+      "duration_s": 6.1,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0024-u0025",
+      "after_utterance_id": "u0024",
+      "before_utterance_id": "u0025",
+      "start_s": 86.48,
+      "end_s": 88.58,
+      "duration_s": 2.1,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0025-u0026",
+      "after_utterance_id": "u0025",
+      "before_utterance_id": "u0026",
+      "start_s": 90.34,
+      "end_s": 91.86,
+      "duration_s": 1.52,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0030-u0031",
+      "after_utterance_id": "u0030",
+      "before_utterance_id": "u0031",
+      "start_s": 103.12,
+      "end_s": 110.57,
+      "duration_s": 7.45,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0033-u0034",
+      "after_utterance_id": "u0033",
+      "before_utterance_id": "u0034",
+      "start_s": 117.77,
+      "end_s": 126.72,
+      "duration_s": 8.95,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0034-u0035",
+      "after_utterance_id": "u0034",
+      "before_utterance_id": "u0035",
+      "start_s": 127.32,
+      "end_s": 130.26,
+      "duration_s": 2.94,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0037-u0038",
+      "after_utterance_id": "u0037",
+      "before_utterance_id": "u0038",
+      "start_s": 135.6,
+      "end_s": 137.99,
+      "duration_s": 2.39,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0038-u0039",
+      "after_utterance_id": "u0038",
+      "before_utterance_id": "u0039",
+      "start_s": 140.75,
+      "end_s": 143.19,
+      "duration_s": 2.44,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0048-u0049",
+      "after_utterance_id": "u0048",
+      "before_utterance_id": "u0049",
+      "start_s": 166.35,
+      "end_s": 167.79,
+      "duration_s": 1.44,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0049-u0050",
+      "after_utterance_id": "u0049",
+      "before_utterance_id": "u0050",
+      "start_s": 168.63,
+      "end_s": 172.32,
+      "duration_s": 3.69,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0050-u0051",
+      "after_utterance_id": "u0050",
+      "before_utterance_id": "u0051",
+      "start_s": 173.36,
+      "end_s": 174.28,
+      "duration_s": 0.92,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0052-u0053",
+      "after_utterance_id": "u0052",
+      "before_utterance_id": "u0053",
+      "start_s": 177.12,
+      "end_s": 178.0,
+      "duration_s": 0.88,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0055-u0057",
+      "after_utterance_id": "u0055",
+      "before_utterance_id": "u0057",
+      "start_s": 184.3,
+      "end_s": 185.48,
+      "duration_s": 1.18,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0057-u0059",
+      "after_utterance_id": "u0057",
+      "before_utterance_id": "u0059",
+      "start_s": 188.2,
+      "end_s": 190.46,
+      "duration_s": 2.26,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0064-u0066",
+      "after_utterance_id": "u0064",
+      "before_utterance_id": "u0066",
+      "start_s": 201.48,
+      "end_s": 202.28,
+      "duration_s": 0.8,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0069-u0070",
+      "after_utterance_id": "u0069",
+      "before_utterance_id": "u0070",
+      "start_s": 210.0,
+      "end_s": 212.06,
+      "duration_s": 2.06,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0076-u0077",
+      "after_utterance_id": "u0076",
+      "before_utterance_id": "u0077",
+      "start_s": 223.68,
+      "end_s": 224.56,
+      "duration_s": 0.88,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0079-u0080",
+      "after_utterance_id": "u0079",
+      "before_utterance_id": "u0080",
+      "start_s": 229.14,
+      "end_s": 232.88,
+      "duration_s": 3.74,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0084-u0085",
+      "after_utterance_id": "u0084",
+      "before_utterance_id": "u0085",
+      "start_s": 239.96,
+      "end_s": 241.28,
+      "duration_s": 1.32,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0087-u0089",
+      "after_utterance_id": "u0087",
+      "before_utterance_id": "u0089",
+      "start_s": 246.5,
+      "end_s": 247.88,
+      "duration_s": 1.38,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0089-u0090",
+      "after_utterance_id": "u0089",
+      "before_utterance_id": "u0090",
+      "start_s": 249.78,
+      "end_s": 251.26,
+      "duration_s": 1.48,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0092-u0093",
+      "after_utterance_id": "u0092",
+      "before_utterance_id": "u0093",
+      "start_s": 257.32,
+      "end_s": 259.43,
+      "duration_s": 2.11,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0093-u0094",
+      "after_utterance_id": "u0093",
+      "before_utterance_id": "u0094",
+      "start_s": 261.33,
+      "end_s": 262.31,
+      "duration_s": 0.98,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0094-u0095",
+      "after_utterance_id": "u0094",
+      "before_utterance_id": "u0095",
+      "start_s": 262.71,
+      "end_s": 263.77,
+      "duration_s": 1.06,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0096-u0098",
+      "after_utterance_id": "u0096",
+      "before_utterance_id": "u0098",
+      "start_s": 265.93,
+      "end_s": 267.23,
+      "duration_s": 1.3,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0098-u0099",
+      "after_utterance_id": "u0098",
+      "before_utterance_id": "u0099",
+      "start_s": 269.41,
+      "end_s": 271.07,
+      "duration_s": 1.66,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0102-u0103",
+      "after_utterance_id": "u0102",
+      "before_utterance_id": "u0103",
+      "start_s": 276.35,
+      "end_s": 278.45,
+      "duration_s": 2.1,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0104-u0105",
+      "after_utterance_id": "u0104",
+      "before_utterance_id": "u0105",
+      "start_s": 280.87,
+      "end_s": 282.41,
+      "duration_s": 1.54,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0105-u0106",
+      "after_utterance_id": "u0105",
+      "before_utterance_id": "u0106",
+      "start_s": 282.83,
+      "end_s": 285.98,
+      "duration_s": 3.15,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0107-u0109",
+      "after_utterance_id": "u0107",
+      "before_utterance_id": "u0109",
+      "start_s": 291.5,
+      "end_s": 294.22,
+      "duration_s": 2.72,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0109-u0110",
+      "after_utterance_id": "u0109",
+      "before_utterance_id": "u0110",
+      "start_s": 295.3,
+      "end_s": 297.56,
+      "duration_s": 2.26,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0112-u0114",
+      "after_utterance_id": "u0112",
+      "before_utterance_id": "u0114",
+      "start_s": 304.64,
+      "end_s": 305.68,
+      "duration_s": 1.04,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0114-u0116",
+      "after_utterance_id": "u0114",
+      "before_utterance_id": "u0116",
+      "start_s": 308.82,
+      "end_s": 310.82,
+      "duration_s": 2.0,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0116-u0118",
+      "after_utterance_id": "u0116",
+      "before_utterance_id": "u0118",
+      "start_s": 313.3,
+      "end_s": 314.18,
+      "duration_s": 0.88,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0121-u0122",
+      "after_utterance_id": "u0121",
+      "before_utterance_id": "u0122",
+      "start_s": 321.22,
+      "end_s": 324.26,
+      "duration_s": 3.04,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0122-u0123",
+      "after_utterance_id": "u0122",
+      "before_utterance_id": "u0123",
+      "start_s": 324.62,
+      "end_s": 326.64,
+      "duration_s": 2.02,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0123-u0125",
+      "after_utterance_id": "u0123",
+      "before_utterance_id": "u0125",
+      "start_s": 327.8,
+      "end_s": 331.94,
+      "duration_s": 4.14,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0125-u0126",
+      "after_utterance_id": "u0125",
+      "before_utterance_id": "u0126",
+      "start_s": 334.42,
+      "end_s": 337.25,
+      "duration_s": 2.83,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0126-u0132",
+      "after_utterance_id": "u0126",
+      "before_utterance_id": "u0132",
+      "start_s": 353.2,
+      "end_s": 356.42,
+      "duration_s": 3.22,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0133-u0134",
+      "after_utterance_id": "u0133",
+      "before_utterance_id": "u0134",
+      "start_s": 359.12,
+      "end_s": 360.14,
+      "duration_s": 1.02,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0134-u0137",
+      "after_utterance_id": "u0134",
+      "before_utterance_id": "u0137",
+      "start_s": 365.58,
+      "end_s": 366.4,
+      "duration_s": 0.82,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0138-u0140",
+      "after_utterance_id": "u0138",
+      "before_utterance_id": "u0140",
+      "start_s": 375.1,
+      "end_s": 376.68,
+      "duration_s": 1.58,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0140-u0141",
+      "after_utterance_id": "u0140",
+      "before_utterance_id": "u0141",
+      "start_s": 380.1,
+      "end_s": 381.06,
+      "duration_s": 0.96,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0145-u0147",
+      "after_utterance_id": "u0145",
+      "before_utterance_id": "u0147",
+      "start_s": 391.36,
+      "end_s": 392.86,
+      "duration_s": 1.5,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0147-u0150",
+      "after_utterance_id": "u0147",
+      "before_utterance_id": "u0150",
+      "start_s": 404.04,
+      "end_s": 405.22,
+      "duration_s": 1.18,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0153-u0155",
+      "after_utterance_id": "u0153",
+      "before_utterance_id": "u0155",
+      "start_s": 421.68,
+      "end_s": 435.57,
+      "duration_s": 13.89,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0155-u0156",
+      "after_utterance_id": "u0155",
+      "before_utterance_id": "u0156",
+      "start_s": 437.27,
+      "end_s": 442.39,
+      "duration_s": 5.12,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0156-u0161",
+      "after_utterance_id": "u0156",
+      "before_utterance_id": "u0161",
+      "start_s": 459.95,
+      "end_s": 464.66,
+      "duration_s": 4.71,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0161-u0162",
+      "after_utterance_id": "u0161",
+      "before_utterance_id": "u0162",
+      "start_s": 468.1,
+      "end_s": 469.44,
+      "duration_s": 1.34,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0162-u0163",
+      "after_utterance_id": "u0162",
+      "before_utterance_id": "u0163",
+      "start_s": 477.32,
+      "end_s": 478.72,
+      "duration_s": 1.4,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0163-u0165",
+      "after_utterance_id": "u0163",
+      "before_utterance_id": "u0165",
+      "start_s": 482.54,
+      "end_s": 483.78,
+      "duration_s": 1.24,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0165-u0169",
+      "after_utterance_id": "u0165",
+      "before_utterance_id": "u0169",
+      "start_s": 507.07,
+      "end_s": 512.87,
+      "duration_s": 5.8,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0169-u0177",
+      "after_utterance_id": "u0169",
+      "before_utterance_id": "u0177",
+      "start_s": 562.83,
+      "end_s": 565.78,
+      "duration_s": 2.95,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0177-u0181",
+      "after_utterance_id": "u0177",
+      "before_utterance_id": "u0181",
+      "start_s": 584.7,
+      "end_s": 589.47,
+      "duration_s": 4.77,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0181-u0182",
+      "after_utterance_id": "u0181",
+      "before_utterance_id": "u0182",
+      "start_s": 593.43,
+      "end_s": 597.34,
+      "duration_s": 3.91,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0182-u0184",
+      "after_utterance_id": "u0182",
+      "before_utterance_id": "u0184",
+      "start_s": 607.42,
+      "end_s": 608.5,
+      "duration_s": 1.08,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0184-u0186",
+      "after_utterance_id": "u0184",
+      "before_utterance_id": "u0186",
+      "start_s": 612.14,
+      "end_s": 614.49,
+      "duration_s": 2.35,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0186-u0187",
+      "after_utterance_id": "u0186",
+      "before_utterance_id": "u0187",
+      "start_s": 614.61,
+      "end_s": 618.08,
+      "duration_s": 3.47,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0187-u0189",
+      "after_utterance_id": "u0187",
+      "before_utterance_id": "u0189",
+      "start_s": 629.5,
+      "end_s": 630.4,
+      "duration_s": 0.9,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0190-u0191",
+      "after_utterance_id": "u0190",
+      "before_utterance_id": "u0191",
+      "start_s": 637.12,
+      "end_s": 638.98,
+      "duration_s": 1.86,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0191-u0193",
+      "after_utterance_id": "u0191",
+      "before_utterance_id": "u0193",
+      "start_s": 646.64,
+      "end_s": 647.94,
+      "duration_s": 1.3,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0193-u0194",
+      "after_utterance_id": "u0193",
+      "before_utterance_id": "u0194",
+      "start_s": 650.08,
+      "end_s": 651.04,
+      "duration_s": 0.96,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0197-u0198",
+      "after_utterance_id": "u0197",
+      "before_utterance_id": "u0198",
+      "start_s": 660.52,
+      "end_s": 663.97,
+      "duration_s": 3.45,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0204-u0205",
+      "after_utterance_id": "u0204",
+      "before_utterance_id": "u0205",
+      "start_s": 687.31,
+      "end_s": 688.91,
+      "duration_s": 1.6,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0205-u0209",
+      "after_utterance_id": "u0205",
+      "before_utterance_id": "u0209",
+      "start_s": 708.65,
+      "end_s": 712.52,
+      "duration_s": 3.87,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0215-u0216",
+      "after_utterance_id": "u0215",
+      "before_utterance_id": "u0216",
+      "start_s": 741.44,
+      "end_s": 742.98,
+      "duration_s": 1.54,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0216-u0217",
+      "after_utterance_id": "u0216",
+      "before_utterance_id": "u0217",
+      "start_s": 744.46,
+      "end_s": 745.68,
+      "duration_s": 1.22,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0217-u0218",
+      "after_utterance_id": "u0217",
+      "before_utterance_id": "u0218",
+      "start_s": 746.06,
+      "end_s": 747.88,
+      "duration_s": 1.82,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0218-u0219",
+      "after_utterance_id": "u0218",
+      "before_utterance_id": "u0219",
+      "start_s": 749.4,
+      "end_s": 750.32,
+      "duration_s": 0.92,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0220-u0223",
+      "after_utterance_id": "u0220",
+      "before_utterance_id": "u0223",
+      "start_s": 765.58,
+      "end_s": 768.25,
+      "duration_s": 2.67,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0223-u0225",
+      "after_utterance_id": "u0223",
+      "before_utterance_id": "u0225",
+      "start_s": 775.49,
+      "end_s": 776.57,
+      "duration_s": 1.08,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0226-u0227",
+      "after_utterance_id": "u0226",
+      "before_utterance_id": "u0227",
+      "start_s": 782.73,
+      "end_s": 784.69,
+      "duration_s": 1.96,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0227-u0242",
+      "after_utterance_id": "u0227",
+      "before_utterance_id": "u0242",
+      "start_s": 859.47,
+      "end_s": 860.89,
+      "duration_s": 1.42,
+      "reason": "inter-utterance-pause"
+    }
+  ],
+  "repetition_candidates": [
+    {
+      "id": "repetition-u0016-u0024",
+      "utterance_ids": [
+        "u0016",
+        "u0024"
+      ],
+      "similarity": 0.933333,
+      "reason": "lexical-repetition"
+    },
+    {
+      "id": "repetition-u0016-u0116",
+      "utterance_ids": [
+        "u0016",
+        "u0116"
+      ],
+      "similarity": 0.933333,
+      "reason": "lexical-repetition"
+    },
+    {
+      "id": "repetition-u0020-u0038",
+      "utterance_ids": [
+        "u0020",
+        "u0038"
+      ],
+      "similarity": 1.0,
+      "reason": "lexical-repetition"
+    },
+    {
+      "id": "repetition-u0024-u0116",
+      "utterance_ids": [
+        "u0024",
+        "u0116"
+      ],
+      "similarity": 1.0,
+      "reason": "lexical-repetition"
+    },
+    {
+      "id": "repetition-u0033-u0121",
+      "utterance_ids": [
+        "u0033",
+        "u0121"
+      ],
+      "similarity": 1.0,
+      "reason": "lexical-repetition"
+    },
+    {
+      "id": "repetition-u0047-u0120",
+      "utterance_ids": [
+        "u0047",
+        "u0120"
+      ],
+      "similarity": 1.0,
+      "reason": "lexical-repetition"
+    },
+    {
+      "id": "repetition-u0050-u0142",
+      "utterance_ids": [
+        "u0050",
+        "u0142"
+      ],
+      "similarity": 1.0,
+      "reason": "lexical-repetition"
+    },
+    {
+      "id": "repetition-u0050-u0186",
+      "utterance_ids": [
+        "u0050",
+        "u0186"
+      ],
+      "similarity": 1.0,
+      "reason": "lexical-repetition"
+    },
+    {
+      "id": "repetition-u0107-u0112",
+      "utterance_ids": [
+        "u0107",
+        "u0112"
+      ],
+      "similarity": 1.0,
+      "reason": "lexical-repetition"
+    },
+    {
+      "id": "repetition-u0110-u0118",
+      "utterance_ids": [
+        "u0110",
+        "u0118"
+      ],
+      "similarity": 1.0,
+      "reason": "lexical-repetition"
+    },
+    {
+      "id": "repetition-u0142-u0186",
+      "utterance_ids": [
+        "u0142",
+        "u0186"
+      ],
+      "similarity": 1.0,
+      "reason": "lexical-repetition"
+    }
+  ],
+  "take_candidates": [
+    {
+      "id": "take-rep-u0016-u0116",
+      "take_group": "rep-u0016-u0116",
+      "utterance_ids": [
+        "u0016",
+        "u0024",
+        "u0116"
+      ],
+      "recommended_keep": "u0116",
+      "recommended_cut": [
+        "u0016",
+        "u0024"
+      ],
+      "reason": "latest-repetition-cluster"
+    },
+    {
+      "id": "take-rep-u0020-u0038",
+      "take_group": "rep-u0020-u0038",
+      "utterance_ids": [
+        "u0020",
+        "u0038"
+      ],
+      "recommended_keep": "u0038",
+      "recommended_cut": [
+        "u0020"
+      ],
+      "reason": "latest-repetition-cluster"
+    },
+    {
+      "id": "take-rep-u0033-u0121",
+      "take_group": "rep-u0033-u0121",
+      "utterance_ids": [
+        "u0033",
+        "u0121"
+      ],
+      "recommended_keep": "u0121",
+      "recommended_cut": [
+        "u0033"
+      ],
+      "reason": "latest-repetition-cluster"
+    },
+    {
+      "id": "take-rep-u0047-u0120",
+      "take_group": "rep-u0047-u0120",
+      "utterance_ids": [
+        "u0047",
+        "u0120"
+      ],
+      "recommended_keep": "u0120",
+      "recommended_cut": [
+        "u0047"
+      ],
+      "reason": "latest-repetition-cluster"
+    },
+    {
+      "id": "take-rep-u0050-u0186",
+      "take_group": "rep-u0050-u0186",
+      "utterance_ids": [
+        "u0050",
+        "u0142",
+        "u0186"
+      ],
+      "recommended_keep": "u0186",
+      "recommended_cut": [
+        "u0050",
+        "u0142"
+      ],
+      "reason": "latest-repetition-cluster"
+    },
+    {
+      "id": "take-rep-u0107-u0112",
+      "take_group": "rep-u0107-u0112",
+      "utterance_ids": [
+        "u0107",
+        "u0112"
+      ],
+      "recommended_keep": "u0112",
+      "recommended_cut": [
+        "u0107"
+      ],
+      "reason": "latest-repetition-cluster"
+    },
+    {
+      "id": "take-rep-u0110-u0118",
+      "take_group": "rep-u0110-u0118",
+      "utterance_ids": [
+        "u0110",
+        "u0118"
+      ],
+      "recommended_keep": "u0118",
+      "recommended_cut": [
+        "u0110"
+      ],
+      "reason": "latest-repetition-cluster"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "pause-u0001-u0002",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0002-u0003",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0003-u0004",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0004-u0005",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0006-u0007",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0007-u0008",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0008-u0010",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0010-u0011",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0013-u0014",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0014-u0016",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0016-u0017",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0017-u0018",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0020-u0022",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0022-u0023",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0023-u0024",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0024-u0025",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0025-u0026",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0030-u0031",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0033-u0034",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0034-u0035",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0037-u0038",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0038-u0039",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0048-u0049",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0049-u0050",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0050-u0051",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0052-u0053",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0055-u0057",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0057-u0059",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0064-u0066",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0069-u0070",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0076-u0077",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0079-u0080",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0084-u0085",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0087-u0089",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0089-u0090",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0092-u0093",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0093-u0094",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0094-u0095",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0096-u0098",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0098-u0099",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0102-u0103",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0104-u0105",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0105-u0106",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0107-u0109",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0109-u0110",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0112-u0114",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0114-u0116",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0116-u0118",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0121-u0122",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0122-u0123",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0123-u0125",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0125-u0126",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0126-u0132",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0133-u0134",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0134-u0137",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0138-u0140",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0140-u0141",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0145-u0147",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0147-u0150",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0153-u0155",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0155-u0156",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0156-u0161",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0161-u0162",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0162-u0163",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0163-u0165",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0165-u0169",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0169-u0177",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0177-u0181",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0181-u0182",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0182-u0184",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0184-u0186",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0186-u0187",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0187-u0189",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0190-u0191",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0191-u0193",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0193-u0194",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0197-u0198",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0204-u0205",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0205-u0209",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0215-u0216",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0216-u0217",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0217-u0218",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0218-u0219",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0220-u0223",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0223-u0225",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0226-u0227",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0227-u0242",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "repetition-u0016-u0024",
+      "kind": "repetition",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "repetition-u0016-u0116",
+      "kind": "repetition",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "repetition-u0020-u0038",
+      "kind": "repetition",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "repetition-u0024-u0116",
+      "kind": "repetition",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "repetition-u0033-u0121",
+      "kind": "repetition",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "repetition-u0047-u0120",
+      "kind": "repetition",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "repetition-u0050-u0142",
+      "kind": "repetition",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "repetition-u0050-u0186",
+      "kind": "repetition",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "repetition-u0107-u0112",
+      "kind": "repetition",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "repetition-u0110-u0118",
+      "kind": "repetition",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "repetition-u0142-u0186",
+      "kind": "repetition",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "take-rep-u0016-u0116",
+      "kind": "take",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "take-rep-u0020-u0038",
+      "kind": "take",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "take-rep-u0033-u0121",
+      "kind": "take",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "take-rep-u0047-u0120",
+      "kind": "take",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "take-rep-u0050-u0186",
+      "kind": "take",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "take-rep-u0107-u0112",
+      "kind": "take",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "take-rep-u0110-u0118",
+      "kind": "take",
+      "decision": "REVIEW"
+    }
+  ]
+}

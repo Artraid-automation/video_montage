@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "kind": "sense-catalog",
+  "worker_version": "agent-senses-v1",
+  "updated_at": "2026-07-21",
+  "provenance": {
+    "project_id": "tanya-reel-pilot",
+    "method": "agent-review-in-chat",
+    "note": "No embedding model / no external API. Cards written from accepted MOTION briefs and author Final."
+  },
+  "senses": [
+    {
+      "id": "pain-zero-balance",
+      "title": "Боль «на нуле» / пустой кошелёк",
+      "tags": ["#pain", "#zero", "#wallet", "#hook", "#empty", "#balance", "#ноль", "#кошелёк"],
+      "situations": [
+        "хук про пустой счёт",
+        "ощущение что деньги кончились",
+        "открытие ролика через боль нуля"
+      ],
+      "anti_situations": ["спокойный CTA без боли", "абстрактная инфографика без цифры нуля"],
+      "motion_hints": ["meter_drop", "empty wallet", "0 ₽"],
+      "broll_hints": ["empty wallet", "zero balance screen", "broke"],
+      "provenance": "tanya-reel-pilot seg01 scene 1a"
+    },
+    {
+      "id": "panic-cascade",
+      "title": "Каскад паники (горит → занять → тушить)",
+      "tags": ["#panic", "#stress", "#emergency", "#fire", "#borrow", "#паника", "#срочно"],
+      "situations": [
+        "экстренная клауза про панику",
+        "цепочка плохих реакций на нехватку денег"
+      ],
+      "anti_situations": ["спокойное правило 10%", "финальный CTA"],
+      "motion_hints": ["panic steps", "burning head", "extinguish"],
+      "broll_hints": ["anxiety", "chaos", "stress hands"],
+      "provenance": "tanya-reel-pilot seg01 scene 1b"
+    },
+    {
+      "id": "rule-ten-percent",
+      "title": "Правило 10% (доход → отложить)",
+      "tags": ["#rule", "#percent", "#10", "#60000", "#6000", "#формула", "#правило"],
+      "situations": [
+        "произнесение формулы 60к / 6к",
+        "объяснение простого процента отложения"
+      ],
+      "anti_situations": ["эмоция без цифры", "весы ценностей"],
+      "motion_hints": ["cut 10%", "60→6", "formula split"],
+      "broll_hints": ["calculator", "percent", "salary slip"],
+      "provenance": "tanya-reel-pilot seg02 2a / seg03 3a"
+    },
+    {
+      "id": "friction-other-bank",
+      "title": "Трение «другой банк» / пауза перед тратой",
+      "tags": ["#friction", "#bank", "#transfer", "#pause", "#замок", "#банк", "#перевод"],
+      "situations": [
+        "перевод в другой банк как защита от импульса",
+        "нужно показать трение, не рекламу вклада"
+      ],
+      "anti_situations": ["открыть вклад как продукт", "быстрый перевод без трения"],
+      "motion_hints": ["two banks", "lock", "timer", "grey return arrow"],
+      "broll_hints": ["bank app", "transfer pending", "locked account"],
+      "provenance": "tanya-reel-pilot seg02 scene 2b"
+    },
+    {
+      "id": "year-stack",
+      "title": "Год / стопка месяцев",
+      "tags": ["#year", "#12", "#months", "#stack", "#compound", "#год", "#месяц"],
+      "situations": [
+        "через год накопится",
+        "визуал нарастания одинаковых кусков"
+      ],
+      "anti_situations": ["одноразовый платёж без горизонта"],
+      "motion_hints": ["month tiles", "stack 6k", "12 months"],
+      "broll_hints": ["calendar year", "coin stack", "savings jar"],
+      "provenance": "tanya-reel-pilot seg02 scene 2c"
+    },
+    {
+      "id": "values-scales",
+      "title": "Весы ценностей (мечта vs хотелки)",
+      "tags": ["#values", "#scales", "#dream", "#safety", "#wants", "#весы", "#мечта", "#хотелки"],
+      "situations": [
+        "тезис ролика про выбор приоритетов",
+        "спокойствие/безопасность против импульсивных хотелок"
+      ],
+      "anti_situations": ["чистая арифметика 10% без ценностей"],
+      "motion_hints": ["scales", "heavier dream side"],
+      "broll_hints": ["balance scale", "fork in road"],
+      "provenance": "tanya-reel-pilot seg03 scene 3b"
+    },
+    {
+      "id": "priority-shift-cta",
+      "title": "Сдвиг приоритетов + CTA схема",
+      "tags": ["#cta", "#priorities", "#shift", "#scheme", "#схема", "#приоритет", "#финал"],
+      "situations": [
+        "закрытие ролика действием",
+        "хотелки вниз, подушка/мечта вверх"
+      ],
+      "anti_situations": ["открывающий хук боли", "середина объяснения правила"],
+      "motion_hints": ["priority shift", "CTA схема"],
+      "broll_hints": ["checklist", "plan board", "subscribe CTA"],
+      "provenance": "tanya-reel-pilot seg03 scene 3c"
+    }
+  ]
+}

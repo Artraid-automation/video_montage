@@ -1,0 +1,899 @@
+{
+  "schema_version": 2,
+  "verdict": "PASS",
+  "bindings": {
+    "master_sha256": "sha256:21524cc4911f378f6c82e7a1144b97de8bfe5a685c44ab3193322dd8c95b3809"
+  },
+  "technical": {
+    "schema_version": 1,
+    "verdict": "PASS",
+    "path": "E:\\Xampp\\MCP монтаж\\projects\\tanya-reel-pilot\\05_final\\tanya-reel-pilot.mp4",
+    "actual": {
+      "duration_s": 84.612,
+      "video": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.64001f",
+          "width": 720,
+          "height": 1280,
+          "coded_width": 720,
+          "coded_height": 1280,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "9:16",
+          "pix_fmt": "yuv420p",
+          "level": 31,
+          "color_range": "tv",
+          "color_space": "bt709",
+          "color_transfer": "bt709",
+          "color_primaries": "bt709",
+          "chroma_location": "left",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/15360",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 1298432,
+          "duration": "84.533333",
+          "bit_rate": "2342227",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "2536",
+          "extradata_size": 48,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc62.28.102 libx264"
+          }
+        }
+      ],
+      "audio": [
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "codec_long_name": "AAC (Advanced Audio Coding)",
+          "profile": "LC",
+          "codec_type": "audio",
+          "codec_tag_string": "mp4a",
+          "codec_tag": "0x6134706d",
+          "mime_codec_string": "mp4a.40.2",
+          "sample_fmt": "fltp",
+          "sample_rate": "96000",
+          "channels": 2,
+          "channel_layout": "stereo",
+          "bits_per_sample": 0,
+          "initial_padding": 0,
+          "id": "0x2",
+          "r_frame_rate": "0/0",
+          "avg_frame_rate": "0/0",
+          "time_base": "1/96000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 8122752,
+          "duration": "84.612000",
+          "bit_rate": "195322",
+          "nb_frames": "7925",
+          "extradata_size": 5,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "SoundHandler"
+          }
+        }
+      ]
+    },
+    "expected": {
+      "duration_s": 84.53401600000001,
+      "width": 720,
+      "height": 1280,
+      "fps": 30
+    },
+    "thresholds": {
+      "duration_tolerance_s": 0.35
+    },
+    "reasons": []
+  },
+  "frame_integrity": {
+    "schema_version": 1,
+    "verdict": "PASS",
+    "frames": [
+      {
+        "timestamp_s": 0.0,
+        "mean_luma": 135.852,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-001-0.000.jpg",
+          "sha256": "sha256:13ae9c75ce102512d3bee520e3436ecd865b0d9140e042f11afc6cf862dcb3a3",
+          "size_bytes": 46185
+        }
+      },
+      {
+        "timestamp_s": 2.0,
+        "mean_luma": 109.617,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-002-2.000.jpg",
+          "sha256": "sha256:bb7d477aa73725e3afed4f19b81599659a6e4aff8646f0a36482eb8da05f53ab",
+          "size_bytes": 61506
+        }
+      },
+      {
+        "timestamp_s": 4.0,
+        "mean_luma": 123.74,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-003-4.000.jpg",
+          "sha256": "sha256:27cb3e8dd0e1cd5108df0461566faea021dcdf39eb625708680bdcd745c0eb51",
+          "size_bytes": 72142
+        }
+      },
+      {
+        "timestamp_s": 6.0,
+        "mean_luma": 126.225,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-004-6.000.jpg",
+          "sha256": "sha256:c655894b9a672d87c4f01425f47b1970e7b4b7c5dafc1d1d1628fb1bef29b2b0",
+          "size_bytes": 68746
+        }
+      },
+      {
+        "timestamp_s": 8.0,
+        "mean_luma": 124.39,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-005-8.000.jpg",
+          "sha256": "sha256:de6daade9ae6bb2d4980ca9229080c1a97a647b64185921be2e7980e38388e6a",
+          "size_bytes": 64929
+        }
+      },
+      {
+        "timestamp_s": 10.0,
+        "mean_luma": 129.142,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-006-10.000.jpg",
+          "sha256": "sha256:b9fc2100fe3189834d073950f3f3f161f308b9cd068a06a5aad68991477d0d22",
+          "size_bytes": 74464
+        }
+      },
+      {
+        "timestamp_s": 12.0,
+        "mean_luma": 127.278,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-007-12.000.jpg",
+          "sha256": "sha256:30f70fce83160b5e63f16348ff08f09960c617526c763e4a0859c94d15e7386d",
+          "size_bytes": 67255
+        }
+      },
+      {
+        "timestamp_s": 14.0,
+        "mean_luma": 133.62,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-008-14.000.jpg",
+          "sha256": "sha256:18c533a1966dfde7364c0a2572d569dba56067c7a5849cf152bbc669dd634d36",
+          "size_bytes": 66297
+        }
+      },
+      {
+        "timestamp_s": 16.0,
+        "mean_luma": 125.545,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-009-16.000.jpg",
+          "sha256": "sha256:ef58f5a56bca2d20d13f9bf9cf27b987e52b45822ee463f693dcd6b7095f4643",
+          "size_bytes": 60736
+        }
+      },
+      {
+        "timestamp_s": 18.0,
+        "mean_luma": 130.31,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-010-18.000.jpg",
+          "sha256": "sha256:063e1ffa8c09a7838f184d456bbcd12a126805e84b2b25e78a96b19b78379080",
+          "size_bytes": 64433
+        }
+      },
+      {
+        "timestamp_s": 20.0,
+        "mean_luma": 127.438,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-011-20.000.jpg",
+          "sha256": "sha256:e302d4ddd8fcf556232b0c8d53471291d2ac13aa2a0c6726d13c8ec18d6cff9b",
+          "size_bytes": 60734
+        }
+      },
+      {
+        "timestamp_s": 22.0,
+        "mean_luma": 119.42,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-012-22.000.jpg",
+          "sha256": "sha256:8e52921df036d589872ca9704df10758a725901725a3b8307fc2a8dd6348a6bd",
+          "size_bytes": 51344
+        }
+      },
+      {
+        "timestamp_s": 24.0,
+        "mean_luma": 118.149,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-013-24.000.jpg",
+          "sha256": "sha256:214eefacfd633d64bbb91ff82dad22c471a75e89bbc154bab0b856d31d7df37c",
+          "size_bytes": 51714
+        }
+      },
+      {
+        "timestamp_s": 26.0,
+        "mean_luma": 127.643,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-014-26.000.jpg",
+          "sha256": "sha256:af377c8350158b58a27a7070694b1cd7e72b90a8f906578d490e25608a68e2c8",
+          "size_bytes": 67052
+        }
+      },
+      {
+        "timestamp_s": 28.0,
+        "mean_luma": 124.736,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-015-28.000.jpg",
+          "sha256": "sha256:1e51caa66b3f77e266c23df6674a589d0dd375aff328ab21ef3419bd5e3458fd",
+          "size_bytes": 63533
+        }
+      },
+      {
+        "timestamp_s": 30.0,
+        "mean_luma": 127.733,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-016-30.000.jpg",
+          "sha256": "sha256:1f19f7401cd12a9a88081f5964ab626ad03309e27eb5c22bd703686f662aa1da",
+          "size_bytes": 64906
+        }
+      },
+      {
+        "timestamp_s": 32.0,
+        "mean_luma": 126.804,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-017-32.000.jpg",
+          "sha256": "sha256:f8e30cbcafbb452138c6c42e15befc75cc6c7888bdf0af9f2e5706b0ad1f979c",
+          "size_bytes": 64481
+        }
+      },
+      {
+        "timestamp_s": 34.0,
+        "mean_luma": 123.017,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-018-34.000.jpg",
+          "sha256": "sha256:d3c229856301d262e7b1bd1091468c17a6becf94146a262e526c91e55c87ef14",
+          "size_bytes": 65469
+        }
+      },
+      {
+        "timestamp_s": 36.0,
+        "mean_luma": 120.886,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-019-36.000.jpg",
+          "sha256": "sha256:46540d6c32f233c3d26f9d006c7c3bb43807861aa9dd2db0eee5d56d610d29b6",
+          "size_bytes": 70034
+        }
+      },
+      {
+        "timestamp_s": 38.0,
+        "mean_luma": 120.688,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-020-38.000.jpg",
+          "sha256": "sha256:d0c5b7580c03ae69468d0e58a4c5246fa8afae794d73a72006660d182fea9dc9",
+          "size_bytes": 69064
+        }
+      },
+      {
+        "timestamp_s": 40.0,
+        "mean_luma": 125.766,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-021-40.000.jpg",
+          "sha256": "sha256:61862abaca4f49ddb3184a13e1172c429c72b283df43338c1b91237f6cca369c",
+          "size_bytes": 66852
+        }
+      },
+      {
+        "timestamp_s": 42.0,
+        "mean_luma": 111.413,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-022-42.000.jpg",
+          "sha256": "sha256:4a39d22e34ec4e94633820e810675f21120d7bdb2277e194460f7957e77ee8d4",
+          "size_bytes": 54302
+        }
+      },
+      {
+        "timestamp_s": 42.306,
+        "mean_luma": 114.151,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-023-42.306.jpg",
+          "sha256": "sha256:a2fe5dd252a8231a56b8ac32244a85d797d44be6fb62d2f820e6e29bdf1943e5",
+          "size_bytes": 54635
+        }
+      },
+      {
+        "timestamp_s": 44.0,
+        "mean_luma": 115.041,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-024-44.000.jpg",
+          "sha256": "sha256:c9c709f3cf1dc06cd3b01ccc9c28b63fd9abf9b0e3ce65be6d4a8de2241fab2f",
+          "size_bytes": 56782
+        }
+      },
+      {
+        "timestamp_s": 46.0,
+        "mean_luma": 112.463,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-025-46.000.jpg",
+          "sha256": "sha256:e279ac047351ebf8e544eeae6d09c93e5af4bcb37ba296a5544b4bc34a391a50",
+          "size_bytes": 57243
+        }
+      },
+      {
+        "timestamp_s": 48.0,
+        "mean_luma": 122.782,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-026-48.000.jpg",
+          "sha256": "sha256:497cb2457d4f40061b7ff34e21029318923d9251ca5e6593d5522f3464530caa",
+          "size_bytes": 65295
+        }
+      },
+      {
+        "timestamp_s": 50.0,
+        "mean_luma": 127.088,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-027-50.000.jpg",
+          "sha256": "sha256:24656ba6f234f6a693846b918775158662cac95ceaf52649810e6479ade44ac1",
+          "size_bytes": 70212
+        }
+      },
+      {
+        "timestamp_s": 52.0,
+        "mean_luma": 126.668,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-028-52.000.jpg",
+          "sha256": "sha256:80564151b0bfb5e0981a65eed781bc28c8645ccb403a72e499a59fec5598e55d",
+          "size_bytes": 65196
+        }
+      },
+      {
+        "timestamp_s": 54.0,
+        "mean_luma": 122.319,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-029-54.000.jpg",
+          "sha256": "sha256:44520332b43099243257c470dcf236e39647c8a77467fff4de5eae83eedaa792",
+          "size_bytes": 65518
+        }
+      },
+      {
+        "timestamp_s": 56.0,
+        "mean_luma": 121.711,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-030-56.000.jpg",
+          "sha256": "sha256:687282c7a1f1d78e4bff4b2d004732b4de5be3531a1c938554a473f082419605",
+          "size_bytes": 66924
+        }
+      },
+      {
+        "timestamp_s": 58.0,
+        "mean_luma": 126.121,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-031-58.000.jpg",
+          "sha256": "sha256:8b68bc2cae1b25c7d4dbabf91e3875bcd613d6b36862c7914417fb23e8833f75",
+          "size_bytes": 86302
+        }
+      },
+      {
+        "timestamp_s": 60.0,
+        "mean_luma": 111.185,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-032-60.000.jpg",
+          "sha256": "sha256:8a72abd5efb6876a07d4df78c713778a7764189948521cb3124ced517c96e931",
+          "size_bytes": 74887
+        }
+      },
+      {
+        "timestamp_s": 62.0,
+        "mean_luma": 119.935,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-033-62.000.jpg",
+          "sha256": "sha256:167d059f2145ae60ac48f0be498b6c533f3f82e5797d45130d1db76475c09d62",
+          "size_bytes": 88031
+        }
+      },
+      {
+        "timestamp_s": 64.0,
+        "mean_luma": 118.73,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-034-64.000.jpg",
+          "sha256": "sha256:440f05ffbcfeb585c32f6a9b0277fd8f843c995664472f1aa262ea8d9cb1af72",
+          "size_bytes": 92365
+        }
+      },
+      {
+        "timestamp_s": 66.0,
+        "mean_luma": 122.716,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-035-66.000.jpg",
+          "sha256": "sha256:023fa1689c3bdf662f77423833076aa8de8d4fb5a364fc6dd5f5e1b873347051",
+          "size_bytes": 84531
+        }
+      },
+      {
+        "timestamp_s": 68.0,
+        "mean_luma": 119.103,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-036-68.000.jpg",
+          "sha256": "sha256:e1594017a56f5db6b06b094de7aacd28f5af455fde6fcd3cf103321233d4d86b",
+          "size_bytes": 85555
+        }
+      },
+      {
+        "timestamp_s": 70.0,
+        "mean_luma": 121.88,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-037-70.000.jpg",
+          "sha256": "sha256:1b7f68552a80306a0cc00f753466864d6ebd59c73439ebddd82de8069b892c9c",
+          "size_bytes": 84701
+        }
+      },
+      {
+        "timestamp_s": 72.0,
+        "mean_luma": 124.302,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-038-72.000.jpg",
+          "sha256": "sha256:67c0e0b36f77ecb80d52480ff238c21c3fbb05989d25711364e1738c276a6041",
+          "size_bytes": 97415
+        }
+      },
+      {
+        "timestamp_s": 74.0,
+        "mean_luma": 119.733,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-039-74.000.jpg",
+          "sha256": "sha256:dfcef6df8a513b7ce8c25743f0369f8d2e1a7df6e524c17474076c6b27802c95",
+          "size_bytes": 87574
+        }
+      },
+      {
+        "timestamp_s": 76.0,
+        "mean_luma": 120.014,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-040-76.000.jpg",
+          "sha256": "sha256:b0d54d4a4a5b3b9d4b3151b8484a4abb46ea050cebe75f82ecc8ff304eea8b40",
+          "size_bytes": 89098
+        }
+      },
+      {
+        "timestamp_s": 78.0,
+        "mean_luma": 118.764,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-041-78.000.jpg",
+          "sha256": "sha256:a675d207991446a7815acc1a5812069916835eed7c614c18b4efb44a910e0bab",
+          "size_bytes": 88568
+        }
+      },
+      {
+        "timestamp_s": 80.0,
+        "mean_luma": 125.804,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-042-80.000.jpg",
+          "sha256": "sha256:d69dc8df2c96e4df2bec184e01a674088b7c9339fa7cd6ff64072b284b75be63",
+          "size_bytes": 91611
+        }
+      },
+      {
+        "timestamp_s": 82.0,
+        "mean_luma": 120.715,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-043-82.000.jpg",
+          "sha256": "sha256:e6bd31948b2a4bcb8d57decf12b560c7200e19bef85c678a2a26cab977eceba3",
+          "size_bytes": 91247
+        }
+      },
+      {
+        "timestamp_s": 84.0,
+        "mean_luma": 127.858,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-044-84.000.jpg",
+          "sha256": "sha256:93caf9fb9aaa99602aca4e6219efb5f7798e7090ef7450a22819f15b8519059a",
+          "size_bytes": 81473
+        }
+      },
+      {
+        "timestamp_s": 84.41199999999999,
+        "mean_luma": 128.158,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "05_final/probes/probe-045-84.412.jpg",
+          "sha256": "sha256:cdc247d15d4f4024a3067b0c95706116be84747bafece0a20d3088a7f27027eb",
+          "size_bytes": 82236
+        }
+      }
+    ],
+    "reasons": []
+  },
+  "layout_policy": {
+    "verdict": "PASS",
+    "frame": {
+      "width": 720,
+      "height": 1280
+    },
+    "safe_margin_px": 24,
+    "overlays": [
+      {
+        "kind": "captions",
+        "x": 24,
+        "y": 922,
+        "width": 672,
+        "height": 256
+      }
+    ],
+    "reasons": []
+  },
+  "audio_policy": {
+    "verdict": "PASS",
+    "mean_db": -17.3,
+    "peak_db": -1.2,
+    "thresholds": {
+      "max_peak_db": -0.1,
+      "min_mean_db": -40.0,
+      "target_mean_db_min": -24.0,
+      "target_mean_db_max": -12.0
+    },
+    "reasons": []
+  },
+  "reasons": [],
+  "grade_candidates": {
+    "schema_version": 1,
+    "kind": "final-grade-candidates",
+    "worker_version": "final-grades-v1",
+    "default_grade": "dankoe",
+    "candidates": [
+      {
+        "grade": "neutral",
+        "path": "05_final/grades/master-neutral.mp4",
+        "sha256": "sha256:5475d32b302f10812ab3b5c79a54210a1c4f5143fe2ccaf8f687f6c385f3d6da",
+        "size_bytes": 25823092,
+        "audio": {
+          "verdict": "PASS",
+          "mean_db": -17.3,
+          "peak_db": -1.2,
+          "thresholds": {
+            "max_peak_db": -0.1,
+            "min_mean_db": -40.0,
+            "target_mean_db_min": -24.0,
+            "target_mean_db_max": -12.0
+          },
+          "reasons": []
+        },
+        "is_primary": false
+      },
+      {
+        "grade": "dankoe",
+        "path": "05_final/grades/master-dankoe.mp4",
+        "sha256": "sha256:21524cc4911f378f6c82e7a1144b97de8bfe5a685c44ab3193322dd8c95b3809",
+        "size_bytes": 26907104,
+        "audio": {
+          "verdict": "PASS",
+          "mean_db": -17.3,
+          "peak_db": -1.2,
+          "thresholds": {
+            "max_peak_db": -0.1,
+            "min_mean_db": -40.0,
+            "target_mean_db_min": -24.0,
+            "target_mean_db_max": -12.0
+          },
+          "reasons": []
+        },
+        "is_primary": true
+      },
+      {
+        "grade": "warm",
+        "path": "05_final/grades/master-warm.mp4",
+        "sha256": "sha256:96cb0623308020a251994551ad16df76f453d2f89d77858559aa57adf24169f1",
+        "size_bytes": 26429969,
+        "audio": {
+          "verdict": "PASS",
+          "mean_db": -17.3,
+          "peak_db": -1.2,
+          "thresholds": {
+            "max_peak_db": -0.1,
+            "min_mean_db": -40.0,
+            "target_mean_db_min": -24.0,
+            "target_mean_db_max": -12.0
+          },
+          "reasons": []
+        },
+        "is_primary": false
+      }
+    ],
+    "audio_note": "Loudness normalized once on the concat master (loudnorm I=-14). Listen here — do not re-check per-segment audio unless a segment was revised."
+  },
+  "master_audio": {
+    "loudnorm": {
+      "I": -14.0,
+      "TP": -1.5,
+      "LRA": 11.0
+    },
+    "policy": {
+      "verdict": "PASS",
+      "mean_db": -17.3,
+      "peak_db": -1.2,
+      "thresholds": {
+        "max_peak_db": -0.1,
+        "min_mean_db": -40.0,
+        "target_mean_db_min": -24.0,
+        "target_mean_db_max": -12.0
+      },
+      "reasons": []
+    }
+  }
+}

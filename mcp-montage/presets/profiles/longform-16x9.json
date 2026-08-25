@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "longform-16x9",
+  "title": "Long-form horizontal",
+  "format": "longform",
+  "style_version": "dankoe-mevga-v1",
+  "default_grade": "dankoe",
+  "render_profile": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 25,
+    "crf": 18,
+    "preset": "medium",
+    "captions": true,
+    "caption_font_ratio": 0.15
+  },
+  "transcript_verification": {
+    "max_wer": 0.12,
+    "min_order_ratio": 0.9,
+    "max_silence_s": 1.2,
+    "max_timing_drift_s": 0.85,
+    "max_timing_drift_ratio": 0.25,
+    "max_lead_in_silence_s": 0.8,
+    "reject_adjacent_echoes": true,
+    "reject_repeated_openers": true
+  },
+  "visual_planning": {
+    "enabled": false,
+    "cadence_seconds": 45.0,
+    "max_per_segment": 12
+  },
+  "visual_probe_interval_s": 3.0,
+  "telegram_delivery": {
+    "enabled": true,
+    "width": 1920,
+    "height": 1080,
+    "speed_factor": 1.0,
+    "send_as": "document"
+  },
+  "notes": "Same Style Bible / senses; wider frame; TG document without forced 1.15x."
+}

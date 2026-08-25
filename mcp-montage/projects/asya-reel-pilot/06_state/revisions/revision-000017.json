@@ -1,0 +1,30 @@
+{
+  "schema_version": 2,
+  "gate": "gate2",
+  "created_at": "2026-07-22T03:18:51.857746+00:00",
+  "fixes": [
+    {
+      "id": "fix-001",
+      "kind": "speech",
+      "segment_id": "01",
+      "description": "transcript-reviewed",
+      "status": "OPEN",
+      "blocking": false,
+      "operation": "transcript-reviewed",
+      "arguments": {}
+    }
+  ],
+  "rule_candidates": [],
+  "source_files": [
+    "04_phase2/segments/01/fixes.md"
+  ],
+  "outcomes": [
+    {
+      "fix_id": "fix-001",
+      "status": "APPLIED",
+      "before_sha256": "sha256:d956868bc3953795c1f1fe8811900887a76ce5d5fa305ce4e53468dc78037996",
+      "after_sha256": "sha256:d956868bc3953795c1f1fe8811900887a76ce5d5fa305ce4e53468dc78037996"
+    }
+  ],
+  "rule_proposals_added": []
+}

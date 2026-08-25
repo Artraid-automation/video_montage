@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "verdict": "PASS",
+  "selected": "neutral",
+  "samples": [
+    {
+      "kind": "grade-sample",
+      "path": "03_phase1/segments/02/grade-samples/neutral.jpg",
+      "sha256": "sha256:840ade569110ec39d33abc832fca2f0a228cbaf4a2caaca13fe06711e6b1bf55",
+      "size_bytes": 71039
+    },
+    {
+      "kind": "grade-sample",
+      "path": "03_phase1/segments/02/grade-samples/warm.jpg",
+      "sha256": "sha256:a24a4d678911cbb8c20e29750f19fa46fccc7b62269bf31d37a9c5462a9a962a",
+      "size_bytes": 91441
+    },
+    {
+      "kind": "grade-sample",
+      "path": "03_phase1/segments/02/grade-samples/punchy.jpg",
+      "sha256": "sha256:3bad2c03fd0f8ed435627610fc581164e3f4ba5ae75f8ec6db27c3532ad6c3a0",
+      "size_bytes": 76476
+    }
+  ],
+  "filters": {
+    "neutral": "null",
+    "warm": "eq=contrast=1.04:saturation=1.08:gamma=1.02,colorbalance=rs=.04:bs=-.025",
+    "punchy": "eq=contrast=1.12:saturation=1.12:gamma=0.98"
+  }
+}

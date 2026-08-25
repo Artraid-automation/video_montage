@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "project-state.schema.json",
+  "title": "Video factory durable project state",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "project_id", "state", "revision", "updated_at", "active_gate", "gate_artifacts", "last_error", "recover_to"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "project_id": {"type": "string", "minLength": 1},
+    "state": {"enum": ["NEW", "PHASE1_RUNNING", "GATE1_REVIEW", "PHASE2_RUNNING", "GATE2_REVIEW", "REVISIONS_RUNNING", "PHASE3_READY", "PHASE3_RUNNING", "FINAL_REVIEW", "COMPLETED", "FAILED_RECOVERABLE"]},
+    "revision": {"type": "integer", "minimum": 0},
+    "updated_at": {"type": "string", "format": "date-time"},
+    "active_gate": {"type": ["string", "null"], "enum": ["gate1", "gate2", "final", null]},
+    "gate_artifacts": {"type": "object", "additionalProperties": {"type": "array", "items": {"$ref": "#/$defs/artifact"}}},
+    "last_error": {"type": ["string", "null"]},
+    "recover_to": {"type": ["string", "null"]}
+  },
+  "$defs": {
+    "artifact": {
+      "type": "object", "additionalProperties": false, "required": ["path", "hash"],
+      "properties": {"path": {"type": "string", "minLength": 1}, "hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}}
+    }
+  }
+}

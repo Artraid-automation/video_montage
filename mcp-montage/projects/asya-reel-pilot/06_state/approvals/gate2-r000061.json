@@ -1,0 +1,18 @@
+{
+  "schema_version": 2,
+  "project_id": "asya-reel-pilot",
+  "gate": "gate2",
+  "reviewer": "author",
+  "approved_at": "2026-07-22T04:47:14.148126+00:00",
+  "ledger_revision": 61,
+  "manifest": {
+    "kind": "gate2-manifest",
+    "path": "04_phase2/gate2-manifest.json",
+    "sha256": "sha256:16400d952b5c380ce99f33cd91e6ff81d271a5d7525d7a73551f15d34abd3e17",
+    "size_bytes": 2238
+  },
+  "manifest_content_hash": "sha256:88373043861a7b7b34a492f7baa1f206fbb68ea33627790969467450521bb342",
+  "style_version": null,
+  "provider_versions": {},
+  "accepted_exceptions": []
+}

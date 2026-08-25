@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "kind": "editorial-analysis",
+  "worker_version": "editorial-analysis-v6",
+  "source_transcript_sha256": "sha256:85fa0f598896c7306f4ec5aad81107e28c41b40147db231251cb41449a311971",
+  "thresholds": {
+    "pause_s": 0.8,
+    "repetition_similarity": 0.86,
+    "block_pause_s": 5.0
+  },
+  "verdict": "CANDIDATES_PROPOSED",
+  "pause_candidates": [
+    {
+      "id": "pause-u0003-u0004",
+      "after_utterance_id": "u0003",
+      "before_utterance_id": "u0004",
+      "start_s": 24.43,
+      "end_s": 25.25,
+      "duration_s": 0.82,
+      "reason": "inter-utterance-pause"
+    }
+  ],
+  "repetition_candidates": [],
+  "take_candidates": [],
+  "candidates": [
+    {
+      "id": "pause-u0003-u0004",
+      "kind": "pause",
+      "decision": "REVIEW"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.video.factory/contracts/media-manifest.schema.json",
+  "title": "Media Manifest",
+  "type": "object",
+  "required": ["schema_version", "generated_at", "project_root", "files"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "project_root": {"type": "string"},
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "path", "relative_path", "size_bytes", "probe_ok", "streams"],
+        "properties": {
+          "id": {"type": "string"},
+          "path": {"type": "string"},
+          "relative_path": {"type": "string"},
+          "role": {"enum": ["a_roll", "screen", "audio", "b_roll", "image", "unknown"]},
+          "size_bytes": {"type": "integer", "minimum": 0},
+          "probe_ok": {"type": "boolean"},
+          "duration_s": {"type": ["number", "null"], "minimum": 0},
+          "streams": {"type": "array"},
+          "error": {"type": ["string", "null"]}
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": false
+}
+

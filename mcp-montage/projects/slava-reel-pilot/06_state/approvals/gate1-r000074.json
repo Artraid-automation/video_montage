@@ -1,0 +1,25 @@
+{
+  "schema_version": 2,
+  "project_id": "slava-reel-pilot",
+  "gate": "gate1",
+  "reviewer": "agent-producer",
+  "approved_at": "2026-07-21T10:41:00.780408+00:00",
+  "ledger_revision": 74,
+  "manifest": {
+    "kind": "gate1-manifest",
+    "path": "03_phase1/gate1-manifest.json",
+    "sha256": "sha256:36e114c0872dc4faf2b868cbca8bd967901f7e74536ec2c414c38aff31717cef",
+    "size_bytes": 2688
+  },
+  "manifest_content_hash": "sha256:87549fa2adab94dc44e56f47702b931f3abb3765f004bb71b50d66876a831df0",
+  "style_version": "dankoe-mevga-v1",
+  "provider_versions": {
+    "transcription": "faster-whisper:small",
+    "editorial": "editorial-analysis-v6",
+    "visual_planning": "visual-planner-v4",
+    "broll_search": "broll-lexical-search-v2-senses",
+    "cross_segment_takes": "cross-segment-takes-v1",
+    "film_continuity": "film-continuity-v1"
+  },
+  "accepted_exceptions": []
+}

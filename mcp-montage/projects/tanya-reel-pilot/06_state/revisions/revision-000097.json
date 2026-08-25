@@ -1,0 +1,64 @@
+{
+  "schema_version": 2,
+  "gate": "gate2",
+  "created_at": "2026-07-20T07:04:23.549694+00:00",
+  "fixes": [
+    {
+      "id": "fix-001",
+      "kind": "visual",
+      "segment_id": "01",
+      "description": "transcript-reviewed",
+      "status": "OPEN",
+      "blocking": false,
+      "operation": "transcript-reviewed",
+      "arguments": {}
+    },
+    {
+      "id": "fix-001",
+      "kind": "visual",
+      "segment_id": "02",
+      "description": "transcript-reviewed",
+      "status": "OPEN",
+      "blocking": false,
+      "operation": "transcript-reviewed",
+      "arguments": {}
+    },
+    {
+      "id": "fix-001",
+      "kind": "visual",
+      "segment_id": "03",
+      "description": "transcript-reviewed",
+      "status": "OPEN",
+      "blocking": false,
+      "operation": "transcript-reviewed",
+      "arguments": {}
+    }
+  ],
+  "rule_candidates": [],
+  "source_files": [
+    "04_phase2/segments/01/fixes.md",
+    "04_phase2/segments/02/fixes.md",
+    "04_phase2/segments/03/fixes.md"
+  ],
+  "outcomes": [
+    {
+      "fix_id": "fix-001",
+      "status": "APPLIED",
+      "before_sha256": "sha256:e459f2ef559ec255f55aa5ef4af56795f652298d0c242ca0163183955f560a22",
+      "after_sha256": "sha256:84690054a03db9f06a42d68b1be24eaebcbbcfa4542ea4170108fb8ad0d1eb72"
+    },
+    {
+      "fix_id": "fix-001",
+      "status": "APPLIED",
+      "before_sha256": "sha256:b55de2770161778e14555d9ef8f70352993043499339508a898f1f415f3659c5",
+      "after_sha256": "sha256:93876170734f132d25125efbf4d408c608d56ad66ac75912ca79dd6147710d7a"
+    },
+    {
+      "fix_id": "fix-001",
+      "status": "APPLIED",
+      "before_sha256": "sha256:f8054bf2954c8ddd0ff6f12bc78df52b0ef4b57dd69260a9b64faab073fd46c2",
+      "after_sha256": "sha256:b89fed8eb6b0083a1d6ba1880cf506a8c145dcced975e7683f1436349bc014c9"
+    }
+  ],
+  "rule_proposals_added": []
+}

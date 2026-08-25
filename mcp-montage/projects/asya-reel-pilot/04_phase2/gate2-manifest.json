@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "kind": "gate2",
+  "project_id": "asya-reel-pilot",
+  "revision": 1,
+  "gate1_approval": {
+    "kind": "approval",
+    "path": "06_state/approvals/gate1-r000011.json",
+    "sha256": "sha256:76da5a2d477fc69b37e5f7e4e60f06bed3c1463ed323b76e4cf71831445fcd3d",
+    "size_bytes": 871
+  },
+  "review": {
+    "kind": "gate2-review",
+    "path": "04_phase2/review.md",
+    "sha256": "sha256:aa1beee351f9da22d086be2e929c7aeb2796818f7e057148b894cf4b768989f0",
+    "size_bytes": 3217
+  },
+  "film_continuity": {
+    "kind": "film-continuity",
+    "path": "04_phase2/film-continuity.json",
+    "sha256": "sha256:d2216efe46b92de5e618be262ccf15dd0fe54cc3fe2b8d55b4c6f3c4a25be267",
+    "size_bytes": 623
+  },
+  "segments": [
+    {
+      "id": "01",
+      "render": {
+        "kind": "segment-render",
+        "path": "04_phase2/segments/01/review.mp4",
+        "sha256": "sha256:1b5190e8db17c39ccd5a836b20d32e3920bd8a26a03010e6eca46f5b579433e3",
+        "size_bytes": 32516833
+      },
+      "expected_transcript": {
+        "kind": "expected-transcript",
+        "path": "04_phase2/segments/01/expected-transcript.json",
+        "sha256": "sha256:88356d2fca86af191b11a88a61a16a9f96dbc64b652c251ee1a16bb70040c5f6",
+        "size_bytes": 26216
+      },
+      "rendered_transcript": {
+        "kind": "rendered-transcript",
+        "path": "04_phase2/segments/01/rendered-transcript.json",
+        "sha256": "sha256:0482c9f535b96c0d554fe657dbefbeddf3ab77bdced184831766291b5e99c0af",
+        "size_bytes": 24969
+      },
+      "verification": {
+        "kind": "transcript-verification",
+        "path": "04_phase2/segments/01/verification.json",
+        "sha256": "sha256:995e643d7b28ed5466e59560860edf099f3b9f6406511181252fbfd7ea70377e",
+        "size_bytes": 5452
+      },
+      "qc": {
+        "kind": "segment-qc",
+        "path": "04_phase2/segments/01/qc.json",
+        "sha256": "sha256:42f62e0443ece4382cdf91c22e5aa1aa81bcff1eccd962a96e30a15f2ffc477a",
+        "size_bytes": 27903
+      },
+      "fixes": {
+        "kind": "fixes",
+        "path": "04_phase2/segments/01/fixes.md",
+        "sha256": "sha256:373ff32332a92f57304b07f80babd03d78e3bc532fd0eddf67b955c692045104",
+        "size_bytes": 11
+      }
+    }
+  ]
+}

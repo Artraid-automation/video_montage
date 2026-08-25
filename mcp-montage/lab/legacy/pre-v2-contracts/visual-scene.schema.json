@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.video.factory/contracts/visual-scene.schema.json",
+  "title": "Visual Scene Plan",
+  "type": "object",
+  "required": ["schema_version", "project_id", "duration_s", "scenes", "summary"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "project_id": {"type": ["string", "null"]},
+    "edit_plan_version": {"type": ["integer", "null"]},
+    "duration_s": {"type": "number", "minimum": 0},
+    "scenes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "segment_id", "timeline_in_s", "timeline_out_s", "duration_s", "mode", "status"],
+        "properties": {
+          "id": {"type": "string"},
+          "segment_id": {"type": "string"},
+          "timeline_in_s": {"type": "number", "minimum": 0},
+          "timeline_out_s": {"type": "number", "minimum": 0},
+          "duration_s": {"type": "number", "minimum": 0},
+          "mode": {"enum": ["a_roll", "screen", "b_roll", "motion", "still", "none"]},
+          "status": {"enum": ["ready", "planned", "suggested", "selected", "missing"]},
+          "query": {"type": "string"},
+          "selected_asset_id": {"type": "string"},
+          "suggested_asset_id": {"type": "string"},
+          "matches": {"type": "array"},
+          "contract": {"type": "object"},
+          "notes": {"type": ["string", "null"]}
+        },
+        "additionalProperties": true
+      }
+    },
+    "summary": {"type": "object"}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "kind": "cross-segment-take-analysis",
+  "worker_version": "cross-segment-takes-v1",
+  "input_bindings": [
+    {
+      "segment_id": "01",
+      "source_transcript_sha256": "sha256:85fa0f598896c7306f4ec5aad81107e28c41b40147db231251cb41449a311971",
+      "utterance_ids": [
+        "u0001",
+        "u0002",
+        "u0003",
+        "u0004"
+      ]
+    },
+    {
+      "segment_id": "02",
+      "source_transcript_sha256": "sha256:646f4b748f5791eb2dccc56dbf586552179f3f27c8bbd7b895231d06b0233759",
+      "utterance_ids": [
+        "u0001",
+        "u0002",
+        "u0003",
+        "u0004",
+        "u0005",
+        "u0006",
+        "u0007",
+        "u0008",
+        "u0009",
+        "u0010",
+        "u0011",
+        "u0012",
+        "u0013"
+      ]
+    },
+    {
+      "segment_id": "03",
+      "source_transcript_sha256": "sha256:d8766bdb753560b550d4a2f41d0a7042355859db29af4130affcd2236ec174de",
+      "utterance_ids": [
+        "u0001",
+        "u0002",
+        "u0003",
+        "u0004",
+        "u0005",
+        "u0006",
+        "u0007",
+        "u0008",
+        "u0009",
+        "u0010",
+        "u0011",
+        "u0012",
+        "u0013",
+        "u0014",
+        "u0015",
+        "u0016",
+        "u0017",
+        "u0018",
+        "u0019",
+        "u0020",
+        "u0021",
+        "u0022",
+        "u0023",
+        "u0024",
+        "u0025",
+        "u0026",
+        "u0027",
+        "u0028",
+        "u0029",
+        "u0030",
+        "u0031",
+        "u0032",
+        "u0033",
+        "u0034",
+        "u0035",
+        "u0036",
+        "u0037",
+        "u0038",
+        "u0039",
+        "u0040",
+        "u0041",
+        "u0042",
+        "u0043",
+        "u0044",
+        "u0045",
+        "u0046",
+        "u0047",
+        "u0048",
+        "u0049",
+        "u0050",
+        "u0051",
+        "u0052",
+        "u0053",
+        "u0054",
+        "u0055",
+        "u0056",
+        "u0057",
+        "u0058",
+        "u0059",
+        "u0060",
+        "u0061",
+        "u0062",
+        "u0063",
+        "u0064",
+        "u0065",
+        "u0066",
+        "u0067",
+        "u0068",
+        "u0069",
+        "u0070",
+        "u0071",
+        "u0072",
+        "u0073",
+        "u0074",
+        "u0075",
+        "u0076"
+      ]
+    }
+  ],
+  "thresholds": {
+    "similarity": 0.84,
+    "recommendation": 0.92,
+    "min_tokens": 5,
+    "metric": "minimum(sequence-ratio, lexical-set-overlap)"
+  },
+  "verdict": "NO_CANDIDATES",
+  "groups": [],
+  "uncertain_matches": [
+    {
+      "id": "cross-take-ff639399ccbc88db",
+      "members": [
+        {
+          "segment_id": "02",
+          "utterance_id": "u0002"
+        },
+        {
+          "segment_id": "03",
+          "utterance_id": "u0002"
+        }
+      ],
+      "minimum_similarity": 0.9,
+      "decision": "REVIEW"
+    }
+  ],
+  "candidates": [],
+  "auto_apply": false
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 2,
+  "gate": "gate2",
+  "created_at": "2026-07-21T11:35:41.786441+00:00",
+  "fixes": [
+    {
+      "id": "fix-001",
+      "kind": "speech",
+      "segment_id": "01",
+      "description": "transcript-reviewed note=\"cut u0018 restart работа руками; word-timed captions\"",
+      "status": "OPEN",
+      "blocking": false,
+      "operation": "transcript-reviewed",
+      "arguments": {
+        "note": "cut u0018 restart работа руками; word-timed captions"
+      }
+    }
+  ],
+  "rule_candidates": [],
+  "source_files": [
+    "04_phase2/segments/01/fixes.md"
+  ],
+  "outcomes": [
+    {
+      "fix_id": "fix-001",
+      "status": "APPLIED",
+      "before_sha256": "sha256:f7bd6f0720d666b5b74c9156682cd53b03ca96cf2f0c09d783fa4e9e3bf5c438",
+      "after_sha256": "sha256:157e0379ef3dacd809a7a61a8c9c4947f877d8595ee6b3f7daf345e666247ef3"
+    }
+  ],
+  "rule_proposals_added": []
+}

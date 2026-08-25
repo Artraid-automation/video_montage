@@ -1,0 +1,76 @@
+{
+  "schema_version": 2,
+  "id": "asya-reel-pilot",
+  "title": "Asya reel pilot",
+  "profile": "longform-16x9",
+  "format": "longform",
+  "style_version": "dankoe-mevga-v1",
+  "default_grade": "dankoe",
+  "transcription": {
+    "provider": "faster-whisper",
+    "model": "small",
+    "language": "ru"
+  },
+  "verification_transcription": {
+    "provider": "faster-whisper",
+    "model": "small",
+    "language": "ru"
+  },
+  "render_profile": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "crf": 18,
+    "preset": "medium",
+    "captions": true,
+    "caption_font_ratio": 0.15
+  },
+  "transcript_verification": {
+    "max_wer": 0.12,
+    "min_order_ratio": 0.9,
+    "max_silence_s": 1.2,
+    "max_timing_drift_s": 0.85,
+    "max_timing_drift_ratio": 0.25,
+    "max_lead_in_silence_s": 0.8,
+    "reject_adjacent_echoes": true,
+    "reject_repeated_openers": true
+  },
+  "editorial": {
+    "pause_threshold_s": 0.8,
+    "repetition_similarity": 0.86,
+    "llm": {
+      "provider": "agent",
+      "prompt_version": "gate1-editorial-cohesion.v2"
+    }
+  },
+  "visual_planning": {
+    "enabled": false,
+    "cadence_seconds": 45.0,
+    "max_per_segment": 12
+  },
+  "visual_llm": {
+    "provider": "agent",
+    "prompt_version": "gate1-visual-producer.v1"
+  },
+  "visual_probe_interval_s": 3.0,
+  "library_root": "E:\\Xampp\\MCP монтаж\\library\\broll",
+  "archive_root": "E:\\Xampp\\MCP монтаж\\projects\\_archive",
+  "publishing": {
+    "title": "Asya reel pilot",
+    "description": "",
+    "chapter_titles": {
+      "01": "Main"
+    }
+  },
+  "telegram_delivery": {
+    "enabled": true,
+    "width": 1920,
+    "height": 1080,
+    "speed_factor": 1.0,
+    "send_as": "document"
+  },
+  "framing": {
+    "mode": "preserve-composition",
+    "notes": "Source is already 16:9 with speaker on left third and X10 brand plate on right. Do not face-center crop; scale 1280x720 → 1920x1080. Captions follow face X (chest under speaker)."
+  }
+}

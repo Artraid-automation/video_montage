@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.video.factory/contracts/edit-plan.schema.json",
+  "title": "Semantic Edit Plan",
+  "type": "object",
+  "required": ["schema_version", "project_id", "version", "status", "segments"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "project_id": {"type": "string"},
+    "version": {"type": "integer", "minimum": 1},
+    "status": {"enum": ["proposed", "approved", "building", "rendered", "rejected"]},
+    "format": {"enum": ["youtube", "shorts", "custom"]},
+    "segments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "source_id", "source_in_s", "source_out_s", "intent"],
+        "properties": {
+          "id": {"type": "string"},
+          "source_id": {"type": "string"},
+          "source_in_s": {"type": "number", "minimum": 0},
+          "source_out_s": {"type": "number", "minimum": 0},
+          "intent": {"type": "string"},
+          "transcript": {"type": "string"},
+          "audio_fade_ms": {"type": "integer", "minimum": 0},
+          "visual": {
+            "type": "object",
+            "properties": {
+              "mode": {"enum": ["a_roll", "screen", "b_roll", "motion", "still", "none"]},
+              "query": {"type": ["string", "null"]},
+              "asset_id": {"type": ["string", "null"]},
+              "notes": {"type": ["string", "null"]}
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}
+

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "kind": "film-continuity",
+  "worker_version": "film-continuity-v1",
+  "input_bindings": [
+    {
+      "segment_id": "01",
+      "transcript_sha256": "sha256:8c5402108204d812c5bf3a6b5354810c77fd6a83eeefdc3ce1d06f60e5af926c",
+      "keep_ids": [
+        "u0001",
+        "u0002",
+        "u0003",
+        "u0004"
+      ]
+    },
+    {
+      "segment_id": "02",
+      "transcript_sha256": "sha256:621e52a9298739d50f764923d19fa17c9af624db0bab4b486a8a5dfc8d0219e7",
+      "keep_ids": [
+        "u0001",
+        "u0002",
+        "u0004",
+        "u0005"
+      ]
+    },
+    {
+      "segment_id": "03",
+      "transcript_sha256": "sha256:21e44be1d0ad7ea55ce0a446eb782f8048628cb3a2930c3ba3b4cca5b6ed36e5",
+      "keep_ids": [
+        "u0058p1"
+      ]
+    }
+  ],
+  "thresholds": {
+    "similarity": 0.84,
+    "recommendation": 0.92,
+    "min_tokens": 5,
+    "metric": "minimum(sequence-ratio, lexical-set-overlap)"
+  },
+  "verdict": "PASS",
+  "blocking_groups": [],
+  "uncertain_matches": []
+}

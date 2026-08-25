@@ -1,0 +1,18 @@
+{
+  "schema_version": 2,
+  "project_id": "slava-reel-pilot",
+  "gate": "gate2",
+  "reviewer": "author",
+  "approved_at": "2026-07-21T13:13:34.788151+00:00",
+  "ledger_revision": 106,
+  "manifest": {
+    "kind": "gate2-manifest",
+    "path": "04_phase2/gate2-manifest.json",
+    "sha256": "sha256:70a54849d3650766122501daaf5e91a25fa0f9ea2484ffe5693d27190c7bd9ba",
+    "size_bytes": 2239
+  },
+  "manifest_content_hash": "sha256:1b79c01726c5e367712d989c746ff569e3acfc8ed4004122be2e38badff90afc",
+  "style_version": null,
+  "provider_versions": {},
+  "accepted_exceptions": []
+}

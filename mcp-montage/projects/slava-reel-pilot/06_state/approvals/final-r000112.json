@@ -1,0 +1,18 @@
+{
+  "schema_version": 2,
+  "project_id": "slava-reel-pilot",
+  "gate": "final",
+  "reviewer": "author",
+  "approved_at": "2026-07-22T02:59:03.093456+00:00",
+  "ledger_revision": 112,
+  "manifest": {
+    "kind": "final-manifest",
+    "path": "05_final/final-manifest.json",
+    "sha256": "sha256:7997d449c1c265992c60ca8d6b3ccc1ba2578a4528dc295437ca050747a7d3d5",
+    "size_bytes": 2462
+  },
+  "manifest_content_hash": "sha256:3be6f9ea51ff36a3ab5667df6f15e58d58daee337b68ff2ac75c9f7387b82e70",
+  "style_version": null,
+  "provider_versions": {},
+  "accepted_exceptions": []
+}

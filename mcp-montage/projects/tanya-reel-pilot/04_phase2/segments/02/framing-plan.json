@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "kind": "framing-plan",
+  "worker_version": "framing-face-v4",
+  "source": {
+    "width": 720,
+    "height": 1280
+  },
+  "output": {
+    "width": 720,
+    "height": 1280
+  },
+  "face_source": {
+    "x": 177,
+    "y": 362,
+    "w": 330,
+    "h": 330
+  },
+  "scale": 1.180122,
+  "scaled_w": 850,
+  "scaled_h": 1510,
+  "crop_x": 50,
+  "crop_y": 226,
+  "targets": {
+    "eye_line_ratio": 0.22,
+    "face_height_ratio": 0.26,
+    "headroom_target": 0.1,
+    "headroom_min": 0.04,
+    "headroom_max": 0.18
+  },
+  "predicted": {
+    "headroom_ratio": 0.1648,
+    "face_height_ratio": 0.3211,
+    "eye_line_ratio": 0.2869
+  },
+  "ffmpeg_vf": "scale=850:1510,crop=720:1280:50:226",
+  "segment_id": "02",
+  "samples": [
+    {
+      "timestamp_s": 1.07,
+      "face": {
+        "x": 180,
+        "y": 370,
+        "w": 325,
+        "h": 325
+      },
+      "path": "sample-01-1.07.jpg"
+    },
+    {
+      "timestamp_s": 2.13,
+      "face": {
+        "x": 200,
+        "y": 200,
+        "w": 433,
+        "h": 433
+      },
+      "path": "sample-02-2.13.jpg"
+    },
+    {
+      "timestamp_s": 3.19,
+      "face": {
+        "x": 182,
+        "y": 371,
+        "w": 349,
+        "h": 349
+      },
+      "path": "sample-03-3.19.jpg"
+    },
+    {
+      "timestamp_s": 4.45,
+      "face": {
+        "x": 177,
+        "y": 362,
+        "w": 330,
+        "h": 330
+      },
+      "path": "sample-04-4.45.jpg"
+    },
+    {
+      "timestamp_s": 7.02,
+      "face": {
+        "x": 135,
+        "y": 196,
+        "w": 436,
+        "h": 436
+      },
+      "path": "sample-05-7.02.jpg"
+    },
+    {
+      "timestamp_s": 9.59,
+      "face": {
+        "x": 215,
+        "y": 381,
+        "w": 360,
+        "h": 360
+      },
+      "path": "sample-06-9.59.jpg"
+    },
+    {
+      "timestamp_s": 10.63,
+      "face": {
+        "x": 194,
+        "y": 364,
+        "w": 323,
+        "h": 323
+      },
+      "path": "sample-07-10.63.jpg"
+    },
+    {
+      "timestamp_s": 11.86,
+      "face": {
+        "x": 140,
+        "y": 194,
+        "w": 462,
+        "h": 462
+      },
+      "path": "sample-08-11.86.jpg"
+    },
+    {
+      "timestamp_s": 13.09,
+      "face": {
+        "x": 167,
+        "y": 365,
+        "w": 344,
+        "h": 344
+      },
+      "path": "sample-09-13.09.jpg"
+    },
+    {
+      "timestamp_s": 14.13,
+      "face": {
+        "x": 179,
+        "y": 370,
+        "w": 329,
+        "h": 329
+      },
+      "path": "sample-10-14.13.jpg"
+    },
+    {
+      "timestamp_s": 21.08,
+      "face": {
+        "x": 103,
+        "y": 184,
+        "w": 463,
+        "h": 463
+      },
+      "path": "sample-11-21.08.jpg"
+    },
+    {
+      "timestamp_s": 28.03,
+      "face": {
+        "x": 119,
+        "y": 404,
+        "w": 336,
+        "h": 336
+      },
+      "path": "sample-12-28.03.jpg"
+    }
+  ],
+  "sample_strategy": {
+    "scale_from": "scored_talking_head_face",
+    "crop_from": "median_center_crown",
+    "caption_from": "max_face_bottom",
+    "face_count": 12
+  },
+  "face_output": {
+    "x": 164,
+    "y": 211,
+    "w": 412,
+    "h": 411
+  },
+  "face_bottom_max": 647,
+  "caption": {
+    "caption_pos_x": 360,
+    "caption_pos_y": 870,
+    "face": {
+      "x": 164,
+      "y": 211,
+      "w": 412,
+      "h": 411
+    },
+    "face_bottom_max": 647,
+    "placement": "below-face-chest"
+  }
+}

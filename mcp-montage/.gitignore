@@ -1,0 +1,50 @@
+# Heavy media and generated work
+projects/*/01_inbox/
+projects/*/02_source/
+projects/*/03_project_broll/
+projects/*/04_work/cache/
+projects/*/04_work/proxies/
+projects/*/05_review/*.mp4
+projects/*/05_review/frames/
+projects/*/06_exports/
+library/broll/originals/
+library/broll/proxies/
+
+# Existing legacy media workspace
+прокты/
+lab/references/*/source/
+
+# Third-party local experiments
+davinci-resolve-mcp/
+
+# Local tools and caches
+**/__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.DS_Store
+Thumbs.db
+
+
+# Video Factory v2 runtime media/state
+projects/*/01_raw/
+projects/*/03_phase1/segments/*/grade-samples/
+projects/*/04_phase2/cache/
+projects/*/04_phase2/segments/*/*.mp4
+projects/*/04_phase2/segments/*/clips/
+projects/*/04_phase2/segments/*/probes/
+projects/*/04_phase2/segments/*/framing-samples/
+projects/*/04_phase2/segments/*/motion-v2-probes/
+projects/*/04_phase2/segments/*/seek-test/
+tmp_motion_check_*.jpg
+audit/gate2-visual-review/*.jpg
+projects/*/05_final/*.mp4
+projects/*/05_final/probes/
+projects/*/06_state/*.lock
+projects/*/07_quarantine/
+projects/*/*.mp4
+audit/model-cache/
+audit/fixtures/**/*.wav
+audit/fixtures/**/*.mp4
+audit/runs/

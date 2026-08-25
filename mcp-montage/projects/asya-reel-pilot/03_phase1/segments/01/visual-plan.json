@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "kind": "visual-plan",
+  "worker_version": "visual-planner-v4",
+  "segment_id": "01",
+  "scenes": [
+    {
+      "id": "1c",
+      "anchor": "u0011",
+      "type": "motion",
+      "brief": "Три маркера лидера: открытость · эрудиция · влияние на других (третий ярче).. Зачем: Список качеств лидера — один доминирующий beat на «влиянием»",
+      "asset": null,
+      "resolution": "CONFIGURED",
+      "origin": "AGENT",
+      "status": "PROPOSED"
+    },
+    {
+      "id": "1d",
+      "anchor": "u0015",
+      "type": "motion",
+      "brief": "Вход в команду → вспышка смелости/яркости (кольца роста), X10 остаётся в кадре справа.. Зачем: Payoff «смелее, ярче, новые грани» поверх финальной речи; не закрывать бренд-плашку",
+      "asset": null,
+      "resolution": "CONFIGURED",
+      "origin": "AGENT",
+      "status": "PROPOSED"
+    }
+  ],
+  "searches": [],
+  "status": "PROPOSED",
+  "transcript_sha256": "sha256:9264f52b53a0a48b26207be4d57aeab6548616d9c71111ddead3c0e18a1d06a2",
+  "style_scenes": [
+    {
+      "id": "s1",
+      "recipe": "hook_title",
+      "anchor": "u0006",
+      "what": "Крупный italic gold title на груди слева от центра (под спикером).",
+      "why": "situation: сильный тезис/обложка входа; tag #hook #promise — не каждая реплика",
+      "origin": "AGENT",
+      "status": "PROPOSED",
+      "title": "Приходим\nна людей"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": 2,
+  "kind": "llm-editorial-request",
+  "worker_version": "llm-editorial-v3",
+  "prompt_version": "gate1-editorial-cohesion.v2",
+  "segment_id": "02",
+  "media_end_s": 43.0,
+  "media_end_timecode": "0:43.000",
+  "blocks": [
+    {
+      "id": "u0001",
+      "start_s": 0.82,
+      "end_s": 3.44,
+      "text": "Но ведь дело не в сумме, дело в приоритете.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0002",
+      "start_s": 4.2,
+      "end_s": 9.84,
+      "text": "В день получения зарплаты, пока ты ее еще не начал дербанить, отложи хотя бы десятую часть.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0004",
+      "start_s": 10.38,
+      "end_s": 13.34,
+      "text": "Если ты получаешь 60 тысяч, то отложи эти 6.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0005",
+      "start_s": 13.88,
+      "end_s": 28.28,
+      "text": "И желательно, не на какой-то счет в этом банке, а на счет в другом банке, откуда тебе будет проблематично эти деньги переводить обратно, и у тебя будет время подумать, нужны ли тебе эти дополнительные траты из вот этих вот сохраненных тобой средств.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0010",
+      "start_s": 28.28,
+      "end_s": 43.0,
+      "text": "Зачастую вот эта вот разница между 60 и 54 тысячами, она не будет ощущаться, но уже через год при таких накоплениях у тебя сформируется очень такая приятная сумма, которую можно назвать существенной.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    }
+  ]
+}

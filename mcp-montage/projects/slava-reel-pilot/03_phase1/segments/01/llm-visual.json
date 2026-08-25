@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "kind": "llm-visual-result",
+  "worker_version": "llm-visual-v1",
+  "prompt_version": "gate1-visual-producer.v1",
+  "segment_id": "01",
+  "proposals": [],
+  "style_scenes": [
+    {
+      "id": "s01-hook",
+      "recipe": "hook_title",
+      "anchor": "u0016",
+      "what": "Крупный italic gold title поверх хука — обложка обещания как в MeVGa 0–5s",
+      "why": "Ситуация hook_title: холодный старт / тезис ролика; tag #promise #thesis",
+      "origin": "AGENT",
+      "status": "PROPOSED",
+      "title": "Как добиться в жизни\nвсего, что хочешь?"
+    },
+    {
+      "id": "s01-list",
+      "recipe": "framework_list",
+      "anchor": "u0017",
+      "what": "Blur+darken + 4-step spotlight list поверх перечисления системы",
+      "why": "Ситуация framework_list: 4 шага playbook в KEEP; MeVGa ~5–15s pattern; tag #steps #system",
+      "origin": "AGENT",
+      "status": "PROPOSED",
+      "lines": [
+        "Ясное видение",
+        "Ежедневная учёба",
+        "Ежедневная работа руками",
+        "Упорство через постоянные повторы"
+      ]
+    }
+  ],
+  "narrative_summary": "MeVGa fork: hook_title → framework_list на первых KEEP; дальше только captions_body (default) на majority/CTA. Без MOTION/BROLL и без senses Тани.",
+  "risks": [
+    "List и title не должны одновременно кроить один такт с body captions — compositor order",
+    "Большой вырез 70s→442s: стык хук→majority проверить на Gate 1 preview"
+  ],
+  "provider": "agent"
+}

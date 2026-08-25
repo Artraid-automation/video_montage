@@ -1,0 +1,192 @@
+{
+  "schema_version": 2,
+  "gate": "gate2",
+  "created_at": "2026-07-20T05:43:05.276519+00:00",
+  "fixes": [
+    {
+      "id": "fix-001",
+      "kind": "speech",
+      "segment_id": "01",
+      "description": "transcript-reviewed",
+      "status": "OPEN",
+      "blocking": false,
+      "operation": "transcript-reviewed",
+      "arguments": {}
+    },
+    {
+      "id": "fix-001",
+      "kind": "speech",
+      "segment_id": "02",
+      "description": "transcript-reviewed",
+      "status": "OPEN",
+      "blocking": false,
+      "operation": "transcript-reviewed",
+      "arguments": {}
+    },
+    {
+      "id": "fix-001",
+      "kind": "speech",
+      "segment_id": "03",
+      "description": "cut entry=u0001",
+      "status": "OPEN",
+      "blocking": false,
+      "operation": "cut",
+      "arguments": {
+        "entry": "u0001"
+      }
+    },
+    {
+      "id": "fix-002",
+      "kind": "speech",
+      "segment_id": "03",
+      "description": "cut entry=u0002",
+      "status": "OPEN",
+      "blocking": false,
+      "operation": "cut",
+      "arguments": {
+        "entry": "u0002"
+      }
+    },
+    {
+      "id": "fix-003",
+      "kind": "speech",
+      "segment_id": "03",
+      "description": "cut entry=u0004",
+      "status": "OPEN",
+      "blocking": false,
+      "operation": "cut",
+      "arguments": {
+        "entry": "u0004"
+      }
+    },
+    {
+      "id": "fix-004",
+      "kind": "visual",
+      "segment_id": "03",
+      "description": "remove-visual entry=u0004",
+      "status": "OPEN",
+      "blocking": false,
+      "operation": "remove-visual",
+      "arguments": {
+        "entry": "u0004"
+      }
+    },
+    {
+      "id": "fix-005",
+      "kind": "speech",
+      "segment_id": "03",
+      "description": "cut entry=u0005",
+      "status": "OPEN",
+      "blocking": false,
+      "operation": "cut",
+      "arguments": {
+        "entry": "u0005"
+      }
+    },
+    {
+      "id": "fix-006",
+      "kind": "speech",
+      "segment_id": "03",
+      "description": "cut entry=u0007",
+      "status": "OPEN",
+      "blocking": false,
+      "operation": "cut",
+      "arguments": {
+        "entry": "u0007"
+      }
+    },
+    {
+      "id": "fix-007",
+      "kind": "speech",
+      "segment_id": "03",
+      "description": "cut entry=u0010",
+      "status": "OPEN",
+      "blocking": false,
+      "operation": "cut",
+      "arguments": {
+        "entry": "u0010"
+      }
+    },
+    {
+      "id": "fix-008",
+      "kind": "speech",
+      "segment_id": "03",
+      "description": "cut entry=u0012",
+      "status": "OPEN",
+      "blocking": false,
+      "operation": "cut",
+      "arguments": {
+        "entry": "u0012"
+      }
+    }
+  ],
+  "rule_candidates": [],
+  "source_files": [
+    "04_phase2/segments/01/fixes.md",
+    "04_phase2/segments/02/fixes.md",
+    "04_phase2/segments/03/fixes.md"
+  ],
+  "outcomes": [
+    {
+      "fix_id": "fix-001",
+      "status": "APPLIED",
+      "before_sha256": "sha256:0da8ffb677b2583a5b2bd4a06fb19652eb4895d59ae45a1e0d4fa077368d62c1",
+      "after_sha256": "sha256:84690054a03db9f06a42d68b1be24eaebcbbcfa4542ea4170108fb8ad0d1eb72"
+    },
+    {
+      "fix_id": "fix-001",
+      "status": "APPLIED",
+      "before_sha256": "sha256:868ae793eeba4797cc613189eac774a759e905bf5d80fa96256fcafb452f5044",
+      "after_sha256": "sha256:93876170734f132d25125efbf4d408c608d56ad66ac75912ca79dd6147710d7a"
+    },
+    {
+      "fix_id": "fix-001",
+      "status": "APPLIED",
+      "before_sha256": "sha256:9dad37ea515164bf66b32dfd22c2132dd2b9bf1ccc29c87964e5923bfd4b128e",
+      "after_sha256": "sha256:9a8b805fce6f5c30beea35bb295d097b5f0a7fba60258fbe26034d42c59baa5b"
+    },
+    {
+      "fix_id": "fix-002",
+      "status": "APPLIED",
+      "before_sha256": "sha256:9a8b805fce6f5c30beea35bb295d097b5f0a7fba60258fbe26034d42c59baa5b",
+      "after_sha256": "sha256:57d1c568ca7b47d77be51b3a00c47cc819d9be16bef5504fbcd84c63014eabba"
+    },
+    {
+      "fix_id": "fix-003",
+      "status": "APPLIED",
+      "before_sha256": "sha256:57d1c568ca7b47d77be51b3a00c47cc819d9be16bef5504fbcd84c63014eabba",
+      "after_sha256": "sha256:ca9d933c79ebe2de5a170306371e3990ef104cbda3428beca53b220088277bbf"
+    },
+    {
+      "fix_id": "fix-004",
+      "status": "APPLIED",
+      "before_sha256": "sha256:ca9d933c79ebe2de5a170306371e3990ef104cbda3428beca53b220088277bbf",
+      "after_sha256": "sha256:7ea4499da741e39a98cc400e4f0e69b573c6252d6dd7702f1d0d3ba3260aefcc"
+    },
+    {
+      "fix_id": "fix-005",
+      "status": "APPLIED",
+      "before_sha256": "sha256:7ea4499da741e39a98cc400e4f0e69b573c6252d6dd7702f1d0d3ba3260aefcc",
+      "after_sha256": "sha256:3cc85bbbcc2b97a9b660b8f2070f43b3e64d761d95911e046ce20cba2249b0a6"
+    },
+    {
+      "fix_id": "fix-006",
+      "status": "APPLIED",
+      "before_sha256": "sha256:3cc85bbbcc2b97a9b660b8f2070f43b3e64d761d95911e046ce20cba2249b0a6",
+      "after_sha256": "sha256:e7fd835105165f2fd7af754e590ef2e2feb5281a953a0e386f8dbf2b49432613"
+    },
+    {
+      "fix_id": "fix-007",
+      "status": "APPLIED",
+      "before_sha256": "sha256:e7fd835105165f2fd7af754e590ef2e2feb5281a953a0e386f8dbf2b49432613",
+      "after_sha256": "sha256:09a8ad3b0af02fe1683c7a14132e40018b3f061c5eeb0dd1c00d4e441c47e978"
+    },
+    {
+      "fix_id": "fix-008",
+      "status": "APPLIED",
+      "before_sha256": "sha256:09a8ad3b0af02fe1683c7a14132e40018b3f061c5eeb0dd1c00d4e441c47e978",
+      "after_sha256": "sha256:088818c6cdc93c35f7100221c1c003c495276d106ae3c65ca4135adba14efdd3"
+    }
+  ],
+  "rule_proposals_added": []
+}

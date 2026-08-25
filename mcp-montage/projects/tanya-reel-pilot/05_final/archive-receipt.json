@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "verdict": "VERIFIED",
+  "verified_at": "2026-07-21T08:49:12.285132+00:00",
+  "archive_root": "E:\\Xampp\\MCP монтаж\\projects\\_archive",
+  "archive_directory": "E:\\Xampp\\MCP монтаж\\projects\\_archive\\tanya-reel-pilot",
+  "source_sha256": "sha256:21524cc4911f378f6c82e7a1144b97de8bfe5a685c44ab3193322dd8c95b3809",
+  "destination_sha256": "sha256:21524cc4911f378f6c82e7a1144b97de8bfe5a685c44ab3193322dd8c95b3809",
+  "entries": [
+    {
+      "role": "master",
+      "source": "E:\\Xampp\\MCP монтаж\\projects\\tanya-reel-pilot\\05_final\\tanya-reel-pilot.mp4",
+      "destination": "E:\\Xampp\\MCP монтаж\\projects\\_archive\\tanya-reel-pilot\\final\\tanya-reel-pilot.mp4",
+      "sha256": "sha256:21524cc4911f378f6c82e7a1144b97de8bfe5a685c44ab3193322dd8c95b3809",
+      "size_bytes": 26907104
+    },
+    {
+      "role": "publishing",
+      "source": "E:\\Xampp\\MCP монтаж\\projects\\tanya-reel-pilot\\05_final\\publishing-package\\title.txt",
+      "destination": "E:\\Xampp\\MCP монтаж\\projects\\_archive\\tanya-reel-pilot\\publishing-package\\title.txt",
+      "sha256": "sha256:84e93e85a1d22410d05d1317be61899045e68500ee24b2153c0f5a7d3b4ac609",
+      "size_bytes": 18
+    },
+    {
+      "role": "publishing",
+      "source": "E:\\Xampp\\MCP монтаж\\projects\\tanya-reel-pilot\\05_final\\publishing-package\\description.md",
+      "destination": "E:\\Xampp\\MCP монтаж\\projects\\_archive\\tanya-reel-pilot\\publishing-package\\description.md",
+      "sha256": "sha256:7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "size_bytes": 2
+    },
+    {
+      "role": "publishing",
+      "source": "E:\\Xampp\\MCP монтаж\\projects\\tanya-reel-pilot\\05_final\\publishing-package\\chapters.txt",
+      "destination": "E:\\Xampp\\MCP монтаж\\projects\\_archive\\tanya-reel-pilot\\publishing-package\\chapters.txt",
+      "sha256": "sha256:e903a54cbf0dcf1881298344fe30188a67ab7b20a7fab2d411648d0598c4f448",
+      "size_bytes": 45
+    },
+    {
+      "role": "publishing",
+      "source": "E:\\Xampp\\MCP монтаж\\projects\\tanya-reel-pilot\\05_final\\publishing-package\\manifest.json",
+      "destination": "E:\\Xampp\\MCP монтаж\\projects\\_archive\\tanya-reel-pilot\\publishing-package\\manifest.json",
+      "sha256": "sha256:80e118f88dc59c3b2c42796e5748a6d0bd09eb2d8a6128bd6d8f06dc08716ac8",
+      "size_bytes": 301
+    },
+    {
+      "role": "raw",
+      "source": "E:\\Xampp\\MCP монтаж\\projects\\tanya-reel-pilot\\01_raw\\01_camera.mp4",
+      "destination": "E:\\Xampp\\MCP монтаж\\projects\\_archive\\tanya-reel-pilot\\raw\\01_camera.mp4",
+      "sha256": "sha256:c64ec608bc0f53fd62767e06bde9c29a3a728d4d662f53fb84e72a0ad1c40606",
+      "size_bytes": 17053034
+    },
+    {
+      "role": "raw",
+      "source": "E:\\Xampp\\MCP монтаж\\projects\\tanya-reel-pilot\\01_raw\\02_camera.mp4",
+      "destination": "E:\\Xampp\\MCP монтаж\\projects\\_archive\\tanya-reel-pilot\\raw\\02_camera.mp4",
+      "sha256": "sha256:5004585c202332c9f7152962d2a8c22aac8a247cc91ae5bd4c5562ab06da91da",
+      "size_bytes": 26474107
+    },
+    {
+      "role": "raw",
+      "source": "E:\\Xampp\\MCP монтаж\\projects\\tanya-reel-pilot\\01_raw\\03_camera.mp4",
+      "destination": "E:\\Xampp\\MCP монтаж\\projects\\_archive\\tanya-reel-pilot\\raw\\03_camera.mp4",
+      "sha256": "sha256:6c54e7197e7336d8cfc7d5bd93dadd6103c0de80dcd0b87b6ce3758d1af0661b",
+      "size_bytes": 1101870496
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "id": "slava-reel-pilot",
+  "title": "Slava reel pilot",
+  "transcription": {
+    "provider": "faster-whisper",
+    "model": "small",
+    "language": "ru"
+  },
+  "verification_transcription": {
+    "provider": "faster-whisper",
+    "model": "small",
+    "language": "ru"
+  },
+  "editorial": {
+    "pause_threshold_s": 0.8,
+    "repetition_similarity": 0.86,
+    "llm": {
+      "provider": "agent",
+      "prompt_version": "gate1-editorial-cohesion.v2"
+    }
+  },
+  "visual_llm": {
+    "provider": "agent",
+    "prompt_version": "gate1-visual-producer.v1"
+  },
+  "library_root": "E:\\Xampp\\MCP монтаж\\library\\broll",
+  "archive_root": "E:\\Xampp\\MCP монтаж\\projects\\_archive",
+  "publishing": {
+    "title": "Slava reel pilot",
+    "description": "Dan Koe / MeVGa visual fork — reel only, meta cut",
+    "chapter_titles": {
+      "01": "Main take"
+    }
+  },
+  "profile": "reels-9x16",
+  "format": "reels",
+  "style_version": "dankoe-mevga-v1",
+  "default_grade": "dankoe",
+  "render_profile": {
+    "width": 720,
+    "height": 1280,
+    "fps": 30,
+    "crf": 20,
+    "preset": "veryfast",
+    "captions": true,
+    "audio_filter": "loudnorm=I=-16:TP=-1.5:LRA=11"
+  },
+  "transcript_verification": {
+    "max_wer": 0.14,
+    "min_order_ratio": 0.88,
+    "max_silence_s": 1.2,
+    "max_timing_drift_s": 0.85,
+    "max_timing_drift_ratio": 0.25,
+    "max_lead_in_silence_s": 0.8,
+    "reject_adjacent_echoes": true,
+    "reject_repeated_openers": true
+  },
+  "visual_planning": {
+    "enabled": false,
+    "cadence_seconds": 30.0,
+    "max_per_segment": 6
+  },
+  "visual_probe_interval_s": 2.0,
+  "gate2_random_probe_count": 5,
+  "telegram_delivery": {
+    "enabled": true,
+    "width": 1080,
+    "height": 1920,
+    "speed_factor": 1.15,
+    "send_as": "document"
+  }
+}

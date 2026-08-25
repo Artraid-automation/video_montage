@@ -1,0 +1,99 @@
+{
+  "schema_version": 2,
+  "kind": "llm-editorial-result",
+  "worker_version": "llm-editorial-v3",
+  "prompt_version": "gate1-editorial-cohesion.v2",
+  "segment_id": "01",
+  "request_block_count": 12,
+  "working_block_count": 12,
+  "splits": [],
+  "decisions": [
+    {
+      "id": "u0001",
+      "kind": "cut",
+      "reason": "вопрос интервьюера"
+    },
+    {
+      "id": "u0002",
+      "kind": "cut",
+      "reason": "вопрос интервьюера"
+    },
+    {
+      "id": "u0003",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0004",
+      "kind": "cut",
+      "reason": "директива съёмки"
+    },
+    {
+      "id": "u0006",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0007",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0009",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0011",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0014",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0015",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0020",
+      "kind": "cut",
+      "reason": "маркер пересъёма"
+    },
+    {
+      "id": "u0023",
+      "kind": "cut",
+      "reason": "обрубок"
+    }
+  ],
+  "narrative_summary": "Ася: сомнение при входе → женщины в сообществе → лидер → путь в команду X10 / «экзи»-движение и рост смелости.",
+  "risks": [
+    "ASR: «общество»/«про женщины»/«ирудиции»/«экзесидвижение» — проверить на слух, текст не править в editorial",
+    "u0003 короткое сомнение — если это голос интервьюера, вырезать на Gate 1 review",
+    "после u0015 обрыв перед «Заново» — нормальный конец дубля"
+  ],
+  "coverage_end_s": 83.94,
+  "media_end_s": 83.94,
+  "source_request": {
+    "segment_id": "01",
+    "prompt_version": "gate1-editorial-cohesion.v2",
+    "block_ids": [
+      "u0001",
+      "u0002",
+      "u0003",
+      "u0004",
+      "u0006",
+      "u0007",
+      "u0009",
+      "u0011",
+      "u0014",
+      "u0015",
+      "u0020",
+      "u0023"
+    ]
+  },
+  "provider": "agent"
+}

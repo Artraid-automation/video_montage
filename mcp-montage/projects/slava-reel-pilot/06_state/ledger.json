@@ -1,0 +1,1418 @@
+{
+  "schema_version": 2,
+  "project_id": "slava-reel-pilot",
+  "revision": 113,
+  "state": "COMPLETED",
+  "updated_at": "2026-07-22T02:59:03.734186+00:00",
+  "run": null,
+  "gates": {
+    "gate1": {
+      "status": "APPROVED",
+      "manifest": {
+        "kind": "gate1-manifest",
+        "path": "03_phase1/gate1-manifest.json",
+        "sha256": "sha256:36e114c0872dc4faf2b868cbca8bd967901f7e74536ec2c414c38aff31717cef",
+        "size_bytes": 2688
+      },
+      "manifest_content_hash": "sha256:87549fa2adab94dc44e56f47702b931f3abb3765f004bb71b50d66876a831df0",
+      "prepared_at": "2026-07-21T10:41:00.698041+00:00",
+      "approval": {
+        "kind": "approval",
+        "path": "06_state/approvals/gate1-r000074.json",
+        "sha256": "sha256:1377ffe6565610479c0160172defe313c4159a6e53a5f285d86a0b7462b2e5fd",
+        "size_bytes": 880
+      }
+    },
+    "gate2": {
+      "status": "APPROVED",
+      "manifest": {
+        "kind": "gate2-manifest",
+        "path": "04_phase2/gate2-manifest.json",
+        "sha256": "sha256:70a54849d3650766122501daaf5e91a25fa0f9ea2484ffe5693d27190c7bd9ba",
+        "size_bytes": 2239
+      },
+      "manifest_content_hash": "sha256:1b79c01726c5e367712d989c746ff569e3acfc8ed4004122be2e38badff90afc",
+      "prepared_at": "2026-07-21T13:01:50.254106+00:00",
+      "approval": {
+        "kind": "approval",
+        "path": "06_state/approvals/gate2-r000106.json",
+        "sha256": "sha256:f051a06e79d2793800a7a3d27a8313feaeb50258f1011c94f74c4958db25efbe",
+        "size_bytes": 575
+      }
+    },
+    "final": {
+      "status": "APPROVED",
+      "manifest": {
+        "kind": "final-manifest",
+        "path": "05_final/final-manifest.json",
+        "sha256": "sha256:7997d449c1c265992c60ca8d6b3ccc1ba2578a4528dc295437ca050747a7d3d5",
+        "size_bytes": 2462
+      },
+      "manifest_content_hash": "sha256:3be6f9ea51ff36a3ab5667df6f15e58d58daee337b68ff2ac75c9f7387b82e70",
+      "prepared_at": "2026-07-21T13:15:14.417908+00:00",
+      "approval": {
+        "kind": "approval",
+        "path": "06_state/approvals/final-r000112.json",
+        "sha256": "sha256:2cfd70077310d24c590dd68aba7a159c312e30c8f7d48b1fc163793787ebd42b",
+        "size_bytes": 574
+      }
+    }
+  },
+  "approvals": [
+    {
+      "gate": "gate1",
+      "record": {
+        "kind": "approval",
+        "path": "06_state/approvals/gate1-r000023.json",
+        "sha256": "sha256:2803118313989d56518971c7c963da03dc1caf7b4dfdf48bcc03d73823eb7256",
+        "size_bytes": 870
+      },
+      "approved_at": "2026-07-21T08:27:44.586446+00:00"
+    },
+    {
+      "gate": "gate1",
+      "record": {
+        "kind": "approval",
+        "path": "06_state/approvals/gate1-r000074.json",
+        "sha256": "sha256:1377ffe6565610479c0160172defe313c4159a6e53a5f285d86a0b7462b2e5fd",
+        "size_bytes": 880
+      },
+      "approved_at": "2026-07-21T10:41:00.780408+00:00"
+    },
+    {
+      "gate": "gate2",
+      "record": {
+        "kind": "approval",
+        "path": "06_state/approvals/gate2-r000106.json",
+        "sha256": "sha256:f051a06e79d2793800a7a3d27a8313feaeb50258f1011c94f74c4958db25efbe",
+        "size_bytes": 575
+      },
+      "approved_at": "2026-07-21T13:13:34.788151+00:00"
+    },
+    {
+      "gate": "final",
+      "record": {
+        "kind": "approval",
+        "path": "06_state/approvals/final-r000112.json",
+        "sha256": "sha256:2cfd70077310d24c590dd68aba7a159c312e30c8f7d48b1fc163793787ebd42b",
+        "size_bytes": 574
+      },
+      "approved_at": "2026-07-22T02:59:03.093456+00:00"
+    }
+  ],
+  "revision_request": null,
+  "last_error": null,
+  "events": [
+    {
+      "id": "a2352c32c2e84e7c9fedf748afbb3b54",
+      "at": "2026-07-21T05:05:28.030564+00:00",
+      "type": "state_created",
+      "state": "NEW",
+      "details": {}
+    },
+    {
+      "id": "cbb6694e61f74fb6bf036c900677e8cf",
+      "at": "2026-07-21T05:05:37.372276+00:00",
+      "type": "phase1_started",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "NEW",
+        "inputs_hash": "sha256:1660d8d9d86a45e9b12cbe9e1433d272ff3281676e5320bc6e3a3bb3bf33d4b0"
+      }
+    },
+    {
+      "id": "9d16e58f61d44ee4b8aa3fdc332d91f2",
+      "at": "2026-07-21T05:05:37.692252+00:00",
+      "type": "checkpoint",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "checkpoint": "ingested"
+      }
+    },
+    {
+      "id": "3b17b6483292486fa25d58fde2cda6a4",
+      "at": "2026-07-21T05:11:13.194947+00:00",
+      "type": "worker_failed",
+      "state": "FAILED_RECOVERABLE",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "message": "llm editorial file provider missing response: E:\\Xampp\\MCP монтаж\\projects\\slava-reel-pilot\\03_phase1\\segments\\01\\llm-editorial-response.json. Write decisions JSON for the request artifact, then resume.",
+        "retryable": true
+      }
+    },
+    {
+      "id": "2f155353f41e49e3975149dd8ec6f4ca",
+      "at": "2026-07-21T05:12:33.746591+00:00",
+      "type": "worker_resumed",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "FAILED_RECOVERABLE"
+      }
+    },
+    {
+      "id": "0c28e5e9e2a046ef917a30597023c68c",
+      "at": "2026-07-21T05:12:34.578363+00:00",
+      "type": "checkpoint",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "checkpoint": "ingested"
+      }
+    },
+    {
+      "id": "190b13a6c6844e509a508413de00ef4c",
+      "at": "2026-07-21T05:18:27.391448+00:00",
+      "type": "worker_failed",
+      "state": "FAILED_RECOVERABLE",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "message": "llm editorial decisions reference unknown ids after splits: ['u0008', 'u0037', 'u0041', 'u0061', 'u0063', 'u0066', 'u0068', 'u0071', 'u0072', 'u0074', 'u0081', 'u0083', 'u0085', 'u0094', 'u0098', 'u0104', 'u0107', 'u0118', 'u0119', 'u0123', 'u0124', 'u0136', 'u0138', 'u0148', 'u0149', 'u0150', 'u0151', 'u0153', 'u0154', 'u0155', 'u0162', 'u0165', 'u0166', 'u0167', 'u0168', 'u0170', 'u0172', 'u0180', 'u0184', 'u0185', 'u0190']",
+        "retryable": true
+      }
+    },
+    {
+      "id": "52f887a98ad54191a99139018bf9ed32",
+      "at": "2026-07-21T05:19:35.489236+00:00",
+      "type": "worker_resumed",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "FAILED_RECOVERABLE"
+      }
+    },
+    {
+      "id": "97fce56a75114e8886d73377696852b2",
+      "at": "2026-07-21T05:19:36.113474+00:00",
+      "type": "checkpoint",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "checkpoint": "ingested"
+      }
+    },
+    {
+      "id": "a3d73a9e0e8d4b89966d9c9bbec8337e",
+      "at": "2026-07-21T05:24:08.210512+00:00",
+      "type": "worker_failed",
+      "state": "FAILED_RECOVERABLE",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "message": "llm editorial decisions reference unknown ids after splits: ['u0002', 'u0003', 'u0010', 'u0012', 'u0015', 'u0016', 'u0021', 'u0023', 'u0029', 'u0035', 'u0040', 'u0042', 'u0046', 'u0052', 'u0054', 'u0055', 'u0056', 'u0057', 'u0058', 'u0059', 'u0062', 'u0064', 'u0065', 'u0067', 'u0070', 'u0073', 'u0077', 'u0078', 'u0096', 'u0099', 'u0103', 'u0111', 'u0120', 'u0122', 'u0126', 'u0128', 'u0130', 'u0134', 'u0135', 'u0140', 'u0142', 'u0143', 'u0144', 'u0146', 'u0147', 'u0156', 'u0157', 'u0158', 'u0169']",
+        "retryable": true
+      }
+    },
+    {
+      "id": "ffafa6f8eaf140029e4934ee132d2707",
+      "at": "2026-07-21T05:27:26.659956+00:00",
+      "type": "worker_resumed",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "FAILED_RECOVERABLE"
+      }
+    },
+    {
+      "id": "5baf22c526874c93a544f4ada97d577d",
+      "at": "2026-07-21T05:27:27.480576+00:00",
+      "type": "checkpoint",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "checkpoint": "ingested"
+      }
+    },
+    {
+      "id": "e94b9469bb504385b9cdcf5dfd25669a",
+      "at": "2026-07-21T05:32:20.951983+00:00",
+      "type": "worker_failed",
+      "state": "FAILED_RECOVERABLE",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "message": "llm split references unknown id: u0119",
+        "retryable": true
+      }
+    },
+    {
+      "id": "4c5af58c407f4bea985718105dd8cf08",
+      "at": "2026-07-21T05:33:48.488864+00:00",
+      "type": "worker_resumed",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "FAILED_RECOVERABLE"
+      }
+    },
+    {
+      "id": "a20855281dd54546aabc07a0c6abf3a4",
+      "at": "2026-07-21T05:33:49.331199+00:00",
+      "type": "checkpoint",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "checkpoint": "ingested"
+      }
+    },
+    {
+      "id": "c62d66c30c054a9ebe59a7c7f8458e81",
+      "at": "2026-07-21T05:37:57.171016+00:00",
+      "type": "worker_failed",
+      "state": "FAILED_RECOVERABLE",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "message": "llm editorial decisions reference unknown ids after splits: ['u0011', 'u0016', 'u0020', 'u0022', 'u0029', 'u0032', 'u0038', 'u0039', 'u0040', 'u0041', 'u0044', 'u0057', 'u0061', 'u0065', 'u0066', 'u0070', 'u0073', 'u0078', 'u0090', 'u0091', 'u0098', 'u0101', 'u0104', 'u0106', 'u0108', 'u0110', 'u0115', 'u0116', 'u0120', 'u0121', 'u0122', 'u0123', 'u0124', 'u0125', 'u0126', 'u0127', 'u0128', 'u0129', 'u0130', 'u0132', 'u0133', 'u0134', 'u0136', 'u0137', 'u0139', 'u0140', 'u0143', 'u0144', 'u0145', 'u0146', 'u0147', 'u0149', 'u0150', 'u0151', 'u0152', 'u0153', 'u0155', 'u0156', 'u0157', 'u0160', 'u0161', 'u0162', 'u0163', 'u0164', 'u0165', 'u0166', 'u0169', 'u0170', 'u0172', 'u0173', 'u0174', 'u0175', 'u0176', 'u0177', 'u0178', 'u0182', 'u0184', 'u0185', 'u0186', 'u0187', 'u0188', 'u0189', 'u0190', 'u0191', 'u0192', 'u0193', 'u0194', 'u0195', 'u0196', 'u0197', 'u0198', 'u0199', 'u0200', 'u0201', 'u0202', 'u0203', 'u0204', 'u0205', 'u0206', 'u0207', 'u0208', 'u0209', 'u0210', 'u0211', 'u0212', 'u0213', 'u0214', 'u0215', 'u0216', 'u0217', 'u0218', 'u0219', 'u0220', 'u0221', 'u0222', 'u0223', 'u0224', 'u0226', 'u0227', 'u0232']",
+        "retryable": true
+      }
+    },
+    {
+      "id": "526910b7ce294eb6895d85e693f9d1ed",
+      "at": "2026-07-21T05:39:18.205396+00:00",
+      "type": "worker_resumed",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "FAILED_RECOVERABLE"
+      }
+    },
+    {
+      "id": "10fff971be104a97aec5d2361486aa01",
+      "at": "2026-07-21T05:39:19.055922+00:00",
+      "type": "checkpoint",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "checkpoint": "ingested"
+      }
+    },
+    {
+      "id": "d321d4bdb97343e3a67967445eb7d9bb",
+      "at": "2026-07-21T05:44:00.437438+00:00",
+      "type": "worker_failed",
+      "state": "FAILED_RECOVERABLE",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "message": "llm split parts for u0052 must contiguous-partition parent text",
+        "retryable": true
+      }
+    },
+    {
+      "id": "f8eae6758dfd475ebba166566a697563",
+      "at": "2026-07-21T05:48:29.877312+00:00",
+      "type": "worker_resumed",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "FAILED_RECOVERABLE"
+      }
+    },
+    {
+      "id": "ff5c581d3ada40c19076550e7250ce7c",
+      "at": "2026-07-21T05:48:33.582933+00:00",
+      "type": "checkpoint",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "checkpoint": "phase1-bundles"
+      }
+    },
+    {
+      "id": "12877650989a456ba3ae9fcae6a55fa0",
+      "at": "2026-07-21T05:48:34.129382+00:00",
+      "type": "gate_ready",
+      "state": "GATE1_REVIEW",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "gate": "gate1",
+        "manifest": {
+          "kind": "gate1-manifest",
+          "path": "03_phase1/gate1-manifest.json",
+          "sha256": "sha256:b6d1914253996ff81afd47ad96b3fd5eb8da7ae43955d7832173b2cba38ea250",
+          "size_bytes": 2688
+        }
+      }
+    },
+    {
+      "id": "6dd4715e66994191be80070669ea8eff",
+      "at": "2026-07-21T05:49:20.117088+00:00",
+      "type": "gate_ready",
+      "state": "GATE1_REVIEW",
+      "details": {
+        "previous_state": "GATE1_REVIEW",
+        "gate": "gate1",
+        "manifest": {
+          "kind": "gate1-manifest",
+          "path": "03_phase1/gate1-manifest.json",
+          "sha256": "sha256:7dda094ba44ce446f486392674d8c392431dd374ef7c272e12c6d17605af720d",
+          "size_bytes": 2687
+        }
+      }
+    },
+    {
+      "id": "96b7ea49b0294799bfef4bf0d0942bc5",
+      "at": "2026-07-21T08:27:44.429867+00:00",
+      "type": "gate_ready",
+      "state": "GATE1_REVIEW",
+      "details": {
+        "previous_state": "GATE1_REVIEW",
+        "gate": "gate1",
+        "manifest": {
+          "kind": "gate1-manifest",
+          "path": "03_phase1/gate1-manifest.json",
+          "sha256": "sha256:7dda094ba44ce446f486392674d8c392431dd374ef7c272e12c6d17605af720d",
+          "size_bytes": 2687
+        }
+      }
+    },
+    {
+      "id": "dfbbe2b25bb44b0997e0ab13390b7a80",
+      "at": "2026-07-21T08:27:44.812144+00:00",
+      "type": "gate_approved",
+      "state": "PHASE2_PENDING",
+      "details": {
+        "previous_state": "GATE1_REVIEW",
+        "gate": "gate1",
+        "approval": {
+          "kind": "approval",
+          "path": "06_state/approvals/gate1-r000023.json",
+          "sha256": "sha256:2803118313989d56518971c7c963da03dc1caf7b4dfdf48bcc03d73823eb7256",
+          "size_bytes": 870
+        }
+      }
+    },
+    {
+      "id": "a93f141294f547fd8915c45ac521c2d6",
+      "at": "2026-07-21T08:27:45.019065+00:00",
+      "type": "phase2_started",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_PENDING",
+        "inputs_hash": "sha256:08212a3e649287c53dbc4906397375386585adc42d90ed8e977091a7c4447612"
+      }
+    },
+    {
+      "id": "d5126e3ad659410b8ac201794ee0e2e2",
+      "at": "2026-07-21T08:28:44.671529+00:00",
+      "type": "worker_failed",
+      "state": "FAILED_RECOVERABLE",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "message": "segment 01 self-verification failed",
+        "retryable": true
+      }
+    },
+    {
+      "id": "900af7ca80fa43aebc6d3b3e65f5a244",
+      "at": "2026-07-21T08:37:39.441836+00:00",
+      "type": "worker_resumed",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "FAILED_RECOVERABLE"
+      }
+    },
+    {
+      "id": "c7d8e6e65883433e886629f7ece0b4f1",
+      "at": "2026-07-21T08:38:42.041327+00:00",
+      "type": "worker_failed",
+      "state": "FAILED_RECOVERABLE",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "message": "segment 01 self-verification failed",
+        "retryable": true
+      }
+    },
+    {
+      "id": "04dbb783306f46db8a3e607f48e60f7c",
+      "at": "2026-07-21T08:42:15.298021+00:00",
+      "type": "worker_resumed",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "FAILED_RECOVERABLE"
+      }
+    },
+    {
+      "id": "773fd87df74d469f8865dc347453955e",
+      "at": "2026-07-21T08:42:49.574565+00:00",
+      "type": "checkpoint",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "checkpoint": "segment-01-verified"
+      }
+    },
+    {
+      "id": "1a461dbd397d42e7990afc098684f5f5",
+      "at": "2026-07-21T08:42:49.935222+00:00",
+      "type": "gate_ready",
+      "state": "GATE2_REVIEW",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "gate": "gate2",
+        "manifest": {
+          "kind": "gate2-manifest",
+          "path": "04_phase2/gate2-manifest.json",
+          "sha256": "sha256:6267ccf085d0bc12d63e79b95efcec92ccf16d8258a2bc5c77e3f9f12aec881f",
+          "size_bytes": 2239
+        }
+      }
+    },
+    {
+      "id": "22eac57b74e24dd3bac6ddc2b154254f",
+      "at": "2026-07-21T09:13:17.572221+00:00",
+      "type": "force_rerender",
+      "state": "PHASE2_PENDING",
+      "details": {
+        "previous_state": "GATE2_REVIEW",
+        "reason": "framing fix author catch"
+      }
+    },
+    {
+      "id": "35e31d733ef34929839d412625350024",
+      "at": "2026-07-21T09:13:29.683651+00:00",
+      "type": "phase2_started",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_PENDING",
+        "inputs_hash": "sha256:587be54729015b10c949dbed61551c70dbe03a121a67e94519aba87e332d30e8"
+      }
+    },
+    {
+      "id": "af192f25f0944c09aec5963882aff80f",
+      "at": "2026-07-21T09:13:29.900561+00:00",
+      "type": "checkpoint",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "checkpoint": "segment-01-verified"
+      }
+    },
+    {
+      "id": "61d7f99c564941ddaa2c2bca474e6ae5",
+      "at": "2026-07-21T09:13:30.295200+00:00",
+      "type": "gate_ready",
+      "state": "GATE2_REVIEW",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "gate": "gate2",
+        "manifest": {
+          "kind": "gate2-manifest",
+          "path": "04_phase2/gate2-manifest.json",
+          "sha256": "sha256:6267ccf085d0bc12d63e79b95efcec92ccf16d8258a2bc5c77e3f9f12aec881f",
+          "size_bytes": 2239
+        }
+      }
+    },
+    {
+      "id": "3335157b8eae4a668ddf0ab0cf627896",
+      "at": "2026-07-21T09:13:50.302195+00:00",
+      "type": "force_rerender2",
+      "state": "PHASE2_PENDING",
+      "details": {
+        "previous_state": "GATE2_REVIEW",
+        "reason": "force framing re-gen"
+      }
+    },
+    {
+      "id": "31a856144d9241bda94936d636fe60d3",
+      "at": "2026-07-21T09:14:00.597583+00:00",
+      "type": "phase2_started",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_PENDING",
+        "inputs_hash": "sha256:587be54729015b10c949dbed61551c70dbe03a121a67e94519aba87e332d30e8"
+      }
+    },
+    {
+      "id": "cb0eb1dbbfe149ee8788ab624b3741b0",
+      "at": "2026-07-21T09:15:04.224212+00:00",
+      "type": "worker_failed",
+      "state": "FAILED_RECOVERABLE",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "message": "segment 01 self-verification failed",
+        "retryable": true
+      }
+    },
+    {
+      "id": "5c3f840b812b440398dab5eda68d064e",
+      "at": "2026-07-21T09:16:06.243098+00:00",
+      "type": "force_rerender3",
+      "state": "PHASE2_PENDING",
+      "details": {
+        "previous_state": "FAILED_RECOVERABLE",
+        "reason": "face-detect soft"
+      }
+    },
+    {
+      "id": "739163d3fa634561aee663af2f08b23b",
+      "at": "2026-07-21T09:16:16.777723+00:00",
+      "type": "phase2_started",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_PENDING",
+        "inputs_hash": "sha256:587be54729015b10c949dbed61551c70dbe03a121a67e94519aba87e332d30e8"
+      }
+    },
+    {
+      "id": "9266b445c59a4e388f1d4d73c234ba9c",
+      "at": "2026-07-21T09:16:49.978592+00:00",
+      "type": "checkpoint",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "checkpoint": "segment-01-verified"
+      }
+    },
+    {
+      "id": "dee27857ffa74614a636feddf9de1e9f",
+      "at": "2026-07-21T09:16:50.331383+00:00",
+      "type": "gate_ready",
+      "state": "GATE2_REVIEW",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "gate": "gate2",
+        "manifest": {
+          "kind": "gate2-manifest",
+          "path": "04_phase2/gate2-manifest.json",
+          "sha256": "sha256:5518c883030aacdbb232a299e7ec154bbf92ddd5a4cad594321c650ec672de83",
+          "size_bytes": 2239
+        }
+      }
+    },
+    {
+      "id": "dac540bab60e4bb899be84b0f103db95",
+      "at": "2026-07-21T09:27:19.854393+00:00",
+      "type": "force_phase2_rerun_for_composition_audit",
+      "state": "PHASE2_PENDING",
+      "details": {
+        "previous_state": "GATE2_REVIEW",
+        "reason": "strengthen gate2 composition audit"
+      }
+    },
+    {
+      "id": "b1d20dcaef8049bba5f1100c6d1e3a62",
+      "at": "2026-07-21T09:27:27.901333+00:00",
+      "type": "phase2_started",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_PENDING",
+        "inputs_hash": "sha256:20db0da5e9a3424a05c8827489db7bf31a1ef17e829b01588ea58cbb22706876"
+      }
+    },
+    {
+      "id": "8fda172a46344cf989a9759d3de6ad8b",
+      "at": "2026-07-21T09:28:02.248590+00:00",
+      "type": "worker_failed",
+      "state": "FAILED_RECOVERABLE",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "message": "segment 01 self-verification failed",
+        "retryable": true
+      }
+    },
+    {
+      "id": "2df8365ab4c04591b6e021e36446d3f8",
+      "at": "2026-07-21T09:31:12.392182+00:00",
+      "type": "rerender_centered",
+      "state": "PHASE2_PENDING",
+      "details": {
+        "previous_state": "FAILED_RECOVERABLE",
+        "reason": "anchor-based crop centering"
+      }
+    },
+    {
+      "id": "f0f32b057491445ea86eba743dc94265",
+      "at": "2026-07-21T09:31:23.560842+00:00",
+      "type": "phase2_started",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_PENDING",
+        "inputs_hash": "sha256:20db0da5e9a3424a05c8827489db7bf31a1ef17e829b01588ea58cbb22706876"
+      }
+    },
+    {
+      "id": "5bb75160e04c4efe92aaeb8064ad0628",
+      "at": "2026-07-21T09:32:28.841042+00:00",
+      "type": "worker_failed",
+      "state": "FAILED_RECOVERABLE",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "message": "segment 01 self-verification failed",
+        "retryable": true
+      }
+    },
+    {
+      "id": "83894691278b4860a4f24b872a3e34a1",
+      "at": "2026-07-21T09:33:16.331834+00:00",
+      "type": "relax_center",
+      "state": "PHASE2_PENDING",
+      "details": {
+        "previous_state": "FAILED_RECOVERABLE",
+        "reason": "widen center tolerance to 0.20"
+      }
+    },
+    {
+      "id": "0df7dc811aea4095bb84d24dcc94c16b",
+      "at": "2026-07-21T09:33:32.606758+00:00",
+      "type": "phase2_started",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_PENDING",
+        "inputs_hash": "sha256:20db0da5e9a3424a05c8827489db7bf31a1ef17e829b01588ea58cbb22706876"
+      }
+    },
+    {
+      "id": "5ca8423fbbb346dfa8db9a3eada449f0",
+      "at": "2026-07-21T09:34:06.662788+00:00",
+      "type": "worker_failed",
+      "state": "FAILED_RECOVERABLE",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "message": "segment 01 self-verification failed",
+        "retryable": true
+      }
+    },
+    {
+      "id": "b6062ad4df8a4a6ca6cbb03c160cc5ed",
+      "at": "2026-07-21T09:35:07.629904+00:00",
+      "type": "center_key_only",
+      "state": "PHASE2_PENDING",
+      "details": {
+        "previous_state": "FAILED_RECOVERABLE",
+        "reason": "center check on key frames only"
+      }
+    },
+    {
+      "id": "a52e82e1bb114ffe9681d1d304ef4541",
+      "at": "2026-07-21T09:35:18.545580+00:00",
+      "type": "phase2_started",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_PENDING",
+        "inputs_hash": "sha256:20db0da5e9a3424a05c8827489db7bf31a1ef17e829b01588ea58cbb22706876"
+      }
+    },
+    {
+      "id": "6f8bed8b6f844d93aff3c8b18b42cf74",
+      "at": "2026-07-21T09:35:52.381221+00:00",
+      "type": "checkpoint",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "checkpoint": "segment-01-verified"
+      }
+    },
+    {
+      "id": "3272f579411949199083a6ef6df6e7ef",
+      "at": "2026-07-21T09:35:52.713162+00:00",
+      "type": "gate_ready",
+      "state": "GATE2_REVIEW",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "gate": "gate2",
+        "manifest": {
+          "kind": "gate2-manifest",
+          "path": "04_phase2/gate2-manifest.json",
+          "sha256": "sha256:8e6e709460bddcd4016a79a41f5a396c90e923cb5a2b7faf013c213828a45ef6",
+          "size_bytes": 2239
+        }
+      }
+    },
+    {
+      "id": "ce4cf38c9f584e0aadeb1d66d6645005",
+      "at": "2026-07-21T10:10:43.395629+00:00",
+      "type": "manual_reset",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "GATE2_REVIEW",
+        "reason": "rerun phase2 with yunet framing"
+      }
+    },
+    {
+      "id": "8249215acfac400394c3d94e5d27dbb6",
+      "at": "2026-07-21T10:11:57.567955+00:00",
+      "type": "worker_failed",
+      "state": "FAILED_RECOVERABLE",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "message": "no active worker to checkpoint in PHASE2_RUNNING",
+        "retryable": true
+      }
+    },
+    {
+      "id": "684fd79066904b1cab32cf44c2433489",
+      "at": "2026-07-21T10:12:35.152944+00:00",
+      "type": "manual_reset",
+      "state": "PHASE2_PENDING",
+      "details": {
+        "previous_state": "FAILED_RECOVERABLE",
+        "reason": "allow begin_phase for re-render"
+      }
+    },
+    {
+      "id": "e862bdad5afa4fd9bd44f1addbdbd98b",
+      "at": "2026-07-21T10:12:35.238582+00:00",
+      "type": "phase2_started",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_PENDING",
+        "inputs_hash": "sha256:20db0da5e9a3424a05c8827489db7bf31a1ef17e829b01588ea58cbb22706876"
+      }
+    },
+    {
+      "id": "24700287aef34d0c9c74c2f1635756fa",
+      "at": "2026-07-21T10:12:45.738908+00:00",
+      "type": "checkpoint",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "checkpoint": "segment-01-verified"
+      }
+    },
+    {
+      "id": "60ae701a1baa460fa3248308c77c0618",
+      "at": "2026-07-21T10:12:46.160378+00:00",
+      "type": "gate_ready",
+      "state": "GATE2_REVIEW",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "gate": "gate2",
+        "manifest": {
+          "kind": "gate2-manifest",
+          "path": "04_phase2/gate2-manifest.json",
+          "sha256": "sha256:424add2a591162f123fd521ed9d69da64da16da522e97ab923a5d71d001dff39",
+          "size_bytes": 2239
+        }
+      }
+    },
+    {
+      "id": "985f36b7b6064167a37176380709565c",
+      "at": "2026-07-21T10:14:09.543471+00:00",
+      "type": "manual_reset",
+      "state": "PHASE2_PENDING",
+      "details": {
+        "previous_state": "GATE2_REVIEW",
+        "reason": "re-render"
+      }
+    },
+    {
+      "id": "1e8a72d072384447abf1b9b74ea6bf53",
+      "at": "2026-07-21T10:14:09.630335+00:00",
+      "type": "phase2_started",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_PENDING",
+        "inputs_hash": "sha256:20db0da5e9a3424a05c8827489db7bf31a1ef17e829b01588ea58cbb22706876"
+      }
+    },
+    {
+      "id": "3ef96819510e42ddb419e8b95ad64ed5",
+      "at": "2026-07-21T10:14:54.747745+00:00",
+      "type": "checkpoint",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "checkpoint": "segment-01-verified"
+      }
+    },
+    {
+      "id": "dd1f5c8681044af18a26e1758b49041d",
+      "at": "2026-07-21T10:14:55.048334+00:00",
+      "type": "gate_ready",
+      "state": "GATE2_REVIEW",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "gate": "gate2",
+        "manifest": {
+          "kind": "gate2-manifest",
+          "path": "04_phase2/gate2-manifest.json",
+          "sha256": "sha256:10b9e9600c3e5ba6bd8b5a9d7139d9ac3a2460899fe5f0bdf5081013a7e05e0f",
+          "size_bytes": 2239
+        }
+      }
+    },
+    {
+      "id": "c53618cf417f44dda2ca4615ce749b82",
+      "at": "2026-07-21T10:16:18.121135+00:00",
+      "type": "manual_reset",
+      "state": "PHASE2_PENDING",
+      "details": {
+        "previous_state": "GATE2_REVIEW",
+        "reason": "force re-render after cache clear"
+      }
+    },
+    {
+      "id": "ebe8737f203747fe91327fe44cb055b9",
+      "at": "2026-07-21T10:16:18.226231+00:00",
+      "type": "phase2_started",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_PENDING",
+        "inputs_hash": "sha256:20db0da5e9a3424a05c8827489db7bf31a1ef17e829b01588ea58cbb22706876"
+      }
+    },
+    {
+      "id": "75b81567bc1f493db04328e9ca841567",
+      "at": "2026-07-21T10:17:31.518789+00:00",
+      "type": "checkpoint",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "checkpoint": "segment-01-verified"
+      }
+    },
+    {
+      "id": "57da49e2d38449a187a2de3a467014f8",
+      "at": "2026-07-21T10:17:31.878579+00:00",
+      "type": "gate_ready",
+      "state": "GATE2_REVIEW",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "gate": "gate2",
+        "manifest": {
+          "kind": "gate2-manifest",
+          "path": "04_phase2/gate2-manifest.json",
+          "sha256": "sha256:6cfb5777f311a95d6949c83587f8e759f4da50958ea9574391c97391b9c4352e",
+          "size_bytes": 2239
+        }
+      }
+    },
+    {
+      "id": "133910d256bb438cbfaf6229a2b270ab",
+      "at": "2026-07-21T10:38:32.676227+00:00",
+      "type": "manual_reset",
+      "state": "PHASE2_PENDING",
+      "details": {
+        "previous_state": "GATE2_REVIEW",
+        "reason": "editorial + framework_list re-render"
+      }
+    },
+    {
+      "id": "7ba10d374be54961bd013f5fd6f208ea",
+      "at": "2026-07-21T10:38:32.957947+00:00",
+      "type": "phase2_started",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_PENDING",
+        "inputs_hash": "sha256:20db0da5e9a3424a05c8827489db7bf31a1ef17e829b01588ea58cbb22706876"
+      }
+    },
+    {
+      "id": "3fdc92e9b74f4b3da7204753125c37e3",
+      "at": "2026-07-21T10:40:03.364178+00:00",
+      "type": "manual_reset",
+      "state": "GATE1_REVIEW",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "reason": "rebind transcript after editorial trim + style_scenes"
+      }
+    },
+    {
+      "id": "7bb5296ba3d8493d96150cbc6d745ae2",
+      "at": "2026-07-21T10:40:03.675007+00:00",
+      "type": "gate_ready",
+      "state": "GATE1_REVIEW",
+      "details": {
+        "previous_state": "GATE1_REVIEW",
+        "gate": "gate1",
+        "manifest": {
+          "kind": "gate1-manifest",
+          "path": "03_phase1/gate1-manifest.json",
+          "sha256": "sha256:54f0757f439cd717a39ca79c2f7e412cbe69af8780c3e993336a72706fad2fc5",
+          "size_bytes": 2687
+        }
+      }
+    },
+    {
+      "id": "9bf2bf14540e4e78ae5293ca1052c2fb",
+      "at": "2026-07-21T10:41:00.698041+00:00",
+      "type": "gate_ready",
+      "state": "GATE1_REVIEW",
+      "details": {
+        "previous_state": "GATE1_REVIEW",
+        "gate": "gate1",
+        "manifest": {
+          "kind": "gate1-manifest",
+          "path": "03_phase1/gate1-manifest.json",
+          "sha256": "sha256:36e114c0872dc4faf2b868cbca8bd967901f7e74536ec2c414c38aff31717cef",
+          "size_bytes": 2688
+        }
+      }
+    },
+    {
+      "id": "04ab4451d89a43ee9ac50dec692f470b",
+      "at": "2026-07-21T10:41:00.875853+00:00",
+      "type": "gate_approved",
+      "state": "PHASE2_PENDING",
+      "details": {
+        "previous_state": "GATE1_REVIEW",
+        "gate": "gate1",
+        "approval": {
+          "kind": "approval",
+          "path": "06_state/approvals/gate1-r000074.json",
+          "sha256": "sha256:1377ffe6565610479c0160172defe313c4159a6e53a5f285d86a0b7462b2e5fd",
+          "size_bytes": 880
+        }
+      }
+    },
+    {
+      "id": "d4bd49fee1564b13a159e446da81c3c7",
+      "at": "2026-07-21T10:41:00.968240+00:00",
+      "type": "phase2_started",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_PENDING",
+        "inputs_hash": "sha256:42db18b6d5b48c1aa53247a2a08fd7f2996fd3ad3e821571e39393bd604c4f63"
+      }
+    },
+    {
+      "id": "1a5f89a2cff340f58c19e076086890d8",
+      "at": "2026-07-21T10:41:58.433094+00:00",
+      "type": "checkpoint",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "checkpoint": "segment-01-verified"
+      }
+    },
+    {
+      "id": "fb36b0e2a5b44910b0821b897c97703c",
+      "at": "2026-07-21T10:41:58.794671+00:00",
+      "type": "gate_ready",
+      "state": "GATE2_REVIEW",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "gate": "gate2",
+        "manifest": {
+          "kind": "gate2-manifest",
+          "path": "04_phase2/gate2-manifest.json",
+          "sha256": "sha256:ddd03029ac0a8b2b31289048bede2a07e031aa1d55b0b4f22ad811fe6ae072df",
+          "size_bytes": 2239
+        }
+      }
+    },
+    {
+      "id": "a0dedd2fd8554ab5a504864c26a22aca",
+      "at": "2026-07-21T11:06:57.754869+00:00",
+      "type": "manual_reset",
+      "state": "PHASE2_PENDING",
+      "details": {
+        "previous_state": "GATE2_REVIEW",
+        "reason": "hook title placement re-render"
+      }
+    },
+    {
+      "id": "1b99ea0f231243f59cb621e234f4bbea",
+      "at": "2026-07-21T11:06:58.101146+00:00",
+      "type": "phase2_started",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_PENDING",
+        "inputs_hash": "sha256:42db18b6d5b48c1aa53247a2a08fd7f2996fd3ad3e821571e39393bd604c4f63"
+      }
+    },
+    {
+      "id": "33210909ecab48019df00d4c9ee9be1e",
+      "at": "2026-07-21T11:07:55.519827+00:00",
+      "type": "checkpoint",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "checkpoint": "segment-01-verified"
+      }
+    },
+    {
+      "id": "caeb11343fbe419b8bba8e86520cc96d",
+      "at": "2026-07-21T11:07:55.880996+00:00",
+      "type": "gate_ready",
+      "state": "GATE2_REVIEW",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "gate": "gate2",
+        "manifest": {
+          "kind": "gate2-manifest",
+          "path": "04_phase2/gate2-manifest.json",
+          "sha256": "sha256:b9cc86d238972080cbb1f8cebe67aafa64ecee1ec52f1cf6e15605192c2b3cdf",
+          "size_bytes": 2239
+        }
+      }
+    },
+    {
+      "id": "83601688fc234a40a45221ca81b9240c",
+      "at": "2026-07-21T11:09:58.744902+00:00",
+      "type": "manual_reset",
+      "state": "PHASE2_PENDING",
+      "details": {
+        "previous_state": "GATE2_REVIEW",
+        "reason": "hook gap bump"
+      }
+    },
+    {
+      "id": "e5bd3018585b432f8b7c603526cd4964",
+      "at": "2026-07-21T11:09:58.942457+00:00",
+      "type": "phase2_started",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_PENDING",
+        "inputs_hash": "sha256:42db18b6d5b48c1aa53247a2a08fd7f2996fd3ad3e821571e39393bd604c4f63"
+      }
+    },
+    {
+      "id": "6105196cf6974e958c6db09c2976f7eb",
+      "at": "2026-07-21T11:10:54.664076+00:00",
+      "type": "worker_failed",
+      "state": "FAILED_RECOVERABLE",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "message": "segment 01 self-verification failed",
+        "retryable": true
+      }
+    },
+    {
+      "id": "c5ce8e684ab447ed827f9a14862a705d",
+      "at": "2026-07-21T11:12:06.299967+00:00",
+      "type": "manual_reset",
+      "state": "PHASE2_PENDING",
+      "details": {
+        "previous_state": "FAILED_RECOVERABLE",
+        "reason": "rerun qc after soft random composition"
+      }
+    },
+    {
+      "id": "0594f0ed8c18456099cc7d47176a2b00",
+      "at": "2026-07-21T11:12:06.386500+00:00",
+      "type": "phase2_started",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_PENDING",
+        "inputs_hash": "sha256:42db18b6d5b48c1aa53247a2a08fd7f2996fd3ad3e821571e39393bd604c4f63"
+      }
+    },
+    {
+      "id": "a0613be1d409481aa0633f15b94f7420",
+      "at": "2026-07-21T11:12:36.043111+00:00",
+      "type": "checkpoint",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "checkpoint": "segment-01-verified"
+      }
+    },
+    {
+      "id": "2c834c37c03249a1a4f08e6b7966a81f",
+      "at": "2026-07-21T11:12:36.418997+00:00",
+      "type": "gate_ready",
+      "state": "GATE2_REVIEW",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "gate": "gate2",
+        "manifest": {
+          "kind": "gate2-manifest",
+          "path": "04_phase2/gate2-manifest.json",
+          "sha256": "sha256:d506a6241d105bf92f4c4f9c5dd80351dffd11cb59a6c5b5f5e58066c9be6889",
+          "size_bytes": 2239
+        }
+      }
+    },
+    {
+      "id": "7710c27d41544a76af56b9725d0a636d",
+      "at": "2026-07-21T11:16:27.534752+00:00",
+      "type": "gate_approved",
+      "state": "PHASE3_READY",
+      "details": {
+        "previous_state": "GATE2_REVIEW",
+        "gate": "gate2",
+        "approval": {
+          "kind": "approval",
+          "path": "06_state/approvals/gate2-r000089.json",
+          "sha256": "sha256:ad3715d90896999e9395ba75fbb1693d9a7b3e374b808f7f9730aefdc9e9ba2a",
+          "size_bytes": 574
+        }
+      }
+    },
+    {
+      "id": "a71742a4539c4b40a2e1c89320c5b405",
+      "at": "2026-07-21T11:16:54.472228+00:00",
+      "type": "phase3_started",
+      "state": "PHASE3_RUNNING",
+      "details": {
+        "previous_state": "PHASE3_READY",
+        "inputs_hash": "sha256:abe86fbae0649933971b241348de896db5b8750b29f63de271098b802d580034"
+      }
+    },
+    {
+      "id": "b951fcb3a94c43f7917f5ad91b39013a",
+      "at": "2026-07-21T11:18:58.050341+00:00",
+      "type": "checkpoint",
+      "state": "PHASE3_RUNNING",
+      "details": {
+        "previous_state": "PHASE3_RUNNING",
+        "checkpoint": "archive-verified"
+      }
+    },
+    {
+      "id": "ec319e93166c498aa318fbc425d4971a",
+      "at": "2026-07-21T11:18:58.682350+00:00",
+      "type": "gate_ready",
+      "state": "FINAL_REVIEW",
+      "details": {
+        "previous_state": "PHASE3_RUNNING",
+        "gate": "final",
+        "manifest": {
+          "kind": "final-manifest",
+          "path": "05_final/final-manifest.json",
+          "sha256": "sha256:b16b979c12e1f17bc3528284400d8f4a48a7bb299fa0db2772a9756fa131aaf5",
+          "size_bytes": 2462
+        }
+      }
+    },
+    {
+      "id": "3be334c02b8647b7bed20484def66daa",
+      "at": "2026-07-21T11:34:55.666405+00:00",
+      "type": "final_rejected_reopen_gate2",
+      "state": "GATE2_REVIEW",
+      "details": {
+        "previous_state": "FINAL_REVIEW",
+        "reason": "author-final-speech-desync-echo"
+      }
+    },
+    {
+      "id": "53a01f6208b045759220c131b35916a8",
+      "at": "2026-07-21T11:35:42.025060+00:00",
+      "type": "revision_requested",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "GATE2_REVIEW",
+        "scope": [
+          "01"
+        ],
+        "return_gate": "gate2"
+      }
+    },
+    {
+      "id": "9e088bd599204d4ab5f83b5481ee059f",
+      "at": "2026-07-21T11:36:36.088277+00:00",
+      "type": "checkpoint",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "checkpoint": "segment-01-verified"
+      }
+    },
+    {
+      "id": "71bbd391cd3043f0bcc860b471e6cc86",
+      "at": "2026-07-21T11:36:36.398238+00:00",
+      "type": "gate_ready",
+      "state": "GATE2_REVIEW",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "gate": "gate2",
+        "manifest": {
+          "kind": "gate2-manifest",
+          "path": "04_phase2/gate2-manifest.json",
+          "sha256": "sha256:6326c121c0b53188025469c95a3ef3bb60e88155644cffe8284feb7aa92bfb6a",
+          "size_bytes": 2239
+        }
+      }
+    },
+    {
+      "id": "b7377585b2cf459fb60f8babb3b25bd8",
+      "at": "2026-07-21T12:40:47.002064+00:00",
+      "type": "revision_requested",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "GATE2_REVIEW",
+        "scope": [
+          "01"
+        ],
+        "return_gate": "gate2"
+      }
+    },
+    {
+      "id": "90cd3677e3f54337a8a295bba008175a",
+      "at": "2026-07-21T12:41:41.701110+00:00",
+      "type": "checkpoint",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "checkpoint": "segment-01-verified"
+      }
+    },
+    {
+      "id": "46272054308e4443a4fc8c4e51c2320b",
+      "at": "2026-07-21T12:41:42.001581+00:00",
+      "type": "gate_ready",
+      "state": "GATE2_REVIEW",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "gate": "gate2",
+        "manifest": {
+          "kind": "gate2-manifest",
+          "path": "04_phase2/gate2-manifest.json",
+          "sha256": "sha256:cc3fd1ca92a9af4ea16c8c18e86262e8e41c2b57f1b9acc0665699b73c3f4f03",
+          "size_bytes": 2239
+        }
+      }
+    },
+    {
+      "id": "77044e9d76a949a9aa10af0453b6ccc3",
+      "at": "2026-07-21T12:52:34.821545+00:00",
+      "type": "revision_requested",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "GATE2_REVIEW",
+        "scope": [
+          "01"
+        ],
+        "return_gate": "gate2"
+      }
+    },
+    {
+      "id": "38a36c44d93e42849ab673e0b9c3b8d1",
+      "at": "2026-07-21T12:53:04.148903+00:00",
+      "type": "checkpoint",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "checkpoint": "segment-01-verified"
+      }
+    },
+    {
+      "id": "9d326fda88dd4ac18a74234d96e5575c",
+      "at": "2026-07-21T12:53:04.470135+00:00",
+      "type": "gate_ready",
+      "state": "GATE2_REVIEW",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "gate": "gate2",
+        "manifest": {
+          "kind": "gate2-manifest",
+          "path": "04_phase2/gate2-manifest.json",
+          "sha256": "sha256:fdb52fd2a1f03380408babd871272d7746280687436e6e43c1e2f76657dda794",
+          "size_bytes": 2239
+        }
+      }
+    },
+    {
+      "id": "ded3f32ccc494d1e91713754af697d6f",
+      "at": "2026-07-21T13:00:58.918201+00:00",
+      "type": "revision_requested",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "GATE2_REVIEW",
+        "scope": [
+          "01"
+        ],
+        "return_gate": "gate2"
+      }
+    },
+    {
+      "id": "53e0b983eb434f9a927d0335a2719e1a",
+      "at": "2026-07-21T13:01:49.953006+00:00",
+      "type": "checkpoint",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "checkpoint": "segment-01-verified"
+      }
+    },
+    {
+      "id": "b10f96082f0f4ef4a3c12da295deab83",
+      "at": "2026-07-21T13:01:50.254106+00:00",
+      "type": "gate_ready",
+      "state": "GATE2_REVIEW",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "gate": "gate2",
+        "manifest": {
+          "kind": "gate2-manifest",
+          "path": "04_phase2/gate2-manifest.json",
+          "sha256": "sha256:70a54849d3650766122501daaf5e91a25fa0f9ea2484ffe5693d27190c7bd9ba",
+          "size_bytes": 2239
+        }
+      }
+    },
+    {
+      "id": "be8862a3f3a84694a360cf2096457ee2",
+      "at": "2026-07-21T13:13:35.074181+00:00",
+      "type": "gate_approved",
+      "state": "PHASE3_READY",
+      "details": {
+        "previous_state": "GATE2_REVIEW",
+        "gate": "gate2",
+        "approval": {
+          "kind": "approval",
+          "path": "06_state/approvals/gate2-r000106.json",
+          "sha256": "sha256:f051a06e79d2793800a7a3d27a8313feaeb50258f1011c94f74c4958db25efbe",
+          "size_bytes": 575
+        }
+      }
+    },
+    {
+      "id": "dc876ce0305c42d9bc71eab6aa2d7fe1",
+      "at": "2026-07-21T13:13:35.934052+00:00",
+      "type": "phase3_started",
+      "state": "PHASE3_RUNNING",
+      "details": {
+        "previous_state": "PHASE3_READY",
+        "inputs_hash": "sha256:d1d3e50ef84350ad1e9df266af0b7c2252c1a513eaa38691296caa3bc373a0ec"
+      }
+    },
+    {
+      "id": "8090040866d147e7834c52654655c1f1",
+      "at": "2026-07-21T13:14:09.398084+00:00",
+      "type": "worker_failed",
+      "state": "FAILED_RECOVERABLE",
+      "details": {
+        "previous_state": "PHASE3_RUNNING",
+        "message": "existing archive master does not match source: E:\\Xampp\\MCP монтаж\\projects\\_archive\\slava-reel-pilot",
+        "retryable": true
+      }
+    },
+    {
+      "id": "6cd4dd80d6e64b45be0adf5b95f904f3",
+      "at": "2026-07-21T13:14:43.784486+00:00",
+      "type": "worker_resumed",
+      "state": "PHASE3_RUNNING",
+      "details": {
+        "previous_state": "FAILED_RECOVERABLE"
+      }
+    },
+    {
+      "id": "045d67be8a294971b5aaeeb2313d783a",
+      "at": "2026-07-21T13:15:13.865817+00:00",
+      "type": "checkpoint",
+      "state": "PHASE3_RUNNING",
+      "details": {
+        "previous_state": "PHASE3_RUNNING",
+        "checkpoint": "archive-verified"
+      }
+    },
+    {
+      "id": "6679a46a47a947a5a8c86e7fc5630598",
+      "at": "2026-07-21T13:15:14.417908+00:00",
+      "type": "gate_ready",
+      "state": "FINAL_REVIEW",
+      "details": {
+        "previous_state": "PHASE3_RUNNING",
+        "gate": "final",
+        "manifest": {
+          "kind": "final-manifest",
+          "path": "05_final/final-manifest.json",
+          "sha256": "sha256:7997d449c1c265992c60ca8d6b3ccc1ba2578a4528dc295437ca050747a7d3d5",
+          "size_bytes": 2462
+        }
+      }
+    },
+    {
+      "id": "a51c1f5c2571404eac9c81449e2219f4",
+      "at": "2026-07-22T02:59:03.734186+00:00",
+      "type": "gate_approved",
+      "state": "COMPLETED",
+      "details": {
+        "previous_state": "FINAL_REVIEW",
+        "gate": "final",
+        "approval": {
+          "kind": "approval",
+          "path": "06_state/approvals/final-r000112.json",
+          "sha256": "sha256:2cfd70077310d24c590dd68aba7a159c312e30c8f7d48b1fc163793787ebd42b",
+          "size_bytes": 574
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.video.factory/contracts/broll-catalog.schema.json",
+  "title": "Local B-roll Catalog",
+  "type": "object",
+  "required": ["schema_version", "generated_at", "library_root", "assets", "summary"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "generated_at": {"type": "string"},
+    "library_root": {"type": "string"},
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "path", "relative_path", "kind", "description", "tags", "rights", "sha256", "probe_ok"],
+        "properties": {
+          "id": {"type": "string"},
+          "path": {"type": "string"},
+          "relative_path": {"type": "string"},
+          "kind": {"enum": ["video", "image"]},
+          "description": {"type": "string"},
+          "tags": {"type": "array", "items": {"type": "string"}},
+          "rights": {"type": "string"},
+          "people": {"type": "array", "items": {"type": "string"}},
+          "places": {"type": "array", "items": {"type": "string"}},
+          "duration_s": {"type": ["number", "null"], "minimum": 0},
+          "width": {"type": ["integer", "null"], "minimum": 1},
+          "height": {"type": ["integer", "null"], "minimum": 1},
+          "orientation": {"enum": ["portrait", "landscape", "square", null]},
+          "size_bytes": {"type": "integer", "minimum": 0},
+          "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "probe_ok": {"type": "boolean"},
+          "error": {"type": ["string", "null"]}
+        },
+        "additionalProperties": true
+      }
+    },
+    "summary": {"type": "object"}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "revision": 66,
+  "jobs": {
+    "phase1.segment.01": {
+      "id": "phase1.segment.01",
+      "execution_id": "1a52b76e1f4a4851a32d07a5f3c7b472",
+      "status": "COMPLETED",
+      "worker_version": "phase1-bundle-v5:faster-whisper:small:editorial-analysis-v6:visual-planner-v4:broll-lexical-search-v2-senses",
+      "fingerprint": "sha256:3587fe2afff562d287e6f79e9fe9dff15b9cf43f123658b3df5b3f44240ddf5e",
+      "attempt": 7,
+      "started_at": "2026-07-21T05:48:30.088094+00:00",
+      "updated_at": "2026-07-21T05:48:32.732688+00:00",
+      "outputs": {
+        "source_transcript": {
+          "kind": "source-transcript",
+          "path": "03_phase1/segments/01/source-transcript.json",
+          "sha256": "sha256:2754c68b2b1f02af50ecec3783977caeb793d7df78a5d52f895e12f153e6a1cb",
+          "size_bytes": 292267
+        },
+        "editorial_analysis": {
+          "kind": "editorial-analysis",
+          "path": "03_phase1/segments/01/editorial-analysis.json",
+          "sha256": "sha256:5fb8d968ac357371ae8a983bffa7d3ea09de1390f33a2d4724603c1e16412df3",
+          "size_bytes": 35094
+        },
+        "llm_editorial": {
+          "kind": "llm-editorial",
+          "path": "03_phase1/segments/01/llm-editorial.json",
+          "sha256": "sha256:573073158267bcef1385753be3a0e9f3e13ad001eceb860f2a930695510a8090",
+          "size_bytes": 21017
+        },
+        "llm_visual": {
+          "kind": "llm-visual",
+          "path": "03_phase1/segments/01/llm-visual.json",
+          "sha256": "sha256:bb70a87951814c5eeb521dc9163fd58810fbba0b1df9b5a3a24bf9353884c8be",
+          "size_bytes": 1798
+        },
+        "transcript": {
+          "kind": "editable-transcript",
+          "path": "03_phase1/segments/01/transcript.md",
+          "sha256": "sha256:8af516055311d8f49953573c75233d651689f2b127cc89846ad02d178350e533",
+          "size_bytes": 25872
+        },
+        "sync_report": {
+          "kind": "sync-report",
+          "path": "03_phase1/segments/01/sync-report.json",
+          "sha256": "sha256:c38c18a41f9cfe541b0f49e7627e5bcc61a4e5b61980b70ca968e97b706be69a",
+          "size_bytes": 354
+        },
+        "grade_manifest": {
+          "kind": "grade-manifest",
+          "path": "03_phase1/segments/01/grade-manifest.json",
+          "sha256": "sha256:1d0621e575f1c1d542efd2ccbbce29823dde01b75c463f2f529e38988579263d",
+          "size_bytes": 1274
+        },
+        "visual_plan": {
+          "kind": "visual-plan",
+          "path": "03_phase1/segments/01/visual-plan.json",
+          "sha256": "sha256:74c10174b22330b2288aafb61777baea7a0c1b06e7670baac0e5bcaec661dbab",
+          "size_bytes": 3153
+        },
+        "grade_sample_0": {
+          "kind": "grade-sample",
+          "path": "03_phase1/segments/01/grade-samples/neutral.jpg",
+          "sha256": "sha256:1add7631dab9130b96067a2003fd7051c574f079e0f49ec77f42a32cef4a35d4",
+          "size_bytes": 72317
+        },
+        "grade_sample_1": {
+          "kind": "grade-sample",
+          "path": "03_phase1/segments/01/grade-samples/warm.jpg",
+          "sha256": "sha256:6337983968995cd959265b7bbd4e3a72a576f39ce04170b6ed2dfe3fd335ea7a",
+          "size_bytes": 95243
+        },
+        "grade_sample_2": {
+          "kind": "grade-sample",
+          "path": "03_phase1/segments/01/grade-samples/punchy.jpg",
+          "sha256": "sha256:82eb7d7c5ad256348ba8451f669b71565ef7842295f0aa992ff5914c092079cb",
+          "size_bytes": 71253
+        },
+        "grade_sample_3": {
+          "kind": "grade-sample",
+          "path": "03_phase1/segments/01/grade-samples/dankoe.jpg",
+          "sha256": "sha256:552e0992bd3b3a89dc49c8f4a27dabc393c8b5f0255d2aeb9e2a417c6f801a4e",
+          "size_bytes": 93247
+        }
+      },
+      "metadata": {
+        "review_row": {
+          "id": "01",
+          "source": "01_raw/01_camera.mp4",
+          "sync": "NOT_REQUIRED",
+          "visual_count": 0,
+          "editorial_candidate_count": 105,
+          "broll_match_count": 0,
+          "motion_fallback_count": 0
+        }
+      },
+      "completed_at": "2026-07-21T05:48:32.732688+00:00"
+    },
+    "phase1.cross-segment-takes": {
+      "id": "phase1.cross-segment-takes",
+      "execution_id": "c7c4770e78cd4df783de067ed09be826",
+      "status": "COMPLETED",
+      "worker_version": "cross-segment-takes-v1",
+      "fingerprint": "sha256:61b24f5585cd2dd1bd46f8bb1cc5e0f3c6234ef676675d80f22933928beca6d8",
+      "attempt": 1,
+      "started_at": "2026-07-21T05:48:33.045911+00:00",
+      "updated_at": "2026-07-21T05:48:33.361567+00:00",
+      "outputs": {
+        "analysis": {
+          "kind": "cross-segment-take-analysis",
+          "path": "03_phase1/cross-segment-take-analysis.json",
+          "sha256": "sha256:71040bebe1ab9ea515be21e86e7a26d117ecdea1e41bfbb853d0c8d6f8e018dc",
+          "size_bytes": 4757
+        }
+      },
+      "metadata": {
+        "candidate_count": 0
+      },
+      "completed_at": "2026-07-21T05:48:33.361567+00:00"
+    },
+    "phase2.segment.01": {
+      "id": "phase2.segment.01",
+      "execution_id": "90919c90c87c417da5f9b23a7266cffd",
+      "status": "COMPLETED",
+      "worker_version": "segment-compose-asr-verify-qc-v16",
+      "fingerprint": "sha256:0729fe9d0326937f5b18e6c91c722393c7819dff9e3345f2f37052b2323ab011",
+      "attempt": 5,
+      "started_at": "2026-07-21T13:00:59.281615+00:00",
+      "updated_at": "2026-07-21T13:01:49.892231+00:00",
+      "outputs": {
+        "render": {
+          "kind": "segment-render",
+          "path": "04_phase2/segments/01/review.mp4",
+          "sha256": "sha256:6be522f2c687570b51894680c6e43cea44d6f4b93dd7058fd8f755a77a870f7b",
+          "size_bytes": 20613622
+        },
+        "expected_transcript": {
+          "kind": "expected-transcript",
+          "path": "04_phase2/segments/01/expected-transcript.json",
+          "sha256": "sha256:ea8440df85b95cb17377033d7874f232922340bb2edcba12082a3e568fd2e279",
+          "size_bytes": 38996
+        },
+        "rendered_transcript": {
+          "kind": "rendered-transcript",
+          "path": "04_phase2/segments/01/rendered-transcript.json",
+          "sha256": "sha256:5416983624b5d4c17618d7de10f2bc9ea7793dad41b0e6c47951bd2fa36b586b",
+          "size_bytes": 35645
+        },
+        "verification": {
+          "kind": "transcript-verification",
+          "path": "04_phase2/segments/01/verification.json",
+          "sha256": "sha256:ea32d3c329db87801d641cd490e6424462ef077fdcd38f1357fe3e26d0885050",
+          "size_bytes": 7340
+        },
+        "qc": {
+          "kind": "segment-qc",
+          "path": "04_phase2/segments/01/qc.json",
+          "sha256": "sha256:bca8deb24cd408a8f71620a0399af7e6804609b65701a6fb6f9a68375a85379f",
+          "size_bytes": 32638
+        },
+        "fixes": {
+          "kind": "fixes",
+          "path": "04_phase2/segments/01/fixes.md",
+          "sha256": "sha256:373ff32332a92f57304b07f80babd03d78e3bc532fd0eddf67b955c692045104",
+          "size_bytes": 11
+        }
+      },
+      "metadata": {
+        "render_fingerprint": "sha256:6ef642289f9ae3be98399f71a3432dd830bc83e671f47e5bfa129c7237a6fed2"
+      },
+      "completed_at": "2026-07-21T13:01:49.892231+00:00"
+    },
+    "phase3.master-package": {
+      "id": "phase3.master-package",
+      "execution_id": "cc359fe03f2a472fb8dd9cba258a0214",
+      "status": "COMPLETED",
+      "worker_version": "master-package-v5-tg-delivery",
+      "fingerprint": "sha256:ab245cf00b7630efb84a53a78593c29e74989aec860f52dccf11567631d1f747",
+      "attempt": 2,
+      "started_at": "2026-07-21T13:13:36.055168+00:00",
+      "updated_at": "2026-07-21T13:14:09.228241+00:00",
+      "outputs": {
+        "master": {
+          "kind": "master",
+          "path": "05_final/slava-reel-pilot.mp4",
+          "sha256": "sha256:9b914df8d34875078bb71bd7d4bf37fda0408408eb1e2491e26c2723cb267641",
+          "size_bytes": 19550740
+        },
+        "qc": {
+          "kind": "final-qc",
+          "path": "05_final/qc.json",
+          "sha256": "sha256:35ab33d211dd7760c37e875b54fd79f16289e85340cad2f84101f668562ebd80",
+          "size_bytes": 26046
+        },
+        "title": {
+          "kind": "publishing-title",
+          "path": "05_final/publishing-package/title.txt",
+          "sha256": "sha256:8e0da72ec0a52fe5928ba9a58cbc758dc175a09cd47158d315909f8fc72cc66c",
+          "size_bytes": 18
+        },
+        "description": {
+          "kind": "publishing-description",
+          "path": "05_final/publishing-package/description.md",
+          "sha256": "sha256:21592986d34795c3a73dc45f29ad2d8488332d552b026eaef820d705e0a1aac0",
+          "size_bytes": 53
+        },
+        "chapters": {
+          "kind": "publishing-chapters",
+          "path": "05_final/publishing-package/chapters.txt",
+          "sha256": "sha256:8f609b6fb9e4676da7ca358edf3bec9424d22378f09d5649f9f72a10e24b710e",
+          "size_bytes": 17
+        },
+        "package_manifest": {
+          "kind": "publishing-manifest",
+          "path": "05_final/publishing-package/manifest.json",
+          "sha256": "sha256:fb8514f6d24a9c34fe51e412d1a599a5ff3d9774072dc990c5d2c25d11ee3994",
+          "size_bytes": 261
+        }
+      },
+      "metadata": {},
+      "completed_at": "2026-07-21T13:14:09.228241+00:00"
+    }
+  }
+}

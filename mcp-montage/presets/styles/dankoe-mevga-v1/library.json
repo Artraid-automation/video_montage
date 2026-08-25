@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "id": "dankoe-mevga-v1",
+  "title": "Dan Koe / MeVGaMG28nc style library",
+  "source_url": "https://youtube.com/shorts/MeVGaMG28nc",
+  "analysis": "lab/references/MeVGaMG28nc/analysis.md",
+  "recipes": [
+    {
+      "id": "captions_body",
+      "title": "Золотые фразовые субтитры",
+      "source": "MeVGaMG28nc @ ~15–45s",
+      "what_happens": "Поверх живого говорящего короткие фразы (3–6 слов), золотой serif, по центру на груди; смена в такт речи; лицо не закрыто нижней стеной текста.",
+      "look": {
+        "font_family": "Times New Roman",
+        "font_class": "serif",
+        "color": "#E1C445",
+        "case": "lowercase",
+        "align": "center",
+        "alignment_ass": 5,
+        "y_band_norm": [0.48, 0.58],
+        "max_words": 6,
+        "max_lines": 2,
+        "stroke": "black thin",
+        "font_size_ratio": 0.045
+      },
+      "tags": ["#captions", "#serif", "#gold", "#chest-band", "#phrase", "#default-speech", "#talking-head"],
+      "situations": [
+        "идёт обычная речь / объяснение / история",
+        "нужна читаемость без TikTok-бара снизу",
+        "вертикальный talking-head",
+        "нет отдельной карточки title/list на том же такте"
+      ],
+      "anti_situations": [
+        "одновременно с framework_list или крупным hook_title на том же такте",
+        "пустые или служебные CUT"
+      ],
+      "min_content": "есть KEEP-речь",
+      "inputs": ["phrase_chunks"],
+      "compositor": "ass_phrase_captions"
+    },
+    {
+      "id": "hook_title",
+      "title": "Крупный заголовок-хук",
+      "source": "MeVGaMG28nc @ 0–5s",
+      "what_happens": "Крупный золотой serif (часто italic), 3–5 коротких строк по центру поверх A-roll на 2–4с — обложка мысли, не бегущая строка.",
+      "look": {
+        "font_family": "Times New Roman",
+        "font_class": "serif",
+        "color": "#EAC225",
+        "case": "title",
+        "align": "center",
+        "italic": true,
+        "hold_s": [2.0, 4.0]
+      },
+      "tags": ["#hook", "#title", "#serif", "#gold", "#cold-open", "#promise", "#thesis", "#big-text"],
+      "situations": [
+        "человек формулирует обещание или тему ролика",
+        "сильный тезис или название системы, которое стоит увидеть целиком",
+        "холодный старт / возврат после паузы, где нужна обложка",
+        "фраза, которую хочется запомнить глазом, а не только ухом"
+      ],
+      "anti_situations": [
+        "каждая вторая реплика",
+        "связки вроде «ну вот», «смотри»",
+        "длинный абзац без сжатия в title"
+      ],
+      "min_content": "один сжатый title",
+      "inputs": ["title"],
+      "compositor": "title_overlay"
+    },
+    {
+      "id": "framework_list",
+      "title": "Блюр + список-каркас",
+      "source": "MeVGaMG28nc @ ~5–15s",
+      "what_happens": "A-roll затемнён и размыт; по центру нумерованный/пунктирный список; активный пункт яркий, остальные тусклые — на экране видна система из N шагов.",
+      "look": {
+        "font_family": "Times New Roman",
+        "font_class": "serif",
+        "active_color": "#FFFFFF",
+        "dim_color": "#666666",
+        "dim_opacity": 0.3,
+        "underlay": "blur+darken",
+        "align": "center"
+      },
+      "tags": ["#list", "#framework", "#steps", "#blur", "#darken", "#spotlight", "#enumerate", "#system", "#playbook"],
+      "situations": [
+        "в речи несколько сопоставимых пунктов (шаги, правила, ошибки, принципы) — ориентир 3+",
+        "человек перечисляет систему / playbook / чеклист",
+        "нужно на секунды показать структуру, пока идёт голос",
+        "повтор уже названных столпов (reprise list)"
+      ],
+      "anti_situations": [
+        "один тезис",
+        "два пункта без ощущения системы",
+        "список ради декора",
+        "пункты выдуманы и их нет в речи"
+      ],
+      "min_content": "≥3 пункта из KEEP",
+      "inputs": ["lines"],
+      "compositor": "list_blur_overlay"
+    },
+    {
+      "id": "grade_talking_head",
+      "title": "База цветокора talking-head",
+      "source": "MeVGaMG28nc grade intent",
+      "what_happens": "Общий look: спокойная кожа, более холодные тени, cinematic talking-head — фон для текстовых рецептов.",
+      "look": {
+        "grade_id": "dankoe",
+        "intent": "cool shadows, natural skin, muted midtones"
+      },
+      "tags": ["#grade", "#color", "#cinematic", "#talking-head", "#base-look"],
+      "situations": [
+        "любой talking-head сегмент этого style pack",
+        "выбор/подтверждение grade на Gate 1"
+      ],
+      "anti_situations": [
+        "ломать кожу ради золота субтитров",
+        "давить в чёрное так, что текст не читается"
+      ],
+      "min_content": "есть A-roll",
+      "inputs": [],
+      "compositor": "ffmpeg_grade"
+    }
+  ]
+}

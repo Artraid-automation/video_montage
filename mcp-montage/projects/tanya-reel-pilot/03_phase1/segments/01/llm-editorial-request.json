@@ -1,0 +1,47 @@
+{
+  "schema_version": 2,
+  "kind": "llm-editorial-request",
+  "worker_version": "llm-editorial-v3",
+  "prompt_version": "gate1-editorial-cohesion.v2",
+  "segment_id": "01",
+  "media_end_s": 36.37,
+  "media_end_timecode": "0:36.370",
+  "blocks": [
+    {
+      "id": "u0001",
+      "start_s": 2.45,
+      "end_s": 11.47,
+      "text": "Если ты к концу месяца вечно на нуле, то у меня для тебя плохая новость. Дело не в том, что ты мало зарабатываешь, а в том, что у тебя отсутствует какой-либо порядок.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0002",
+      "start_s": 12.15,
+      "end_s": 20.55,
+      "text": "Почти каждый из нас поступает следующим образом. Он получил деньги, потратил эти деньги и планирует, что из остатка он что-то отложит.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0003",
+      "start_s": 21.07,
+      "end_s": 24.43,
+      "text": "Но обычно там не остается ничего, потому что траты найдутся у нас всегда.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0004",
+      "start_s": 25.25,
+      "end_s": 36.37,
+      "text": "И вот в этот момент как раз-таки происходит какая-то экстренная ситуация, когда ты с горящей головой, попой, бежишь что-то искать, бежишь где-то занимать, бежишь каким-то образом решить эту проблему.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    }
+  ]
+}

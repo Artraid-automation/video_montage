@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "kind": "render-contract",
+  "worker_version": "ffmpeg-overlay-v12-yuv420p",
+  "segment_id": "02",
+  "width": 720,
+  "height": 1280,
+  "motion_mode": "overlay",
+  "motion_count": 2,
+  "motion_on_screen_texts": [
+    "60 000 → 6 000",
+    "чужой / обратно"
+  ],
+  "motion_raw_briefs": [
+    "60 000 → вырезается 6 000 (10%), остаток 54 000 тускнеет. Зачем: Цифра — якорь правила; оверлей синхронно с произнесением 60/6, речь не останавливается",
+    "Два банка: перевод в «чужой» с трением (замок/таймер), стрелка «обратно» серая. Зачем: Смысл — friction паузы, не «открой вклад»; слой держится на клаузе про другой банк"
+  ],
+  "caption_font_size": 58,
+  "caption_alignment": 8,
+  "caption_margin_v": 26,
+  "caption_color": "#E1C445",
+  "caption_font_class": "serif",
+  "caption_pos_x": 360,
+  "caption_pos_y": 870,
+  "caption_placement": "face-chest",
+  "style_recipes_applied": [],
+  "cache_hit": false,
+  "framing_plan": "framing-plan.json"
+}

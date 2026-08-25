@@ -1,0 +1,14 @@
+{
+  "scenes": [
+    {
+      "id": "s1",
+      "recipe": "hook_title",
+      "anchor": "u0006",
+      "what": "Крупный italic gold title на груди слева от центра (под спикером).",
+      "why": "situation: сильный тезис/обложка входа; tag #hook #promise — не каждая реплика",
+      "origin": "AGENT",
+      "status": "PROPOSED",
+      "title": "Приходим\nна людей"
+    }
+  ]
+}

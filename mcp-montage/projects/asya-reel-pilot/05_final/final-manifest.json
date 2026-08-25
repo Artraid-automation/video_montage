@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "kind": "final",
+  "project_id": "asya-reel-pilot",
+  "revision": 1,
+  "gate2_approval": {
+    "kind": "approval",
+    "path": "06_state/approvals/gate2-r000074.json",
+    "sha256": "sha256:0a890f13cd3a5baadc81f539a2bf723c6903b5497bf120b2e40c74006897d1f3",
+    "size_bytes": 573
+  },
+  "master": {
+    "kind": "master",
+    "path": "05_final/asya-reel-pilot.mp4",
+    "sha256": "sha256:f7c59246002eb5f604942e94438d6aa0079f49351e796ccc3388e426f612d8e3",
+    "size_bytes": 31528419
+  },
+  "qc": {
+    "kind": "final-qc",
+    "path": "05_final/qc.json",
+    "sha256": "sha256:c374084829f0c9eb790f407fb4113368d5c511292a7eef48488d1866e151ddc3",
+    "size_bytes": 14798
+  },
+  "archive_receipt": {
+    "kind": "archive-receipt",
+    "path": "05_final/archive-receipt.json",
+    "sha256": "sha256:7e400b4537d0a2b739d2ae42413a4958f5ba8738105c69f3a2f6c5033c1f4d83",
+    "size_bytes": 2799
+  },
+  "publishing_package": {
+    "title": {
+      "kind": "publishing-title",
+      "path": "05_final/publishing-package/title.txt",
+      "sha256": "sha256:d51bffe8e4d68271b02611c3cd404b125fc1faa6b1496b99cdfcbe2acf7c647a",
+      "size_bytes": 17
+    },
+    "description": {
+      "kind": "publishing-description",
+      "path": "05_final/publishing-package/description.md",
+      "sha256": "sha256:7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "size_bytes": 2
+    },
+    "chapters": {
+      "kind": "publishing-chapters",
+      "path": "05_final/publishing-package/chapters.txt",
+      "sha256": "sha256:dd90fa3706d0cfb6839ac8d71694620a5c911c7c07402f70eb489d41f0bfe02a",
+      "size_bytes": 12
+    },
+    "manifest": {
+      "kind": "publishing-manifest",
+      "path": "05_final/publishing-package/manifest.json",
+      "sha256": "sha256:bb651f3f87dd2bbcec220025f0f07e3b6b0d68006170434ace37df69333f84ad",
+      "size_bytes": 255
+    }
+  },
+  "segment_hashes": [
+    "sha256:1b5190e8db17c39ccd5a836b20d32e3920bd8a26a03010e6eca46f5b579433e3"
+  ],
+  "telegram_delivery": {
+    "kind": "telegram-delivery-report",
+    "path": "05_final/delivery/telegram-delivery.json",
+    "sha256": "sha256:5c0634f154102039b205f999220e38cb011a42b88150e4ed7750cb70ad809dd8",
+    "size_bytes": 610
+  },
+  "telegram_file": {
+    "kind": "telegram-delivery",
+    "path": "05_final/delivery/tg-dankoe-1920x1080.mp4",
+    "sha256": "sha256:c0b759e3c4037408cfe7504d7affd75be3d43e9a92c78ebcb63b20f1a6b8ad5d",
+    "size_bytes": 13054533
+  }
+}

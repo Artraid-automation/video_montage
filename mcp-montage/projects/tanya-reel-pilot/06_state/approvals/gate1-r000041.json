@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "project_id": "tanya-reel-pilot",
+  "gate": "gate1",
+  "reviewer": "author",
+  "approved_at": "2026-07-20T04:36:20.822008+00:00",
+  "ledger_revision": 41,
+  "manifest": {
+    "kind": "gate1-manifest",
+    "path": "03_phase1/gate1-manifest.json",
+    "sha256": "sha256:46af30a2821e573c137583ada35e6317783ebeed47019e72b22f33eaa55b1617",
+    "size_bytes": 5894
+  },
+  "manifest_content_hash": "sha256:286310423977740f062a0491106bf45a88ba244720f39c3efccc2c21d1e86c03",
+  "style_version": "tanya-discovery-v1",
+  "provider_versions": {
+    "transcription": "faster-whisper:small",
+    "editorial": "editorial-analysis-v6",
+    "visual_planning": "visual-planner-v4",
+    "broll_search": "broll-lexical-search-v1",
+    "cross_segment_takes": "cross-segment-takes-v1"
+  },
+  "accepted_exceptions": []
+}

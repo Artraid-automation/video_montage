@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "kind": "film-continuity",
+  "worker_version": "film-continuity-v1",
+  "input_bindings": [
+    {
+      "segment_id": "01",
+      "transcript_sha256": "sha256:d431f4c8b7c478d4ece437e5104b88d16461abaa56291d15c1c23132ed02eb7b",
+      "keep_ids": [
+        "u0016",
+        "u0017",
+        "u0018",
+        "u0020",
+        "u0156",
+        "u0165p2",
+        "u0169p1",
+        "u0198",
+        "u0200",
+        "u0203"
+      ]
+    }
+  ],
+  "thresholds": {
+    "similarity": 0.84,
+    "recommendation": 0.92,
+    "min_tokens": 5,
+    "metric": "minimum(sequence-ratio, lexical-set-overlap)"
+  },
+  "verdict": "PASS",
+  "blocking_groups": [],
+  "uncertain_matches": []
+}

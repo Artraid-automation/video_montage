@@ -1,0 +1,68 @@
+{
+  "schema_version": 2,
+  "id": "tanya-reel-pilot",
+  "title": "Tanya reel pilot",
+  "profile": "reels-9x16",
+  "format": "reels",
+  "style_version": "dankoe-mevga-v1",
+  "default_grade": "dankoe",
+  "transcription": {
+    "provider": "faster-whisper",
+    "model": "small",
+    "language": "ru"
+  },
+  "verification_transcription": {
+    "provider": "faster-whisper",
+    "model": "small",
+    "language": "ru"
+  },
+  "render_profile": {
+    "width": 720,
+    "height": 1280,
+    "fps": 30,
+    "crf": 20,
+    "preset": "veryfast",
+    "captions": true
+  },
+  "transcript_verification": {
+    "max_wer": 0.14,
+    "min_order_ratio": 0.88,
+    "max_silence_s": 3.0
+  },
+  "editorial": {
+    "pause_threshold_s": 0.8,
+    "repetition_similarity": 0.86,
+    "llm": {
+      "provider": "agent",
+      "prompt_version": "gate1-editorial-cohesion.v2"
+    }
+  },
+  "visual_planning": {
+    "enabled": false,
+    "cadence_seconds": 30.0,
+    "max_per_segment": 6
+  },
+  "visual_llm": {
+    "provider": "agent",
+    "prompt_version": "gate1-visual-producer.v1"
+  },
+  "visual_probe_interval_s": 2.0,
+  "library_root": "E:\\Xampp\\MCP монтаж\\library\\broll",
+  "archive_root": "E:\\Xampp\\MCP монтаж\\projects\\_archive",
+  "publishing": {
+    "title": "Tanya reel pilot",
+    "description": "",
+    "chapter_titles": {
+      "01": "Take 1",
+      "02": "Take 2",
+      "03": "Main take"
+    }
+  },
+  "telegram_delivery": {
+    "enabled": true,
+    "width": 1080,
+    "height": 1920,
+    "speed_factor": 1.15,
+    "send_as": "document"
+  }
+}

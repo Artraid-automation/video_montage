@@ -1,0 +1,16 @@
+{
+    "schema_version":  2,
+    "generated_at":  "2026-07-19T14:10:41.327470+00:00",
+    "library_root":  "E:\\Xampp\\MCP монтаж\\library\\broll",
+    "assets":  [
+
+               ],
+    "summary":  {
+                    "asset_count":  0,
+                    "video_count":  0,
+                    "image_count":  0,
+                    "probe_failures":  0,
+                    "unknown_rights":  0
+                },
+    "revision":  0
+}

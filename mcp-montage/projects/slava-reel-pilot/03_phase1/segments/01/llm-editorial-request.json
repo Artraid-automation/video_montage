@@ -1,0 +1,1388 @@
+{
+  "schema_version": 2,
+  "kind": "llm-editorial-request",
+  "worker_version": "llm-editorial-v3",
+  "prompt_version": "gate1-editorial-cohesion.v2",
+  "segment_id": "01",
+  "media_end_s": 879.69,
+  "media_end_timecode": "14:39.690",
+  "blocks": [
+    {
+      "id": "u0001",
+      "start_s": 0.53,
+      "end_s": 4.11,
+      "text": "Тун, тун, тун, тун, тун, тун, тун, тун, тун.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0002",
+      "start_s": 7.97,
+      "end_s": 9.85,
+      "text": "Как добиться всего в жизни?",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0003",
+      "start_s": 11.41,
+      "end_s": 12.05,
+      "text": "Больше.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0004",
+      "start_s": 12.99,
+      "end_s": 15.99,
+      "text": "Как добиться всего, что хочешь, в жизни?",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0005",
+      "start_s": 17.41,
+      "end_s": 18.01,
+      "text": "Вау.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0006",
+      "start_s": 18.53,
+      "end_s": 21.99,
+      "text": "Как добиться всего, чего ты лезешь вперед.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0007",
+      "start_s": 23.11,
+      "end_s": 23.49,
+      "text": "Не надо?",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0008",
+      "start_s": 24.33,
+      "end_s": 25.71,
+      "text": "Договорились? Хорошо.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0010",
+      "start_s": 27.4,
+      "end_s": 32.6,
+      "text": "Блин, теперь всё это на камеру будет запечатленно, запечатлено,",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0011",
+      "start_s": 33.54,
+      "end_s": 34.2,
+      "text": "запечатляться.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0012",
+      "start_s": 34.48,
+      "end_s": 37.88,
+      "text": "Хотел сказать, запечатляться и запечатлено одновременно.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0013",
+      "start_s": 37.92,
+      "end_s": 42.28,
+      "text": "Оно мне там было, ах, получилось хрень.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0014",
+      "start_s": 43.4,
+      "end_s": 48.4,
+      "text": "Всё, всё, забыло, чем я хотел говорить. Да.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0016",
+      "start_s": 52.27,
+      "end_s": 55.27,
+      "text": "Как добиться в жизни всего, что хочешь?",
+      "heuristic_kind": "cut",
+      "heuristic_reason": "proposed-repetition",
+      "false_cohesion": false
+    },
+    {
+      "id": "u0017",
+      "start_s": 56.25,
+      "end_s": 61.21,
+      "text": "Ясное видение, ежедневная учёба, ежедневная работа,",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0018",
+      "start_s": 62.65,
+      "end_s": 66.99,
+      "text": "руками, работа руками и упорство через постоянные повторы.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0020",
+      "start_s": 67.47,
+      "end_s": 70.13,
+      "text": "Именно это должно стоять в твоей жизни на первом месте.",
+      "heuristic_kind": "cut",
+      "heuristic_reason": "proposed-repetition",
+      "false_cohesion": false
+    },
+    {
+      "id": "u0022",
+      "start_s": 71.69,
+      "end_s": 73.31,
+      "text": "У меня, кстати, руки обрезаны.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0023",
+      "start_s": 76.38,
+      "end_s": 77.94,
+      "text": "Sorry, I'm sorry, замат.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0024",
+      "start_s": 84.04,
+      "end_s": 86.48,
+      "text": "Вот как добиться в жизни всего, что хочешь.",
+      "heuristic_kind": "cut",
+      "heuristic_reason": "proposed-repetition",
+      "false_cohesion": false
+    },
+    {
+      "id": "u0025",
+      "start_s": 88.58,
+      "end_s": 90.34,
+      "text": "Ах, на хрен, на хрен.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0026",
+      "start_s": 91.86,
+      "end_s": 95.6,
+      "text": "Это из-за непривычной обстановки нервяк, какой-то вот этих джестой делать.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0028",
+      "start_s": 95.8,
+      "end_s": 97.82,
+      "text": "Но и мне нравятся эти джесты, они прикольно выглядят.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0029",
+      "start_s": 98.56,
+      "end_s": 100.96,
+      "text": "Но мать вашу.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0030",
+      "start_s": 101.6,
+      "end_s": 103.12,
+      "text": "Нет, нет, нет.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0031",
+      "start_s": 110.57,
+      "end_s": 115.19,
+      "text": "Ежедневная работа руками и постоянное упорство через постоянные повторы.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0033",
+      "start_s": 115.19,
+      "end_s": 117.77,
+      "text": "Упорство через постоянные повторы.",
+      "heuristic_kind": "cut",
+      "heuristic_reason": "proposed-repetition",
+      "false_cohesion": false
+    },
+    {
+      "id": "u0034",
+      "start_s": 126.72,
+      "end_s": 127.32,
+      "text": "Иронично.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0035",
+      "start_s": 130.26,
+      "end_s": 131.96,
+      "text": "Я сновидения ежедневного учеба, ежедневного.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0036",
+      "start_s": 132.08,
+      "end_s": 134.44,
+      "text": "Под руками упорство через постоянные повторы.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0037",
+      "start_s": 134.64,
+      "end_s": 135.6,
+      "text": "И смотреть в камеру.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0038",
+      "start_s": 137.99,
+      "end_s": 140.75,
+      "text": "Именно это должно стоять в твоей жизни на первом месте.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0039",
+      "start_s": 143.19,
+      "end_s": 145.71,
+      "text": "Вот как добиться в жизни в чего. В чего.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0041",
+      "start_s": 146.39,
+      "end_s": 154.15,
+      "text": "Вот как добиться в жизни всего, что хочешь. Ясное видение. Ежедневное учеба.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0044",
+      "start_s": 154.59,
+      "end_s": 156.85,
+      "text": "Ежедневная работа над собой.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0045",
+      "start_s": 157.55,
+      "end_s": 158.45,
+      "text": "Постоянное.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0046",
+      "start_s": 158.83,
+      "end_s": 161.29,
+      "text": "Упорство через постоянные повторения.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0047",
+      "start_s": 161.71,
+      "end_s": 163.15,
+      "text": "Ежедневная работа руками.",
+      "heuristic_kind": "cut",
+      "heuristic_reason": "proposed-repetition",
+      "false_cohesion": false
+    },
+    {
+      "id": "u0048",
+      "start_s": 163.31,
+      "end_s": 166.35,
+      "text": "Вот как добиться, блять.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0049",
+      "start_s": 167.79,
+      "end_s": 168.63,
+      "text": "Опять сорвалось.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0050",
+      "start_s": 172.32,
+      "end_s": 173.36,
+      "text": "Вот.",
+      "heuristic_kind": "cut",
+      "heuristic_reason": "proposed-repetition",
+      "false_cohesion": false
+    },
+    {
+      "id": "u0051",
+      "start_s": 174.28,
+      "end_s": 174.82,
+      "text": "Пример.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0052",
+      "start_s": 175.18,
+      "end_s": 177.12,
+      "text": "Точки, в которой я...",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0053",
+      "start_s": 178.0,
+      "end_s": 179.48,
+      "text": "Меня глючит.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0054",
+      "start_s": 180.04,
+      "end_s": 181.38,
+      "text": "Я сорвался.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0055",
+      "start_s": 181.38,
+      "end_s": 184.3,
+      "text": "Проговорил что-то не так. А, плохо.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0057",
+      "start_s": 185.48,
+      "end_s": 188.2,
+      "text": "То есть это реакция организма. Реакция мозга.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0059",
+      "start_s": 190.46,
+      "end_s": 194.82,
+      "text": "Если таких ступенек будет много на каждом этапе.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0062",
+      "start_s": 194.92,
+      "end_s": 197.36,
+      "text": "На каждой перезаписе я буду себя дергать.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0063",
+      "start_s": 197.54,
+      "end_s": 198.78,
+      "text": "Какой я плохой человек.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0064",
+      "start_s": 199.02,
+      "end_s": 201.48,
+      "text": "Какой мудак оговорился. Далеко.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0066",
+      "start_s": 202.28,
+      "end_s": 205.44,
+      "text": "В этом деле записи не продвинешься.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0067",
+      "start_s": 205.82,
+      "end_s": 207.68,
+      "text": "Надо это перезаписать. Вот.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0069",
+      "start_s": 207.68,
+      "end_s": 210.0,
+      "text": "Я в очередной раз.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0070",
+      "start_s": 212.06,
+      "end_s": 212.44,
+      "text": "Нет.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0071",
+      "start_s": 212.96,
+      "end_s": 213.68,
+      "text": "В очередной раз.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0072",
+      "start_s": 214.08,
+      "end_s": 216.74,
+      "text": "Я сейчас оговорился.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0073",
+      "start_s": 216.92,
+      "end_s": 218.24,
+      "text": "Я сейчас совершил ошибку.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0074",
+      "start_s": 218.32,
+      "end_s": 220.84,
+      "text": "У меня в мозгу мысли смешались.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0075",
+      "start_s": 221.18,
+      "end_s": 222.9,
+      "text": "Но я ведь это отследил.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0076",
+      "start_s": 223.08,
+      "end_s": 223.68,
+      "text": "Я ведь это",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0077",
+      "start_s": 224.56,
+      "end_s": 225.28,
+      "text": "ухватил.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0078",
+      "start_s": 226.0,
+      "end_s": 228.08,
+      "text": "И уже вот этот вот ухватил.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0079",
+      "start_s": 228.62,
+      "end_s": 229.14,
+      "text": "И является",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0080",
+      "start_s": 232.88,
+      "end_s": 233.6,
+      "text": "прогрессом.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0081",
+      "start_s": 234.08,
+      "end_s": 236.56,
+      "text": "То есть обучение это оно есть. Это практика.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0083",
+      "start_s": 236.56,
+      "end_s": 237.36,
+      "text": "И вот практика.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0084",
+      "start_s": 238.02,
+      "end_s": 239.96,
+      "text": "Хоп, хоп, хоп.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0085",
+      "start_s": 241.28,
+      "end_s": 243.82,
+      "text": "И еще раз, еще раз, еще раз. Десять, сто.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0087",
+      "start_s": 244.36,
+      "end_s": 246.5,
+      "text": "И далее таких повторений. И вот.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0089",
+      "start_s": 247.88,
+      "end_s": 249.78,
+      "text": "Их уже меньше.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0090",
+      "start_s": 251.26,
+      "end_s": 252.5,
+      "text": "На 10%.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0091",
+      "start_s": 253.18,
+      "end_s": 254.5,
+      "text": "Потихоньку не спеша.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0092",
+      "start_s": 254.6,
+      "end_s": 257.32,
+      "text": "Поэтому хорошо, что я сейчас вот так вот оговорился.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0093",
+      "start_s": 259.43,
+      "end_s": 261.33,
+      "text": "Не материм себя.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0094",
+      "start_s": 262.31,
+      "end_s": 262.71,
+      "text": "Не",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0095",
+      "start_s": 263.77,
+      "end_s": 264.39,
+      "text": "негативен.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0096",
+      "start_s": 265.14,
+      "end_s": 265.93,
+      "text": "Позитивен. И",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0098",
+      "start_s": 267.23,
+      "end_s": 269.41,
+      "text": "долгосрочно у нас все получится.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0099",
+      "start_s": 271.07,
+      "end_s": 275.13,
+      "text": "Вот в такой удачной конфигурации для этого дела.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0102",
+      "start_s": 275.35,
+      "end_s": 276.35,
+      "text": "Не было раньше.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0103",
+      "start_s": 278.45,
+      "end_s": 280.09,
+      "text": "И штатив текенба.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0104",
+      "start_s": 280.25,
+      "end_s": 280.87,
+      "text": "Мне очень нравится.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0105",
+      "start_s": 282.41,
+      "end_s": 282.83,
+      "text": "Короче.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0106",
+      "start_s": 285.98,
+      "end_s": 287.94,
+      "text": "Ясновиденье ежедневно учеба.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0107",
+      "start_s": 287.96,
+      "end_s": 291.5,
+      "text": "Ежедневная работа руками и упорства через постоянные повторы.",
+      "heuristic_kind": "cut",
+      "heuristic_reason": "proposed-repetition",
+      "false_cohesion": false
+    },
+    {
+      "id": "u0109",
+      "start_s": 294.22,
+      "end_s": 295.3,
+      "text": "На этом я закончили.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0110",
+      "start_s": 297.56,
+      "end_s": 299.96,
+      "text": "Ясновиденье ежедневная учеба.",
+      "heuristic_kind": "cut",
+      "heuristic_reason": "proposed-repetition",
+      "false_cohesion": false
+    },
+    {
+      "id": "u0112",
+      "start_s": 300.34,
+      "end_s": 304.64,
+      "text": "Ежедневная работа руками и упорства через постоянные повторы.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0114",
+      "start_s": 305.68,
+      "end_s": 308.82,
+      "text": "Вот что должно стоять в твоей жизни на первом месте.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0116",
+      "start_s": 310.82,
+      "end_s": 313.3,
+      "text": "Вот как добиться в жизни всего, что хочешь.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0118",
+      "start_s": 314.18,
+      "end_s": 316.68,
+      "text": "Ясновиденье. Ежедневная учеба.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0120",
+      "start_s": 317.22,
+      "end_s": 318.74,
+      "text": "Ежедневная работа руками.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0121",
+      "start_s": 319.2,
+      "end_s": 321.22,
+      "text": "Упорство через постоянные повторы.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0122",
+      "start_s": 324.26,
+      "end_s": 324.62,
+      "text": "Да.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0123",
+      "start_s": 326.64,
+      "end_s": 327.8,
+      "text": "Именно это должно стать",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0125",
+      "start_s": 331.94,
+      "end_s": 334.42,
+      "text": "у тебя в жизни на первом месте.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0126",
+      "start_s": 337.25,
+      "end_s": 353.2,
+      "text": "Х saying пишем lets ourselves имена это должно стоять в твоей жизни на первом месте и imminentetta должно стоять в твоей жизни на первом месте",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0132",
+      "start_s": 356.42,
+      "end_s": 357.68,
+      "text": "вот как добиться в жизни.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0133",
+      "start_s": 357.96,
+      "end_s": 359.12,
+      "text": "всего что желаешь.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0134",
+      "start_s": 360.14,
+      "end_s": 365.58,
+      "text": "Ясновиденья ежедневная учеба ежедневная работа руками и стай главное",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0137",
+      "start_s": 366.4,
+      "end_s": 368.88,
+      "text": "опорство через постоянные повторы",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0138",
+      "start_s": 368.88,
+      "end_s": 375.1,
+      "text": "Держа фокус на этом, именно это ты должен ставить свои жизни на первом месте.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0140",
+      "start_s": 376.68,
+      "end_s": 380.1,
+      "text": "И, слушай, уже какой-то improvisation пошел.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0141",
+      "start_s": 381.06,
+      "end_s": 382.4,
+      "text": "А по сути так и надо.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0142",
+      "start_s": 383.02,
+      "end_s": 383.06,
+      "text": "Вот.",
+      "heuristic_kind": "cut",
+      "heuristic_reason": "proposed-repetition",
+      "false_cohesion": false
+    },
+    {
+      "id": "u0143",
+      "start_s": 383.76,
+      "end_s": 388.16,
+      "text": "А в прошлую запись такого не было, а сейчас у меня какая-то improvisation вылезла.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0145",
+      "start_s": 388.66,
+      "end_s": 391.36,
+      "text": "Да, это один и тот же текст, то есть это еще спустя время.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0147",
+      "start_s": 392.86,
+      "end_s": 404.04,
+      "text": "Но это опять Geo-опыт и понимание, что наговорить что-то неудачно, криво, косость, телефона в один день, потом через день, через два дня.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0150",
+      "start_s": 405.22,
+      "end_s": 414.44,
+      "text": "Снова прийти, снова записаться и гораздо, гораздо лучше в голове все это уже уложилось и вот у меня даже что-то заимпровизировалось.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0153",
+      "start_s": 414.62,
+      "end_s": 421.68,
+      "text": "И это опять же нарабатываем и нафиксируем, это только первый раз, когда оно привелилось, оно ведь все наработается.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0155",
+      "start_s": 435.57,
+      "end_s": 437.27,
+      "text": "Чувак, мне еще дописать надо.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0156",
+      "start_s": 442.39,
+      "end_s": 459.95,
+      "text": "Но большинство людей вообще не понимают, чего они хотят, потому что ни разу за многие годы всерьез не садились, не разбирались в себе и не выписывали, чего они не хотят, к чему они точно не хотят прийти и кем они хотят стать.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0161",
+      "start_s": 464.66,
+      "end_s": 468.1,
+      "text": "Ну вот, внешний фактор, да, опять же, я могу сказать,",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0162",
+      "start_s": 469.44,
+      "end_s": 477.32,
+      "text": "блин, звук говно, блин, мне все портят, блин, с другой,",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0163",
+      "start_s": 478.72,
+      "end_s": 482.54,
+      "text": "прикольно, мне же и дальше так будет делать, а я уже сейчас к этому готов.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0165",
+      "start_s": 483.78,
+      "end_s": 507.07,
+      "text": "Ща, погодь, большинство не учится, потому что настоящее учеба – это всегда больно, это не как не относится к зубрежке или к хорошим оценкам, то есть это отдельный навык, который тоже нужно внезапно изучать, практиковать.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0169",
+      "start_s": 512.87,
+      "end_s": 562.83,
+      "text": "Большинство людей не строят, они балуются, берут первое, второе, третье направление в каждом, как только встречают трудности, первое бросают и переходят следующее вместо твердой постоянной работы, вместо того чтобы добежать до результата, и без понимания, что эти трудности, они возникнут в любом деле, то есть они живут в этой петле легкого старта, спотыкаются, бросают, и бросают как только выходят на плато, как им кажется.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0177",
+      "start_s": 565.78,
+      "end_s": 584.7,
+      "text": "И последнее большинство не растет через поражение, стоит один раз упасть, где-то накосячить не справиться, и люди проигрывают борьбу, сильные версии себя с слабой версией себя, уходят в тильт и забивают.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0181",
+      "start_s": 589.47,
+      "end_s": 593.43,
+      "text": "Это затянута, эта версия мне не нравится, нет, фу-фу-фу.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0182",
+      "start_s": 597.34,
+      "end_s": 607.42,
+      "text": "И последнее большинство они не растут через провалы, стоит один раз упасть, и депресняк, тильта, мы от этого уходим.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0184",
+      "start_s": 608.5,
+      "end_s": 612.14,
+      "text": "Неправильно, нет, мне не нравится эта импровизация тоже нахрен.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0186",
+      "start_s": 614.49,
+      "end_s": 614.61,
+      "text": "Вот.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0187",
+      "start_s": 618.08,
+      "end_s": 629.5,
+      "text": "И последнее большинство, опять руки вытянуло, это какой-то вот нездоровый уже, щата, сделают, продолжим.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0189",
+      "start_s": 630.4,
+      "end_s": 632.78,
+      "text": "Камер пишет так долго, вообще кайф.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0190",
+      "start_s": 633.56,
+      "end_s": 637.12,
+      "text": "Я почти закончил, она почти тоже дошла до своего лимита.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0191",
+      "start_s": 638.98,
+      "end_s": 646.64,
+      "text": "Но раньше она так не делала, я вот почистил SD-карту, сменил там форматы записи, что-то такое.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0193",
+      "start_s": 647.94,
+      "end_s": 650.08,
+      "text": "Сейчас пишет, это радостно.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0194",
+      "start_s": 651.04,
+      "end_s": 656.18,
+      "text": "И, кстати, я экранчик не завернул, ну как-то вот по положению двигаюсь.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0196",
+      "start_s": 656.18,
+      "end_s": 659.32,
+      "text": "Ладно, глаза съезжают, надо смотреть в камеру.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0197",
+      "start_s": 659.88,
+      "end_s": 660.52,
+      "text": "У нас время.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0198",
+      "start_s": 663.97,
+      "end_s": 668.95,
+      "text": "И последнее большинство не растут через провалы, стоит один раз упасть.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0200",
+      "start_s": 669.35,
+      "end_s": 680.77,
+      "text": "Мы опускаем руки, мы проигрываем внутреннюю борьбу с слабой версией себя, сильная версия себя не выигрывает.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0202",
+      "start_s": 681.15,
+      "end_s": 682.93,
+      "text": "Все, мы бросаем.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0203",
+      "start_s": 683.41,
+      "end_s": 684.55,
+      "text": "Не будь как большинство.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0204",
+      "start_s": 684.97,
+      "end_s": 687.31,
+      "text": "Эта версия мне тоже не нравится, я опять налил воды.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0205",
+      "start_s": 688.91,
+      "end_s": 708.65,
+      "text": "И последнее и последнее большинство не растут через провалы, стоит один раз проиграть, потерпеть неудачу и люди опускают руки, проигрывая борьбу, сильной версии себя внутреннюю с слабой версией себя, не будь как большинство.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0209",
+      "start_s": 712.52,
+      "end_s": 719.54,
+      "text": "Не будь, не будь, как большинство, не думай, не думай.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0210",
+      "start_s": 719.98,
+      "end_s": 721.84,
+      "text": "Ну что, фокус слишком близко, да?",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0211",
+      "start_s": 722.16,
+      "end_s": 726.72,
+      "text": "Эй, да ты че, че, че это я в блюре, остальное четко?",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0212",
+      "start_s": 726.98,
+      "end_s": 735.72,
+      "text": "Не, не, не, я надеюсь с фокусом там нормально, ну насколько мне тут видно, в очках, вот с расстояния.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0214",
+      "start_s": 736.12,
+      "end_s": 737.88,
+      "text": "Фокус был, я надеюсь.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0215",
+      "start_s": 737.88,
+      "end_s": 741.44,
+      "text": "Ну и звук должен был писаться, если че, зря все это проверял.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0216",
+      "start_s": 742.98,
+      "end_s": 744.46,
+      "text": "Все должно быть хорошо.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0217",
+      "start_s": 745.68,
+      "end_s": 746.06,
+      "text": "Все, а?",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0218",
+      "start_s": 747.88,
+      "end_s": 749.4,
+      "text": "Мизю писали, а?",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0219",
+      "start_s": 750.32,
+      "end_s": 751.44,
+      "text": "Работа сделана.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0220",
+      "start_s": 751.92,
+      "end_s": 765.58,
+      "text": "Я хочу не знаю, кому-нибудь сгинуть этот исходник, кто тоже пробует, да, думает о том, что все это делает, всем этим заниматься, и мне кажется это хорошие мысли.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0223",
+      "start_s": 768.25,
+      "end_s": 775.49,
+      "text": "Да, особенно когда я это смонтирую, в короче, пя-пя-пя-пе, офигенный видос, а потом сгинуть исходник, и так вот, смотрите.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0225",
+      "start_s": 776.57,
+      "end_s": 780.33,
+      "text": "Никто, правда, 13 минут смотреть не будет, не с нюанс.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0226",
+      "start_s": 780.73,
+      "end_s": 782.73,
+      "text": "Надо на личной встрече, чтобы не отвертелись.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0227",
+      "start_s": 784.69,
+      "end_s": 859.47,
+      "text": "Блин, ты пец, почему так хорошо, мне так нравится этот блюр, я просто кайфую, я так рад, я так рад, я на кайфчик это поставил, короче, в прошлый раз я писал вот с этой кучей, вот с этой кучей, есть, короче, печка, на которой навалины вещи, я ставил камеру на вот эту подушку, подкладывал под нее что-то палочку, типа выставлял кадр, и пробовал в этих обстоятельствах что-то писать, ну и даже что-то получалось, потом где забил, все равно говорил вот так, ну вы все это видели, наверное, если нет, забейте, вы ничего не потеряли, а сейчас штатив, ух, величие, петля, я научился цеплять петлю, не к телефону, я писал на телефон в прошлый раз, было две дорожки, а сейчас я прицепил петлю к камере, и я такой очень хорошо, радостно, это не типично, это мне сейчас хорошо, потом меня будет",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0242",
+      "start_s": 860.89,
+      "end_s": 879.69,
+      "text": "откатом, во-первых, заливать, во-вторых, извините, не каждая, далеко не каждая, запись будет в таком веселом настроении, когда я еще в воскресенье тут что-то как-то хорошо себя чувствую, эта работа",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    }
+  ]
+}

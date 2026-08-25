@@ -1,0 +1,45 @@
+[studio]
+schema_version = 2
+projects_dir = "projects"
+library_dir = "library/broll"
+default_language = "ru"
+
+[asr.primary]
+provider = "faster-whisper"
+model = "small"
+
+[asr.verification]
+provider = "faster-whisper"
+model = "small"
+max_wer = 0.12
+min_order_ratio = 0.90
+max_silence_s = 2.5
+
+[video.review]
+width = 1280
+height = 720
+fps = 25
+codec = "libx264"
+crf = 23
+
+[video.youtube]
+width = 1920
+height = 1080
+fps = 25
+crf = 18
+
+[video.shorts]
+width = 1080
+height = 1920
+fps = 30
+crf = 18
+
+[audio_qc]
+max_peak_db = -0.1
+min_mean_db = -40.0
+
+[gates]
+gate1 = "editorial_and_visual_plan"
+gate2 = "verified_segments"
+final = "master_archive_and_package"
+auto_publish = false

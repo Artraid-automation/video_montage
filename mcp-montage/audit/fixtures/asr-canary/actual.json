@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "provider": "faster-whisper",
+  "provider_version": "tiny.en",
+  "language": "en",
+  "media_path": "audit\\fixtures\\asr-canary\\canary.mp4",
+  "duration_s": 4.644,
+  "words": [
+    {
+      "id": "w000001",
+      "start_s": 0.0,
+      "end_s": 0.5,
+      "text": "The",
+      "confidence": 0.361032634973526
+    },
+    {
+      "id": "w000002",
+      "start_s": 0.5,
+      "end_s": 0.88,
+      "text": "quick",
+      "confidence": 0.8698585629463196
+    },
+    {
+      "id": "w000003",
+      "start_s": 0.88,
+      "end_s": 1.4,
+      "text": "brown",
+      "confidence": 0.9826732873916626
+    },
+    {
+      "id": "w000004",
+      "start_s": 1.4,
+      "end_s": 1.86,
+      "text": "fox",
+      "confidence": 0.41723325848579407
+    },
+    {
+      "id": "w000005",
+      "start_s": 1.86,
+      "end_s": 2.26,
+      "text": "jumps",
+      "confidence": 0.9080952405929565
+    },
+    {
+      "id": "w000006",
+      "start_s": 2.26,
+      "end_s": 2.72,
+      "text": "over",
+      "confidence": 0.739472508430481
+    },
+    {
+      "id": "w000007",
+      "start_s": 2.72,
+      "end_s": 3.04,
+      "text": "the",
+      "confidence": 0.965765118598938
+    },
+    {
+      "id": "w000008",
+      "start_s": 3.04,
+      "end_s": 3.38,
+      "text": "lazy",
+      "confidence": 0.9750866293907166
+    },
+    {
+      "id": "w000009",
+      "start_s": 3.38,
+      "end_s": 3.72,
+      "text": "duck.",
+      "confidence": 0.5508319735527039
+    }
+  ],
+  "utterances": [
+    {
+      "id": "u0001",
+      "start_s": 0.0,
+      "end_s": 3.72,
+      "text": "The quick brown fox jumps over the lazy duck.",
+      "word_ids": [
+        "w000001",
+        "w000002",
+        "w000003",
+        "w000004",
+        "w000005",
+        "w000006",
+        "w000007",
+        "w000008",
+        "w000009"
+      ],
+      "decision": "keep",
+      "reason": null,
+      "take_group": null
+    }
+  ]
+}

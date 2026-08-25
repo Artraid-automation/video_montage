@@ -1,0 +1,32 @@
+{
+  "schema_version": 2,
+  "gate": "gate2",
+  "created_at": "2026-07-21T12:52:34.264501+00:00",
+  "fixes": [
+    {
+      "id": "fix-001",
+      "kind": "speech",
+      "segment_id": "01",
+      "description": "transcript-reviewed note=\"trim u0165p2 lead-in silence; CUT u0169p3 instead retake; KEEP u0169p1/u0169p4\"",
+      "status": "OPEN",
+      "blocking": false,
+      "operation": "transcript-reviewed",
+      "arguments": {
+        "note": "trim u0165p2 lead-in silence; CUT u0169p3 instead retake; KEEP u0169p1/u0169p4"
+      }
+    }
+  ],
+  "rule_candidates": [],
+  "source_files": [
+    "04_phase2/segments/01/fixes.md"
+  ],
+  "outcomes": [
+    {
+      "fix_id": "fix-001",
+      "status": "APPLIED",
+      "before_sha256": "sha256:75a015283d788dab835c906750d8b8a1dfe752ee8f9515bb3bb53a3ec7f5c2cc",
+      "after_sha256": "sha256:75a015283d788dab835c906750d8b8a1dfe752ee8f9515bb3bb53a3ec7f5c2cc"
+    }
+  ],
+  "rule_proposals_added": []
+}

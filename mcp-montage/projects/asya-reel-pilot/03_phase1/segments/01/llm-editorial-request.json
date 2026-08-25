@@ -1,0 +1,119 @@
+{
+  "schema_version": 2,
+  "kind": "llm-editorial-request",
+  "worker_version": "llm-editorial-v3",
+  "prompt_version": "gate1-editorial-cohesion.v2",
+  "segment_id": "01",
+  "media_end_s": 83.94,
+  "media_end_timecode": "1:23.940",
+  "blocks": [
+    {
+      "id": "u0001",
+      "start_s": 4.68,
+      "end_s": 10.26,
+      "text": "как ты попала в сообщество и что ты вообще думала о сообществе, когда ты сюда пришла?",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0002",
+      "start_s": 10.36,
+      "end_s": 11.46,
+      "text": "Может, были такие-то сомнения?",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0003",
+      "start_s": 11.74,
+      "end_s": 14.14,
+      "text": "Я думала, что это вообще такое здесь происходит?",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0004",
+      "start_s": 14.38,
+      "end_s": 18.58,
+      "text": "Или сразу быстро делась вот эту историю? Пожалуйста.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0006",
+      "start_s": 19.26,
+      "end_s": 25.46,
+      "text": "Все мы приходим на людей, важны люди, которые появляются в нашей жизни.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0007",
+      "start_s": 25.62,
+      "end_s": 31.3,
+      "text": "Когда в моей жизни появился общество, я пришла про женщины и это был мой первый опыт.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0009",
+      "start_s": 31.44,
+      "end_s": 37.98,
+      "text": "Я увидела много активных, энергичных женщин и подумала, что интересно, но это, наверное, и не мое.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0011",
+      "start_s": 38.4,
+      "end_s": 49.36,
+      "text": "Буквально через полгода я познакомилась с лидером сообщества, который привлекла мне своей открытостью, ирудиции, вдохновение, а самым главным влиянием на других участников.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0014",
+      "start_s": 50.04,
+      "end_s": 52.28,
+      "text": "Я поняла, что я хочу быть в команде такого лидера.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0015",
+      "start_s": 52.36,
+      "end_s": 71.16,
+      "text": "Таким образом мой путь знакомства начался с того, что я вошла в команду и некоторое время пришло в мою жизнь экзесидвижение, чему я бесконечно счастлива, потому что именно экзесидвижение силы сообществ дало мне возможность быть смелее, ярче, узнавать каждый раз про себя новые грани.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0020",
+      "start_s": 74.8,
+      "end_s": 78.96,
+      "text": "Заново, да? Давайте заново. Давайте заново.",
+      "heuristic_kind": "cut",
+      "heuristic_reason": "retake-marker",
+      "false_cohesion": false
+    },
+    {
+      "id": "u0023",
+      "start_s": 81.36,
+      "end_s": 83.94,
+      "text": "Я пришла на тебя.",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    }
+  ]
+}

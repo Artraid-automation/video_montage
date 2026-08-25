@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "reels-9x16",
+  "title": "Reels / short vertical",
+  "format": "reels",
+  "style_version": "dankoe-mevga-v1",
+  "default_grade": "dankoe",
+  "render_profile": {
+    "width": 720,
+    "height": 1280,
+    "fps": 30,
+    "crf": 20,
+    "preset": "veryfast",
+    "captions": true
+  },
+  "transcript_verification": {
+    "max_wer": 0.14,
+    "min_order_ratio": 0.88,
+    "max_silence_s": 1.2,
+    "max_timing_drift_s": 0.85,
+    "max_timing_drift_ratio": 0.25,
+    "max_lead_in_silence_s": 0.8,
+    "reject_adjacent_echoes": true,
+    "reject_repeated_openers": true
+  },
+  "visual_planning": {
+    "enabled": false,
+    "cadence_seconds": 30.0,
+    "max_per_segment": 6
+  },
+  "visual_probe_interval_s": 2.0,
+  "telegram_delivery": {
+    "enabled": true,
+    "width": 1080,
+    "height": 1920,
+    "speed_factor": 1.15,
+    "send_as": "document"
+  },
+  "notes": "Author default after Tanya pilot. Clean grades stay 1.0x; TG file may be sped."
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "transaction_id": "92b9dedf20904591894e3812f7ddbc3d",
+  "status": "COMMITTED",
+  "gate": "gate2",
+  "expected_ledger_revision": 100,
+  "affected_paths": [
+    "03_phase1/segments/01/transcript.md",
+    "06_state/revisions/revision-000101.json",
+    "02_inputs/rules/ledger.json"
+  ],
+  "created_at": "2026-07-21T12:52:34.304501+00:00",
+  "committed_at": "2026-07-21T12:52:34.927989+00:00"
+}

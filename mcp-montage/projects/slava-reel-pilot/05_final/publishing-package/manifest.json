@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "project_id": "slava-reel-pilot",
+  "master_sha256": "sha256:9b914df8d34875078bb71bd7d4bf37fda0408408eb1e2491e26c2723cb267641",
+  "chapters": [
+    "00:00 Main take"
+  ],
+  "publication": "manual",
+  "assets_license_reviewed": true
+}

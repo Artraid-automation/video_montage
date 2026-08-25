@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "project_id": "tanya-reel-pilot",
+  "master_sha256": "sha256:21524cc4911f378f6c82e7a1144b97de8bfe5a685c44ab3193322dd8c95b3809",
+  "chapters": [
+    "00:00 Take 1",
+    "00:31 Take 2",
+    "00:57 Main take"
+  ],
+  "publication": "manual",
+  "assets_license_reviewed": true
+}

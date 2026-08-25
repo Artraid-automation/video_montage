@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "kind": "final-grade-candidates",
+  "worker_version": "final-grades-v1",
+  "default_grade": "dankoe",
+  "candidates": [
+    {
+      "grade": "neutral",
+      "path": "05_final/grades/master-neutral.mp4",
+      "sha256": "sha256:ab8bacab632695090130092fb2522d84423647232a1064f144ff972bc22c03cf",
+      "size_bytes": 18823960,
+      "audio": {
+        "verdict": "PASS",
+        "mean_db": -17.1,
+        "peak_db": -0.4,
+        "thresholds": {
+          "max_peak_db": -0.1,
+          "min_mean_db": -40.0,
+          "target_mean_db_min": -24.0,
+          "target_mean_db_max": -12.0
+        },
+        "reasons": []
+      },
+      "is_primary": false
+    },
+    {
+      "grade": "dankoe",
+      "path": "05_final/grades/master-dankoe.mp4",
+      "sha256": "sha256:9b914df8d34875078bb71bd7d4bf37fda0408408eb1e2491e26c2723cb267641",
+      "size_bytes": 19550740,
+      "audio": {
+        "verdict": "PASS",
+        "mean_db": -17.1,
+        "peak_db": -0.4,
+        "thresholds": {
+          "max_peak_db": -0.1,
+          "min_mean_db": -40.0,
+          "target_mean_db_min": -24.0,
+          "target_mean_db_max": -12.0
+        },
+        "reasons": []
+      },
+      "is_primary": true
+    },
+    {
+      "grade": "warm",
+      "path": "05_final/grades/master-warm.mp4",
+      "sha256": "sha256:f6da7f6854f72a691c7de9afdc78770930adc13eacf145ef7d98e4d516ea8cd7",
+      "size_bytes": 19446387,
+      "audio": {
+        "verdict": "PASS",
+        "mean_db": -17.1,
+        "peak_db": -0.4,
+        "thresholds": {
+          "max_peak_db": -0.1,
+          "min_mean_db": -40.0,
+          "target_mean_db_min": -24.0,
+          "target_mean_db_max": -12.0
+        },
+        "reasons": []
+      },
+      "is_primary": false
+    }
+  ],
+  "audio_note": "Loudness normalized once on the concat master (loudnorm I=-14). Listen here — do not re-check per-segment audio unless a segment was revised."
+}

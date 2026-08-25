@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "kind": "render-contract",
+  "worker_version": "ffmpeg-overlay-v11-caption-gaps",
+  "segment_id": "01",
+  "width": 720,
+  "height": 1280,
+  "motion_mode": "overlay",
+  "motion_count": 2,
+  "motion_on_screen_texts": [
+    "0 ₽",
+    "паника"
+  ],
+  "motion_raw_briefs": [
+    "Индикатор счёта ползёт к «0 ₽» / пустой кошелёк. Зачем: Боль «на нуле» должна читаться глазом, пока звучит хук — не после фразы",
+    "Иконки паники поверх речи: горящая голова → искать/занять → тушение. Зачем: Кульминация open; оверлей кроет всю «экстренную» клаузу, без вспышки на 1с"
+  ],
+  "caption_font_size": 58,
+  "caption_alignment": 8,
+  "caption_margin_v": 26,
+  "caption_color": "#E1C445",
+  "caption_font_class": "serif",
+  "caption_pos_x": 360,
+  "caption_pos_y": 870,
+  "caption_placement": "face-chest",
+  "style_recipes_applied": [],
+  "cache_hit": false,
+  "framing_plan": "framing-plan.json"
+}

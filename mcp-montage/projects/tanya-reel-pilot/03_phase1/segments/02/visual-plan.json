@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "kind": "visual-plan",
+  "worker_version": "visual-planner-v4",
+  "segment_id": "02",
+  "scenes": [
+    {
+      "id": "2a",
+      "anchor": "u0004",
+      "type": "motion",
+      "brief": "60 000 → вырезается 6 000 (10%), остаток 54 000 тускнеет. Зачем: Цифра — якорь правила; оверлей синхронно с произнесением 60/6, речь не останавливается",
+      "asset": null,
+      "resolution": "CONFIGURED",
+      "origin": "AGENT",
+      "status": "PROPOSED"
+    },
+    {
+      "id": "2b",
+      "anchor": "u0005",
+      "type": "motion",
+      "brief": "Два банка: перевод в «чужой» с трением (замок/таймер), стрелка «обратно» серая. Зачем: Смысл — friction паузы, не «открой вклад»; слой держится на клаузе про другой банк",
+      "asset": null,
+      "resolution": "CONFIGURED",
+      "origin": "AGENT",
+      "status": "PROPOSED"
+    },
+    {
+      "id": "2c",
+      "anchor": "u0010",
+      "type": "motion",
+      "brief": "12 месяцев: плитки 6к складываются в стопку. Зачем: Обещание «через год» должно нарастать поверх речи о разнице 60/54",
+      "asset": null,
+      "resolution": "CONFIGURED",
+      "origin": "AGENT",
+      "status": "PROPOSED"
+    }
+  ],
+  "searches": [],
+  "status": "PROPOSED",
+  "transcript_sha256": "sha256:93876170734f132d25125efbf4d408c608d56ad66ac75912ca79dd6147710d7a"
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 2,
+  "project_id": "tanya-reel-pilot",
+  "gate": "gate2",
+  "reviewer": "author",
+  "approved_at": "2026-07-20T11:03:17.257872+00:00",
+  "ledger_revision": 110,
+  "manifest": {
+    "kind": "gate2-manifest",
+    "path": "04_phase2/gate2-manifest.json",
+    "sha256": "sha256:005189cfdc930342355269c9ee8c6cba47ca204d1995f3072ad0d9c6069e2a89",
+    "size_bytes": 5231
+  },
+  "manifest_content_hash": "sha256:3aae6db24c34ad0fe6d4f50522e91fd2106c38e2cbc83ec4a7aacf9cf7a1d380",
+  "style_version": null,
+  "provider_versions": {},
+  "accepted_exceptions": []
+}

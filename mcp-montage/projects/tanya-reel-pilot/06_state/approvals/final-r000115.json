@@ -1,0 +1,18 @@
+{
+  "schema_version": 2,
+  "project_id": "tanya-reel-pilot",
+  "gate": "final",
+  "reviewer": "user",
+  "approved_at": "2026-07-21T04:23:33.892051+00:00",
+  "ledger_revision": 115,
+  "manifest": {
+    "kind": "final-manifest",
+    "path": "05_final/final-manifest.json",
+    "sha256": "sha256:06338d081eb84cb1953d332c4548095b2c3a6c3ad7d86e78703ee7e487c97eca",
+    "size_bytes": 2619
+  },
+  "manifest_content_hash": "sha256:c7b696e482c310503426fa028bdf114597be50601bdfec0eafda1552eec19dff",
+  "style_version": null,
+  "provider_versions": {},
+  "accepted_exceptions": []
+}

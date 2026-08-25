@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "kind": "framing-plan",
+  "worker_version": "framing-face-v4",
+  "source": {
+    "width": 1080,
+    "height": 1920
+  },
+  "output": {
+    "width": 720,
+    "height": 1280
+  },
+  "face_source": {
+    "x": 337,
+    "y": 418,
+    "w": 564,
+    "h": 564
+  },
+  "scale": 0.718634,
+  "scaled_w": 776,
+  "scaled_h": 1380,
+  "crop_x": 56,
+  "crop_y": 100,
+  "targets": {
+    "eye_line_ratio": 0.22,
+    "face_height_ratio": 0.26,
+    "headroom_target": 0.1,
+    "headroom_min": 0.04,
+    "headroom_max": 0.18
+  },
+  "predicted": {
+    "headroom_ratio": 0.1672,
+    "face_height_ratio": 0.3453,
+    "eye_line_ratio": 0.2984
+  },
+  "ffmpeg_vf": "scale=776:1380,crop=720:1280:56:100",
+  "segment_id": "03",
+  "samples": [
+    {
+      "timestamp_s": 48.0,
+      "face": {
+        "x": 281,
+        "y": 170,
+        "w": 694,
+        "h": 694
+      },
+      "path": "sample-01-48.00.jpg"
+    },
+    {
+      "timestamp_s": 54.96,
+      "face": {
+        "x": 337,
+        "y": 418,
+        "w": 564,
+        "h": 564
+      },
+      "path": "sample-02-54.96.jpg"
+    },
+    {
+      "timestamp_s": 61.92,
+      "face": {
+        "x": 296,
+        "y": 471,
+        "w": 608,
+        "h": 608
+      },
+      "path": "sample-03-61.92.jpg"
+    },
+    {
+      "timestamp_s": 398.29,
+      "face": {
+        "x": 207,
+        "y": 422,
+        "w": 688,
+        "h": 688
+      },
+      "path": "sample-04-398.29.jpg"
+    },
+    {
+      "timestamp_s": 411.48,
+      "face": {
+        "x": 341,
+        "y": 438,
+        "w": 598,
+        "h": 598
+      },
+      "path": "sample-05-411.48.jpg"
+    },
+    {
+      "timestamp_s": 424.67,
+      "face": {
+        "x": 249,
+        "y": 438,
+        "w": 616,
+        "h": 616
+      },
+      "path": "sample-06-424.67.jpg"
+    }
+  ],
+  "sample_strategy": {
+    "scale_from": "scored_talking_head_face",
+    "crop_from": "median_center_crown",
+    "caption_from": "max_face_bottom",
+    "face_count": 6
+  },
+  "face_output": {
+    "x": 122,
+    "y": 214,
+    "w": 442,
+    "h": 442
+  },
+  "face_bottom_max": 697,
+  "caption": {
+    "caption_pos_x": 360,
+    "caption_pos_y": 870,
+    "face": {
+      "x": 122,
+      "y": 214,
+      "w": 442,
+      "h": 442
+    },
+    "face_bottom_max": 697,
+    "placement": "below-face-chest"
+  }
+}

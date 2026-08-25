@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "kind": "visual-plan",
+  "worker_version": "visual-planner-v4",
+  "segment_id": "03",
+  "scenes": [
+    {
+      "id": "3a",
+      "anchor": "u0004",
+      "type": "motion",
+      "brief": "60 000 → 6 000 (10%) крупно, пока произносится формула. Зачем: Оверлей на цифре, не после неё; если seg 03 после seg 02 — можно снять как дубль на склейке",
+      "asset": null,
+      "resolution": "CONFIGURED",
+      "origin": "AGENT",
+      "status": "PROPOSED"
+    },
+    {
+      "id": "3b",
+      "anchor": "u0014",
+      "type": "motion",
+      "brief": "Весы: мечта/спокойствие/безопасность vs хотелки — правая чаша тяжелее. Зачем: Тезис ролика должен висеть поверх хука целиком, не вспыхивать между предложениями",
+      "asset": null,
+      "resolution": "CONFIGURED",
+      "origin": "AGENT",
+      "status": "PROPOSED"
+    },
+    {
+      "id": "3c",
+      "anchor": "u0058p1",
+      "type": "motion",
+      "brief": "Сдвиг приоритетов (хотелки ↓, мечта/подушка ↑) + акцент CTA «схема». Зачем: Финал: действие и перестановка порядка поверх закрывающей речи, без дырки в A-roll",
+      "asset": null,
+      "resolution": "CONFIGURED",
+      "origin": "AGENT",
+      "status": "PROPOSED"
+    }
+  ],
+  "searches": [],
+  "status": "PROPOSED",
+  "transcript_sha256": "sha256:9dad37ea515164bf66b32dfd22c2132dd2b9bf1ccc29c87964e5923bfd4b128e"
+}

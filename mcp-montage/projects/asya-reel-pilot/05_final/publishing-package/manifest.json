@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "project_id": "asya-reel-pilot",
+  "master_sha256": "sha256:f7c59246002eb5f604942e94438d6aa0079f49351e796ccc3388e426f612d8e3",
+  "chapters": [
+    "00:00 Main"
+  ],
+  "publication": "manual",
+  "assets_license_reviewed": true
+}

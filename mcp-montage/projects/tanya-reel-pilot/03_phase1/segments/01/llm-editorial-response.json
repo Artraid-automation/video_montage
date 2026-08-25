@@ -1,0 +1,17 @@
+{
+  "schema_version": 2,
+  "prompt_version": "gate1-editorial-cohesion.v2",
+  "segment_id": "01",
+  "splits": [],
+  "decisions": [
+    {"id": "u0001", "kind": "keep", "reason": null},
+    {"id": "u0002", "kind": "keep", "reason": null},
+    {"id": "u0003", "kind": "keep", "reason": null},
+    {"id": "u0004", "kind": "keep", "reason": null}
+  ],
+  "narrative_summary": "Цельный холодный open: нуль к концу месяца → нет порядка → тратим остаток → экстренная дыра. Один дубль, без повторов.",
+  "risks": [
+    "Проверить интонацию на «попой» — ок для автора или смягчить текстом.",
+    "MOTION не ставить механически — только если после Gate 1 автор/агент решат beat."
+  ]
+}

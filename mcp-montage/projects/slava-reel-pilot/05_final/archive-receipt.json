@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "verdict": "VERIFIED",
+  "verified_at": "2026-07-21T13:14:45.289877+00:00",
+  "archive_root": "E:\\Xampp\\MCP монтаж\\projects\\_archive",
+  "archive_directory": "E:\\Xampp\\MCP монтаж\\projects\\_archive\\slava-reel-pilot",
+  "source_sha256": "sha256:9b914df8d34875078bb71bd7d4bf37fda0408408eb1e2491e26c2723cb267641",
+  "destination_sha256": "sha256:9b914df8d34875078bb71bd7d4bf37fda0408408eb1e2491e26c2723cb267641",
+  "entries": [
+    {
+      "role": "master",
+      "source": "E:\\Xampp\\MCP монтаж\\projects\\slava-reel-pilot\\05_final\\slava-reel-pilot.mp4",
+      "destination": "E:\\Xampp\\MCP монтаж\\projects\\_archive\\slava-reel-pilot\\final\\slava-reel-pilot.mp4",
+      "sha256": "sha256:9b914df8d34875078bb71bd7d4bf37fda0408408eb1e2491e26c2723cb267641",
+      "size_bytes": 19550740
+    },
+    {
+      "role": "publishing",
+      "source": "E:\\Xampp\\MCP монтаж\\projects\\slava-reel-pilot\\05_final\\publishing-package\\title.txt",
+      "destination": "E:\\Xampp\\MCP монтаж\\projects\\_archive\\slava-reel-pilot\\publishing-package\\title.txt",
+      "sha256": "sha256:8e0da72ec0a52fe5928ba9a58cbc758dc175a09cd47158d315909f8fc72cc66c",
+      "size_bytes": 18
+    },
+    {
+      "role": "publishing",
+      "source": "E:\\Xampp\\MCP монтаж\\projects\\slava-reel-pilot\\05_final\\publishing-package\\description.md",
+      "destination": "E:\\Xampp\\MCP монтаж\\projects\\_archive\\slava-reel-pilot\\publishing-package\\description.md",
+      "sha256": "sha256:21592986d34795c3a73dc45f29ad2d8488332d552b026eaef820d705e0a1aac0",
+      "size_bytes": 53
+    },
+    {
+      "role": "publishing",
+      "source": "E:\\Xampp\\MCP монтаж\\projects\\slava-reel-pilot\\05_final\\publishing-package\\chapters.txt",
+      "destination": "E:\\Xampp\\MCP монтаж\\projects\\_archive\\slava-reel-pilot\\publishing-package\\chapters.txt",
+      "sha256": "sha256:8f609b6fb9e4676da7ca358edf3bec9424d22378f09d5649f9f72a10e24b710e",
+      "size_bytes": 17
+    },
+    {
+      "role": "publishing",
+      "source": "E:\\Xampp\\MCP монтаж\\projects\\slava-reel-pilot\\05_final\\publishing-package\\manifest.json",
+      "destination": "E:\\Xampp\\MCP монтаж\\projects\\_archive\\slava-reel-pilot\\publishing-package\\manifest.json",
+      "sha256": "sha256:fb8514f6d24a9c34fe51e412d1a599a5ff3d9774072dc990c5d2c25d11ee3994",
+      "size_bytes": 261
+    },
+    {
+      "role": "raw",
+      "source": "E:\\Xampp\\MCP монтаж\\projects\\slava-reel-pilot\\01_raw\\01_camera.mp4",
+      "destination": "E:\\Xampp\\MCP монтаж\\projects\\_archive\\slava-reel-pilot\\raw\\01_camera.mp4",
+      "sha256": "sha256:09d58665697d5a5bdbd35775c36e529ae0338bdbeefe8cd542c41f3ef5d70d41",
+      "size_bytes": 449541256
+    }
+  ]
+}

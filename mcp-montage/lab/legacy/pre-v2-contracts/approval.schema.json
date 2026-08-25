@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "approval.schema.json",
+  "title": "Human gate approval",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "project_id", "gate", "approved_at", "reviewer", "artifacts"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "project_id": {"type": "string", "minLength": 1},
+    "gate": {"enum": ["gate1", "gate2", "final"]},
+    "approved_at": {"type": "string", "format": "date-time"},
+    "reviewer": {"type": "string", "minLength": 1},
+    "artifacts": {
+      "type": "array", "minItems": 1,
+      "items": {"type": "object", "additionalProperties": false, "required": ["path", "hash"], "properties": {"path": {"type": "string", "minLength": 1}, "hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}}}
+    }
+  }
+}

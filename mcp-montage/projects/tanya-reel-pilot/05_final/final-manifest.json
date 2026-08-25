@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "kind": "final",
+  "project_id": "tanya-reel-pilot",
+  "revision": 1,
+  "gate2_approval": {
+    "kind": "approval",
+    "path": "06_state/approvals/gate2-r000121.json",
+    "sha256": "sha256:bb978cd4f5c83f6e6aac8095cb213140c9c92a8920358ed66095f1f388284979",
+    "size_bytes": 578
+  },
+  "master": {
+    "kind": "master",
+    "path": "05_final/tanya-reel-pilot.mp4",
+    "sha256": "sha256:21524cc4911f378f6c82e7a1144b97de8bfe5a685c44ab3193322dd8c95b3809",
+    "size_bytes": 26907104
+  },
+  "qc": {
+    "kind": "final-qc",
+    "path": "05_final/qc.json",
+    "sha256": "sha256:380dd7d085889e01f268ad4dca3331ff19b1ccd68de9174ac5b7498b55fb40e1",
+    "size_bytes": 24909
+  },
+  "archive_receipt": {
+    "kind": "archive-receipt",
+    "path": "05_final/archive-receipt.json",
+    "sha256": "sha256:1ccfe9f0a4d4e09e98aa91fc48fe4de3dd3a6d759997af4ff7e7fcf30f899ec4",
+    "size_bytes": 3540
+  },
+  "publishing_package": {
+    "title": {
+      "kind": "publishing-title",
+      "path": "05_final/publishing-package/title.txt",
+      "sha256": "sha256:84e93e85a1d22410d05d1317be61899045e68500ee24b2153c0f5a7d3b4ac609",
+      "size_bytes": 18
+    },
+    "description": {
+      "kind": "publishing-description",
+      "path": "05_final/publishing-package/description.md",
+      "sha256": "sha256:7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "size_bytes": 2
+    },
+    "chapters": {
+      "kind": "publishing-chapters",
+      "path": "05_final/publishing-package/chapters.txt",
+      "sha256": "sha256:e903a54cbf0dcf1881298344fe30188a67ab7b20a7fab2d411648d0598c4f448",
+      "size_bytes": 45
+    },
+    "manifest": {
+      "kind": "publishing-manifest",
+      "path": "05_final/publishing-package/manifest.json",
+      "sha256": "sha256:80e118f88dc59c3b2c42796e5748a6d0bd09eb2d8a6128bd6d8f06dc08716ac8",
+      "size_bytes": 301
+    }
+  },
+  "segment_hashes": [
+    "sha256:d9037af9eabc5fb58f63f86aeffede99eb47bc2394a35b785b3ec9e1f4393d87",
+    "sha256:63f7ded9f60490447c9261058c6028fd476d261a2fc5eadc1e10148baae21de5",
+    "sha256:2d205afcd793f1d3f8687e237646d52105e401ac14a496c084162ff74178d5ca"
+  ],
+  "telegram_delivery": {
+    "kind": "telegram-delivery-report",
+    "path": "05_final/delivery/telegram-delivery.json",
+    "sha256": "sha256:6a9b22ae2b0529aabde26776a94af3dec960ed6ba91a5609ed307f7301f7e825",
+    "size_bytes": 617
+  },
+  "telegram_file": {
+    "kind": "telegram-delivery",
+    "path": "05_final/delivery/tg-dankoe-1080x1920-x1p15.mp4",
+    "sha256": "sha256:e89f3eba04e77d06b1719d5798838ca22cb53a6899108a4517255f3299dddae9",
+    "size_bytes": 30499666
+  }
+}

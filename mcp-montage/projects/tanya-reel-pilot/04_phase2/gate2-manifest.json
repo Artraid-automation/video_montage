@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "kind": "gate2",
+  "project_id": "tanya-reel-pilot",
+  "revision": 1,
+  "gate1_approval": {
+    "kind": "approval",
+    "path": "06_state/approvals/gate1-r000041.json",
+    "sha256": "sha256:10972e132458113368abc22b8db74e7f6897801afb6f1038a35ce71ed83fdb59",
+    "size_bytes": 823
+  },
+  "review": {
+    "kind": "gate2-review",
+    "path": "04_phase2/review.md",
+    "sha256": "sha256:4d30102bcfd22a3112470497d454ba7b9922248968eab8617b0415a6030ec631",
+    "size_bytes": 5423
+  },
+  "film_continuity": {
+    "kind": "film-continuity",
+    "path": "04_phase2/film-continuity.json",
+    "sha256": "sha256:3e2482fa10e00932c02b525d764591021a50812030f406ba71e6448cba729d3d",
+    "size_bytes": 1012
+  },
+  "segments": [
+    {
+      "id": "01",
+      "render": {
+        "kind": "segment-render",
+        "path": "04_phase2/segments/01/review.mp4",
+        "sha256": "sha256:d9037af9eabc5fb58f63f86aeffede99eb47bc2394a35b785b3ec9e1f4393d87",
+        "size_bytes": 9646646
+      },
+      "expected_transcript": {
+        "kind": "expected-transcript",
+        "path": "04_phase2/segments/01/expected-transcript.json",
+        "sha256": "sha256:8c5402108204d812c5bf3a6b5354810c77fd6a83eeefdc3ce1d06f60e5af926c",
+        "size_bytes": 18435
+      },
+      "rendered_transcript": {
+        "kind": "rendered-transcript",
+        "path": "04_phase2/segments/01/rendered-transcript.json",
+        "sha256": "sha256:4b18be5e3dfb4817af75d8219f551c88df4f90406539a471fa0e85c35f120566",
+        "size_bytes": 19643
+      },
+      "verification": {
+        "kind": "transcript-verification",
+        "path": "04_phase2/segments/01/verification.json",
+        "sha256": "sha256:d90a9e6b2759f258ddd85f68461bbbc7bae17f13563778c35e79f7cd07e74fdf",
+        "size_bytes": 4181
+      },
+      "qc": {
+        "kind": "segment-qc",
+        "path": "04_phase2/segments/01/qc.json",
+        "sha256": "sha256:385f5a115f2cf8a061607b9bd89f768f5b18ff50faf1a292a98c9a84d1c2a8e9",
+        "size_bytes": 22533
+      },
+      "fixes": {
+        "kind": "fixes",
+        "path": "04_phase2/segments/01/fixes.md",
+        "sha256": "sha256:373ff32332a92f57304b07f80babd03d78e3bc532fd0eddf67b955c692045104",
+        "size_bytes": 11
+      }
+    },
+    {
+      "id": "02",
+      "render": {
+        "kind": "segment-render",
+        "path": "04_phase2/segments/02/review.mp4",
+        "sha256": "sha256:63f7ded9f60490447c9261058c6028fd476d261a2fc5eadc1e10148baae21de5",
+        "size_bytes": 8364959
+      },
+      "expected_transcript": {
+        "kind": "expected-transcript",
+        "path": "04_phase2/segments/02/expected-transcript.json",
+        "sha256": "sha256:621e52a9298739d50f764923d19fa17c9af624db0bab4b486a8a5dfc8d0219e7",
+        "size_bytes": 14035
+      },
+      "rendered_transcript": {
+        "kind": "rendered-transcript",
+        "path": "04_phase2/segments/02/rendered-transcript.json",
+        "sha256": "sha256:ea49b4ee28651318adb30b0d6f0bf16ae83c35b4e99960b95af4ffa0911aedf6",
+        "size_bytes": 14818
+      },
+      "verification": {
+        "kind": "transcript-verification",
+        "path": "04_phase2/segments/02/verification.json",
+        "sha256": "sha256:cad7b4561a255502fdf4ce01c5f8f70e40457b6c64909d0b5d4e20a5398d1b6c",
+        "size_bytes": 3313
+      },
+      "qc": {
+        "kind": "segment-qc",
+        "path": "04_phase2/segments/02/qc.json",
+        "sha256": "sha256:a1e29c2ed5cb67216a4a706f01fc200e986284b747f71d43b513f7873766e494",
+        "size_bytes": 21437
+      },
+      "fixes": {
+        "kind": "fixes",
+        "path": "04_phase2/segments/02/fixes.md",
+        "sha256": "sha256:373ff32332a92f57304b07f80babd03d78e3bc532fd0eddf67b955c692045104",
+        "size_bytes": 11
+      }
+    },
+    {
+      "id": "03",
+      "render": {
+        "kind": "segment-render",
+        "path": "04_phase2/segments/03/review.mp4",
+        "sha256": "sha256:2d205afcd793f1d3f8687e237646d52105e401ac14a496c084162ff74178d5ca",
+        "size_bytes": 12481461
+      },
+      "expected_transcript": {
+        "kind": "expected-transcript",
+        "path": "04_phase2/segments/03/expected-transcript.json",
+        "sha256": "sha256:21e44be1d0ad7ea55ce0a446eb782f8048628cb3a2930c3ba3b4cca5b6ed36e5",
+        "size_bytes": 14153
+      },
+      "rendered_transcript": {
+        "kind": "rendered-transcript",
+        "path": "04_phase2/segments/03/rendered-transcript.json",
+        "sha256": "sha256:05e3040eb001ead291ae511040ddc6423cc145abe73cc3c09b87ea23e316a58e",
+        "size_bytes": 14635
+      },
+      "verification": {
+        "kind": "transcript-verification",
+        "path": "04_phase2/segments/03/verification.json",
+        "sha256": "sha256:18ae7093c6b8d430965a06ff2a2e088c7b801d82b518132708aa87500ccadde9",
+        "size_bytes": 3531
+      },
+      "qc": {
+        "kind": "segment-qc",
+        "path": "04_phase2/segments/03/qc.json",
+        "sha256": "sha256:445a6595e4e54a50027f1f4b409386883afcc2c5c72ebf32f97b39cb5d48da7f",
+        "size_bytes": 18463
+      },
+      "fixes": {
+        "kind": "fixes",
+        "path": "04_phase2/segments/03/fixes.md",
+        "sha256": "sha256:373ff32332a92f57304b07f80babd03d78e3bc532fd0eddf67b955c692045104",
+        "size_bytes": 11
+      }
+    }
+  ]
+}

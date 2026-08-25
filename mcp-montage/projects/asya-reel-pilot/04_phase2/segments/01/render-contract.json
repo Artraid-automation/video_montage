@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "kind": "render-contract",
+  "worker_version": "ffmpeg-overlay-v25-brand-atomic",
+  "segment_id": "01",
+  "width": 1920,
+  "height": 1080,
+  "motion_mode": "overlay",
+  "motion_count": 2,
+  "motion_on_screen_texts": [],
+  "motion_raw_briefs": [
+    "Три маркера лидера: открытость · эрудиция · влияние на других (третий ярче).. Зачем: Список качеств лидера — один доминирующий beat на «влиянием»",
+    "Вход в команду → вспышка смелости/яркости (кольца роста), X10 остаётся в кадре справа.. Зачем: Payoff «смелее, ярче, новые грани» поверх финальной речи; не закрывать бренд-плашку"
+  ],
+  "caption_font_size": 162,
+  "caption_alignment": 8,
+  "caption_margin_v": 22,
+  "caption_color": "#E1C445",
+  "caption_font_class": "serif",
+  "caption_pos_x": 906,
+  "caption_pos_y": 669,
+  "caption_placement": "face-chest",
+  "caption_timing": "source-words",
+  "style_recipes_expected": [
+    "hook_title"
+  ],
+  "style_recipes_applied": [
+    "hook_title"
+  ],
+  "hook_title_font_size": 185,
+  "hook_title_y_center_ratio": 0.7097,
+  "hook_title_pos_y": 604,
+  "cache_hit": false,
+  "framing_plan": "framing-plan.json"
+}

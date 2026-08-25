@@ -1,0 +1,32 @@
+{
+  "schema_version": 2,
+  "gate": "gate2",
+  "created_at": "2026-07-21T13:00:58.357779+00:00",
+  "fixes": [
+    {
+      "id": "fix-001",
+      "kind": "speech",
+      "segment_id": "01",
+      "description": "transcript-reviewed note=\"CUT full вместо retake stack through 535.73; keep only final вместо того чтобы добежать\"",
+      "status": "OPEN",
+      "blocking": false,
+      "operation": "transcript-reviewed",
+      "arguments": {
+        "note": "CUT full вместо retake stack through 535.73; keep only final вместо того чтобы добежать"
+      }
+    }
+  ],
+  "rule_candidates": [],
+  "source_files": [
+    "04_phase2/segments/01/fixes.md"
+  ],
+  "outcomes": [
+    {
+      "fix_id": "fix-001",
+      "status": "APPLIED",
+      "before_sha256": "sha256:1ad3c0ee2b89cf8db775e662edc95d657b07fa63233a356affa825469748dc01",
+      "after_sha256": "sha256:1ad3c0ee2b89cf8db775e662edc95d657b07fa63233a356affa825469748dc01"
+    }
+  ],
+  "rule_proposals_added": []
+}

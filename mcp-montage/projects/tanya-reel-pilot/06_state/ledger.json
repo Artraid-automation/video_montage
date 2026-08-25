@@ -1,0 +1,1691 @@
+{
+  "schema_version": 2,
+  "project_id": "tanya-reel-pilot",
+  "revision": 130,
+  "state": "COMPLETED",
+  "updated_at": "2026-07-21T08:50:13.537324+00:00",
+  "run": null,
+  "gates": {
+    "gate1": {
+      "status": "APPROVED",
+      "manifest": {
+        "kind": "gate1-manifest",
+        "path": "03_phase1/gate1-manifest.json",
+        "sha256": "sha256:46af30a2821e573c137583ada35e6317783ebeed47019e72b22f33eaa55b1617",
+        "size_bytes": 5894
+      },
+      "manifest_content_hash": "sha256:286310423977740f062a0491106bf45a88ba244720f39c3efccc2c21d1e86c03",
+      "prepared_at": "2026-07-20T04:36:20.658200+00:00",
+      "approval": {
+        "kind": "approval",
+        "path": "06_state/approvals/gate1-r000041.json",
+        "sha256": "sha256:10972e132458113368abc22b8db74e7f6897801afb6f1038a35ce71ed83fdb59",
+        "size_bytes": 823
+      }
+    },
+    "gate2": {
+      "status": "APPROVED",
+      "manifest": {
+        "kind": "gate2-manifest",
+        "path": "04_phase2/gate2-manifest.json",
+        "sha256": "sha256:14da61685e68fd8e3546b32e2dca48e04e50fc204e363cf21e7486eff36d4c97",
+        "size_bytes": 5230
+      },
+      "manifest_content_hash": "sha256:7a02cca08b133888ff0edcaad2ddab52a5cadfc553265ffdbad824a7947775c5",
+      "prepared_at": "2026-07-21T08:45:54.179289+00:00",
+      "approval": {
+        "kind": "approval",
+        "path": "06_state/approvals/gate2-r000121.json",
+        "sha256": "sha256:bb978cd4f5c83f6e6aac8095cb213140c9c92a8920358ed66095f1f388284979",
+        "size_bytes": 578
+      }
+    },
+    "final": {
+      "status": "APPROVED",
+      "manifest": {
+        "kind": "final-manifest",
+        "path": "05_final/final-manifest.json",
+        "sha256": "sha256:e1c366637ff5f2f9608499e7a29651cdac5adce7b24e0c9b2cd59f9c3084cbc9",
+        "size_bytes": 2619
+      },
+      "manifest_content_hash": "sha256:f6c6ed57217c9fbdbac6e9372646c34cfffda510f1b4d42798ac0ad28fbf2771",
+      "prepared_at": "2026-07-21T08:49:50.366079+00:00",
+      "approval": {
+        "kind": "approval",
+        "path": "06_state/approvals/final-r000129.json",
+        "sha256": "sha256:9995debd0c3a75fb6116e83a801a836946894247a84dd16d713921b403c69514",
+        "size_bytes": 577
+      }
+    }
+  },
+  "approvals": [
+    {
+      "gate": "gate1",
+      "record": {
+        "kind": "approval",
+        "path": "06_state/approvals/gate1-r000041.json",
+        "sha256": "sha256:10972e132458113368abc22b8db74e7f6897801afb6f1038a35ce71ed83fdb59",
+        "size_bytes": 823
+      },
+      "approved_at": "2026-07-20T04:36:20.822008+00:00"
+    },
+    {
+      "gate": "gate2",
+      "record": {
+        "kind": "approval",
+        "path": "06_state/approvals/gate2-r000110.json",
+        "sha256": "sha256:fd1e3a26e46e58bb00a0b8e520ce19e0aa7dff7114e6a781d077e8455ed90ece",
+        "size_bytes": 575
+      },
+      "approved_at": "2026-07-20T11:03:17.257872+00:00"
+    },
+    {
+      "gate": "final",
+      "record": {
+        "kind": "approval",
+        "path": "06_state/approvals/final-r000115.json",
+        "sha256": "sha256:e282a675eb85d0fb50073de18bf323f80b954964ca894249f58c57f3152ca9d9",
+        "size_bytes": 572
+      },
+      "approved_at": "2026-07-21T04:23:33.892051+00:00"
+    },
+    {
+      "gate": "gate2",
+      "record": {
+        "kind": "approval",
+        "path": "06_state/approvals/gate2-r000121.json",
+        "sha256": "sha256:bb978cd4f5c83f6e6aac8095cb213140c9c92a8920358ed66095f1f388284979",
+        "size_bytes": 578
+      },
+      "approved_at": "2026-07-21T08:45:54.592879+00:00"
+    },
+    {
+      "gate": "final",
+      "record": {
+        "kind": "approval",
+        "path": "06_state/approvals/final-r000129.json",
+        "sha256": "sha256:9995debd0c3a75fb6116e83a801a836946894247a84dd16d713921b403c69514",
+        "size_bytes": 577
+      },
+      "approved_at": "2026-07-21T08:50:12.373275+00:00"
+    }
+  ],
+  "revision_request": null,
+  "last_error": null,
+  "events": [
+    {
+      "id": "511412fbd90a4234bf93b9b99cc2f449",
+      "at": "2026-07-19T15:34:22.782623+00:00",
+      "type": "state_created",
+      "state": "NEW",
+      "details": {}
+    },
+    {
+      "id": "62e5b51d6a80484cb51e3131664a288d",
+      "at": "2026-07-19T15:34:39.283592+00:00",
+      "type": "phase1_started",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "NEW",
+        "inputs_hash": "sha256:ce41ce07b09b6bb2e3932c491b178025229281768c83a45111e949fb9ebd0bbe"
+      }
+    },
+    {
+      "id": "1d11573671874921b5906e2e2c149365",
+      "at": "2026-07-19T15:34:39.398394+00:00",
+      "type": "checkpoint",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "checkpoint": "ingested"
+      }
+    },
+    {
+      "id": "22f0e53338e54f7f9a2e1d73f79cf37b",
+      "at": "2026-07-19T15:39:09.371152+00:00",
+      "type": "checkpoint",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "checkpoint": "ingested"
+      }
+    },
+    {
+      "id": "b8c2f00c6b7e44c38d1172017ef03c2e",
+      "at": "2026-07-19T15:42:25.189262+00:00",
+      "type": "checkpoint",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "checkpoint": "ingested"
+      }
+    },
+    {
+      "id": "58882f90b28d46c4bb7a3b46934dbdec",
+      "at": "2026-07-19T15:43:46.334433+00:00",
+      "type": "checkpoint",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "checkpoint": "ingested"
+      }
+    },
+    {
+      "id": "07aac305c852458482413a0d37a7a1fe",
+      "at": "2026-07-19T15:45:15.355703+00:00",
+      "type": "worker_failed",
+      "state": "FAILED_RECOVERABLE",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "message": "invalid word timing in transcript segment 2",
+        "retryable": true
+      }
+    },
+    {
+      "id": "1e55e26015374d1b9596c6b2f52e4372",
+      "at": "2026-07-19T15:46:28.803816+00:00",
+      "type": "worker_resumed",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "FAILED_RECOVERABLE"
+      }
+    },
+    {
+      "id": "f8ef821cbd57447b9ffc77bb5bf2173b",
+      "at": "2026-07-19T15:46:29.938034+00:00",
+      "type": "checkpoint",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "checkpoint": "ingested"
+      }
+    },
+    {
+      "id": "32070de26f914b189234f4fe0874a6b4",
+      "at": "2026-07-19T15:46:32.476782+00:00",
+      "type": "worker_failed",
+      "state": "FAILED_RECOVERABLE",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "message": "invalid word timing in transcript segment 2",
+        "retryable": true
+      }
+    },
+    {
+      "id": "32b22ff35d0742a2909ef3e2831bc720",
+      "at": "2026-07-19T15:46:58.493915+00:00",
+      "type": "worker_resumed",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "FAILED_RECOVERABLE"
+      }
+    },
+    {
+      "id": "347238329d5748cfa2868ef8ba7533c5",
+      "at": "2026-07-19T15:46:59.618442+00:00",
+      "type": "checkpoint",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "checkpoint": "ingested"
+      }
+    },
+    {
+      "id": "9772f158bf584679b15a152908768e83",
+      "at": "2026-07-19T15:47:46.902694+00:00",
+      "type": "checkpoint",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "checkpoint": "phase1-bundles"
+      }
+    },
+    {
+      "id": "3375cdf432d943f588a9da8c9f76f187",
+      "at": "2026-07-19T15:47:47.028188+00:00",
+      "type": "gate_ready",
+      "state": "GATE1_REVIEW",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "gate": "gate1",
+        "manifest": {
+          "kind": "gate1-manifest",
+          "path": "03_phase1/gate1-manifest.json",
+          "sha256": "sha256:c90b9e5ef8c099fed0f305d958ef81de53b75a7835e1e60a8baf7eff9233c779",
+          "size_bytes": 5216
+        }
+      }
+    },
+    {
+      "id": "50f525aa8290496b811fe4a1c8a3687d",
+      "at": "2026-07-19T16:00:33.430491+00:00",
+      "type": "gate1_superseded",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "GATE1_REVIEW",
+        "reason": "integrate automatic visual proposals and cross-segment take analysis",
+        "inputs_hash": "sha256:2836a8399a514032863ec136f7026f2e3325f9ca1056dd8414614bd5c2a2ef27"
+      }
+    },
+    {
+      "id": "ccea58de41054454a560d36f8f55857f",
+      "at": "2026-07-19T16:00:33.547051+00:00",
+      "type": "checkpoint",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "checkpoint": "ingested"
+      }
+    },
+    {
+      "id": "9ad3d6d083a44f979fb3196e62fab210",
+      "at": "2026-07-19T16:01:17.719526+00:00",
+      "type": "checkpoint",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "checkpoint": "phase1-bundles"
+      }
+    },
+    {
+      "id": "d40f150bf5564132a72e019463024afc",
+      "at": "2026-07-19T16:01:17.901613+00:00",
+      "type": "gate_ready",
+      "state": "GATE1_REVIEW",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "gate": "gate1",
+        "manifest": {
+          "kind": "gate1-manifest",
+          "path": "03_phase1/gate1-manifest.json",
+          "sha256": "sha256:f67bb61c935b9a82ffa6916bfbf71f27d931a5fcc929366032c4b635b83e354a",
+          "size_bytes": 5525
+        }
+      }
+    },
+    {
+      "id": "70332f2c01f040bea4e29e096d2aa94b",
+      "at": "2026-07-20T01:38:09.524301+00:00",
+      "type": "gate1_superseded",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "GATE1_REVIEW",
+        "reason": "upgrade ASR from tiny to small for author Gate 1 review quality",
+        "inputs_hash": "sha256:e721b3a3f323a6b2d0490ec3ba5ba350238ba991f771b8696e1a3273b9ec6f74"
+      }
+    },
+    {
+      "id": "57d4f7e4fba5447c9155c2b462517c0d",
+      "at": "2026-07-20T01:38:09.650393+00:00",
+      "type": "checkpoint",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "checkpoint": "ingested"
+      }
+    },
+    {
+      "id": "8bbed356585e4f9392b7c34ecf76f35c",
+      "at": "2026-07-20T01:42:44.136716+00:00",
+      "type": "checkpoint",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "checkpoint": "phase1-bundles"
+      }
+    },
+    {
+      "id": "62b953ca69ba486fb39ac72ea5c6e4ac",
+      "at": "2026-07-20T01:42:44.518145+00:00",
+      "type": "gate_ready",
+      "state": "GATE1_REVIEW",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "gate": "gate1",
+        "manifest": {
+          "kind": "gate1-manifest",
+          "path": "03_phase1/gate1-manifest.json",
+          "sha256": "sha256:0d43d6a3851f957fe0af77a71dbb760bdb6629a05471b1531fee2c378f4632f4",
+          "size_bytes": 5525
+        }
+      }
+    },
+    {
+      "id": "d8f1c9fcd27042989478c8f3c93ef417",
+      "at": "2026-07-20T02:03:38.798918+00:00",
+      "type": "gate1_superseded",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "GATE1_REVIEW",
+        "reason": "mirror editorial proposals as visible cut tags in transcript.md for Gate 1 UX",
+        "inputs_hash": "sha256:e721b3a3f323a6b2d0490ec3ba5ba350238ba991f771b8696e1a3273b9ec6f74"
+      }
+    },
+    {
+      "id": "092725fa2f10484395b2db1b75c3fe17",
+      "at": "2026-07-20T02:03:39.106323+00:00",
+      "type": "checkpoint",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "checkpoint": "ingested"
+      }
+    },
+    {
+      "id": "958a129b2c97440db665d1dd68bf157b",
+      "at": "2026-07-20T02:07:16.920927+00:00",
+      "type": "checkpoint",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "checkpoint": "phase1-bundles"
+      }
+    },
+    {
+      "id": "78f56b72a48041e6b47ac81eedb0585a",
+      "at": "2026-07-20T02:07:17.222132+00:00",
+      "type": "gate_ready",
+      "state": "GATE1_REVIEW",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "gate": "gate1",
+        "manifest": {
+          "kind": "gate1-manifest",
+          "path": "03_phase1/gate1-manifest.json",
+          "sha256": "sha256:28eec04e0c338b1b230bdfac05765cefee6469288bf3a3acc7318b9348266998",
+          "size_bytes": 5525
+        }
+      }
+    },
+    {
+      "id": "3ef66376541c49d7b3b9c20838fb1b2c",
+      "at": "2026-07-20T02:09:00.581661+00:00",
+      "type": "gate_ready",
+      "state": "GATE1_REVIEW",
+      "details": {
+        "previous_state": "GATE1_REVIEW",
+        "gate": "gate1",
+        "manifest": {
+          "kind": "gate1-manifest",
+          "path": "03_phase1/gate1-manifest.json",
+          "sha256": "sha256:8d1304ee94c12314b183d5457d95620976b3f39ce72c7a75197666535a704a2b",
+          "size_bytes": 5525
+        }
+      }
+    },
+    {
+      "id": "6e6ad80ee0114b249a47d429ab1b70cf",
+      "at": "2026-07-20T02:11:00.595364+00:00",
+      "type": "gate_ready",
+      "state": "GATE1_REVIEW",
+      "details": {
+        "previous_state": "GATE1_REVIEW",
+        "gate": "gate1",
+        "manifest": {
+          "kind": "gate1-manifest",
+          "path": "03_phase1/gate1-manifest.json",
+          "sha256": "sha256:33f20c55c022a905d5442277cd39460e36b013f2ec0f104875f8ff5d3743c372",
+          "size_bytes": 5525
+        }
+      }
+    },
+    {
+      "id": "cfab79a47abf400c9a0ae239e03586c4",
+      "at": "2026-07-20T02:29:29.859135+00:00",
+      "type": "gate_ready",
+      "state": "GATE1_REVIEW",
+      "details": {
+        "previous_state": "GATE1_REVIEW",
+        "gate": "gate1",
+        "manifest": {
+          "kind": "gate1-manifest",
+          "path": "03_phase1/gate1-manifest.json",
+          "sha256": "sha256:f2b88d8fc8de4ff5d2726db536ac0f8a3adcd4d368ac4841795c6248e25fcae0",
+          "size_bytes": 5525
+        }
+      }
+    },
+    {
+      "id": "a0d9df6e2e65423c88c6cc2b0e4906c9",
+      "at": "2026-07-20T03:01:08.886267+00:00",
+      "type": "gate_ready",
+      "state": "GATE1_REVIEW",
+      "details": {
+        "previous_state": "GATE1_REVIEW",
+        "gate": "gate1",
+        "manifest": {
+          "kind": "gate1-manifest",
+          "path": "03_phase1/gate1-manifest.json",
+          "sha256": "sha256:805bd11de2b390d03c0bf7652a2616514df99f8044427902473ccafc512d7586",
+          "size_bytes": 5525
+        }
+      }
+    },
+    {
+      "id": "c5a23f075b504be68ed97ffae7ed2feb",
+      "at": "2026-07-20T03:02:33.119080+00:00",
+      "type": "gate_ready",
+      "state": "GATE1_REVIEW",
+      "details": {
+        "previous_state": "GATE1_REVIEW",
+        "gate": "gate1",
+        "manifest": {
+          "kind": "gate1-manifest",
+          "path": "03_phase1/gate1-manifest.json",
+          "sha256": "sha256:853050d24256d7a65f4d2f5b558edfea93b791d5ef348e48c967e77d95f58778",
+          "size_bytes": 5525
+        }
+      }
+    },
+    {
+      "id": "1eb7e66536d04b7182489e8e4e327d95",
+      "at": "2026-07-20T03:20:48.725791+00:00",
+      "type": "gate_ready",
+      "state": "GATE1_REVIEW",
+      "details": {
+        "previous_state": "GATE1_REVIEW",
+        "gate": "gate1",
+        "manifest": {
+          "kind": "gate1-manifest",
+          "path": "03_phase1/gate1-manifest.json",
+          "sha256": "sha256:d15c4eeedef599f5b10dc9b96db71d97bf80a523d520117d826554a929694be5",
+          "size_bytes": 5524
+        }
+      }
+    },
+    {
+      "id": "b13b20423a9d4c66bb0860aba147ed25",
+      "at": "2026-07-20T03:21:23.724532+00:00",
+      "type": "gate_ready",
+      "state": "GATE1_REVIEW",
+      "details": {
+        "previous_state": "GATE1_REVIEW",
+        "gate": "gate1",
+        "manifest": {
+          "kind": "gate1-manifest",
+          "path": "03_phase1/gate1-manifest.json",
+          "sha256": "sha256:566760c6bcb80ac90d203d6b6f8192b8a997575ac45c513ee02d8244b141692e",
+          "size_bytes": 5524
+        }
+      }
+    },
+    {
+      "id": "dd5befafa8e3468399c9548c93eaead4",
+      "at": "2026-07-20T03:21:44.514099+00:00",
+      "type": "gate_ready",
+      "state": "GATE1_REVIEW",
+      "details": {
+        "previous_state": "GATE1_REVIEW",
+        "gate": "gate1",
+        "manifest": {
+          "kind": "gate1-manifest",
+          "path": "03_phase1/gate1-manifest.json",
+          "sha256": "sha256:d15c4eeedef599f5b10dc9b96db71d97bf80a523d520117d826554a929694be5",
+          "size_bytes": 5524
+        }
+      }
+    },
+    {
+      "id": "4fc49e593029472882e6ba7a886bb83c",
+      "at": "2026-07-20T03:22:26.155553+00:00",
+      "type": "gate_ready",
+      "state": "GATE1_REVIEW",
+      "details": {
+        "previous_state": "GATE1_REVIEW",
+        "gate": "gate1",
+        "manifest": {
+          "kind": "gate1-manifest",
+          "path": "03_phase1/gate1-manifest.json",
+          "sha256": "sha256:d15c4eeedef599f5b10dc9b96db71d97bf80a523d520117d826554a929694be5",
+          "size_bytes": 5524
+        }
+      }
+    },
+    {
+      "id": "7b507885ad104ae7a8c3c518064bc7d4",
+      "at": "2026-07-20T03:31:56.717379+00:00",
+      "type": "gate_ready",
+      "state": "GATE1_REVIEW",
+      "details": {
+        "previous_state": "GATE1_REVIEW",
+        "gate": "gate1",
+        "manifest": {
+          "kind": "gate1-manifest",
+          "path": "03_phase1/gate1-manifest.json",
+          "sha256": "sha256:8d3c5b4efd32773bebf26664e7e85320e57d55b52f425fc164e75e34d0115389",
+          "size_bytes": 5524
+        }
+      }
+    },
+    {
+      "id": "b86a40c07f4041878bdecd0c3a9bd308",
+      "at": "2026-07-20T03:55:09.967228+00:00",
+      "type": "gate_ready",
+      "state": "GATE1_REVIEW",
+      "details": {
+        "previous_state": "GATE1_REVIEW",
+        "gate": "gate1",
+        "manifest": {
+          "kind": "gate1-manifest",
+          "path": "03_phase1/gate1-manifest.json",
+          "sha256": "sha256:0982d9aba375e6f27dddeebdff037e5f21be19501f706a1c88fbd35b78dff25a",
+          "size_bytes": 5524
+        }
+      }
+    },
+    {
+      "id": "23fea549e5cc4041a1286d9729d658a4",
+      "at": "2026-07-20T04:17:31.460276+00:00",
+      "type": "gate_ready",
+      "state": "GATE1_REVIEW",
+      "details": {
+        "previous_state": "GATE1_REVIEW",
+        "gate": "gate1",
+        "manifest": {
+          "kind": "gate1-manifest",
+          "path": "03_phase1/gate1-manifest.json",
+          "sha256": "sha256:9bd6a93cf5c3c5b0132b7ba2a83145ef948e308d54c6b492c38e4c5d0355e283",
+          "size_bytes": 5522
+        }
+      }
+    },
+    {
+      "id": "2b92d230194242748db0ebb520c604fc",
+      "at": "2026-07-20T04:19:57.864276+00:00",
+      "type": "gate_ready",
+      "state": "GATE1_REVIEW",
+      "details": {
+        "previous_state": "GATE1_REVIEW",
+        "gate": "gate1",
+        "manifest": {
+          "kind": "gate1-manifest",
+          "path": "03_phase1/gate1-manifest.json",
+          "sha256": "sha256:b95b09c624b83f338f81996bd99a6240ae4214395a60dbea83ee0e3c8b0f183b",
+          "size_bytes": 5525
+        }
+      }
+    },
+    {
+      "id": "5caa9992fd1b4ee9b68207a19a1848bb",
+      "at": "2026-07-20T04:27:11.038690+00:00",
+      "type": "gate_ready",
+      "state": "GATE1_REVIEW",
+      "details": {
+        "previous_state": "GATE1_REVIEW",
+        "gate": "gate1",
+        "manifest": {
+          "kind": "gate1-manifest",
+          "path": "03_phase1/gate1-manifest.json",
+          "sha256": "sha256:7a69a680b7c0b77a5a36ff4e82f5fa0825abb4f1741ed07c727c6c55071758c7",
+          "size_bytes": 5525
+        }
+      }
+    },
+    {
+      "id": "fece86443c7d467c97612c05916d2a5c",
+      "at": "2026-07-20T04:36:09.982068+00:00",
+      "type": "gate_ready",
+      "state": "GATE1_REVIEW",
+      "details": {
+        "previous_state": "GATE1_REVIEW",
+        "gate": "gate1",
+        "manifest": {
+          "kind": "gate1-manifest",
+          "path": "03_phase1/gate1-manifest.json",
+          "sha256": "sha256:5299bf9746096d998c857571560b4ec89ab1a342e7f01536db5673d0a51c82e7",
+          "size_bytes": 5525
+        }
+      }
+    },
+    {
+      "id": "f990a4aa5bec4b9fa250966a8875436c",
+      "at": "2026-07-20T04:36:20.658200+00:00",
+      "type": "gate_ready",
+      "state": "GATE1_REVIEW",
+      "details": {
+        "previous_state": "GATE1_REVIEW",
+        "gate": "gate1",
+        "manifest": {
+          "kind": "gate1-manifest",
+          "path": "03_phase1/gate1-manifest.json",
+          "sha256": "sha256:6fa3198fe96dce4bba8642cfe874f06448a6d30943d64f0fa9452037c0602842",
+          "size_bytes": 5525
+        }
+      }
+    },
+    {
+      "id": "c89fe1beb9b045e4b8c134b8be66f2f0",
+      "at": "2026-07-20T04:36:21.066363+00:00",
+      "type": "gate_approved",
+      "state": "PHASE2_PENDING",
+      "details": {
+        "previous_state": "GATE1_REVIEW",
+        "gate": "gate1",
+        "approval": {
+          "kind": "approval",
+          "path": "06_state/approvals/gate1-r000041.json",
+          "sha256": "sha256:aeab518f42667b2e21e6054dd02e44cb2b11b8078e3c59f5a03998d09eb09387",
+          "size_bytes": 823
+        }
+      }
+    },
+    {
+      "id": "33287bc80c4d4024923b585c2b0236c5",
+      "at": "2026-07-20T04:36:21.330813+00:00",
+      "type": "phase2_started",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_PENDING",
+        "inputs_hash": "sha256:435f71085d552afe0f52cf21c104714478765ed1683d7ee9d53abc48e68172ea"
+      }
+    },
+    {
+      "id": "b0caccab11734066901056811f8e9ca2",
+      "at": "2026-07-20T04:36:40.871219+00:00",
+      "type": "checkpoint",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "checkpoint": "segment-01-verified"
+      }
+    },
+    {
+      "id": "1cc97ca9143d43ae8ab4b0d6b3cf55a5",
+      "at": "2026-07-20T04:37:01.300308+00:00",
+      "type": "checkpoint",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "checkpoint": "segment-02-verified"
+      }
+    },
+    {
+      "id": "65e8815863ff4cf18cc855119bda949c",
+      "at": "2026-07-20T04:37:46.378468+00:00",
+      "type": "worker_failed",
+      "state": "FAILED_RECOVERABLE",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "message": "segment 03 self-verification failed",
+        "retryable": true
+      }
+    },
+    {
+      "id": "8d78ad867bbc461787cbd7533b4d2bba",
+      "at": "2026-07-20T04:39:00.929900+00:00",
+      "type": "worker_resumed",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "FAILED_RECOVERABLE"
+      }
+    },
+    {
+      "id": "f9a4e9ae13c344f48db790dc18196211",
+      "at": "2026-07-20T04:39:13.010865+00:00",
+      "type": "checkpoint",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "checkpoint": "segment-01-verified"
+      }
+    },
+    {
+      "id": "e4f7800e6a0142c28a03f08c40d76f40",
+      "at": "2026-07-20T04:39:24.063230+00:00",
+      "type": "checkpoint",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "checkpoint": "segment-02-verified"
+      }
+    },
+    {
+      "id": "c9491660f6924efa971a5deb03fe0816",
+      "at": "2026-07-20T04:39:50.196235+00:00",
+      "type": "worker_failed",
+      "state": "FAILED_RECOVERABLE",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "message": "segment 03 self-verification failed",
+        "retryable": true
+      }
+    },
+    {
+      "id": "8dd6f2489bcd4a868241e33e6f473c81",
+      "at": "2026-07-20T04:41:24.364262+00:00",
+      "type": "worker_resumed",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "FAILED_RECOVERABLE"
+      }
+    },
+    {
+      "id": "e34df33f364c4b77a2f5be76cbe2855e",
+      "at": "2026-07-20T04:41:24.495286+00:00",
+      "type": "checkpoint",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "checkpoint": "segment-01-verified"
+      }
+    },
+    {
+      "id": "c2037e52cb88439b8df958dcea7c6bf3",
+      "at": "2026-07-20T04:41:24.610825+00:00",
+      "type": "checkpoint",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "checkpoint": "segment-02-verified"
+      }
+    },
+    {
+      "id": "a31a0e462eeb44e081db7e29e1da2540",
+      "at": "2026-07-20T04:41:24.751385+00:00",
+      "type": "checkpoint",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "checkpoint": "segment-03-verified"
+      }
+    },
+    {
+      "id": "6c91d9cd9a4a40ec825a882a3c0bfa1e",
+      "at": "2026-07-20T04:41:25.117668+00:00",
+      "type": "gate_ready",
+      "state": "GATE2_REVIEW",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "gate": "gate2",
+        "manifest": {
+          "kind": "gate2-manifest",
+          "path": "04_phase2/gate2-manifest.json",
+          "sha256": "sha256:f44b9bb2fb65f5facb9e4c8136744840c923eb3a3a8be6adaca2e4f3e195577c",
+          "size_bytes": 5013
+        }
+      }
+    },
+    {
+      "id": "7ab80aa20f854faeb62525c779023d3f",
+      "at": "2026-07-20T05:43:05.767794+00:00",
+      "type": "revision_requested",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "GATE2_REVIEW",
+        "scope": [
+          "01",
+          "02",
+          "03"
+        ],
+        "return_gate": "gate2"
+      }
+    },
+    {
+      "id": "2bc915d41622404090f7f7f08f3913df",
+      "at": "2026-07-20T05:43:25.413825+00:00",
+      "type": "checkpoint",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "checkpoint": "segment-01-verified"
+      }
+    },
+    {
+      "id": "a21fa568104743d08df72f01ccf8e18b",
+      "at": "2026-07-20T05:43:48.881553+00:00",
+      "type": "checkpoint",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "checkpoint": "segment-02-verified"
+      }
+    },
+    {
+      "id": "77d2d42d69b547c69c0435960262378a",
+      "at": "2026-07-20T05:44:21.253063+00:00",
+      "type": "worker_failed",
+      "state": "FAILED_RECOVERABLE",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "message": "segment 03 self-verification failed",
+        "retryable": true
+      }
+    },
+    {
+      "id": "ac8a2f967491428f8b98d0a8ee42803f",
+      "at": "2026-07-20T05:53:13.104185+00:00",
+      "type": "worker_resumed",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "FAILED_RECOVERABLE"
+      }
+    },
+    {
+      "id": "fda125c22ceb47d1a5b6351cfc0cfb31",
+      "at": "2026-07-20T05:53:13.214358+00:00",
+      "type": "checkpoint",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "checkpoint": "segment-01-verified"
+      }
+    },
+    {
+      "id": "f17cf12f72d840cc9bd03acbc271f928",
+      "at": "2026-07-20T05:53:13.339631+00:00",
+      "type": "checkpoint",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "checkpoint": "segment-02-verified"
+      }
+    },
+    {
+      "id": "366b64b7690a490db731a86a3397a88b",
+      "at": "2026-07-20T05:53:34.380481+00:00",
+      "type": "checkpoint",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "checkpoint": "segment-03-verified"
+      }
+    },
+    {
+      "id": "0b1c25d8bff84303a44c8a8f992568e3",
+      "at": "2026-07-20T05:53:34.606282+00:00",
+      "type": "worker_failed",
+      "state": "FAILED_RECOVERABLE",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "message": "gate1 manifest is missing required fields: ['film_continuity']",
+        "retryable": true
+      }
+    },
+    {
+      "id": "be398c22d71e41c5bd86130bb6d8d098",
+      "at": "2026-07-20T05:55:39.999492+00:00",
+      "type": "worker_resumed",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "FAILED_RECOVERABLE"
+      }
+    },
+    {
+      "id": "eda50b18719f42478a16509c4fccf40b",
+      "at": "2026-07-20T05:55:40.170136+00:00",
+      "type": "checkpoint",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "checkpoint": "segment-01-verified"
+      }
+    },
+    {
+      "id": "67f09c46771c4e67bcfc546ed334afd5",
+      "at": "2026-07-20T05:55:40.276310+00:00",
+      "type": "checkpoint",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "checkpoint": "segment-02-verified"
+      }
+    },
+    {
+      "id": "23f84963c52743e38fcce4b66a9318a0",
+      "at": "2026-07-20T05:55:40.396085+00:00",
+      "type": "checkpoint",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "checkpoint": "segment-03-verified"
+      }
+    },
+    {
+      "id": "f22ad0883bad45a298824fda9de0df13",
+      "at": "2026-07-20T05:55:40.762777+00:00",
+      "type": "gate_ready",
+      "state": "GATE2_REVIEW",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "gate": "gate2",
+        "manifest": {
+          "kind": "gate2-manifest",
+          "path": "04_phase2/gate2-manifest.json",
+          "sha256": "sha256:8d0b3b62cd08db6e1d3cbc01adf60b96996533c237bf6cd7c7a4630b87d1a457",
+          "size_bytes": 5230
+        }
+      }
+    },
+    {
+      "id": "f0dfb4a4b48b400c912cb19647a03ab6",
+      "at": "2026-07-20T06:05:26.305418+00:00",
+      "type": "revision_requested",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "GATE2_REVIEW",
+        "scope": [
+          "01",
+          "02",
+          "03"
+        ],
+        "return_gate": "gate2"
+      }
+    },
+    {
+      "id": "64b2e500695f4fdf89bd429c0439c0bb",
+      "at": "2026-07-20T06:05:42.458447+00:00",
+      "type": "checkpoint",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "checkpoint": "segment-01-verified"
+      }
+    },
+    {
+      "id": "a10c976c51dc4f8ebfc0d066deedd743",
+      "at": "2026-07-20T06:05:57.896105+00:00",
+      "type": "checkpoint",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "checkpoint": "segment-02-verified"
+      }
+    },
+    {
+      "id": "f00bef1f6ef14c95872ae2d0d725f55d",
+      "at": "2026-07-20T06:06:16.759958+00:00",
+      "type": "checkpoint",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "checkpoint": "segment-03-verified"
+      }
+    },
+    {
+      "id": "c684f1d113ed459d834b67e42acc9b73",
+      "at": "2026-07-20T06:06:17.145855+00:00",
+      "type": "gate_ready",
+      "state": "GATE2_REVIEW",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "gate": "gate2",
+        "manifest": {
+          "kind": "gate2-manifest",
+          "path": "04_phase2/gate2-manifest.json",
+          "sha256": "sha256:3dc5ca822b71d41714695ffbe52d77afbdfd907af5631d7959e54f686c3f2de7",
+          "size_bytes": 5231
+        }
+      }
+    },
+    {
+      "id": "c99b8bbe565140edaacd92aebe0af8a7",
+      "at": "2026-07-20T06:08:44.403991+00:00",
+      "type": "revision_requested",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "GATE2_REVIEW",
+        "scope": [
+          "01",
+          "02",
+          "03"
+        ],
+        "return_gate": "gate2"
+      }
+    },
+    {
+      "id": "26ff5c17746147029f6059c0a830958e",
+      "at": "2026-07-20T06:08:59.914991+00:00",
+      "type": "checkpoint",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "checkpoint": "segment-01-verified"
+      }
+    },
+    {
+      "id": "9dc9aaaf0e024a0e87e0801445875770",
+      "at": "2026-07-20T06:09:15.604169+00:00",
+      "type": "checkpoint",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "checkpoint": "segment-02-verified"
+      }
+    },
+    {
+      "id": "d939ffb4aa09410da02d5f7a4c1bff19",
+      "at": "2026-07-20T06:09:34.758950+00:00",
+      "type": "checkpoint",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "checkpoint": "segment-03-verified"
+      }
+    },
+    {
+      "id": "b4189dd5edbe4056897a391e509fe385",
+      "at": "2026-07-20T06:09:35.175043+00:00",
+      "type": "gate_ready",
+      "state": "GATE2_REVIEW",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "gate": "gate2",
+        "manifest": {
+          "kind": "gate2-manifest",
+          "path": "04_phase2/gate2-manifest.json",
+          "sha256": "sha256:d826919f34dda80d301987b29f9024fb279ade0e0cc204b1a6cac0e91db36ed2",
+          "size_bytes": 5232
+        }
+      }
+    },
+    {
+      "id": "f392ff893d5b47d6aca1507ff57e92be",
+      "at": "2026-07-20T06:14:32.489234+00:00",
+      "type": "revision_requested",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "GATE2_REVIEW",
+        "scope": [
+          "01",
+          "02",
+          "03"
+        ],
+        "return_gate": "gate2"
+      }
+    },
+    {
+      "id": "731c4edf828545e8bcd0e12c89f44844",
+      "at": "2026-07-20T06:14:46.174828+00:00",
+      "type": "checkpoint",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "checkpoint": "segment-01-verified"
+      }
+    },
+    {
+      "id": "c5dd6e3f5ea94a6898213e8933cb4b8b",
+      "at": "2026-07-20T06:14:59.052737+00:00",
+      "type": "checkpoint",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "checkpoint": "segment-02-verified"
+      }
+    },
+    {
+      "id": "e4cf900994bc42e584e5523247e4ff8c",
+      "at": "2026-07-20T06:15:13.743623+00:00",
+      "type": "checkpoint",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "checkpoint": "segment-03-verified"
+      }
+    },
+    {
+      "id": "39ad52f5c8094a16afcc5f459dda0607",
+      "at": "2026-07-20T06:15:14.190322+00:00",
+      "type": "gate_ready",
+      "state": "GATE2_REVIEW",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "gate": "gate2",
+        "manifest": {
+          "kind": "gate2-manifest",
+          "path": "04_phase2/gate2-manifest.json",
+          "sha256": "sha256:db16c7c2d84cbcd423a4bcdc9482d4f3c6670c15d9cefc2ad682c4ebf87db7b7",
+          "size_bytes": 5232
+        }
+      }
+    },
+    {
+      "id": "a22b66d466e54d10b9021527ca79b5d3",
+      "at": "2026-07-20T06:50:00.766708+00:00",
+      "type": "revision_requested",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "GATE2_REVIEW",
+        "scope": [
+          "01",
+          "02",
+          "03"
+        ],
+        "return_gate": "gate2"
+      }
+    },
+    {
+      "id": "896c7e06b44745a0a6c8f092cebcdc3e",
+      "at": "2026-07-20T06:50:17.131528+00:00",
+      "type": "worker_failed",
+      "state": "FAILED_RECOVERABLE",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "message": "segment 01 self-verification failed",
+        "retryable": true
+      }
+    },
+    {
+      "id": "6c960d6e4277416bb6de2189dcee5f1e",
+      "at": "2026-07-20T06:52:57.536494+00:00",
+      "type": "worker_resumed",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "FAILED_RECOVERABLE"
+      }
+    },
+    {
+      "id": "dbec65d9ebdd4b1398e3d847a3ccca87",
+      "at": "2026-07-20T06:53:53.737002+00:00",
+      "type": "checkpoint",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "checkpoint": "segment-01-verified"
+      }
+    },
+    {
+      "id": "cfd92f8159414b269fea32e066b6242e",
+      "at": "2026-07-20T06:54:11.051286+00:00",
+      "type": "checkpoint",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "checkpoint": "segment-02-verified"
+      }
+    },
+    {
+      "id": "cdefd53c3fd04ab397a6a103313cab5f",
+      "at": "2026-07-20T06:54:30.592028+00:00",
+      "type": "checkpoint",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "checkpoint": "segment-03-verified"
+      }
+    },
+    {
+      "id": "992deaff9ae64014b2f8dfb69408576c",
+      "at": "2026-07-20T06:54:31.103985+00:00",
+      "type": "gate_ready",
+      "state": "GATE2_REVIEW",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "gate": "gate2",
+        "manifest": {
+          "kind": "gate2-manifest",
+          "path": "04_phase2/gate2-manifest.json",
+          "sha256": "sha256:5299f1c39197f96db0ed379a49372df46e75b12d007a1870287aa98adc0895a5",
+          "size_bytes": 5232
+        }
+      }
+    },
+    {
+      "id": "bf4e2aa4771c46eab417e35c8cb03c60",
+      "at": "2026-07-20T07:01:33.396972+00:00",
+      "type": "revision_requested",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "GATE2_REVIEW",
+        "scope": [
+          "01",
+          "02",
+          "03"
+        ],
+        "return_gate": "gate2"
+      }
+    },
+    {
+      "id": "b6e092ca471a4449bdda686fa1d723c8",
+      "at": "2026-07-20T07:01:51.046563+00:00",
+      "type": "checkpoint",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "checkpoint": "segment-01-verified"
+      }
+    },
+    {
+      "id": "5a35a0ad26284758b4abdc300638c2dd",
+      "at": "2026-07-20T07:02:08.982784+00:00",
+      "type": "checkpoint",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "checkpoint": "segment-02-verified"
+      }
+    },
+    {
+      "id": "8490bef6797b4f75bd3ac7deb66988ab",
+      "at": "2026-07-20T07:02:28.548351+00:00",
+      "type": "checkpoint",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "checkpoint": "segment-03-verified"
+      }
+    },
+    {
+      "id": "f6c3491c759b4a33b44167890cc73017",
+      "at": "2026-07-20T07:02:28.995082+00:00",
+      "type": "gate_ready",
+      "state": "GATE2_REVIEW",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "gate": "gate2",
+        "manifest": {
+          "kind": "gate2-manifest",
+          "path": "04_phase2/gate2-manifest.json",
+          "sha256": "sha256:c2c83b13cdb87bb717fbf7e4138d0b4e1435619753edfb3a713bb7b04270f257",
+          "size_bytes": 5232
+        }
+      }
+    },
+    {
+      "id": "43085726a3534f51b371df5afdb850e0",
+      "at": "2026-07-20T07:04:23.946654+00:00",
+      "type": "revision_requested",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "GATE2_REVIEW",
+        "scope": [
+          "01",
+          "02",
+          "03"
+        ],
+        "return_gate": "gate2"
+      }
+    },
+    {
+      "id": "4861cd34e1404d23beaa455607ac9827",
+      "at": "2026-07-20T07:04:41.664896+00:00",
+      "type": "worker_failed",
+      "state": "FAILED_RECOVERABLE",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "message": "segment 01 self-verification failed",
+        "retryable": true
+      }
+    },
+    {
+      "id": "ed5db9d28e644426bdf6780bdfbc2920",
+      "at": "2026-07-20T07:04:53.947205+00:00",
+      "type": "worker_resumed",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "FAILED_RECOVERABLE"
+      }
+    },
+    {
+      "id": "de54c61cb6064cf8bc209393b53f9de3",
+      "at": "2026-07-20T07:05:26.007056+00:00",
+      "type": "worker_failed",
+      "state": "FAILED_RECOVERABLE",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "message": "segment 01 self-verification failed",
+        "retryable": true
+      }
+    },
+    {
+      "id": "cf4317bb48f94d61b67828ba0677f3b2",
+      "at": "2026-07-20T07:06:18.735435+00:00",
+      "type": "worker_resumed",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "FAILED_RECOVERABLE"
+      }
+    },
+    {
+      "id": "17812ce89c9b441e84363bbab921e775",
+      "at": "2026-07-20T07:06:32.723263+00:00",
+      "type": "checkpoint",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "checkpoint": "segment-01-verified"
+      }
+    },
+    {
+      "id": "e2de671e9eaa4aff966a576ed097183c",
+      "at": "2026-07-20T07:06:50.799581+00:00",
+      "type": "checkpoint",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "checkpoint": "segment-02-verified"
+      }
+    },
+    {
+      "id": "1ba3326489c542fe9b7ad0ac37224ad3",
+      "at": "2026-07-20T07:07:10.435587+00:00",
+      "type": "checkpoint",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "checkpoint": "segment-03-verified"
+      }
+    },
+    {
+      "id": "f7533a276f2f440d9f15a4c0b35713d0",
+      "at": "2026-07-20T07:07:10.922709+00:00",
+      "type": "gate_ready",
+      "state": "GATE2_REVIEW",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "gate": "gate2",
+        "manifest": {
+          "kind": "gate2-manifest",
+          "path": "04_phase2/gate2-manifest.json",
+          "sha256": "sha256:593dbfe78d53ce919604595103ec240d527b120490b2ed24afa8769f6dd273e9",
+          "size_bytes": 5232
+        }
+      }
+    },
+    {
+      "id": "2a3c6a341a8a410e818348c5073d68e1",
+      "at": "2026-07-20T09:10:01.345646+00:00",
+      "type": "revision_requested",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "GATE2_REVIEW",
+        "scope": [
+          "01",
+          "02",
+          "03"
+        ],
+        "return_gate": "gate2"
+      }
+    },
+    {
+      "id": "a25446c6f5c6487e9fd3e5def5b563f3",
+      "at": "2026-07-20T09:10:22.511770+00:00",
+      "type": "checkpoint",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "checkpoint": "segment-01-verified"
+      }
+    },
+    {
+      "id": "c3b5e35466204496ab7d8f2c0d203d6f",
+      "at": "2026-07-20T09:10:45.197895+00:00",
+      "type": "checkpoint",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "checkpoint": "segment-02-verified"
+      }
+    },
+    {
+      "id": "871bf47a912145408908ff034190c0de",
+      "at": "2026-07-20T09:11:08.681664+00:00",
+      "type": "checkpoint",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "checkpoint": "segment-03-verified"
+      }
+    },
+    {
+      "id": "88910d4752434763b754f81dd00efa34",
+      "at": "2026-07-20T09:11:09.144050+00:00",
+      "type": "gate_ready",
+      "state": "GATE2_REVIEW",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "gate": "gate2",
+        "manifest": {
+          "kind": "gate2-manifest",
+          "path": "04_phase2/gate2-manifest.json",
+          "sha256": "sha256:81e61d18c055a9739a5259da0486293c061ca7e681f6666684bc73f57e8fe42e",
+          "size_bytes": 5232
+        }
+      }
+    },
+    {
+      "id": "a7a02d7926af4e34b447d24d6ba932bc",
+      "at": "2026-07-20T11:03:17.539519+00:00",
+      "type": "gate_approved",
+      "state": "PHASE3_READY",
+      "details": {
+        "previous_state": "GATE2_REVIEW",
+        "gate": "gate2",
+        "approval": {
+          "kind": "approval",
+          "path": "06_state/approvals/gate2-r000110.json",
+          "sha256": "sha256:fd1e3a26e46e58bb00a0b8e520ce19e0aa7dff7114e6a781d077e8455ed90ece",
+          "size_bytes": 575
+        }
+      }
+    },
+    {
+      "id": "be50485b8365443ea1117a839e4f7c40",
+      "at": "2026-07-20T11:03:17.853178+00:00",
+      "type": "phase3_started",
+      "state": "PHASE3_RUNNING",
+      "details": {
+        "previous_state": "PHASE3_READY",
+        "inputs_hash": "sha256:3c6a9f17cc9e79bade6e049db588e504ae0cc1115ba7c0c8dd1efab8c62a1346"
+      }
+    },
+    {
+      "id": "a5ef413487d24a8191202b8abb3dd228",
+      "at": "2026-07-20T11:04:18.452465+00:00",
+      "type": "checkpoint",
+      "state": "PHASE3_RUNNING",
+      "details": {
+        "previous_state": "PHASE3_RUNNING",
+        "checkpoint": "archive-verified"
+      }
+    },
+    {
+      "id": "b9c2ea92900e4160b0e6c18035cfaad7",
+      "at": "2026-07-20T11:04:19.732439+00:00",
+      "type": "gate_ready",
+      "state": "FINAL_REVIEW",
+      "details": {
+        "previous_state": "PHASE3_RUNNING",
+        "gate": "final",
+        "manifest": {
+          "kind": "final-manifest",
+          "path": "05_final/final-manifest.json",
+          "sha256": "sha256:fefad362933d747f4ef6ac06e54dfc5de39666997d4d3fa03e739ddbc2146582",
+          "size_bytes": 2144
+        }
+      }
+    },
+    {
+      "id": "9ef658eecdcb47b39c9f504e5583bef2",
+      "at": "2026-07-21T04:23:20.232488+00:00",
+      "type": "final_manifest_rebound_yuv420p",
+      "state": "FINAL_REVIEW",
+      "details": {
+        "previous_state": "FINAL_REVIEW"
+      }
+    },
+    {
+      "id": "25cfea0ae0594cc798b12e1a8a9350e5",
+      "at": "2026-07-21T04:23:35.045224+00:00",
+      "type": "gate_approved",
+      "state": "COMPLETED",
+      "details": {
+        "previous_state": "FINAL_REVIEW",
+        "gate": "final",
+        "approval": {
+          "kind": "approval",
+          "path": "06_state/approvals/final-r000115.json",
+          "sha256": "sha256:e282a675eb85d0fb50073de18bf323f80b954964ca894249f58c57f3152ca9d9",
+          "size_bytes": 572
+        }
+      }
+    },
+    {
+      "id": "4aaf014ae7e14d0e992d4ee30f0d9907",
+      "at": "2026-07-21T08:45:20.484245+00:00",
+      "type": "reopened_for_v2_revision",
+      "state": "GATE2_REVIEW",
+      "details": {
+        "previous_state": "COMPLETED"
+      }
+    },
+    {
+      "id": "932d7078175245a7802ae708fc529c04",
+      "at": "2026-07-21T08:45:21.181591+00:00",
+      "type": "revision_requested",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "GATE2_REVIEW",
+        "scope": [
+          "02",
+          "03"
+        ],
+        "return_gate": "gate2"
+      }
+    },
+    {
+      "id": "a29e8e253d2d4728a6fe347e2063ecb9",
+      "at": "2026-07-21T08:45:39.300111+00:00",
+      "type": "checkpoint",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "checkpoint": "segment-02-verified"
+      }
+    },
+    {
+      "id": "3f4d2ff568b042c29e94134630bc5dd6",
+      "at": "2026-07-21T08:45:53.760271+00:00",
+      "type": "checkpoint",
+      "state": "REVISIONS_RUNNING",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "checkpoint": "segment-03-verified"
+      }
+    },
+    {
+      "id": "0fbe055326e84d7fa6fb9bde1316cc81",
+      "at": "2026-07-21T08:45:54.179289+00:00",
+      "type": "gate_ready",
+      "state": "GATE2_REVIEW",
+      "details": {
+        "previous_state": "REVISIONS_RUNNING",
+        "gate": "gate2",
+        "manifest": {
+          "kind": "gate2-manifest",
+          "path": "04_phase2/gate2-manifest.json",
+          "sha256": "sha256:14da61685e68fd8e3546b32e2dca48e04e50fc204e363cf21e7486eff36d4c97",
+          "size_bytes": 5230
+        }
+      }
+    },
+    {
+      "id": "60793ddaf50d449cb061c85dfad38a87",
+      "at": "2026-07-21T08:45:54.830472+00:00",
+      "type": "gate_approved",
+      "state": "PHASE3_READY",
+      "details": {
+        "previous_state": "GATE2_REVIEW",
+        "gate": "gate2",
+        "approval": {
+          "kind": "approval",
+          "path": "06_state/approvals/gate2-r000121.json",
+          "sha256": "sha256:bb978cd4f5c83f6e6aac8095cb213140c9c92a8920358ed66095f1f388284979",
+          "size_bytes": 578
+        }
+      }
+    },
+    {
+      "id": "58597c2270cb47d7887968e31cfd864f",
+      "at": "2026-07-21T08:45:55.254758+00:00",
+      "type": "phase3_started",
+      "state": "PHASE3_RUNNING",
+      "details": {
+        "previous_state": "PHASE3_READY",
+        "inputs_hash": "sha256:78c7a04255894f30d0c8a5599bb716150f1ed7205771cd14a7026a09b47542fb"
+      }
+    },
+    {
+      "id": "6265201d00c4432c8675a9f9b7e97191",
+      "at": "2026-07-21T08:46:25.085332+00:00",
+      "type": "worker_failed",
+      "state": "FAILED_RECOVERABLE",
+      "details": {
+        "previous_state": "PHASE3_RUNNING",
+        "message": "command failed (4294967274): E:\\Xampp\\MCP монтаж\\tools\\ffmpeg\\bin\\ffmpeg.EXE -hide_banner -loglevel error -y -ss 84.532 -i E:\\Xampp\\MCP монтаж\\projects\\tanya-reel-pilot\\05_final\\tanya-reel-pilot.mp4 -frames:v 1 -q:v 3 E:\\Xampp\\MCP монтаж\\projects\\tanya-reel-pilot\\05_final\\probes\\.probe-045-84.532.bf2558d84a9f4754a67aa614370c2e03.tmp.jpg\n[mjpeg @ 00000291439d8cc0] Non full-range YUV is non-standard, set strict_std_compliance to at most unofficial to use it.\n[mjpeg @ 0000029143afe7c0] ff_frame_thread_encoder_init failed\n[vost#0:0/mjpeg @ 0000029141876640] [enc:mjpeg @ 0000029143c43bc0] Error while opening encoder - maybe incorrect parameters such as bit_rate, rate, width or height.\n[vf#0:0 @ 0000029141878c80] Error sending frames to consumers: Invalid argument\n[vf#0:0 @ 0000029141878c80] Task finished with error code: -22 (Invalid argument)\n[vf#0:0 @ 0000029141878c80] Terminating thread with return code -22 (Invalid argument)\n[vost#0:0/mjpeg @ 0000029141876640] [enc:mjpeg @ 0000029143c43bc0] Could not open encoder before EOF\n[vost#0:0/mjpeg @ 0000029141876640] Task finished with error code: -22 (Invalid argument)\n[vost#0:0/mjpeg @ 0000029141876640] Terminating thread with return code -22 (Invalid argument)\n[out#0/image2 @ 0000029141857940] Nothing was written into output file, because at least one of its streams received no packets.\n",
+        "retryable": true
+      }
+    },
+    {
+      "id": "302ab7710e124e5b96f58ba396f1bced",
+      "at": "2026-07-21T08:48:16.702204+00:00",
+      "type": "worker_resumed",
+      "state": "PHASE3_RUNNING",
+      "details": {
+        "previous_state": "FAILED_RECOVERABLE"
+      }
+    },
+    {
+      "id": "f3b95bc27a6c475aae23ba1cf6b0dba8",
+      "at": "2026-07-21T08:48:48.215923+00:00",
+      "type": "worker_failed",
+      "state": "FAILED_RECOVERABLE",
+      "details": {
+        "previous_state": "PHASE3_RUNNING",
+        "message": "existing archive master does not match source: E:\\Xampp\\MCP монтаж\\projects\\_archive\\tanya-reel-pilot",
+        "retryable": true
+      }
+    },
+    {
+      "id": "1e8507a180ee4c89a2a05e38c7b7ac02",
+      "at": "2026-07-21T08:49:08.760509+00:00",
+      "type": "worker_resumed",
+      "state": "PHASE3_RUNNING",
+      "details": {
+        "previous_state": "FAILED_RECOVERABLE"
+      }
+    },
+    {
+      "id": "8929faef85a44f0fbdc9c2cffbad0936",
+      "at": "2026-07-21T08:49:49.173037+00:00",
+      "type": "checkpoint",
+      "state": "PHASE3_RUNNING",
+      "details": {
+        "previous_state": "PHASE3_RUNNING",
+        "checkpoint": "archive-verified"
+      }
+    },
+    {
+      "id": "aaab8874bad3414ba2cf2831fb4b4d03",
+      "at": "2026-07-21T08:49:50.366079+00:00",
+      "type": "gate_ready",
+      "state": "FINAL_REVIEW",
+      "details": {
+        "previous_state": "PHASE3_RUNNING",
+        "gate": "final",
+        "manifest": {
+          "kind": "final-manifest",
+          "path": "05_final/final-manifest.json",
+          "sha256": "sha256:e1c366637ff5f2f9608499e7a29651cdac5adce7b24e0c9b2cd59f9c3084cbc9",
+          "size_bytes": 2619
+        }
+      }
+    },
+    {
+      "id": "9a252bbbbf994126828222597b88f78f",
+      "at": "2026-07-21T08:50:13.537324+00:00",
+      "type": "gate_approved",
+      "state": "COMPLETED",
+      "details": {
+        "previous_state": "FINAL_REVIEW",
+        "gate": "final",
+        "approval": {
+          "kind": "approval",
+          "path": "06_state/approvals/final-r000129.json",
+          "sha256": "sha256:9995debd0c3a75fb6116e83a801a836946894247a84dd16d713921b403c69514",
+          "size_bytes": 577
+        }
+      }
+    }
+  ]
+}

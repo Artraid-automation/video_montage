@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.video.factory/contracts/transcript-analysis.schema.json",
+  "title": "Transcript Analysis",
+  "type": "object",
+  "required": ["schema_version", "source_id", "summary", "silences", "utterances", "duplicate_pairs"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "source_id": {"type": "string"},
+    "summary": {"type": "object"},
+    "silences": {"type": "array"},
+    "utterances": {"type": "array"},
+    "duplicate_pairs": {"type": "array"}
+  },
+  "additionalProperties": true
+}
+

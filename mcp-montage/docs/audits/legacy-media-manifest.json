@@ -1,0 +1,586 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-19T10:21:28.337832+00:00",
+  "project_root": "E:\\Xampp\\MCP монтаж\\прокты\\как добиться всго в жизи dan koe reels",
+  "files": [
+    {
+      "id": "media_128398941cc9",
+      "path": "E:\\Xampp\\MCP монтаж\\прокты\\как добиться всго в жизи dan koe reels\\01_footage\\video_2026-07-16_18-04-55.mp4",
+      "relative_path": "01_footage/video_2026-07-16_18-04-55.mp4",
+      "role": "a_roll",
+      "size_bytes": 178457605,
+      "probe_ok": true,
+      "duration_s": 327.24,
+      "streams": [
+        {
+          "index": 0,
+          "codec_type": "video",
+          "codec_name": "h264",
+          "width": 1280,
+          "height": 720,
+          "r_frame_rate": "25/1",
+          "avg_frame_rate": "204500/8179",
+          "pix_fmt": "yuvj420p",
+          "color_space": "bt709",
+          "color_transfer": "bt709",
+          "color_primaries": "bt709"
+        },
+        {
+          "index": 1,
+          "codec_type": "audio",
+          "codec_name": "aac",
+          "r_frame_rate": "0/0",
+          "avg_frame_rate": "0/0",
+          "sample_rate": "48000",
+          "channels": 2,
+          "channel_layout": "stereo"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "media_22a6774319d4",
+      "path": "E:\\Xampp\\MCP монтаж\\прокты\\как добиться всго в жизи dan koe reels\\03_audio\\16 июл., 21.26​.m4a",
+      "relative_path": "03_audio/16 июл., 21.26​.m4a",
+      "role": "audio",
+      "size_bytes": 11032739,
+      "probe_ok": true,
+      "duration_s": 336.779835,
+      "streams": [
+        {
+          "index": 0,
+          "codec_type": "audio",
+          "codec_name": "aac",
+          "r_frame_rate": "0/0",
+          "avg_frame_rate": "0/0",
+          "sample_rate": "48000",
+          "channels": 2,
+          "channel_layout": "stereo"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "media_60cf321437d0",
+      "path": "E:\\Xampp\\MCP монтаж\\прокты\\как добиться всго в жизи dan koe reels\\05_project\\edit\\v001_work\\rough_9x16.mp4",
+      "relative_path": "05_project/edit/v001_work/rough_9x16.mp4",
+      "role": "unknown",
+      "size_bytes": 117139248,
+      "probe_ok": true,
+      "duration_s": 49.982,
+      "streams": [
+        {
+          "index": 0,
+          "codec_type": "video",
+          "codec_name": "h264",
+          "width": 1080,
+          "height": 1920,
+          "r_frame_rate": "25/1",
+          "avg_frame_rate": "31075/1247",
+          "pix_fmt": "yuvj420p",
+          "color_space": "bt709",
+          "color_transfer": "bt709",
+          "color_primaries": "bt709"
+        },
+        {
+          "index": 1,
+          "codec_type": "audio",
+          "codec_name": "aac",
+          "r_frame_rate": "0/0",
+          "avg_frame_rate": "0/0",
+          "sample_rate": "48000",
+          "channels": 2,
+          "channel_layout": "stereo"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "media_09c113b1f87b",
+      "path": "E:\\Xampp\\MCP монтаж\\прокты\\как добиться всго в жизи dan koe reels\\05_project\\edit\\v001_work\\rough_concat.mp4",
+      "relative_path": "05_project/edit/v001_work/rough_concat.mp4",
+      "role": "unknown",
+      "size_bytes": 90089420,
+      "probe_ok": true,
+      "duration_s": 49.972031,
+      "streams": [
+        {
+          "index": 0,
+          "codec_type": "video",
+          "codec_name": "h264",
+          "width": 1280,
+          "height": 720,
+          "r_frame_rate": "25/1",
+          "avg_frame_rate": "124300/4991",
+          "pix_fmt": "yuvj420p",
+          "color_space": "bt709",
+          "color_transfer": "bt709",
+          "color_primaries": "bt709"
+        },
+        {
+          "index": 1,
+          "codec_type": "audio",
+          "codec_name": "aac",
+          "r_frame_rate": "0/0",
+          "avg_frame_rate": "0/0",
+          "sample_rate": "48000",
+          "channels": 2,
+          "channel_layout": "stereo"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "media_3b3da7d29863",
+      "path": "E:\\Xampp\\MCP монтаж\\прокты\\как добиться всго в жизи dan koe reels\\05_project\\edit\\v001_work\\seg_00.mp4",
+      "relative_path": "05_project/edit/v001_work/seg_00.mp4",
+      "role": "unknown",
+      "size_bytes": 20112286,
+      "probe_ok": true,
+      "duration_s": 11.142,
+      "streams": [
+        {
+          "index": 0,
+          "codec_type": "video",
+          "codec_name": "h264",
+          "width": 1280,
+          "height": 720,
+          "r_frame_rate": "25/1",
+          "avg_frame_rate": "25/1",
+          "pix_fmt": "yuvj420p",
+          "color_space": "bt709",
+          "color_transfer": "bt709",
+          "color_primaries": "bt709"
+        },
+        {
+          "index": 1,
+          "codec_type": "audio",
+          "codec_name": "aac",
+          "r_frame_rate": "0/0",
+          "avg_frame_rate": "0/0",
+          "sample_rate": "48000",
+          "channels": 2,
+          "channel_layout": "stereo"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "media_9e1762def492",
+      "path": "E:\\Xampp\\MCP монтаж\\прокты\\как добиться всго в жизи dan koe reels\\05_project\\edit\\v001_work\\seg_01.mp4",
+      "relative_path": "05_project/edit/v001_work/seg_01.mp4",
+      "role": "unknown",
+      "size_bytes": 4380883,
+      "probe_ok": true,
+      "duration_s": 2.422,
+      "streams": [
+        {
+          "index": 0,
+          "codec_type": "video",
+          "codec_name": "h264",
+          "width": 1280,
+          "height": 720,
+          "r_frame_rate": "25/1",
+          "avg_frame_rate": "25/1",
+          "pix_fmt": "yuvj420p",
+          "color_space": "bt709",
+          "color_transfer": "bt709",
+          "color_primaries": "bt709"
+        },
+        {
+          "index": 1,
+          "codec_type": "audio",
+          "codec_name": "aac",
+          "r_frame_rate": "0/0",
+          "avg_frame_rate": "0/0",
+          "sample_rate": "48000",
+          "channels": 2,
+          "channel_layout": "stereo"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "media_fe05be9c880b",
+      "path": "E:\\Xampp\\MCP монтаж\\прокты\\как добиться всго в жизи dan koe reels\\05_project\\edit\\v001_work\\seg_02.mp4",
+      "relative_path": "05_project/edit/v001_work/seg_02.mp4",
+      "role": "unknown",
+      "size_bytes": 9125874,
+      "probe_ok": true,
+      "duration_s": 5.142,
+      "streams": [
+        {
+          "index": 0,
+          "codec_type": "video",
+          "codec_name": "h264",
+          "width": 1280,
+          "height": 720,
+          "r_frame_rate": "25/1",
+          "avg_frame_rate": "25/1",
+          "pix_fmt": "yuvj420p",
+          "color_space": "bt709",
+          "color_transfer": "bt709",
+          "color_primaries": "bt709"
+        },
+        {
+          "index": 1,
+          "codec_type": "audio",
+          "codec_name": "aac",
+          "r_frame_rate": "0/0",
+          "avg_frame_rate": "0/0",
+          "sample_rate": "48000",
+          "channels": 2,
+          "channel_layout": "stereo"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "media_1642c7bcacb6",
+      "path": "E:\\Xampp\\MCP монтаж\\прокты\\как добиться всго в жизи dan koe reels\\05_project\\edit\\v001_work\\seg_03.mp4",
+      "relative_path": "05_project/edit/v001_work/seg_03.mp4",
+      "role": "unknown",
+      "size_bytes": 21712561,
+      "probe_ok": true,
+      "duration_s": 12.222,
+      "streams": [
+        {
+          "index": 0,
+          "codec_type": "video",
+          "codec_name": "h264",
+          "width": 1280,
+          "height": 720,
+          "r_frame_rate": "25/1",
+          "avg_frame_rate": "25/1",
+          "pix_fmt": "yuvj420p",
+          "color_space": "bt709",
+          "color_transfer": "bt709",
+          "color_primaries": "bt709"
+        },
+        {
+          "index": 1,
+          "codec_type": "audio",
+          "codec_name": "aac",
+          "r_frame_rate": "0/0",
+          "avg_frame_rate": "0/0",
+          "sample_rate": "48000",
+          "channels": 2,
+          "channel_layout": "stereo"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "media_b46c8836359b",
+      "path": "E:\\Xampp\\MCP монтаж\\прокты\\как добиться всго в жизи dan koe reels\\05_project\\edit\\v001_work\\seg_04.mp4",
+      "relative_path": "05_project/edit/v001_work/seg_04.mp4",
+      "role": "unknown",
+      "size_bytes": 15393604,
+      "probe_ok": true,
+      "duration_s": 8.622,
+      "streams": [
+        {
+          "index": 0,
+          "codec_type": "video",
+          "codec_name": "h264",
+          "width": 1280,
+          "height": 720,
+          "r_frame_rate": "25/1",
+          "avg_frame_rate": "25/1",
+          "pix_fmt": "yuvj420p",
+          "color_space": "bt709",
+          "color_transfer": "bt709",
+          "color_primaries": "bt709"
+        },
+        {
+          "index": 1,
+          "codec_type": "audio",
+          "codec_name": "aac",
+          "r_frame_rate": "0/0",
+          "avg_frame_rate": "0/0",
+          "sample_rate": "48000",
+          "channels": 2,
+          "channel_layout": "stereo"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "media_29e21e3db37f",
+      "path": "E:\\Xampp\\MCP монтаж\\прокты\\как добиться всго в жизи dan koe reels\\05_project\\edit\\v001_work\\seg_05.mp4",
+      "relative_path": "05_project/edit/v001_work/seg_05.mp4",
+      "role": "unknown",
+      "size_bytes": 19369986,
+      "probe_ok": true,
+      "duration_s": 10.422,
+      "streams": [
+        {
+          "index": 0,
+          "codec_type": "video",
+          "codec_name": "h264",
+          "width": 1280,
+          "height": 720,
+          "r_frame_rate": "25/1",
+          "avg_frame_rate": "25/1",
+          "pix_fmt": "yuvj420p",
+          "color_space": "bt709",
+          "color_transfer": "bt709",
+          "color_primaries": "bt709"
+        },
+        {
+          "index": 1,
+          "codec_type": "audio",
+          "codec_name": "aac",
+          "r_frame_rate": "0/0",
+          "avg_frame_rate": "0/0",
+          "sample_rate": "48000",
+          "channels": 2,
+          "channel_layout": "stereo"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "media_df388c83b563",
+      "path": "E:\\Xampp\\MCP монтаж\\прокты\\как добиться всго в жизи dan koe reels\\05_project\\edit\\v001_work\\src_frames\\src_220.jpg",
+      "relative_path": "05_project/edit/v001_work/src_frames/src_220.jpg",
+      "role": "image",
+      "size_bytes": 60355,
+      "probe_ok": true,
+      "duration_s": 0.04,
+      "streams": [
+        {
+          "index": 0,
+          "codec_type": "video",
+          "codec_name": "mjpeg",
+          "width": 1280,
+          "height": 720,
+          "r_frame_rate": "25/1",
+          "avg_frame_rate": "25/1",
+          "pix_fmt": "yuvj420p",
+          "color_space": "bt470bg"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "media_d56330b25fe1",
+      "path": "E:\\Xampp\\MCP монтаж\\прокты\\как добиться всго в жизи dan koe reels\\05_project\\edit\\v001_work\\src_frames\\src_260.jpg",
+      "relative_path": "05_project/edit/v001_work/src_frames/src_260.jpg",
+      "role": "image",
+      "size_bytes": 72211,
+      "probe_ok": true,
+      "duration_s": 0.04,
+      "streams": [
+        {
+          "index": 0,
+          "codec_type": "video",
+          "codec_name": "mjpeg",
+          "width": 1280,
+          "height": 720,
+          "r_frame_rate": "25/1",
+          "avg_frame_rate": "25/1",
+          "pix_fmt": "yuvj420p",
+          "color_space": "bt470bg"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "media_64053b8286fc",
+      "path": "E:\\Xampp\\MCP монтаж\\прокты\\как добиться всго в жизи dan koe reels\\05_project\\edit\\v001_work\\src_frames\\src_34.jpg",
+      "relative_path": "05_project/edit/v001_work/src_frames/src_34.jpg",
+      "role": "image",
+      "size_bytes": 58357,
+      "probe_ok": true,
+      "duration_s": 0.04,
+      "streams": [
+        {
+          "index": 0,
+          "codec_type": "video",
+          "codec_name": "mjpeg",
+          "width": 1280,
+          "height": 720,
+          "r_frame_rate": "25/1",
+          "avg_frame_rate": "25/1",
+          "pix_fmt": "yuvj420p",
+          "color_space": "bt470bg"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "media_4d846ce24570",
+      "path": "E:\\Xampp\\MCP монтаж\\прокты\\как добиться всго в жизи dan koe reels\\06_exports\\v001\\reel_v001.mp4",
+      "relative_path": "06_exports/v001/reel_v001.mp4",
+      "role": "unknown",
+      "size_bytes": 164187560,
+      "probe_ok": true,
+      "duration_s": 49.730667,
+      "streams": [
+        {
+          "index": 0,
+          "codec_type": "video",
+          "codec_name": "h264",
+          "width": 1080,
+          "height": 1920,
+          "r_frame_rate": "25/1",
+          "avg_frame_rate": "10325/414",
+          "pix_fmt": "yuvj420p",
+          "color_space": "bt709",
+          "color_transfer": "bt709",
+          "color_primaries": "bt709"
+        },
+        {
+          "index": 1,
+          "codec_type": "audio",
+          "codec_name": "aac",
+          "r_frame_rate": "0/0",
+          "avg_frame_rate": "0/0",
+          "sample_rate": "96000",
+          "channels": 2,
+          "channel_layout": "stereo"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "media_fc9756596f12",
+      "path": "E:\\Xampp\\MCP монтаж\\прокты\\как добиться всго в жизи dan koe reels\\06_exports\\v001\\review\\frame_01.jpg",
+      "relative_path": "06_exports/v001/review/frame_01.jpg",
+      "role": "image",
+      "size_bytes": 40185,
+      "probe_ok": true,
+      "duration_s": 0.04,
+      "streams": [
+        {
+          "index": 0,
+          "codec_type": "video",
+          "codec_name": "mjpeg",
+          "width": 540,
+          "height": 960,
+          "r_frame_rate": "25/1",
+          "avg_frame_rate": "25/1",
+          "pix_fmt": "yuvj420p",
+          "color_space": "bt470bg"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "media_86820f847d65",
+      "path": "E:\\Xampp\\MCP монтаж\\прокты\\как добиться всго в жизи dan koe reels\\06_exports\\v001\\review\\frame_02.jpg",
+      "relative_path": "06_exports/v001/review/frame_02.jpg",
+      "role": "image",
+      "size_bytes": 50702,
+      "probe_ok": true,
+      "duration_s": 0.04,
+      "streams": [
+        {
+          "index": 0,
+          "codec_type": "video",
+          "codec_name": "mjpeg",
+          "width": 540,
+          "height": 960,
+          "r_frame_rate": "25/1",
+          "avg_frame_rate": "25/1",
+          "pix_fmt": "yuvj420p",
+          "color_space": "bt470bg"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "media_1ff70b0cb798",
+      "path": "E:\\Xampp\\MCP монтаж\\прокты\\как добиться всго в жизи dan koe reels\\06_exports\\v001\\review\\frame_03.jpg",
+      "relative_path": "06_exports/v001/review/frame_03.jpg",
+      "role": "image",
+      "size_bytes": 101018,
+      "probe_ok": true,
+      "duration_s": 0.04,
+      "streams": [
+        {
+          "index": 0,
+          "codec_type": "video",
+          "codec_name": "mjpeg",
+          "width": 540,
+          "height": 960,
+          "r_frame_rate": "25/1",
+          "avg_frame_rate": "25/1",
+          "pix_fmt": "yuvj420p",
+          "color_space": "bt470bg"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "media_501a086beb27",
+      "path": "E:\\Xampp\\MCP монтаж\\прокты\\как добиться всго в жизи dan koe reels\\06_exports\\v001\\review\\frame_04.jpg",
+      "relative_path": "06_exports/v001/review/frame_04.jpg",
+      "role": "image",
+      "size_bytes": 93060,
+      "probe_ok": true,
+      "duration_s": 0.04,
+      "streams": [
+        {
+          "index": 0,
+          "codec_type": "video",
+          "codec_name": "mjpeg",
+          "width": 540,
+          "height": 960,
+          "r_frame_rate": "25/1",
+          "avg_frame_rate": "25/1",
+          "pix_fmt": "yuvj420p",
+          "color_space": "bt470bg"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "media_16cbee9ef004",
+      "path": "E:\\Xampp\\MCP монтаж\\прокты\\как добиться всго в жизи dan koe reels\\06_exports\\v001\\review\\frame_05.jpg",
+      "relative_path": "06_exports/v001/review/frame_05.jpg",
+      "role": "image",
+      "size_bytes": 112721,
+      "probe_ok": true,
+      "duration_s": 0.04,
+      "streams": [
+        {
+          "index": 0,
+          "codec_type": "video",
+          "codec_name": "mjpeg",
+          "width": 540,
+          "height": 960,
+          "r_frame_rate": "25/1",
+          "avg_frame_rate": "25/1",
+          "pix_fmt": "yuvj420p",
+          "color_space": "bt470bg"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "media_2ab755811b53",
+      "path": "E:\\Xampp\\MCP монтаж\\прокты\\как добиться всго в жизи dan koe reels\\06_exports\\v001\\review\\frame_06.jpg",
+      "relative_path": "06_exports/v001/review/frame_06.jpg",
+      "role": "image",
+      "size_bytes": 85565,
+      "probe_ok": true,
+      "duration_s": 0.04,
+      "streams": [
+        {
+          "index": 0,
+          "codec_type": "video",
+          "codec_name": "mjpeg",
+          "width": 540,
+          "height": 960,
+          "r_frame_rate": "25/1",
+          "avg_frame_rate": "25/1",
+          "pix_fmt": "yuvj420p",
+          "color_space": "bt470bg"
+        }
+      ],
+      "error": null
+    }
+  ]
+}

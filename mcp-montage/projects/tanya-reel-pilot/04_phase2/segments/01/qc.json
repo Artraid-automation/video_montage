@@ -1,0 +1,811 @@
+{
+  "schema_version": 4,
+  "verdict": "PASS",
+  "bindings": {
+    "render_sha256": "sha256:d9037af9eabc5fb58f63f86aeffede99eb47bc2394a35b785b3ec9e1f4393d87"
+  },
+  "technical": {
+    "schema_version": 1,
+    "verdict": "PASS",
+    "path": "E:\\Xampp\\MCP монтаж\\projects\\tanya-reel-pilot\\04_phase2\\segments\\01\\review.mp4",
+    "actual": {
+      "duration_s": 31.966667,
+      "video": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High 4:4:4 Predictive",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.f4001f",
+          "width": 720,
+          "height": 1280,
+          "coded_width": 720,
+          "coded_height": 1280,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "9:16",
+          "pix_fmt": "yuv444p",
+          "level": 31,
+          "color_range": "tv",
+          "color_space": "bt709",
+          "color_transfer": "bt709",
+          "color_primaries": "bt709",
+          "chroma_location": "left",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/15360",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 491008,
+          "duration": "31.966667",
+          "bit_rate": "2208887",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "959",
+          "extradata_size": 51,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc62.28.102 libx264"
+          }
+        }
+      ],
+      "audio": [
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "codec_long_name": "AAC (Advanced Audio Coding)",
+          "profile": "LC",
+          "codec_type": "audio",
+          "codec_tag_string": "mp4a",
+          "codec_tag": "0x6134706d",
+          "mime_codec_string": "mp4a.40.2",
+          "sample_fmt": "fltp",
+          "sample_rate": "48000",
+          "channels": 2,
+          "channel_layout": "stereo",
+          "bits_per_sample": 0,
+          "initial_padding": 0,
+          "id": "0x2",
+          "r_frame_rate": "0/0",
+          "avg_frame_rate": "0/0",
+          "time_base": "1/48000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 1533952,
+          "duration": "31.957333",
+          "bit_rate": "196191",
+          "nb_frames": "1498",
+          "extradata_size": 5,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "SoundHandler"
+          }
+        }
+      ]
+    },
+    "expected": {
+      "duration_s": 31.9,
+      "width": 720,
+      "height": 1280,
+      "fps": 30
+    },
+    "thresholds": {
+      "duration_tolerance_s": 0.35
+    },
+    "reasons": []
+  },
+  "frame_integrity": {
+    "schema_version": 1,
+    "verdict": "PASS",
+    "frames": [
+      {
+        "timestamp_s": 0.0,
+        "mean_luma": 134.687,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "04_phase2/segments/01/probes/probe-001-0.000.jpg",
+          "sha256": "sha256:0e6b6f3053693cf043dae77177e589b3a15351af7105fc5eaa7b601d2eafd82b",
+          "size_bytes": 54740
+        }
+      },
+      {
+        "timestamp_s": 2.0,
+        "mean_luma": 110.092,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "04_phase2/segments/01/probes/probe-002-2.000.jpg",
+          "sha256": "sha256:97371edee02af5f9e22f756fba8010bb397246a7cfe42e7b1748ea401f354133",
+          "size_bytes": 74532
+        }
+      },
+      {
+        "timestamp_s": 4.0,
+        "mean_luma": 123.071,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "04_phase2/segments/01/probes/probe-003-4.000.jpg",
+          "sha256": "sha256:5d6a7f4707c4d95b8e4136c4f5e93a167355ff8ce7159b3c25bd3065c33126f5",
+          "size_bytes": 85595
+        }
+      },
+      {
+        "timestamp_s": 6.0,
+        "mean_luma": 125.562,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "04_phase2/segments/01/probes/probe-004-6.000.jpg",
+          "sha256": "sha256:06d15912c16cb3df78c76c87d6aa8d90bd4eb8ec6b549eb5f907e51bd553e115",
+          "size_bytes": 80345
+        }
+      },
+      {
+        "timestamp_s": 8.0,
+        "mean_luma": 123.715,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "04_phase2/segments/01/probes/probe-005-8.000.jpg",
+          "sha256": "sha256:95d0c6b51035a54f21645a2d5c3eee60e4afbb3dfb90bb37c408e7a49824e613",
+          "size_bytes": 76340
+        }
+      },
+      {
+        "timestamp_s": 10.0,
+        "mean_luma": 128.161,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "04_phase2/segments/01/probes/probe-006-10.000.jpg",
+          "sha256": "sha256:10554c5cb76e695239b194a74adf53a41cfe72f1d70d1b066d95aebb32ff1c76",
+          "size_bytes": 88132
+        }
+      },
+      {
+        "timestamp_s": 12.0,
+        "mean_luma": 126.461,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "04_phase2/segments/01/probes/probe-007-12.000.jpg",
+          "sha256": "sha256:107cd1bb3a22e9e6aa93a2c136f59d25ddbb69d07888e92a000de147fd87bd62",
+          "size_bytes": 79225
+        }
+      },
+      {
+        "timestamp_s": 14.0,
+        "mean_luma": 132.433,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "04_phase2/segments/01/probes/probe-008-14.000.jpg",
+          "sha256": "sha256:58cb0338b69f61ba3cab59058fa6e73b35a8936e1cf7389f3d145ea24addbd2e",
+          "size_bytes": 79503
+        }
+      },
+      {
+        "timestamp_s": 15.9833335,
+        "mean_luma": 124.812,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "04_phase2/segments/01/probes/probe-009-15.983.jpg",
+          "sha256": "sha256:0b69e3a59af393357159fc16178c52e510ed9b9dc752680b56af1c0e858b742b",
+          "size_bytes": 71245
+        }
+      },
+      {
+        "timestamp_s": 16.0,
+        "mean_luma": 124.812,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "04_phase2/segments/01/probes/probe-010-16.000.jpg",
+          "sha256": "sha256:0b69e3a59af393357159fc16178c52e510ed9b9dc752680b56af1c0e858b742b",
+          "size_bytes": 71245
+        }
+      },
+      {
+        "timestamp_s": 18.0,
+        "mean_luma": 129.294,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "04_phase2/segments/01/probes/probe-011-18.000.jpg",
+          "sha256": "sha256:ad0edecdee6bb3e7f82729eb1a44711773b0cc2abd6ad2fb15a202e4b946dd8f",
+          "size_bytes": 76939
+        }
+      },
+      {
+        "timestamp_s": 20.0,
+        "mean_luma": 126.655,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "04_phase2/segments/01/probes/probe-012-20.000.jpg",
+          "sha256": "sha256:8a9658c9d1c4cdcec33e032a8dc657099a65a90b82ba9de11cfffbea736b70ff",
+          "size_bytes": 69084
+        }
+      },
+      {
+        "timestamp_s": 22.0,
+        "mean_luma": 119.322,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "04_phase2/segments/01/probes/probe-013-22.000.jpg",
+          "sha256": "sha256:ae266e69b321880688c8515df31d5e186c1dc02db050e2694ea9b6ca1e8c4148",
+          "size_bytes": 63433
+        }
+      },
+      {
+        "timestamp_s": 24.0,
+        "mean_luma": 118.145,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "04_phase2/segments/01/probes/probe-014-24.000.jpg",
+          "sha256": "sha256:1046325f9eecf4ee5c3e9d3ee00d9af1c2d458b54271f73fd5016853440738f6",
+          "size_bytes": 63131
+        }
+      },
+      {
+        "timestamp_s": 26.0,
+        "mean_luma": 126.741,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "04_phase2/segments/01/probes/probe-015-26.000.jpg",
+          "sha256": "sha256:69ccc2d20b742b9c967f5c355da40f2ede99a3d959c1d9a64a4220402e313e18",
+          "size_bytes": 80984
+        }
+      },
+      {
+        "timestamp_s": 28.0,
+        "mean_luma": 124.176,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "04_phase2/segments/01/probes/probe-016-28.000.jpg",
+          "sha256": "sha256:d91a73c0d4eec91afbccacd81d766b0c35c183fe076ea4638c6c601b6cf1bd79",
+          "size_bytes": 80109
+        }
+      },
+      {
+        "timestamp_s": 30.0,
+        "mean_luma": 127.029,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "04_phase2/segments/01/probes/probe-017-30.000.jpg",
+          "sha256": "sha256:0b51bba88b21f10e15364c3bd67e64c1bb52dad569fd393578191f97e0ca808b",
+          "size_bytes": 78764
+        }
+      },
+      {
+        "timestamp_s": 31.886667000000003,
+        "mean_luma": 125.59,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "artifact": {
+          "kind": "visual-probe",
+          "path": "04_phase2/segments/01/probes/probe-018-31.887.jpg",
+          "sha256": "sha256:4733429b8c8ca9b256c0f591448c9d2e4551931b30caaa6279ab1374cd2a0509",
+          "size_bytes": 80549
+        }
+      }
+    ],
+    "reasons": []
+  },
+  "layout_policy": {
+    "verdict": "PASS",
+    "frame": {
+      "width": 720,
+      "height": 1280
+    },
+    "safe_margin_px": 24,
+    "overlays": [
+      {
+        "kind": "captions",
+        "x": 24,
+        "y": 922,
+        "width": 672,
+        "height": 256
+      }
+    ],
+    "reasons": []
+  },
+  "audio_policy": {
+    "verdict": "PASS",
+    "mean_db": -33.5,
+    "peak_db": -15.2,
+    "thresholds": {
+      "max_peak_db": -0.1,
+      "min_mean_db": -40.0,
+      "target_mean_db_min": -24.0,
+      "target_mean_db_max": -12.0
+    },
+    "reasons": []
+  },
+  "reasons": [],
+  "visual_render_policy": {
+    "schema_version": 1,
+    "kind": "visual-render-policy",
+    "verdict": "PASS",
+    "reasons": [],
+    "components": {
+      "caption_style": {
+        "verdict": "PASS",
+        "reasons": [],
+        "thresholds": {
+          "max_font_ratio": 0.055,
+          "target_font_ratio": 0.045,
+          "max_font_px": 70,
+          "alignment": 5,
+          "color": "#E1C445",
+          "font_class": "serif",
+          "frame": {
+            "width": 720,
+            "height": 1280
+          }
+        }
+      },
+      "motion_brief": {
+        "verdict": "PASS",
+        "reasons": []
+      },
+      "motion_compose": {
+        "verdict": "PASS",
+        "reasons": [],
+        "expected_mode": "overlay",
+        "actual_mode": "overlay",
+        "motion_count": 2
+      }
+    }
+  },
+  "visual_audit": {
+    "schema_version": 1,
+    "kind": "gate2-visual-audit",
+    "worker_version": "gate2-visual-audit-v3-caption-gaps",
+    "bindings": {
+      "render_sha256": "sha256:d9037af9eabc5fb58f63f86aeffede99eb47bc2394a35b785b3ec9e1f4393d87"
+    },
+    "duration_s": 31.966667,
+    "random_count": 3,
+    "random_frames": [
+      {
+        "id": "random-01",
+        "timestamp_s": 13.782,
+        "path": "04_phase2/segments/01/probes/gate2-audit/random-01-13.782.jpg",
+        "sha256": "sha256:4e8b52d70bf952dca52f3d59f478b4de5d3f832ec2a6678819107f142e6fbc27",
+        "face_check": {
+          "verdict": "PASS",
+          "face": {
+            "x": 104,
+            "y": 291,
+            "w": 396,
+            "h": 396
+          },
+          "headroom_ratio": 0.2273,
+          "reasons": [],
+          "soft_reasons": [
+            "headroom ratio 0.227 above target band (~0.18)"
+          ],
+          "frame": [
+            720,
+            1280
+          ]
+        },
+        "mean_luma": 131.815,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "reasons": []
+      },
+      {
+        "id": "random-02",
+        "timestamp_s": 28.676,
+        "path": "04_phase2/segments/01/probes/gate2-audit/random-02-28.676.jpg",
+        "sha256": "sha256:b87c9ada751bb6ff74da300d9c8d427f775b9583a3d6cd21cbeeba32ca89df62",
+        "face_check": {
+          "verdict": "PASS",
+          "face": {
+            "x": 126,
+            "y": 78,
+            "w": 498,
+            "h": 498
+          },
+          "headroom_ratio": 0.0609,
+          "reasons": [],
+          "soft_reasons": [],
+          "frame": [
+            720,
+            1280
+          ]
+        },
+        "mean_luma": 125.723,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "reasons": []
+      },
+      {
+        "id": "random-03",
+        "timestamp_s": 18.944,
+        "path": "04_phase2/segments/01/probes/gate2-audit/random-03-18.944.jpg",
+        "sha256": "sha256:d955834223ceb752b73cec679fdb4f1d99c535b498383c8f5ab2009e6654c4de",
+        "face_check": {
+          "verdict": "PASS",
+          "face": {
+            "x": 78,
+            "y": 43,
+            "w": 532,
+            "h": 532
+          },
+          "headroom_ratio": 0.0336,
+          "reasons": [],
+          "soft_reasons": [
+            "headroom ratio 0.034 below target band (~0.04)"
+          ],
+          "frame": [
+            720,
+            1280
+          ]
+        },
+        "mean_luma": 126.488,
+        "dimensions": [
+          720,
+          1280
+        ],
+        "reasons": []
+      }
+    ],
+    "motion_checks": [
+      {
+        "id": "1a",
+        "anchor": "u0001",
+        "render_start_s": 0.0,
+        "render_end_s": 3.2,
+        "on_screen": "",
+        "verdict": "PASS",
+        "frames": [
+          {
+            "id": "motion-1a-start",
+            "role": "start",
+            "timestamp_s": 0.12,
+            "path": "04_phase2/segments/01/probes/gate2-audit/motion-1a-start-0.120.jpg",
+            "sha256": "sha256:14cfbfc05406417bca695a36877595b4f6ac2642ec52281d3122973323bfadd5",
+            "face_check": {
+              "verdict": "PASS",
+              "face": {
+                "x": 218,
+                "y": 361,
+                "w": 299,
+                "h": 299
+              },
+              "headroom_ratio": 0.282,
+              "reasons": [],
+              "soft_reasons": [
+                "headroom ratio 0.282 above target band (~0.18)"
+              ],
+              "frame": [
+                720,
+                1280
+              ]
+            },
+            "mean_luma": 130.473,
+            "dimensions": [
+              720,
+              1280
+            ],
+            "reasons": []
+          },
+          {
+            "id": "motion-1a-mid",
+            "role": "mid",
+            "timestamp_s": 1.6,
+            "path": "04_phase2/segments/01/probes/gate2-audit/motion-1a-mid-1.600.jpg",
+            "sha256": "sha256:609ae928240fdd8c3b5e9349e2bdb73a0d0ff4baab011ade1ce407ad1dca356f",
+            "face_check": {
+              "verdict": "PASS",
+              "face": {
+                "x": 135,
+                "y": 202,
+                "w": 516,
+                "h": 516
+              },
+              "headroom_ratio": 0.1578,
+              "reasons": [],
+              "soft_reasons": [],
+              "frame": [
+                720,
+                1280
+              ]
+            },
+            "mean_luma": 111.746,
+            "dimensions": [
+              720,
+              1280
+            ],
+            "reasons": []
+          },
+          {
+            "id": "motion-1a-end",
+            "role": "end",
+            "timestamp_s": 3.08,
+            "path": "04_phase2/segments/01/probes/gate2-audit/motion-1a-end-3.080.jpg",
+            "sha256": "sha256:74f5d5391753963e38122bf68fe9e0dac2a97b12678cff93a39e3b5f25eccee2",
+            "face_check": {
+              "verdict": "PASS",
+              "face": {
+                "x": 106,
+                "y": 159,
+                "w": 558,
+                "h": 558
+              },
+              "headroom_ratio": 0.1242,
+              "reasons": [],
+              "soft_reasons": [],
+              "frame": [
+                720,
+                1280
+              ]
+            },
+            "mean_luma": 117.463,
+            "dimensions": [
+              720,
+              1280
+            ],
+            "reasons": []
+          }
+        ],
+        "reasons": []
+      },
+      {
+        "id": "1b",
+        "anchor": "u0004",
+        "render_start_s": 21.18,
+        "render_end_s": 24.68,
+        "on_screen": "",
+        "verdict": "PASS",
+        "frames": [
+          {
+            "id": "motion-1b-start",
+            "role": "start",
+            "timestamp_s": 21.3,
+            "path": "04_phase2/segments/01/probes/gate2-audit/motion-1b-start-21.300.jpg",
+            "sha256": "sha256:1679492efb294a331b959e6a8526c67ae6fd2cdd7c375528e1702bcaa68e2a6d",
+            "face_check": {
+              "verdict": "PASS",
+              "face": {
+                "x": 91,
+                "y": 238,
+                "w": 371,
+                "h": 371
+              },
+              "headroom_ratio": 0.1859,
+              "reasons": [],
+              "soft_reasons": [
+                "headroom ratio 0.186 above target band (~0.18)"
+              ],
+              "frame": [
+                720,
+                1280
+              ]
+            },
+            "mean_luma": 125.392,
+            "dimensions": [
+              720,
+              1280
+            ],
+            "reasons": []
+          },
+          {
+            "id": "motion-1b-mid",
+            "role": "mid",
+            "timestamp_s": 22.93,
+            "path": "04_phase2/segments/01/probes/gate2-audit/motion-1b-mid-22.930.jpg",
+            "sha256": "sha256:b7542dc227bb1823595e44814d079a5fa2b98bf1a8dfb171356a8eefdeedc851",
+            "face_check": {
+              "verdict": "PASS",
+              "face": {
+                "x": 98,
+                "y": 289,
+                "w": 396,
+                "h": 396
+              },
+              "headroom_ratio": 0.2258,
+              "reasons": [],
+              "soft_reasons": [
+                "headroom ratio 0.226 above target band (~0.18)"
+              ],
+              "frame": [
+                720,
+                1280
+              ]
+            },
+            "mean_luma": 118.275,
+            "dimensions": [
+              720,
+              1280
+            ],
+            "reasons": []
+          },
+          {
+            "id": "motion-1b-end",
+            "role": "end",
+            "timestamp_s": 24.56,
+            "path": "04_phase2/segments/01/probes/gate2-audit/motion-1b-end-24.560.jpg",
+            "sha256": "sha256:bac9de23c99d650bd02bee0f78b6c58e1e24e01881c81770c93288b7146e4dbf",
+            "face_check": {
+              "verdict": "PASS",
+              "face": {
+                "x": 195,
+                "y": 277,
+                "w": 388,
+                "h": 388
+              },
+              "headroom_ratio": 0.2164,
+              "reasons": [],
+              "soft_reasons": [
+                "headroom ratio 0.216 above target band (~0.18)"
+              ],
+              "frame": [
+                720,
+                1280
+              ]
+            },
+            "mean_luma": 120.527,
+            "dimensions": [
+              720,
+              1280
+            ],
+            "reasons": []
+          }
+        ],
+        "reasons": []
+      }
+    ],
+    "caption_gap_checks": [
+      {
+        "id": "caption-gap-01",
+        "timestamp_s": 12.19,
+        "path": "04_phase2/segments/01/probes/gate2-audit/caption-gap-01-12.190.jpg",
+        "sha256": "sha256:9db6cbe0a199540afc53905f8afa713269a3e71f5685d5bcd71cbcd3c18ca947",
+        "gold_px": 5273,
+        "verdict": "PASS",
+        "reasons": [],
+        "mean_luma": 124.728,
+        "dimensions": [
+          720,
+          1280
+        ]
+      },
+      {
+        "id": "caption-gap-02",
+        "timestamp_s": 28.323,
+        "path": "04_phase2/segments/01/probes/gate2-audit/caption-gap-02-28.323.jpg",
+        "sha256": "sha256:6f528891c3870bbb861e28127a060036c759948cb69a1e24ab23e436ee38e6b9",
+        "gold_px": 5916,
+        "verdict": "PASS",
+        "reasons": [],
+        "mean_luma": 126.411,
+        "dimensions": [
+          720,
+          1280
+        ]
+      }
+    ],
+    "require_caption_gaps": true,
+    "caption_pos_y": 870,
+    "verdict": "PASS",
+    "reasons": []
+  }
+}

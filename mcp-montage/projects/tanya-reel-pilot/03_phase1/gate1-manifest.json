@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "kind": "gate1",
+  "project_id": "tanya-reel-pilot",
+  "revision": 1,
+  "style_version": "tanya-discovery-v1",
+  "provider_versions": {
+    "transcription": "faster-whisper:small",
+    "editorial": "editorial-analysis-v6",
+    "visual_planning": "visual-planner-v4",
+    "broll_search": "broll-lexical-search-v1",
+    "cross_segment_takes": "cross-segment-takes-v1"
+  },
+  "review": {
+    "kind": "gate1-review",
+    "path": "03_phase1/review.md",
+    "sha256": "sha256:7a07cb4041536819cba373323e0699afa045686e35b73659dcd9ba4ecce1625b",
+    "size_bytes": 3112
+  },
+  "cross_segment_take_analysis": {
+    "kind": "cross-segment-take-analysis",
+    "path": "03_phase1/cross-segment-take-analysis.json",
+    "sha256": "sha256:ae5e2e2f52d6456651fa32c5ae3ce2b75f411c0be4a8ea10461e7eb35fbe93f1",
+    "size_bytes": 2848
+  },
+  "segments": [
+    {
+      "id": "01",
+      "source_transcript": {
+        "kind": "source-transcript",
+        "path": "03_phase1/segments/01/source-transcript.json",
+        "sha256": "sha256:85fa0f598896c7306f4ec5aad81107e28c41b40147db231251cb41449a311971",
+        "size_bytes": 19090
+      },
+      "editorial_analysis": {
+        "kind": "editorial-analysis",
+        "path": "03_phase1/segments/01/editorial-analysis.json",
+        "sha256": "sha256:fb75b9185148732ee88879636c0a181443a27efda62163f92cee172f3e4a013f",
+        "size_bytes": 782
+      },
+      "transcript": {
+        "kind": "editable-transcript",
+        "path": "03_phase1/segments/01/transcript.md",
+        "sha256": "sha256:84690054a03db9f06a42d68b1be24eaebcbbcfa4542ea4170108fb8ad0d1eb72",
+        "size_bytes": 2285
+      },
+      "sync_report": {
+        "kind": "sync-report",
+        "path": "03_phase1/segments/01/sync-report.json",
+        "sha256": "sha256:530bf1f37cc45520c9d375907df7314fcc1d88f49127d8f50394d17375112917",
+        "size_bytes": 354
+      },
+      "grade_manifest": {
+        "kind": "grade-manifest",
+        "path": "03_phase1/segments/01/grade-manifest.json",
+        "sha256": "sha256:2e253aa78c584a1e7ba3d1a83e83e06b6ce9cd01a85c68c03341b022d07248f2",
+        "size_bytes": 953
+      },
+      "visual_plan": {
+        "kind": "visual-plan",
+        "path": "03_phase1/segments/01/visual-plan.json",
+        "sha256": "sha256:6f9fe124f0c61bc935f99f034acee574914e46eff74925a88076ab0f98f1ff88",
+        "size_bytes": 1183
+      },
+      "broll_assets": []
+    },
+    {
+      "id": "02",
+      "source_transcript": {
+        "kind": "source-transcript",
+        "path": "03_phase1/segments/02/source-transcript.json",
+        "sha256": "sha256:646f4b748f5791eb2dccc56dbf586552179f3f27c8bbd7b895231d06b0233759",
+        "size_bytes": 21951
+      },
+      "editorial_analysis": {
+        "kind": "editorial-analysis",
+        "path": "03_phase1/segments/02/editorial-analysis.json",
+        "sha256": "sha256:b980df99d486f6225d326c2a6e9a16bcf18b73164e476524b35e1d4dce3feb37",
+        "size_bytes": 443
+      },
+      "transcript": {
+        "kind": "editable-transcript",
+        "path": "03_phase1/segments/02/transcript.md",
+        "sha256": "sha256:93876170734f132d25125efbf4d408c608d56ad66ac75912ca79dd6147710d7a",
+        "size_bytes": 2803
+      },
+      "sync_report": {
+        "kind": "sync-report",
+        "path": "03_phase1/segments/02/sync-report.json",
+        "sha256": "sha256:0b9a59fa848e74f8652b7a27e5287c655251634a27d4b90c18a321fc86451d08",
+        "size_bytes": 354
+      },
+      "grade_manifest": {
+        "kind": "grade-manifest",
+        "path": "03_phase1/segments/02/grade-manifest.json",
+        "sha256": "sha256:86cce3d4893454dd9256c5b050cd3fe6403bbb5586ba313af42366965fe43468",
+        "size_bytes": 953
+      },
+      "visual_plan": {
+        "kind": "visual-plan",
+        "path": "03_phase1/segments/02/visual-plan.json",
+        "sha256": "sha256:1e0e15fc4633a9815f3281c350ea2df1e2e2b5b556f968e6dc8a40aa83a0f0d1",
+        "size_bytes": 1646
+      },
+      "broll_assets": []
+    },
+    {
+      "id": "03",
+      "source_transcript": {
+        "kind": "source-transcript",
+        "path": "03_phase1/segments/03/source-transcript.json",
+        "sha256": "sha256:d8766bdb753560b550d4a2f41d0a7042355859db29af4130affcd2236ec174de",
+        "size_bytes": 187027
+      },
+      "editorial_analysis": {
+        "kind": "editorial-analysis",
+        "path": "03_phase1/segments/03/editorial-analysis.json",
+        "sha256": "sha256:b2de496c042566bf11391978fe25826287ee4b1c75311d87deae286d838dcaf3",
+        "size_bytes": 2709
+      },
+      "transcript": {
+        "kind": "editable-transcript",
+        "path": "03_phase1/segments/03/transcript.md",
+        "sha256": "sha256:9dad37ea515164bf66b32dfd22c2132dd2b9bf1ccc29c87964e5923bfd4b128e",
+        "size_bytes": 15213
+      },
+      "sync_report": {
+        "kind": "sync-report",
+        "path": "03_phase1/segments/03/sync-report.json",
+        "sha256": "sha256:a4dc3f58c6fad756d78576fdac808bde08ad4b7b6077a203f2ec6636207b3ac5",
+        "size_bytes": 354
+      },
+      "grade_manifest": {
+        "kind": "grade-manifest",
+        "path": "03_phase1/segments/03/grade-manifest.json",
+        "sha256": "sha256:c020744521a6acf5c48367e81381ab2543b8fb2a8b3ee4b87c80e4a37237e8d6",
+        "size_bytes": 956
+      },
+      "visual_plan": {
+        "kind": "visual-plan",
+        "path": "03_phase1/segments/03/visual-plan.json",
+        "sha256": "sha256:540fc0a6238916c1902df82e49672bf08a86ea6e767564afae02b6fda148c2d1",
+        "size_bytes": 1714
+      },
+      "broll_assets": []
+    }
+  ],
+  "film_continuity": {
+    "kind": "film-continuity",
+    "path": "04_phase2/film-continuity.json",
+    "sha256": "sha256:d1767bb9f419ebbd43f7e07979b720c67799d794ac99a92da3fc7f4ee998221e",
+    "size_bytes": 1046
+  }
+}

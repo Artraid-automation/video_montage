@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "kind": "visual-plan",
+  "worker_version": "visual-planner-v4",
+  "segment_id": "01",
+  "scenes": [],
+  "searches": [],
+  "status": "STYLE_SCENES_ONLY",
+  "transcript_sha256": "sha256:d431f4c8b7c478d4ece437e5104b88d16461abaa56291d15c1c23132ed02eb7b",
+  "style_scenes": [
+    {
+      "id": "s01-hook",
+      "recipe": "hook_title",
+      "anchor": "u0016",
+      "what": "Крупный italic gold title поверх хука — обложка обещания как в MeVGa 0–5s",
+      "why": "Ситуация hook_title: холодный старт / тезис ролика; tag #promise #thesis",
+      "origin": "AGENT",
+      "status": "APPROVED",
+      "title": "Как добиться в жизни\nвсего, что хочешь?"
+    },
+    {
+      "id": "s01-list-a",
+      "recipe": "framework_list",
+      "anchor": "u0017",
+      "what": "Blur+darken + progressive 1–2 spotlight поверх первых пунктов системы",
+      "why": "Ситуация framework_list: 4 шага playbook; MeVGa ~5–15s pattern; tag #steps #system",
+      "origin": "AGENT",
+      "status": "APPROVED",
+      "progressive": true,
+      "active_from": 0,
+      "active_to": 1,
+      "lines": [
+        "Ясное видение",
+        "Ежедневная учёба",
+        "Ежедневная работа руками",
+        "Упорство через постоянные повторы"
+      ]
+    },
+    {
+      "id": "s01-list-b",
+      "recipe": "framework_list",
+      "anchor": "u0018p1",
+      "what": "Blur+darken + progressive item 3 (работа руками) на коротком хвосте",
+      "why": "Продолжение framework_list; без body captions",
+      "origin": "AGENT",
+      "status": "APPROVED",
+      "progressive": true,
+      "active_from": 2,
+      "active_to": 2,
+      "lines": [
+        "Ясное видение",
+        "Ежедневная учёба",
+        "Ежедневная работа руками",
+        "Упорство через постоянные повторы"
+      ]
+    },
+    {
+      "id": "s01-list-c",
+      "recipe": "framework_list",
+      "anchor": "u0018p3",
+      "what": "Blur+darken + progressive item 4 (упорство) поверх финального пункта",
+      "why": "Закрытие framework_list playbook beat; без body captions",
+      "origin": "AGENT",
+      "status": "APPROVED",
+      "progressive": true,
+      "active_from": 3,
+      "active_to": 3,
+      "lines": [
+        "Ясное видение",
+        "Ежедневная учёба",
+        "Ежедневная работа руками",
+        "Упорство через постоянные повторы"
+      ]
+    }
+  ]
+}

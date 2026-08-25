@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "verdict": "PASS",
+  "metrics": {
+    "wer": 0.111111,
+    "order_ratio": 0.888889,
+    "edit_distance": 1
+  },
+  "thresholds": {
+    "wer_max": 0.2,
+    "order_ratio_min": 0.85,
+    "silence_s_max": 2.5
+  },
+  "expected_tokens": [
+    "the",
+    "quick",
+    "brown",
+    "fox",
+    "jumps",
+    "over",
+    "the",
+    "lazy",
+    "dog"
+  ],
+  "actual_tokens": [
+    "the",
+    "quick",
+    "brown",
+    "fox",
+    "jumps",
+    "over",
+    "the",
+    "lazy",
+    "duck"
+  ],
+  "long_gaps": [],
+  "reasons": [],
+  "claim": "faster-whisper tiny.en transcribed audio decoded from muxed final MP4",
+  "provider": "faster-whisper",
+  "provider_version": "tiny.en",
+  "bindings": {
+    "media_sha256": "sha256:127b75e7f643cfbf99337b3c7a567951079ba54744fc7ff968acc672b3b1054c",
+    "actual_sha256": "sha256:1d72ef207d13ce290f087f3fdddde2483a71529ea53227bb990d3cbaec76427f"
+  }
+}
