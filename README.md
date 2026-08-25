@@ -1,7 +1,7 @@
-﻿# video_montage
+# video_montage
 
-Публичный репозиторий монтажных пайплайнов.
+Public repo for montage pipelines.
 
-## Проекты
+## Projects
 
-- [mcp-montage](./mcp-montage) — Local AI Video Factory v2 (трёхфазный pipeline: ingest → Gate 1 → render → Gate 2 → master).
+- [`mcp-montage`](./mcp-montage) — Local AI Video Factory v2 (three-phase pipeline: ingest → Gate 1 → render → Gate 2 → master).
