@@ -1,0 +1,197 @@
+{
+  "version": "measured-v1",
+  "measured_on": "2026-08-25",
+  "source": {
+    "clips": 4,
+    "resolution": "1080x1920",
+    "fps": 60,
+    "durations_s": [
+      132,
+      84,
+      158,
+      220
+    ],
+    "note": "четыре референса одного автора; значения — медиана по роликам"
+  },
+  "units": "проценты от высоты кадра, если не указано иное",
+  "profile": {
+    "eye_pct": {
+      "value": 31.88,
+      "range": [
+        28.13,
+        32.33
+      ],
+      "n_refs": 4
+    },
+    "face_cx_pct": {
+      "value": 52.97,
+      "range": [
+        51.06,
+        54.07
+      ],
+      "n_refs": 4
+    },
+    "face_h_pct": {
+      "value": 25.11,
+      "range": [
+        23.65,
+        29.9
+      ],
+      "n_refs": 4
+    },
+    "chin_pct": {
+      "value": 46.14,
+      "range": [
+        41.88,
+        50.31
+      ],
+      "n_refs": 4
+    },
+    "shot_s": {
+      "value": 2.5,
+      "range": [
+        1.68,
+        3.15
+      ],
+      "n_refs": 4
+    },
+    "cut_every_s": {
+      "value": 2.77,
+      "range": [
+        2.39,
+        3.67
+      ],
+      "n_refs": 4
+    },
+    "short_shot_share": {
+      "value": 0.23,
+      "range": [
+        0.08,
+        0.33
+      ],
+      "n_refs": 4
+    },
+    "caption_glyph_pct": {
+      "value": 2.14,
+      "range": [
+        2.14,
+        2.19
+      ],
+      "n_refs": 4
+    },
+    "caption_bottom_pct": {
+      "value": 53.0,
+      "range": [
+        52.2,
+        58.2
+      ],
+      "n_refs": 4
+    },
+    "caption_width_pct": {
+      "value": 31.05,
+      "range": [
+        30.0,
+        31.7
+      ],
+      "n_refs": 4
+    },
+    "caption_gap_below_chin_pct": {
+      "value": 9.97,
+      "range": [
+        9.44,
+        15.2
+      ],
+      "n_refs": 4
+    },
+    "caption_hold_s": {
+      "value": 0.35,
+      "range": [
+        0.35,
+        0.4
+      ],
+      "n_refs": 4
+    },
+    "words_per_min": {
+      "value": 103.5,
+      "range": [
+        94,
+        113
+      ],
+      "n_refs": 4
+    },
+    "single_line_share": {
+      "value": 0.9,
+      "range": [
+        0.8,
+        0.95
+      ],
+      "n_refs": 4
+    }
+  },
+  "per_ref": {
+    "1": {
+      "eye_pct": 31.85,
+      "face_cx_pct": 51.06,
+      "face_h_pct": 25.52,
+      "chin_pct": 46.67,
+      "shot_s": 2.65,
+      "cut_every_s": 2.81,
+      "short_shot_share": 0.25,
+      "caption_glyph_pct": 2.19,
+      "caption_bottom_pct": 53.8,
+      "caption_width_pct": 31.7,
+      "caption_gap_below_chin_pct": 9.84,
+      "caption_hold_s": 0.35,
+      "words_per_min": 113,
+      "single_line_share": 0.89
+    },
+    "2": {
+      "eye_pct": 31.9,
+      "face_cx_pct": 53.89,
+      "face_h_pct": 24.69,
+      "chin_pct": 45.62,
+      "shot_s": 1.68,
+      "cut_every_s": 2.39,
+      "short_shot_share": 0.33,
+      "caption_glyph_pct": 2.14,
+      "caption_bottom_pct": 58.2,
+      "caption_width_pct": 30.0,
+      "caption_gap_below_chin_pct": 10.11,
+      "caption_hold_s": 0.4,
+      "words_per_min": 108,
+      "single_line_share": 0.9
+    },
+    "3": {
+      "eye_pct": 32.33,
+      "face_cx_pct": 52.04,
+      "face_h_pct": 29.9,
+      "chin_pct": 50.31,
+      "shot_s": 2.35,
+      "cut_every_s": 2.73,
+      "short_shot_share": 0.08,
+      "caption_glyph_pct": 2.14,
+      "caption_bottom_pct": 52.2,
+      "caption_width_pct": 31.5,
+      "caption_gap_below_chin_pct": 15.2,
+      "caption_hold_s": 0.35,
+      "words_per_min": 94,
+      "single_line_share": 0.8
+    },
+    "4": {
+      "eye_pct": 28.13,
+      "face_cx_pct": 54.07,
+      "face_h_pct": 23.65,
+      "chin_pct": 41.88,
+      "shot_s": 3.15,
+      "cut_every_s": 3.67,
+      "short_shot_share": 0.21,
+      "caption_glyph_pct": 2.14,
+      "caption_bottom_pct": 52.2,
+      "caption_width_pct": 30.6,
+      "caption_gap_below_chin_pct": 9.44,
+      "caption_hold_s": 0.35,
+      "words_per_min": 99,
+      "single_line_share": 0.95
+    }
+  }
+}
