@@ -1,0 +1,7 @@
+# Личное и генерируемое — в публичный репозиторий не идёт
+feed/cache/
+feed/digest/
+ritual/LOG.md
+raw/
+*.pyc
+__pycache__/

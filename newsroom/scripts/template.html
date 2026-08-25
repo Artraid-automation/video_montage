@@ -1,0 +1,163 @@
+<title>Эфирный лист {{DATE_TITLE}}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Literata:opsz,wght@7..72,400;7..72,500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --ground:#F3F4F7;
+    --ink:#14171E;
+    --ink-soft:#535B6B;
+    --rule:#DCE0E8;
+    --accent:#D62030;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --ground:#0E1116;
+      --ink:#E7EAEF;
+      --ink-soft:#8B94A5;
+      --rule:#252B35;
+      --accent:#FF5566;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0E1116;
+    --ink:#E7EAEF;
+    --ink-soft:#8B94A5;
+    --rule:#252B35;
+    --accent:#FF5566;
+  }
+  *{box-sizing:border-box}
+  body{
+    background:var(--ground);
+    color:var(--ink);
+    font-family:"Literata",Georgia,serif;
+    font-size:19px;
+    line-height:1.62;
+    margin:0;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:40rem;margin:0 auto;padding:0 1.15rem 5rem}
+
+  header{
+    display:flex;flex-direction:column;gap:.55rem;
+    padding:2.1rem 0 1.15rem;
+    border-bottom:2px solid var(--ink);
+  }
+  .slug{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--accent);
+    display:flex;align-items:center;gap:.5rem;
+  }
+  .slug .dot{width:.5rem;height:.5rem;border-radius:50%;background:var(--accent);display:inline-block}
+  h1{
+    font-family:"Oswald",Impact,sans-serif;
+    font-weight:600;font-size:2.35rem;line-height:1.04;
+    letter-spacing:.005em;margin:0;text-wrap:balance;
+  }
+  .counter{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:.76rem;letter-spacing:.06em;color:var(--ink-soft);
+    font-variant-numeric:tabular-nums;
+  }
+  .counter b{color:var(--ink);font-weight:500}
+
+  .list{display:flex;flex-direction:column}
+
+  article{
+    border-bottom:1px solid var(--rule);
+    padding:1.7rem 0 1.6rem;
+    display:flex;flex-direction:column;gap:.6rem;
+  }
+  article.collapsed{padding:.85rem 0}
+  article.collapsed>:not(.meta){display:none}
+
+  .meta{
+    display:flex;align-items:baseline;gap:.8rem;
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  .num{
+    font-variant-numeric:tabular-nums;
+    color:var(--accent);font-weight:500;
+    background:none;border:0;padding:.15rem .5rem .15rem 0;
+    font-family:inherit;font-size:1rem;letter-spacing:.06em;
+    cursor:pointer;line-height:1;
+  }
+  .num:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+  .topic{flex:1}
+
+  h2{
+    font-family:"Oswald",Impact,sans-serif;
+    font-weight:500;font-size:1.62rem;line-height:1.16;
+    margin:0;text-wrap:balance;
+  }
+  p.body{margin:0}
+
+  a.src{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:.75rem;letter-spacing:.03em;
+    color:var(--ink-soft);text-decoration:none;
+    border-bottom:1px solid var(--rule);
+    align-self:flex-start;padding-bottom:1px;
+    word-break:break-word;
+  }
+  a.src:hover,a.src:focus-visible{color:var(--accent);border-color:var(--accent)}
+  a.src::after{content:" ↗";opacity:.55}
+
+  footer{
+    margin-top:2.5rem;padding-top:1.2rem;border-top:1px solid var(--rule);
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:.73rem;line-height:1.7;color:var(--ink-soft);
+  }
+  @media (max-width:26rem){
+    body{font-size:18px}
+    h1{font-size:2rem}
+    h2{font-size:1.45rem}
+  }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="slug"><span class="dot"></span>Прогон · {{DATE_HUMAN}}</div>
+    <h1>Эфирный лист</h1>
+    <div class="counter">{{COUNT}} новостей · <b id="open">{{COUNT}}</b> развёрнуто</div>
+  </header>
+
+  <div class="list">
+{{ITEMS}}
+  </div>
+
+  <footer>
+    Дата создания: {{DATE_SHORT}}
+  </footer>
+</div>
+
+<script>
+  (function(){
+    var KEY='efir-{{DATE_ISO}}';
+    var saved={};
+    try{saved=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){saved={}}
+    var arts=[].slice.call(document.querySelectorAll('article'));
+    var out=document.getElementById('open');
+    function paint(){
+      var n=0;
+      arts.forEach(function(a,i){
+        if(saved[i]){a.classList.add('collapsed')}else{a.classList.remove('collapsed');n++}
+      });
+      out.textContent=n;
+    }
+    arts.forEach(function(a,i){
+      var btn=a.querySelector('.num');
+      btn.addEventListener('click',function(){
+        saved[i]=!saved[i];
+        try{localStorage.setItem(KEY,JSON.stringify(saved))}catch(e){}
+        paint();
+        btn.setAttribute('aria-expanded', saved[i]?'false':'true');
+      });
+      btn.setAttribute('aria-expanded','true');
+    });
+    paint();
+  })();
+</script>

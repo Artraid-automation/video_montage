@@ -1,0 +1,50 @@
+# Реестр источников. Формат: категория|название|url[|crm]
+# Четвёртое поле crm = тянуть через российский сервер (ssh crm), иначе издание не отдаёт фид
+# Проверка живости: bash ~/brand/scripts/check_feeds.sh
+ai_global|TechCrunch AI|https://techcrunch.com/category/artificial-intelligence/feed/
+ai_global|The Verge|https://www.theverge.com/rss/index.xml
+ai_global|Ars Technica|https://feeds.arstechnica.com/arstechnica/index
+ai_global|Wired|https://www.wired.com/feed/rss
+ai_global|MIT Technology Review|https://www.technologyreview.com/feed/
+ai_global|VentureBeat AI|https://venturebeat.com/category/ai/feed/
+ai_global|OpenAI News|https://openai.com/news/rss.xml
+ai_global|Google DeepMind|https://deepmind.google/blog/rss.xml
+ai_global|Anthropic via GNews|https://news.google.com/rss/search?q=when:2d+site:anthropic.com&hl=en-US&gl=US&ceid=US:en
+ai_global|Hacker News 300+|https://hnrss.org/frontpage?points=300
+ai_global|Reddit r/artificial|https://www.reddit.com/r/artificial/top/.rss?t=day
+ai_global|Reddit r/singularity|https://www.reddit.com/r/singularity/top.rss?t=day
+ai_global|Rest of World|https://restofworld.org/feed/latest/
+ai_global|Bloomberg Technology|https://feeds.bloomberg.com/technology/news.rss
+ai_cases|TechNode (Китай)|https://technode.com/feed/
+ai_cases|The Register AI|https://www.theregister.com/software/ai_ml/headlines.atom
+ai_cases|MIT Sloan Management Review|https://sloanreview.mit.edu/feed/
+ai_cases|Habr — машинное обучение|https://habr.com/ru/rss/hubs/machine_learning/articles/?fl=ru
+ai_cases|GNews: внедрил ИИ|https://news.google.com/rss/search?q=%22%D0%B2%D0%BD%D0%B5%D0%B4%D1%80%D0%B8%D0%BB%22+%D0%98%D0%98+OR+%22%D0%98%D0%98-%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%22+when:3d&hl=ru&gl=RU&ceid=RU:ru
+ai_cases|GNews: AI agent deployed|https://news.google.com/rss/search?q=%22AI+agent%22+(deployed+OR+%22case+study%22+OR+rollout)+when:3d&hl=en-US&gl=US&ceid=US:en
+ai_cases|GNews: компания использует ИИ|https://news.google.com/rss/search?q=%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8%D1%8F+%22%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D1%83%D0%B5%D1%82+%D0%98%D0%98%22+when:3d&hl=ru&gl=RU&ceid=RU:ru
+science|Nature News|https://www.nature.com/nature.rss
+science|ScienceAlert|https://www.sciencealert.com/feed
+science|Quanta Magazine|https://api.quantamagazine.org/feed/
+science|New Scientist via GNews|https://news.google.com/rss/search?q=when:2d+site:newscientist.com&hl=en-US&gl=US&ceid=US:en
+science|N+1|https://nplus1.ru/rss
+science|Naked Science|https://naked-science.ru/feed
+world|BBC World|https://feeds.bbci.co.uk/news/world/rss.xml
+world|BBC Russian|https://feeds.bbci.co.uk/russian/rss.xml
+world|The Guardian World|https://www.theguardian.com/world/rss
+world|Al Jazeera|https://www.aljazeera.com/xml/rss/all.xml
+world|Reuters via GNews|https://news.google.com/rss/search?q=when:1d+site:reuters.com&hl=ru&gl=RU&ceid=RU:ru
+world|AP via GNews|https://news.google.com/rss/search?q=when:1d+site:apnews.com&hl=en-US&gl=US&ceid=US:en
+ru_tech|Habr лучшее за день|https://habr.com/ru/rss/best/daily/?fl=ru
+ru_tech|Habr — ИИ|https://habr.com/ru/rss/hubs/artificial_intelligence/articles/?fl=ru
+ru_tech|vc.ru|https://vc.ru/rss
+ru_tech|CNews|https://www.cnews.ru/inc/rss/news.xml
+ru_tech|Rozetked|https://rozetked.me/rss.xml
+ru_tech|Код Дурова via GNews|https://news.google.com/rss/search?q=when:2d+site:kod.ru&hl=ru&gl=RU&ceid=RU:ru
+ru_tech|Хайтек+ via GNews|https://news.google.com/rss/search?q=when:2d+site:hightech.plus&hl=ru&gl=RU&ceid=RU:ru
+ru_biz|Коммерсантъ|https://www.kommersant.ru/RSS/news.xml
+ru_biz|ТАСС|https://tass.ru/rss/v2.xml
+ru_biz|РБК|https://rssexport.rbc.ru/rbcnews/news/30/full.rss|crm
+ru_biz|Forbes.ru|https://www.forbes.ru/newrss.xml|crm
+agg|GNews: искусственный интеллект|https://news.google.com/rss/search?q=%D0%B8%D1%81%D0%BA%D1%83%D1%81%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9+%D0%B8%D0%BD%D1%82%D0%B5%D0%BB%D0%BB%D0%B5%D0%BA%D1%82+when:1d&hl=ru&gl=RU&ceid=RU:ru
+agg|GNews: технологии|https://news.google.com/rss/search?q=%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8+when:1d&hl=ru&gl=RU&ceid=RU:ru
+agg|GNews: главное в мире|https://news.google.com/rss?hl=ru&gl=RU&ceid=RU:ru
