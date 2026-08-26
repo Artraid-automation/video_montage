@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "pause-cut-plan",
+  "thresholds": {
+    "threshold_s": 0.15,
+    "keep_s": 0.06,
+    "noise_db": -32.0
+  },
+  "cuts": [],
+  "cut_count": 0,
+  "removed_s": 0,
+  "source_duration_s": 19.74,
+  "duration_after_s": 19.74,
+  "speech_share_before": 1.0,
+  "speech_share_after": 1.0,
+  "audio_checked": false,
+  "source_transcript_sha256": "sha256:7133368d710ae045edeb700198ccecb7a9d18d506f7e7a0ad1685861a0332f1a"
+}

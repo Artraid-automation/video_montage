@@ -1,0 +1,201 @@
+{
+  "schema_version": 2,
+  "project_id": "pilot-live",
+  "revision": 12,
+  "state": "FAILED_RECOVERABLE",
+  "updated_at": "2026-08-26T12:31:00.673478+00:00",
+  "run": {
+    "id": "9d8030c3304c41f0bda4ae267d32bb70",
+    "phase": "phase2",
+    "attempt": 3,
+    "checkpoint": "started",
+    "inputs_hash": "sha256:64f795a0bda352924dcec84524a30638da774fd8e52f5c8fd7b5bd2c79d81ccd",
+    "started_at": "2026-08-26T11:49:17.664983+00:00",
+    "heartbeat_at": "2026-08-26T12:06:45.923285+00:00"
+  },
+  "gates": {
+    "gate1": {
+      "status": "APPROVED",
+      "manifest": {
+        "kind": "gate1-manifest",
+        "path": "03_phase1/gate1-manifest.json",
+        "sha256": "sha256:d5343c2e0be8bb45cf53dc86c8501227f48215fe79a55018818f3314c47abe80",
+        "size_bytes": 2685
+      },
+      "manifest_content_hash": "sha256:694f355774eb39d613821c1c28c64234c89ccf2ba97b999afe02b01d3bf230e8",
+      "prepared_at": "2026-08-26T11:49:17.592087+00:00",
+      "approval": {
+        "kind": "approval",
+        "path": "06_state/approvals/gate1-r000005.json",
+        "sha256": "sha256:943f77255fe194ea2578bde89ea3f90041b70f0ded77a992f8704efe894e6f5c",
+        "size_bytes": 871
+      }
+    }
+  },
+  "approvals": [
+    {
+      "gate": "gate1",
+      "record": {
+        "kind": "approval",
+        "path": "06_state/approvals/gate1-r000005.json",
+        "sha256": "sha256:943f77255fe194ea2578bde89ea3f90041b70f0ded77a992f8704efe894e6f5c",
+        "size_bytes": 871
+      },
+      "approved_at": "2026-08-26T11:49:17.626837+00:00"
+    }
+  ],
+  "revision_request": null,
+  "last_error": {
+    "message": "segment 01 self-verification failed",
+    "retryable": true,
+    "at": "2026-08-26T12:31:00.673427+00:00"
+  },
+  "events": [
+    {
+      "id": "4f2273e883aa464f95bd41f2a87c0c5a",
+      "at": "2026-08-26T11:30:55.611476+00:00",
+      "type": "state_created",
+      "state": "NEW",
+      "details": {}
+    },
+    {
+      "id": "1253c1be2fe84ada8f1cfac4cd8207f4",
+      "at": "2026-08-26T11:32:58.522988+00:00",
+      "type": "phase1_started",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "NEW",
+        "inputs_hash": "sha256:69617b5641a6afce271a6b0bad24390225e6d859ec0070c005d069a84c0adf81"
+      }
+    },
+    {
+      "id": "f4c70abf458a4efb83ab8f490b3fe0e4",
+      "at": "2026-08-26T11:32:58.529083+00:00",
+      "type": "checkpoint",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "checkpoint": "ingested"
+      }
+    },
+    {
+      "id": "fe30cf3ddd4948a9a2c8cf1f1f51d069",
+      "at": "2026-08-26T11:44:22.985850+00:00",
+      "type": "checkpoint",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "checkpoint": "phase1-bundles"
+      }
+    },
+    {
+      "id": "363211c28a514ecfa0b90428fca9a89b",
+      "at": "2026-08-26T11:44:23.047783+00:00",
+      "type": "gate_ready",
+      "state": "GATE1_REVIEW",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "gate": "gate1",
+        "manifest": {
+          "kind": "gate1-manifest",
+          "path": "03_phase1/gate1-manifest.json",
+          "sha256": "sha256:ed54316e8b6f27c39fee116e0e169251407a5e892efb1c8736b4c0a8f5c05efe",
+          "size_bytes": 2685
+        }
+      }
+    },
+    {
+      "id": "42e8c31b5bb14a72ae6bc4dbaba847a5",
+      "at": "2026-08-26T11:49:17.592127+00:00",
+      "type": "gate_ready",
+      "state": "GATE1_REVIEW",
+      "details": {
+        "previous_state": "GATE1_REVIEW",
+        "gate": "gate1",
+        "manifest": {
+          "kind": "gate1-manifest",
+          "path": "03_phase1/gate1-manifest.json",
+          "sha256": "sha256:d5343c2e0be8bb45cf53dc86c8501227f48215fe79a55018818f3314c47abe80",
+          "size_bytes": 2685
+        }
+      }
+    },
+    {
+      "id": "454d8a17c807401d9d9ded73579a3799",
+      "at": "2026-08-26T11:49:17.646953+00:00",
+      "type": "gate_approved",
+      "state": "PHASE2_PENDING",
+      "details": {
+        "previous_state": "GATE1_REVIEW",
+        "gate": "gate1",
+        "approval": {
+          "kind": "approval",
+          "path": "06_state/approvals/gate1-r000005.json",
+          "sha256": "sha256:943f77255fe194ea2578bde89ea3f90041b70f0ded77a992f8704efe894e6f5c",
+          "size_bytes": 871
+        }
+      }
+    },
+    {
+      "id": "5377e0da1f124d9aa99390896fdd3e1a",
+      "at": "2026-08-26T11:49:17.665012+00:00",
+      "type": "phase2_started",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_PENDING",
+        "inputs_hash": "sha256:64f795a0bda352924dcec84524a30638da774fd8e52f5c8fd7b5bd2c79d81ccd"
+      }
+    },
+    {
+      "id": "644fa2569a9c4e838b21a8af38a4c63d",
+      "at": "2026-08-26T11:49:34.197360+00:00",
+      "type": "worker_failed",
+      "state": "FAILED_RECOVERABLE",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "message": "name 'caps' is not defined",
+        "retryable": true
+      }
+    },
+    {
+      "id": "15f7ba2bc47e49c08d2d99b7d1563997",
+      "at": "2026-08-26T11:51:14.730907+00:00",
+      "type": "worker_resumed",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "FAILED_RECOVERABLE"
+      }
+    },
+    {
+      "id": "317a1a21ebd54aff94c4d2b7b7a8df3f",
+      "at": "2026-08-26T12:04:32.665378+00:00",
+      "type": "worker_failed",
+      "state": "FAILED_RECOVERABLE",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "message": "command failed (69): /usr/bin/ffmpeg -hide_banner -loglevel error -y -f concat -safe 0 -i /home/clwduser1/video_montage/mcp-montage/projects/pilot-live/04_phase2/segments/01/review.concat.txt -fps_mode cfr -r 60 -c:v libx264 -pix_fmt yuv420p -profile:v high -preset veryfast -crf 20 -c:a aac -b:a 192k -ar 48000 -ac 2 -movflags +faststart /home/clwduser1/video_montage/mcp-montage/projects/pilot-live/04_phase2/segments/01/.review.d55baae221444dc4ac44328a8a860af7.tmp.mp4\n[h264 @ 0x5e004afac8c0] Error splitting the input into NAL units.\n[h264 @ 0x5e004afac8c0] Invalid NAL unit size (1308612548 > 8495).\n[h264 @ 0x5e004afac8c0] missing picture in access unit with size 8499\n[h264 @ 0x5e004afac8c0] Invalid NAL unit size (1308612548 > 8495).\n[h264 @ 0x5e004afac8c0] Error splitting the input into NAL units.\n[h264 @ 0x5e004afac8c0] Invalid NAL unit size (1543892844 > 813).\n[h264 @ 0x5e004afac8c0] missing picture in access unit with size 817\n[h264 @ 0x5e004afac8c0] Invalid NAL unit size (1543892844 > 813).\n[h264 @ 0x5e004afac8c0] Error splitting the input into NAL units.\n[h264 @ 0x5e004afac8c0] Invalid NAL unit size (-2121593345 > 247).\n[h264 @ 0x5e004afac8c0] missing picture in access unit with size 251\n[h264 @ 0x5e004afac8c0] Invalid NAL unit size (-2121593345 > 247).\n[h264 @ 0x5e004afac8c0] Error splitting the input into NAL units.\n[h264 @ 0x5e004afac8c0] Invalid NAL unit size (557134677 > 465).\n[h264 @ 0x5e004afac8c0] missing picture in access unit with size 469\n[h264 @ 0x5e004afac8c0] Invalid NAL unit size (557134677 > 465).\n[h264 @ 0x5e004afac8c0] Error splitting the input into NAL units.\n[h264 @ 0x5e004afac8c0] Invalid NAL unit size (476034233 > 15752).\n[h264 @ 0x5e004afac8c0] missing picture in access unit with size 15756\n[h264 @ 0x5e004afac8c0] Invalid NAL unit size (476034233 > 15752).\n[h264 @ 0x5e004afac8c0] Error splitting the input into NAL units.\n[h264 @ 0x5e004afac8c0] Invalid NAL unit size (775455919 > 2539).\n[h264 @ 0x5e004afac8c0] missing picture in access unit with size 2543\n[h264 @ 0x5e004afac8c0] Invalid NAL unit size (775455919 > 2539).\n[h264 @ 0x5e004afac8c0] Error splitting the input into NAL units.\n[h264 @ 0x5e004afac8c0] Invalid NAL unit size (1785464659 > 677).\n[h264 @ 0x5e004afac8c0] missing picture in access unit with size 681\n[h264 @ 0x5e004afac8c0] Invalid NAL unit size (1785464659 > 677).\n[h264 @ 0x5e004afac8c0] Error splitting the input into NAL units.\n[h264 @ 0x5e004afac8c0] Invalid NAL unit size (1077964730 > 23793).\n[h264 @ 0x5e004afac8c0] missing picture in access unit with size 23797\n[h264 @ 0x5e004afac8c0] Invalid NAL unit size (1077964730 > 23793).\n[h264 @ 0x5e004afac8c0] Error splitting the input into NAL units.\n[h264 @ 0x5e004afac8c0] Invalid NAL unit size (-991166724 > 746).\n[h264 @ 0x5e004afac8c0] missing picture in access unit with size 750\n[h264 @ 0x5e004afac8c0] Invalid NAL unit size (-991166724 > 746).\n[h264 @ 0x5e004afac8c0] Error splitting the input into NAL units.\n[h264 @ 0x5e004afac8c0] Invalid NAL unit size (-829943593 > 62).\n[h264 @ 0x5e004afac8c0] missing picture in access unit with size 66\n[h264 @ 0x5e004afac8c0] Invalid NAL unit size (-829943593 > 62).\n[h264 @ 0x5e004afac8c0] Error splitting the input into NAL units.\n[h264 @ 0x5e004afac8c0] Invalid NAL unit size (-102014168 > 623).\n[h264 @ 0x5e004afac8c0] missing picture in access unit with size 627\n[h264 @ 0x5e004afac8c0] Invalid NAL unit size (-102014168 > 623).\n[h264 @ 0x5e004afac8c0] Error splitting the input into NAL units.\n[h264 @ 0x5e004afac8c0] Invalid NAL unit size (-634001780 > 16789).\n[h264 @ 0x5e004afac8c0] missing picture in access unit with size 16793\n[concat @ 0x5e004afa25c0] h264_mp4toannexb filter failed to receive output packet\n    Last message repeated 1 times\n[in#0/concat @ 0x5e004afa24c0] Error during demuxing: Invalid data found when processing input\n[aac @ 0x5e004b006740] Number of bands (5) exceeds limit (4).\n[aist#0:1/aac @ 0x5e004b0c0dc0] Error submitting packet to decoder: Invalid data found when processing input\n[in#0/concat @ 0x5e004afa24c0] Error retrieving a packet from demuxer: Invalid data found when processing input\nCannot determine format of input stream 0:0 after EOF\nError marking filters as finished\nError while filtering: Invalid data found when processing input\n[aist#0:1/aac @ 0x5e004b0c0dc0] Decode error rate 1 exceeds maximum 0.666667\n[out#0/mp4 @ 0x5e004b0c5f80] Nothing was written into output file, because at least one of its streams received no packets.\n",
+        "retryable": true
+      }
+    },
+    {
+      "id": "4b04a8db930a48dda0f32f8585b8d785",
+      "at": "2026-08-26T12:06:45.923322+00:00",
+      "type": "worker_resumed",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "FAILED_RECOVERABLE"
+      }
+    },
+    {
+      "id": "896478d44df043f7b7b65c2f256c844e",
+      "at": "2026-08-26T12:31:00.673478+00:00",
+      "type": "worker_failed",
+      "state": "FAILED_RECOVERABLE",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "message": "segment 01 self-verification failed",
+        "retryable": true
+      }
+    }
+  ]
+}

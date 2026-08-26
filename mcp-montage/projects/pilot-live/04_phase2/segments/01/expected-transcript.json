@@ -1,0 +1,2940 @@
+{
+  "schema_version": 1,
+  "duration_s": 187.26000000000002,
+  "words": [
+    {
+      "id": "expected-000001",
+      "text": "разработчик",
+      "start_s": 8.881784197001252e-16,
+      "end_s": 0.9200000000000008,
+      "source_word_id": "w000001"
+    },
+    {
+      "id": "expected-000002",
+      "text": "создал",
+      "start_s": 0.9200000000000008,
+      "end_s": 1.4000000000000004,
+      "source_word_id": "w000002"
+    },
+    {
+      "id": "expected-000003",
+      "text": "crm",
+      "start_s": 1.4000000000000004,
+      "end_s": 1.7600000000000007,
+      "source_word_id": "w000003"
+    },
+    {
+      "id": "expected-000004",
+      "text": "без",
+      "start_s": 1.7600000000000007,
+      "end_s": 2.0600000000000005,
+      "source_word_id": "w000004"
+    },
+    {
+      "id": "expected-000005",
+      "text": "сервера",
+      "start_s": 2.0600000000000005,
+      "end_s": 2.9400000000000004,
+      "source_word_id": "w000005"
+    },
+    {
+      "id": "expected-000006",
+      "text": "чтобы",
+      "start_s": 2.9400000000000004,
+      "end_s": 3.120000000000001,
+      "source_word_id": "w000006"
+    },
+    {
+      "id": "expected-000007",
+      "text": "не",
+      "start_s": 3.120000000000001,
+      "end_s": 3.3000000000000007,
+      "source_word_id": "w000007"
+    },
+    {
+      "id": "expected-000008",
+      "text": "хранить",
+      "start_s": 3.3000000000000007,
+      "end_s": 3.6800000000000006,
+      "source_word_id": "w000008"
+    },
+    {
+      "id": "expected-000009",
+      "text": "чужие",
+      "start_s": 3.6800000000000006,
+      "end_s": 4.0600000000000005,
+      "source_word_id": "w000009"
+    },
+    {
+      "id": "expected-000010",
+      "text": "звонки",
+      "start_s": 4.0600000000000005,
+      "end_s": 4.540000000000001,
+      "source_word_id": "w000010"
+    },
+    {
+      "id": "expected-000011",
+      "text": "какой",
+      "start_s": 4.540000000000001,
+      "end_s": 5.720000000000001,
+      "source_word_id": "w000011"
+    },
+    {
+      "id": "expected-000012",
+      "text": "то",
+      "start_s": 5.720000000000001,
+      "end_s": 5.960000000000001,
+      "source_word_id": "w000012"
+    },
+    {
+      "id": "expected-000013",
+      "text": "чел",
+      "start_s": 5.960000000000001,
+      "end_s": 6.360000000000001,
+      "source_word_id": "w000013"
+    },
+    {
+      "id": "expected-000014",
+      "text": "на",
+      "start_s": 6.360000000000001,
+      "end_s": 6.98,
+      "source_word_id": "w000014"
+    },
+    {
+      "id": "expected-000015",
+      "text": "своем",
+      "start_s": 6.98,
+      "end_s": 7.940000000000001,
+      "source_word_id": "w000015"
+    },
+    {
+      "id": "expected-000016",
+      "text": "мобильном",
+      "start_s": 7.940000000000001,
+      "end_s": 8.5,
+      "source_word_id": "w000016"
+    },
+    {
+      "id": "expected-000017",
+      "text": "телефоне",
+      "start_s": 8.5,
+      "end_s": 9.08,
+      "source_word_id": "w000017"
+    },
+    {
+      "id": "expected-000018",
+      "text": "сделал",
+      "start_s": 9.08,
+      "end_s": 9.72,
+      "source_word_id": "w000018"
+    },
+    {
+      "id": "expected-000019",
+      "text": "проект",
+      "start_s": 9.72,
+      "end_s": 10.42,
+      "source_word_id": "w000019"
+    },
+    {
+      "id": "expected-000020",
+      "text": "серым",
+      "start_s": 10.42,
+      "end_s": 11.42,
+      "source_word_id": "w000020"
+    },
+    {
+      "id": "expected-000021",
+      "text": "системы",
+      "start_s": 11.42,
+      "end_s": 12.06,
+      "source_word_id": "w000021"
+    },
+    {
+      "id": "expected-000022",
+      "text": "которая",
+      "start_s": 12.06,
+      "end_s": 12.32,
+      "source_word_id": "w000022"
+    },
+    {
+      "id": "expected-000023",
+      "text": "слушает",
+      "start_s": 12.32,
+      "end_s": 13.0,
+      "source_word_id": "w000023"
+    },
+    {
+      "id": "expected-000024",
+      "text": "звонки",
+      "start_s": 13.0,
+      "end_s": 13.84,
+      "source_word_id": "w000024"
+    },
+    {
+      "id": "expected-000025",
+      "text": "которые",
+      "start_s": 13.84,
+      "end_s": 14.14,
+      "source_word_id": "w000025"
+    },
+    {
+      "id": "expected-000026",
+      "text": "происходят",
+      "start_s": 14.14,
+      "end_s": 14.740000000000002,
+      "source_word_id": "w000026"
+    },
+    {
+      "id": "expected-000027",
+      "text": "на",
+      "start_s": 14.740000000000002,
+      "end_s": 14.86,
+      "source_word_id": "w000027"
+    },
+    {
+      "id": "expected-000028",
+      "text": "телефоне",
+      "start_s": 14.86,
+      "end_s": 15.420000000000002,
+      "source_word_id": "w000028"
+    },
+    {
+      "id": "expected-000029",
+      "text": "но",
+      "start_s": 15.420000000000002,
+      "end_s": 15.600000000000001,
+      "source_word_id": "w000029"
+    },
+    {
+      "id": "expected-000030",
+      "text": "и",
+      "start_s": 15.600000000000001,
+      "end_s": 15.7,
+      "source_word_id": "w000030"
+    },
+    {
+      "id": "expected-000031",
+      "text": "как",
+      "start_s": 15.7,
+      "end_s": 15.879999999999999,
+      "source_word_id": "w000031"
+    },
+    {
+      "id": "expected-000032",
+      "text": "я",
+      "start_s": 15.879999999999999,
+      "end_s": 16.02,
+      "source_word_id": "w000032"
+    },
+    {
+      "id": "expected-000033",
+      "text": "понимаю",
+      "start_s": 16.02,
+      "end_s": 16.34,
+      "source_word_id": "w000033"
+    },
+    {
+      "id": "expected-000034",
+      "text": "еще",
+      "start_s": 16.34,
+      "end_s": 17.2,
+      "source_word_id": "w000034"
+    },
+    {
+      "id": "expected-000035",
+      "text": "в",
+      "start_s": 17.2,
+      "end_s": 17.560000000000002,
+      "source_word_id": "w000035"
+    },
+    {
+      "id": "expected-000036",
+      "text": "мессенджерах",
+      "start_s": 17.560000000000002,
+      "end_s": 18.560000000000002,
+      "source_word_id": "w000036"
+    },
+    {
+      "id": "expected-000037",
+      "text": "банально",
+      "start_s": 18.560000000000002,
+      "end_s": 20.02,
+      "source_word_id": "w000037"
+    },
+    {
+      "id": "expected-000038",
+      "text": "просто",
+      "start_s": 20.02,
+      "end_s": 20.34,
+      "source_word_id": "w000038"
+    },
+    {
+      "id": "expected-000039",
+      "text": "на",
+      "start_s": 20.34,
+      "end_s": 20.7,
+      "source_word_id": "w000039"
+    },
+    {
+      "id": "expected-000040",
+      "text": "диктофон",
+      "start_s": 20.7,
+      "end_s": 21.78,
+      "source_word_id": "w000040"
+    },
+    {
+      "id": "expected-000041",
+      "text": "встроенных",
+      "start_s": 21.78,
+      "end_s": 22.220000000000002,
+      "source_word_id": "w000041"
+    },
+    {
+      "id": "expected-000042",
+      "text": "телефон",
+      "start_s": 22.220000000000002,
+      "end_s": 22.64,
+      "source_word_id": "w000042"
+    },
+    {
+      "id": "expected-000043",
+      "text": "потом",
+      "start_s": 22.64,
+      "end_s": 23.1,
+      "source_word_id": "w000043"
+    },
+    {
+      "id": "expected-000044",
+      "text": "транскрибирует",
+      "start_s": 23.1,
+      "end_s": 24.46,
+      "source_word_id": "w000044"
+    },
+    {
+      "id": "expected-000045",
+      "text": "эти",
+      "start_s": 24.46,
+      "end_s": 24.580000000000002,
+      "source_word_id": "w000045"
+    },
+    {
+      "id": "expected-000046",
+      "text": "звонки",
+      "start_s": 24.580000000000002,
+      "end_s": 25.0,
+      "source_word_id": "w000046"
+    },
+    {
+      "id": "expected-000047",
+      "text": "локально",
+      "start_s": 25.0,
+      "end_s": 25.580000000000002,
+      "source_word_id": "w000047"
+    },
+    {
+      "id": "expected-000048",
+      "text": "на",
+      "start_s": 25.580000000000002,
+      "end_s": 26.34,
+      "source_word_id": "w000048"
+    },
+    {
+      "id": "expected-000049",
+      "text": "нужный",
+      "start_s": 26.34,
+      "end_s": 27.060000000000002,
+      "source_word_id": "w000049"
+    },
+    {
+      "id": "expected-000050",
+      "text": "язык",
+      "start_s": 27.060000000000002,
+      "end_s": 27.66,
+      "source_word_id": "w000050"
+    },
+    {
+      "id": "expected-000051",
+      "text": "достаточно",
+      "start_s": 27.66,
+      "end_s": 28.78,
+      "source_word_id": "w000051"
+    },
+    {
+      "id": "expected-000052",
+      "text": "медленно",
+      "start_s": 28.78,
+      "end_s": 29.48,
+      "source_word_id": "w000052"
+    },
+    {
+      "id": "expected-000053",
+      "text": "но",
+      "start_s": 29.48,
+      "end_s": 29.66,
+      "source_word_id": "w000053"
+    },
+    {
+      "id": "expected-000054",
+      "text": "тем",
+      "start_s": 29.66,
+      "end_s": 29.820000000000004,
+      "source_word_id": "w000054"
+    },
+    {
+      "id": "expected-000055",
+      "text": "не",
+      "start_s": 29.820000000000004,
+      "end_s": 29.98,
+      "source_word_id": "w000055"
+    },
+    {
+      "id": "expected-000056",
+      "text": "менее",
+      "start_s": 29.98,
+      "end_s": 30.140000000000004,
+      "source_word_id": "w000056"
+    },
+    {
+      "id": "expected-000057",
+      "text": "работает",
+      "start_s": 30.140000000000004,
+      "end_s": 30.540000000000003,
+      "source_word_id": "w000057"
+    },
+    {
+      "id": "expected-000058",
+      "text": "10",
+      "start_s": 30.540000000000003,
+      "end_s": 31.000000000000004,
+      "source_word_id": "w000058"
+    },
+    {
+      "id": "expected-000059",
+      "text": "минутный",
+      "start_s": 31.000000000000004,
+      "end_s": 31.44,
+      "source_word_id": "w000059"
+    },
+    {
+      "id": "expected-000060",
+      "text": "звонок",
+      "start_s": 31.44,
+      "end_s": 31.860000000000003,
+      "source_word_id": "w000060"
+    },
+    {
+      "id": "expected-000061",
+      "text": "как",
+      "start_s": 31.860000000000003,
+      "end_s": 32.480000000000004,
+      "source_word_id": "w000061"
+    },
+    {
+      "id": "expected-000062",
+      "text": "заявлено",
+      "start_s": 32.480000000000004,
+      "end_s": 33.32000000000001,
+      "source_word_id": "w000062"
+    },
+    {
+      "id": "expected-000063",
+      "text": "расшифровывает",
+      "start_s": 33.32000000000001,
+      "end_s": 34.86,
+      "source_word_id": "w000063"
+    },
+    {
+      "id": "expected-000064",
+      "text": "за",
+      "start_s": 34.86,
+      "end_s": 35.239999999999995,
+      "source_word_id": "w000064"
+    },
+    {
+      "id": "expected-000065",
+      "text": "шесть",
+      "start_s": 35.239999999999995,
+      "end_s": 36.22,
+      "source_word_id": "w000065"
+    },
+    {
+      "id": "expected-000066",
+      "text": "с",
+      "start_s": 36.22,
+      "end_s": 36.28,
+      "source_word_id": "w000066"
+    },
+    {
+      "id": "expected-000067",
+      "text": "половиной",
+      "start_s": 36.28,
+      "end_s": 36.66,
+      "source_word_id": "w000067"
+    },
+    {
+      "id": "expected-000068",
+      "text": "минут",
+      "start_s": 36.66,
+      "end_s": 36.980000000000004,
+      "source_word_id": "w000068"
+    },
+    {
+      "id": "expected-000069",
+      "text": "либо",
+      "start_s": 36.980000000000004,
+      "end_s": 37.599999999999994,
+      "source_word_id": "w000069"
+    },
+    {
+      "id": "expected-000070",
+      "text": "на",
+      "start_s": 37.599999999999994,
+      "end_s": 37.8,
+      "source_word_id": "w000070"
+    },
+    {
+      "id": "expected-000071",
+      "text": "другой",
+      "start_s": 37.8,
+      "end_s": 38.040000000000006,
+      "source_word_id": "w000071"
+    },
+    {
+      "id": "expected-000072",
+      "text": "модели",
+      "start_s": 38.040000000000006,
+      "end_s": 38.5,
+      "source_word_id": "w000072"
+    },
+    {
+      "id": "expected-000073",
+      "text": "транскрибации",
+      "start_s": 38.5,
+      "end_s": 39.120000000000005,
+      "source_word_id": "w000073"
+    },
+    {
+      "id": "expected-000074",
+      "text": "за",
+      "start_s": 39.120000000000005,
+      "end_s": 39.3,
+      "source_word_id": "w000074"
+    },
+    {
+      "id": "expected-000075",
+      "text": "17",
+      "start_s": 39.3,
+      "end_s": 39.620000000000005,
+      "source_word_id": "w000075"
+    },
+    {
+      "id": "expected-000076",
+      "text": "минут",
+      "start_s": 39.620000000000005,
+      "end_s": 40.16,
+      "source_word_id": "w000076"
+    },
+    {
+      "id": "expected-000077",
+      "text": "но",
+      "start_s": 40.16,
+      "end_s": 40.739999999999995,
+      "source_word_id": "w000077"
+    },
+    {
+      "id": "expected-000078",
+      "text": "понятное",
+      "start_s": 40.739999999999995,
+      "end_s": 41.22,
+      "source_word_id": "w000078"
+    },
+    {
+      "id": "expected-000079",
+      "text": "дело",
+      "start_s": 41.22,
+      "end_s": 41.400000000000006,
+      "source_word_id": "w000079"
+    },
+    {
+      "id": "expected-000080",
+      "text": "это",
+      "start_s": 41.400000000000006,
+      "end_s": 41.599999999999994,
+      "source_word_id": "w000080"
+    },
+    {
+      "id": "expected-000081",
+      "text": "все",
+      "start_s": 41.599999999999994,
+      "end_s": 41.760000000000005,
+      "source_word_id": "w000081"
+    },
+    {
+      "id": "expected-000082",
+      "text": "показатели",
+      "start_s": 41.760000000000005,
+      "end_s": 42.480000000000004,
+      "source_word_id": "w000082"
+    },
+    {
+      "id": "expected-000083",
+      "text": "настраиваемые",
+      "start_s": 42.480000000000004,
+      "end_s": 43.42,
+      "source_word_id": "w000083"
+    },
+    {
+      "id": "expected-000084",
+      "text": "а",
+      "start_s": 43.42,
+      "end_s": 44.06,
+      "source_word_id": "w000084"
+    },
+    {
+      "id": "expected-000085",
+      "text": "потом",
+      "start_s": 44.06,
+      "end_s": 44.42,
+      "source_word_id": "w000085"
+    },
+    {
+      "id": "expected-000086",
+      "text": "локальная",
+      "start_s": 44.42,
+      "end_s": 45.34,
+      "source_word_id": "w000086"
+    },
+    {
+      "id": "expected-000087",
+      "text": "моделика",
+      "start_s": 45.34,
+      "end_s": 45.980000000000004,
+      "source_word_id": "w000087"
+    },
+    {
+      "id": "expected-000088",
+      "text": "и",
+      "start_s": 45.980000000000004,
+      "end_s": 46.22,
+      "source_word_id": "w000088"
+    },
+    {
+      "id": "expected-000089",
+      "text": "и",
+      "start_s": 46.22,
+      "end_s": 46.42,
+      "source_word_id": "w000089"
+    },
+    {
+      "id": "expected-000090",
+      "text": "раскладывает",
+      "start_s": 46.42,
+      "end_s": 47.620000000000005,
+      "source_word_id": "w000090"
+    },
+    {
+      "id": "expected-000091",
+      "text": "анализирует",
+      "start_s": 47.620000000000005,
+      "end_s": 48.459999999999994,
+      "source_word_id": "w000091"
+    },
+    {
+      "id": "expected-000092",
+      "text": "звонок",
+      "start_s": 48.459999999999994,
+      "end_s": 48.84,
+      "source_word_id": "w000092"
+    },
+    {
+      "id": "expected-000093",
+      "text": "и",
+      "start_s": 48.84,
+      "end_s": 49.42,
+      "source_word_id": "w000093"
+    },
+    {
+      "id": "expected-000094",
+      "text": "создает",
+      "start_s": 49.42,
+      "end_s": 50.14,
+      "source_word_id": "w000094"
+    },
+    {
+      "id": "expected-000095",
+      "text": "markdown",
+      "start_s": 50.14,
+      "end_s": 50.86,
+      "source_word_id": "w000095"
+    },
+    {
+      "id": "expected-000096",
+      "text": "файлы",
+      "start_s": 50.86,
+      "end_s": 51.56,
+      "source_word_id": "w000096"
+    },
+    {
+      "id": "expected-000097",
+      "text": "для",
+      "start_s": 51.56,
+      "end_s": 52.120000000000005,
+      "source_word_id": "w000097"
+    },
+    {
+      "id": "expected-000098",
+      "text": "обсидиана",
+      "start_s": 52.64,
+      "end_s": 53.36,
+      "source_word_id": "w000098"
+    },
+    {
+      "id": "expected-000099",
+      "text": "короче",
+      "start_s": 53.36,
+      "end_s": 53.959999999999994,
+      "source_word_id": "w000099"
+    },
+    {
+      "id": "expected-000100",
+      "text": "отбрасывая",
+      "start_s": 53.959999999999994,
+      "end_s": 55.019999999999996,
+      "source_word_id": "w000100"
+    },
+    {
+      "id": "expected-000101",
+      "text": "техничку",
+      "start_s": 55.019999999999996,
+      "end_s": 55.519999999999996,
+      "source_word_id": "w000101"
+    },
+    {
+      "id": "expected-000102",
+      "text": "просто",
+      "start_s": 55.519999999999996,
+      "end_s": 55.760000000000005,
+      "source_word_id": "w000102"
+    },
+    {
+      "id": "expected-000103",
+      "text": "сохраняет",
+      "start_s": 55.760000000000005,
+      "end_s": 56.400000000000006,
+      "source_word_id": "w000103"
+    },
+    {
+      "id": "expected-000104",
+      "text": "очень",
+      "start_s": 56.400000000000006,
+      "end_s": 56.64,
+      "source_word_id": "w000104"
+    },
+    {
+      "id": "expected-000105",
+      "text": "просто",
+      "start_s": 56.64,
+      "end_s": 57.58,
+      "source_word_id": "w000105"
+    },
+    {
+      "id": "expected-000106",
+      "text": "файлики",
+      "start_s": 57.58,
+      "end_s": 58.620000000000005,
+      "source_word_id": "w000106"
+    },
+    {
+      "id": "expected-000107",
+      "text": "локально",
+      "start_s": 58.620000000000005,
+      "end_s": 59.08,
+      "source_word_id": "w000107"
+    },
+    {
+      "id": "expected-000108",
+      "text": "на",
+      "start_s": 59.08,
+      "end_s": 59.36,
+      "source_word_id": "w000108"
+    },
+    {
+      "id": "expected-000109",
+      "text": "телефоне",
+      "start_s": 59.36,
+      "end_s": 60.32000000000001,
+      "source_word_id": "w000109"
+    },
+    {
+      "id": "expected-000110",
+      "text": "при",
+      "start_s": 60.32000000000001,
+      "end_s": 60.94,
+      "source_word_id": "w000110"
+    },
+    {
+      "id": "expected-000111",
+      "text": "этом",
+      "start_s": 60.94,
+      "end_s": 61.18000000000001,
+      "source_word_id": "w000111"
+    },
+    {
+      "id": "expected-000112",
+      "text": "какие",
+      "start_s": 61.18000000000001,
+      "end_s": 61.459999999999994,
+      "source_word_id": "w000112"
+    },
+    {
+      "id": "expected-000113",
+      "text": "то",
+      "start_s": 61.459999999999994,
+      "end_s": 61.64,
+      "source_word_id": "w000113"
+    },
+    {
+      "id": "expected-000114",
+      "text": "дукапы",
+      "start_s": 61.64,
+      "end_s": 62.22,
+      "source_word_id": "w000114"
+    },
+    {
+      "id": "expected-000115",
+      "text": "и",
+      "start_s": 62.22,
+      "end_s": 62.8,
+      "source_word_id": "w000115"
+    },
+    {
+      "id": "expected-000116",
+      "text": "облачные",
+      "start_s": 62.8,
+      "end_s": 63.58,
+      "source_word_id": "w000116"
+    },
+    {
+      "id": "expected-000117",
+      "text": "загрузки",
+      "start_s": 63.58,
+      "end_s": 64.25999999999999,
+      "source_word_id": "w000117"
+    },
+    {
+      "id": "expected-000118",
+      "text": "отключены",
+      "start_s": 64.25999999999999,
+      "end_s": 66.0,
+      "source_word_id": "w000118"
+    },
+    {
+      "id": "expected-000119",
+      "text": "у",
+      "start_s": 66.0,
+      "end_s": 66.52,
+      "source_word_id": "w000119"
+    },
+    {
+      "id": "expected-000120",
+      "text": "этого",
+      "start_s": 66.52,
+      "end_s": 66.74,
+      "source_word_id": "w000120"
+    },
+    {
+      "id": "expected-000121",
+      "text": "проекта",
+      "start_s": 66.74,
+      "end_s": 67.39999999999999,
+      "source_word_id": "w000121"
+    },
+    {
+      "id": "expected-000122",
+      "text": "офигенная",
+      "start_s": 67.39999999999999,
+      "end_s": 69.66,
+      "source_word_id": "w000122"
+    },
+    {
+      "id": "expected-000123",
+      "text": "идея",
+      "start_s": 69.66,
+      "end_s": 70.16,
+      "source_word_id": "w000123"
+    },
+    {
+      "id": "expected-000124",
+      "text": "я",
+      "start_s": 70.16,
+      "end_s": 70.36,
+      "source_word_id": "w000124"
+    },
+    {
+      "id": "expected-000125",
+      "text": "не",
+      "start_s": 70.36,
+      "end_s": 70.48,
+      "source_word_id": "w000125"
+    },
+    {
+      "id": "expected-000126",
+      "text": "так",
+      "start_s": 70.48,
+      "end_s": 70.66,
+      "source_word_id": "w000126"
+    },
+    {
+      "id": "expected-000127",
+      "text": "давно",
+      "start_s": 70.66,
+      "end_s": 70.98,
+      "source_word_id": "w000127"
+    },
+    {
+      "id": "expected-000128",
+      "text": "смотрел",
+      "start_s": 70.98,
+      "end_s": 72.74,
+      "source_word_id": "w000128"
+    },
+    {
+      "id": "expected-000129",
+      "text": "локальную",
+      "start_s": 72.74,
+      "end_s": 74.08,
+      "source_word_id": "w000129"
+    },
+    {
+      "id": "expected-000130",
+      "text": "нерунку",
+      "start_s": 74.08,
+      "end_s": 74.66,
+      "source_word_id": "w000130"
+    },
+    {
+      "id": "expected-000131",
+      "text": "на",
+      "start_s": 74.66,
+      "end_s": 74.8,
+      "source_word_id": "w000131"
+    },
+    {
+      "id": "expected-000132",
+      "text": "телефон",
+      "start_s": 74.8,
+      "end_s": 75.11999999999999,
+      "source_word_id": "w000132"
+    },
+    {
+      "id": "expected-000133",
+      "text": "который",
+      "start_s": 75.11999999999999,
+      "end_s": 75.6,
+      "source_word_id": "w000133"
+    },
+    {
+      "id": "expected-000134",
+      "text": "даже",
+      "start_s": 75.6,
+      "end_s": 75.96,
+      "source_word_id": "w000134"
+    },
+    {
+      "id": "expected-000135",
+      "text": "сама",
+      "start_s": 75.96,
+      "end_s": 77.16,
+      "source_word_id": "w000135"
+    },
+    {
+      "id": "expected-000136",
+      "text": "какой",
+      "start_s": 77.16,
+      "end_s": 77.78,
+      "source_word_id": "w000136"
+    },
+    {
+      "id": "expected-000137",
+      "text": "то",
+      "start_s": 77.78,
+      "end_s": 77.98,
+      "source_word_id": "w000137"
+    },
+    {
+      "id": "expected-000138",
+      "text": "сервис",
+      "start_s": 77.98,
+      "end_s": 78.44,
+      "source_word_id": "w000138"
+    },
+    {
+      "id": "expected-000139",
+      "text": "типа",
+      "start_s": 78.44,
+      "end_s": 79.08,
+      "source_word_id": "w000139"
+    },
+    {
+      "id": "expected-000140",
+      "text": "разрабатывает",
+      "start_s": 79.08,
+      "end_s": 79.86,
+      "source_word_id": "w000140"
+    },
+    {
+      "id": "expected-000141",
+      "text": "достаточно",
+      "start_s": 79.86,
+      "end_s": 80.25999999999999,
+      "source_word_id": "w000141"
+    },
+    {
+      "id": "expected-000142",
+      "text": "тупенько",
+      "start_s": 80.25999999999999,
+      "end_s": 81.17999999999999,
+      "source_word_id": "w000142"
+    },
+    {
+      "id": "expected-000143",
+      "text": "но",
+      "start_s": 81.17999999999999,
+      "end_s": 81.32,
+      "source_word_id": "w000143"
+    },
+    {
+      "id": "expected-000144",
+      "text": "тем",
+      "start_s": 81.32,
+      "end_s": 81.48,
+      "source_word_id": "w000144"
+    },
+    {
+      "id": "expected-000145",
+      "text": "не",
+      "start_s": 81.48,
+      "end_s": 81.58,
+      "source_word_id": "w000145"
+    },
+    {
+      "id": "expected-000146",
+      "text": "менее",
+      "start_s": 81.58,
+      "end_s": 81.82,
+      "source_word_id": "w000146"
+    },
+    {
+      "id": "expected-000147",
+      "text": "может",
+      "start_s": 81.82,
+      "end_s": 82.08,
+      "source_word_id": "w000147"
+    },
+    {
+      "id": "expected-000148",
+      "text": "запилить",
+      "start_s": 82.08,
+      "end_s": 82.61999999999999,
+      "source_word_id": "w000148"
+    },
+    {
+      "id": "expected-000149",
+      "text": "прямо",
+      "start_s": 82.61999999999999,
+      "end_s": 82.8,
+      "source_word_id": "w000149"
+    },
+    {
+      "id": "expected-000150",
+      "text": "саску",
+      "start_s": 82.8,
+      "end_s": 83.42,
+      "source_word_id": "w000150"
+    },
+    {
+      "id": "expected-000151",
+      "text": "туда",
+      "start_s": 83.42,
+      "end_s": 84.88,
+      "source_word_id": "w000151"
+    },
+    {
+      "id": "expected-000152",
+      "text": "мы",
+      "start_s": 84.88,
+      "end_s": 85.24,
+      "source_word_id": "w000152"
+    },
+    {
+      "id": "expected-000153",
+      "text": "ставим",
+      "start_s": 85.24,
+      "end_s": 85.66,
+      "source_word_id": "w000153"
+    },
+    {
+      "id": "expected-000154",
+      "text": "уточнение",
+      "start_s": 85.66,
+      "end_s": 87.98,
+      "source_word_id": "w000154"
+    },
+    {
+      "id": "expected-000155",
+      "text": "звездочку",
+      "start_s": 87.98,
+      "end_s": 88.66,
+      "source_word_id": "w000155"
+    },
+    {
+      "id": "expected-000156",
+      "text": "что",
+      "start_s": 88.66,
+      "end_s": 88.96,
+      "source_word_id": "w000156"
+    },
+    {
+      "id": "expected-000157",
+      "text": "телефон",
+      "start_s": 88.96,
+      "end_s": 89.66,
+      "source_word_id": "w000157"
+    },
+    {
+      "id": "expected-000158",
+      "text": "должен",
+      "start_s": 89.66,
+      "end_s": 89.94,
+      "source_word_id": "w000158"
+    },
+    {
+      "id": "expected-000159",
+      "text": "быть",
+      "start_s": 89.94,
+      "end_s": 90.64,
+      "source_word_id": "w000159"
+    },
+    {
+      "id": "expected-000160",
+      "text": "достаточно",
+      "start_s": 90.64,
+      "end_s": 90.96,
+      "source_word_id": "w000160"
+    },
+    {
+      "id": "expected-000161",
+      "text": "мощным",
+      "start_s": 90.96,
+      "end_s": 91.74,
+      "source_word_id": "w000161"
+    },
+    {
+      "id": "expected-000162",
+      "text": "и",
+      "start_s": 91.74,
+      "end_s": 92.36,
+      "source_word_id": "w000162"
+    },
+    {
+      "id": "expected-000163",
+      "text": "не",
+      "start_s": 92.36,
+      "end_s": 92.52,
+      "source_word_id": "w000163"
+    },
+    {
+      "id": "expected-000164",
+      "text": "вы",
+      "start_s": 92.52,
+      "end_s": 92.61999999999999,
+      "source_word_id": "w000164"
+    },
+    {
+      "id": "expected-000165",
+      "text": "со",
+      "start_s": 92.61999999999999,
+      "end_s": 93.38,
+      "source_word_id": "w000165"
+    },
+    {
+      "id": "expected-000166",
+      "text": "временем",
+      "start_s": 93.38,
+      "end_s": 94.42,
+      "source_word_id": "w000166"
+    },
+    {
+      "id": "expected-000167",
+      "text": "мы",
+      "start_s": 94.42,
+      "end_s": 94.48,
+      "source_word_id": "w000167"
+    },
+    {
+      "id": "expected-000168",
+      "text": "будем",
+      "start_s": 94.48,
+      "end_s": 94.72,
+      "source_word_id": "w000168"
+    },
+    {
+      "id": "expected-000169",
+      "text": "видеть",
+      "start_s": 94.72,
+      "end_s": 95.02,
+      "source_word_id": "w000169"
+    },
+    {
+      "id": "expected-000170",
+      "text": "все",
+      "start_s": 95.02,
+      "end_s": 95.17999999999999,
+      "source_word_id": "w000170"
+    },
+    {
+      "id": "expected-000171",
+      "text": "больше",
+      "start_s": 95.17999999999999,
+      "end_s": 95.48,
+      "source_word_id": "w000171"
+    },
+    {
+      "id": "expected-000172",
+      "text": "и",
+      "start_s": 95.48,
+      "end_s": 95.92,
+      "source_word_id": "w000172"
+    },
+    {
+      "id": "expected-000173",
+      "text": "все",
+      "start_s": 95.92,
+      "end_s": 96.14,
+      "source_word_id": "w000173"
+    },
+    {
+      "id": "expected-000174",
+      "text": "более",
+      "start_s": 96.14,
+      "end_s": 96.44,
+      "source_word_id": "w000174"
+    },
+    {
+      "id": "expected-000175",
+      "text": "умные",
+      "start_s": 96.44,
+      "end_s": 97.0,
+      "source_word_id": "w000175"
+    },
+    {
+      "id": "expected-000176",
+      "text": "локальные",
+      "start_s": 97.0,
+      "end_s": 98.02,
+      "source_word_id": "w000176"
+    },
+    {
+      "id": "expected-000177",
+      "text": "модели",
+      "start_s": 98.02,
+      "end_s": 98.56,
+      "source_word_id": "w000177"
+    },
+    {
+      "id": "expected-000178",
+      "text": "которые",
+      "start_s": 98.56,
+      "end_s": 98.86,
+      "source_word_id": "w000178"
+    },
+    {
+      "id": "expected-000179",
+      "text": "будут",
+      "start_s": 98.86,
+      "end_s": 99.14,
+      "source_word_id": "w000179"
+    },
+    {
+      "id": "expected-000180",
+      "text": "опускаться",
+      "start_s": 99.14,
+      "end_s": 99.56,
+      "source_word_id": "w000180"
+    },
+    {
+      "id": "expected-000181",
+      "text": "там",
+      "start_s": 99.56,
+      "end_s": 99.78,
+      "source_word_id": "w000181"
+    },
+    {
+      "id": "expected-000182",
+      "text": "вплоть",
+      "start_s": 99.78,
+      "end_s": 100.14,
+      "source_word_id": "w000182"
+    },
+    {
+      "id": "expected-000183",
+      "text": "до",
+      "start_s": 100.14,
+      "end_s": 100.28,
+      "source_word_id": "w000183"
+    },
+    {
+      "id": "expected-000184",
+      "text": "часов",
+      "start_s": 100.28,
+      "end_s": 100.58,
+      "source_word_id": "w000184"
+    },
+    {
+      "id": "expected-000185",
+      "text": "или",
+      "start_s": 100.58,
+      "end_s": 100.94,
+      "source_word_id": "w000185"
+    },
+    {
+      "id": "expected-000186",
+      "text": "еще",
+      "start_s": 100.94,
+      "end_s": 101.28,
+      "source_word_id": "w000186"
+    },
+    {
+      "id": "expected-000187",
+      "text": "более",
+      "start_s": 101.28,
+      "end_s": 101.58,
+      "source_word_id": "w000187"
+    },
+    {
+      "id": "expected-000188",
+      "text": "мелких",
+      "start_s": 101.58,
+      "end_s": 101.98,
+      "source_word_id": "w000188"
+    },
+    {
+      "id": "expected-000189",
+      "text": "девайсов",
+      "start_s": 101.98,
+      "end_s": 102.5,
+      "source_word_id": "w000189"
+    },
+    {
+      "id": "expected-000190",
+      "text": "работать",
+      "start_s": 102.5,
+      "end_s": 103.1,
+      "source_word_id": "w000190"
+    },
+    {
+      "id": "expected-000191",
+      "text": "без",
+      "start_s": 103.1,
+      "end_s": 103.86,
+      "source_word_id": "w000191"
+    },
+    {
+      "id": "expected-000192",
+      "text": "зависимости",
+      "start_s": 103.86,
+      "end_s": 104.84,
+      "source_word_id": "w000192"
+    },
+    {
+      "id": "expected-000193",
+      "text": "от",
+      "start_s": 104.84,
+      "end_s": 105.08,
+      "source_word_id": "w000193"
+    },
+    {
+      "id": "expected-000194",
+      "text": "какого",
+      "start_s": 105.08,
+      "end_s": 105.46,
+      "source_word_id": "w000194"
+    },
+    {
+      "id": "expected-000195",
+      "text": "то",
+      "start_s": 105.46,
+      "end_s": 105.53999999999999,
+      "source_word_id": "w000195"
+    },
+    {
+      "id": "expected-000196",
+      "text": "облачного",
+      "start_s": 105.53999999999999,
+      "end_s": 106.24,
+      "source_word_id": "w000196"
+    },
+    {
+      "id": "expected-000197",
+      "text": "железа",
+      "start_s": 106.24,
+      "end_s": 106.98,
+      "source_word_id": "w000197"
+    },
+    {
+      "id": "expected-000198",
+      "text": "что",
+      "start_s": 106.98,
+      "end_s": 107.17999999999999,
+      "source_word_id": "w000198"
+    },
+    {
+      "id": "expected-000199",
+      "text": "классно",
+      "start_s": 107.17999999999999,
+      "end_s": 107.98,
+      "source_word_id": "w000199"
+    },
+    {
+      "id": "expected-000200",
+      "text": "ну",
+      "start_s": 107.98,
+      "end_s": 108.67999999999999,
+      "source_word_id": "w000200"
+    },
+    {
+      "id": "expected-000201",
+      "text": "и",
+      "start_s": 108.67999999999999,
+      "end_s": 108.89999999999999,
+      "source_word_id": "w000201"
+    },
+    {
+      "id": "expected-000202",
+      "text": "если",
+      "start_s": 108.89999999999999,
+      "end_s": 109.39999999999999,
+      "source_word_id": "w000202"
+    },
+    {
+      "id": "expected-000203",
+      "text": "в",
+      "start_s": 109.39999999999999,
+      "end_s": 109.94,
+      "source_word_id": "w000203"
+    },
+    {
+      "id": "expected-000204",
+      "text": "ваших",
+      "start_s": 109.94,
+      "end_s": 110.44,
+      "source_word_id": "w000204"
+    },
+    {
+      "id": "expected-000205",
+      "text": "других",
+      "start_s": 110.44,
+      "end_s": 110.64,
+      "source_word_id": "w000205"
+    },
+    {
+      "id": "expected-000206",
+      "text": "задачах",
+      "start_s": 110.64,
+      "end_s": 110.75999999999999,
+      "source_word_id": "w000206"
+    },
+    {
+      "id": "expected-000207",
+      "text": "данный",
+      "start_s": 110.76,
+      "end_s": 111.44,
+      "source_word_id": "w000207"
+    },
+    {
+      "id": "expected-000208",
+      "text": "кейс",
+      "start_s": 111.44,
+      "end_s": 111.8,
+      "source_word_id": "w000208"
+    },
+    {
+      "id": "expected-000209",
+      "text": "интересен",
+      "start_s": 111.8,
+      "end_s": 113.05999999999999,
+      "source_word_id": "w000209"
+    },
+    {
+      "id": "expected-000210",
+      "text": "можно",
+      "start_s": 113.05999999999999,
+      "end_s": 113.3,
+      "source_word_id": "w000210"
+    },
+    {
+      "id": "expected-000211",
+      "text": "во",
+      "start_s": 113.3,
+      "end_s": 114.1,
+      "source_word_id": "w000211"
+    },
+    {
+      "id": "expected-000212",
+      "text": "первых",
+      "start_s": 114.1,
+      "end_s": 114.27999999999999,
+      "source_word_id": "w000212"
+    },
+    {
+      "id": "expected-000213",
+      "text": "вызывай",
+      "start_s": 114.27999999999999,
+      "end_s": 114.66,
+      "source_word_id": "w000213"
+    },
+    {
+      "id": "expected-000214",
+      "text": "ходить",
+      "start_s": 114.66,
+      "end_s": 115.08,
+      "source_word_id": "w000214"
+    },
+    {
+      "id": "expected-000215",
+      "text": "такой",
+      "start_s": 115.08,
+      "end_s": 115.32,
+      "source_word_id": "w000215"
+    },
+    {
+      "id": "expected-000216",
+      "text": "себе",
+      "start_s": 115.32,
+      "end_s": 115.69999999999999,
+      "source_word_id": "w000216"
+    },
+    {
+      "id": "expected-000217",
+      "text": "за",
+      "start_s": 115.69999999999999,
+      "end_s": 116.03999999999999,
+      "source_word_id": "w000217"
+    },
+    {
+      "id": "expected-000218",
+      "text": "буквально",
+      "start_s": 116.03999999999999,
+      "end_s": 117.13999999999999,
+      "source_word_id": "w000218"
+    },
+    {
+      "id": "expected-000219",
+      "text": "пару",
+      "start_s": 117.13999999999999,
+      "end_s": 117.38,
+      "source_word_id": "w000219"
+    },
+    {
+      "id": "expected-000220",
+      "text": "дней",
+      "start_s": 117.38,
+      "end_s": 117.67999999999999,
+      "source_word_id": "w000220"
+    },
+    {
+      "id": "expected-000221",
+      "text": "там",
+      "start_s": 117.67999999999999,
+      "end_s": 117.89999999999999,
+      "source_word_id": "w000221"
+    },
+    {
+      "id": "expected-000222",
+      "text": "ничего",
+      "start_s": 117.89999999999999,
+      "end_s": 118.13999999999999,
+      "source_word_id": "w000222"
+    },
+    {
+      "id": "expected-000223",
+      "text": "сложного",
+      "start_s": 118.13999999999999,
+      "end_s": 118.8,
+      "source_word_id": "w000223"
+    },
+    {
+      "id": "expected-000224",
+      "text": "по",
+      "start_s": 118.8,
+      "end_s": 119.39999999999999,
+      "source_word_id": "w000224"
+    },
+    {
+      "id": "expected-000225",
+      "text": "крайней",
+      "start_s": 119.39999999999999,
+      "end_s": 119.71999999999998,
+      "source_word_id": "w000225"
+    },
+    {
+      "id": "expected-000226",
+      "text": "мере",
+      "start_s": 119.71999999999998,
+      "end_s": 119.82,
+      "source_word_id": "w000226"
+    },
+    {
+      "id": "expected-000227",
+      "text": "если",
+      "start_s": 119.82,
+      "end_s": 120.03999999999999,
+      "source_word_id": "w000227"
+    },
+    {
+      "id": "expected-000228",
+      "text": "у",
+      "start_s": 120.03999999999999,
+      "end_s": 120.13999999999999,
+      "source_word_id": "w000228"
+    },
+    {
+      "id": "expected-000229",
+      "text": "вас",
+      "start_s": 120.13999999999999,
+      "end_s": 120.27999999999999,
+      "source_word_id": "w000229"
+    },
+    {
+      "id": "expected-000230",
+      "text": "android",
+      "start_s": 120.27999999999999,
+      "end_s": 120.55999999999999,
+      "source_word_id": "w000230"
+    },
+    {
+      "id": "expected-000231",
+      "text": "циклом",
+      "start_s": 120.55999999999999,
+      "end_s": 122.74,
+      "source_word_id": "w000231"
+    },
+    {
+      "id": "expected-000232",
+      "text": "сложно",
+      "start_s": 122.74,
+      "end_s": 124.43999999999998,
+      "source_word_id": "w000232"
+    },
+    {
+      "id": "expected-000233",
+      "text": "попасть",
+      "start_s": 124.43999999999998,
+      "end_s": 125.05999999999999,
+      "source_word_id": "w000233"
+    },
+    {
+      "id": "expected-000234",
+      "text": "в",
+      "start_s": 125.05999999999999,
+      "end_s": 125.11999999999999,
+      "source_word_id": "w000234"
+    },
+    {
+      "id": "expected-000235",
+      "text": "appstore",
+      "start_s": 125.11999999999999,
+      "end_s": 125.49999999999999,
+      "source_word_id": "w000235"
+    },
+    {
+      "id": "expected-000236",
+      "text": "там",
+      "start_s": 125.49999999999999,
+      "end_s": 125.7,
+      "source_word_id": "w000236"
+    },
+    {
+      "id": "expected-000237",
+      "text": "и",
+      "start_s": 125.7,
+      "end_s": 125.87999999999998,
+      "source_word_id": "w000237"
+    },
+    {
+      "id": "expected-000238",
+      "text": "какие",
+      "start_s": 125.87999999999998,
+      "end_s": 126.17999999999999,
+      "source_word_id": "w000238"
+    },
+    {
+      "id": "expected-000239",
+      "text": "то",
+      "start_s": 126.17999999999999,
+      "end_s": 126.33999999999999,
+      "source_word_id": "w000239"
+    },
+    {
+      "id": "expected-000240",
+      "text": "конские",
+      "start_s": 126.33999999999999,
+      "end_s": 126.71999999999998,
+      "source_word_id": "w000240"
+    },
+    {
+      "id": "expected-000241",
+      "text": "подписки",
+      "start_s": 126.71999999999998,
+      "end_s": 127.37999999999998,
+      "source_word_id": "w000241"
+    },
+    {
+      "id": "expected-000242",
+      "text": "что",
+      "start_s": 127.37999999999998,
+      "end_s": 128.26,
+      "source_word_id": "w000242"
+    },
+    {
+      "id": "expected-000243",
+      "text": "долларов",
+      "start_s": 128.26,
+      "end_s": 128.65999999999997,
+      "source_word_id": "w000243"
+    },
+    {
+      "id": "expected-000244",
+      "text": "в",
+      "start_s": 128.65999999999997,
+      "end_s": 129.01999999999998,
+      "source_word_id": "w000244"
+    },
+    {
+      "id": "expected-000245",
+      "text": "год",
+      "start_s": 129.01999999999998,
+      "end_s": 129.26,
+      "source_word_id": "w000245"
+    },
+    {
+      "id": "expected-000246",
+      "text": "нужно",
+      "start_s": 129.26,
+      "end_s": 129.48000000000002,
+      "source_word_id": "w000246"
+    },
+    {
+      "id": "expected-000247",
+      "text": "платить",
+      "start_s": 129.48000000000002,
+      "end_s": 129.94,
+      "source_word_id": "w000247"
+    },
+    {
+      "id": "expected-000248",
+      "text": "просто",
+      "start_s": 129.94,
+      "end_s": 130.14,
+      "source_word_id": "w000248"
+    },
+    {
+      "id": "expected-000249",
+      "text": "за",
+      "start_s": 130.14,
+      "end_s": 130.32,
+      "source_word_id": "w000249"
+    },
+    {
+      "id": "expected-000250",
+      "text": "возможность",
+      "start_s": 130.32,
+      "end_s": 130.65999999999997,
+      "source_word_id": "w000250"
+    },
+    {
+      "id": "expected-000251",
+      "text": "выложить",
+      "start_s": 130.65999999999997,
+      "end_s": 131.26,
+      "source_word_id": "w000251"
+    },
+    {
+      "id": "expected-000252",
+      "text": "приложение",
+      "start_s": 131.26,
+      "end_s": 131.88,
+      "source_word_id": "w000252"
+    },
+    {
+      "id": "expected-000253",
+      "text": "но",
+      "start_s": 131.88,
+      "end_s": 132.06,
+      "source_word_id": "w000253"
+    },
+    {
+      "id": "expected-000254",
+      "text": "если",
+      "start_s": 132.06,
+      "end_s": 132.26,
+      "source_word_id": "w000254"
+    },
+    {
+      "id": "expected-000255",
+      "text": "android",
+      "start_s": 132.26,
+      "end_s": 132.59999999999997,
+      "source_word_id": "w000255"
+    },
+    {
+      "id": "expected-000256",
+      "text": "тот",
+      "start_s": 132.59999999999997,
+      "end_s": 133.21999999999997,
+      "source_word_id": "w000256"
+    },
+    {
+      "id": "expected-000257",
+      "text": "целом",
+      "start_s": 133.21999999999997,
+      "end_s": 133.64,
+      "source_word_id": "w000257"
+    },
+    {
+      "id": "expected-000258",
+      "text": "вообще",
+      "start_s": 133.64,
+      "end_s": 133.86,
+      "source_word_id": "w000258"
+    },
+    {
+      "id": "expected-000259",
+      "text": "пофигу",
+      "start_s": 133.86,
+      "end_s": 134.44,
+      "source_word_id": "w000259"
+    },
+    {
+      "id": "expected-000260",
+      "text": "взяли",
+      "start_s": 134.44,
+      "end_s": 134.7,
+      "source_word_id": "w000260"
+    },
+    {
+      "id": "expected-000261",
+      "text": "собрали",
+      "start_s": 134.7,
+      "end_s": 135.56,
+      "source_word_id": "w000261"
+    },
+    {
+      "id": "expected-000262",
+      "text": "себе",
+      "start_s": 135.56,
+      "end_s": 135.76,
+      "source_word_id": "w000262"
+    },
+    {
+      "id": "expected-000263",
+      "text": "образ",
+      "start_s": 135.76,
+      "end_s": 136.24,
+      "source_word_id": "w000263"
+    },
+    {
+      "id": "expected-000264",
+      "text": "и",
+      "start_s": 136.24,
+      "end_s": 136.44,
+      "source_word_id": "w000264"
+    },
+    {
+      "id": "expected-000265",
+      "text": "пользуйтесь",
+      "start_s": 136.44,
+      "end_s": 137.18,
+      "source_word_id": "w000265"
+    },
+    {
+      "id": "expected-000266",
+      "text": "в",
+      "start_s": 137.18,
+      "end_s": 137.98000000000002,
+      "source_word_id": "w000266"
+    },
+    {
+      "id": "expected-000267",
+      "text": "общем",
+      "start_s": 137.98000000000002,
+      "end_s": 140.2,
+      "source_word_id": "w000267"
+    },
+    {
+      "id": "expected-000268",
+      "text": "то",
+      "start_s": 140.1999,
+      "end_s": 140.2399,
+      "source_word_id": "w000268"
+    },
+    {
+      "id": "expected-000269",
+      "text": "если",
+      "start_s": 140.21999999999997,
+      "end_s": 140.59999999999997,
+      "source_word_id": "w000269"
+    },
+    {
+      "id": "expected-000270",
+      "text": "подходит",
+      "start_s": 140.59999999999997,
+      "end_s": 141.36,
+      "source_word_id": "w000270"
+    },
+    {
+      "id": "expected-000271",
+      "text": "под",
+      "start_s": 141.36,
+      "end_s": 141.51999999999998,
+      "source_word_id": "w000271"
+    },
+    {
+      "id": "expected-000272",
+      "text": "юзер",
+      "start_s": 141.51999999999998,
+      "end_s": 141.83999999999997,
+      "source_word_id": "w000272"
+    },
+    {
+      "id": "expected-000273",
+      "text": "кейс",
+      "start_s": 141.83999999999997,
+      "end_s": 142.18,
+      "source_word_id": "w000273"
+    },
+    {
+      "id": "expected-000274",
+      "text": "то",
+      "start_s": 142.18,
+      "end_s": 142.57999999999998,
+      "source_word_id": "w000274"
+    },
+    {
+      "id": "expected-000275",
+      "text": "классно",
+      "start_s": 142.57999999999998,
+      "end_s": 143.26,
+      "source_word_id": "w000275"
+    },
+    {
+      "id": "expected-000276",
+      "text": "нет",
+      "start_s": 143.26,
+      "end_s": 145.3,
+      "source_word_id": "w000276"
+    },
+    {
+      "id": "expected-000277",
+      "text": "хуевая",
+      "start_s": 145.3,
+      "end_s": 145.89999999999998,
+      "source_word_id": "w000277"
+    },
+    {
+      "id": "expected-000278",
+      "text": "подводка",
+      "start_s": 145.89999999999998,
+      "end_s": 146.44,
+      "source_word_id": "w000278"
+    },
+    {
+      "id": "expected-000279",
+      "text": "это",
+      "start_s": 146.44,
+      "end_s": 146.56,
+      "source_word_id": "w000279"
+    },
+    {
+      "id": "expected-000280",
+      "text": "мы",
+      "start_s": 146.56,
+      "end_s": 146.68,
+      "source_word_id": "w000280"
+    },
+    {
+      "id": "expected-000281",
+      "text": "убираем",
+      "start_s": 146.68,
+      "end_s": 147.24,
+      "source_word_id": "w000281"
+    },
+    {
+      "id": "expected-000282",
+      "text": "эту",
+      "start_s": 147.24,
+      "end_s": 147.44,
+      "source_word_id": "w000282"
+    },
+    {
+      "id": "expected-000283",
+      "text": "ветку",
+      "start_s": 147.44,
+      "end_s": 147.77999999999997,
+      "source_word_id": "w000283"
+    },
+    {
+      "id": "expected-000284",
+      "text": "смысла",
+      "start_s": 147.77999999999997,
+      "end_s": 148.2,
+      "source_word_id": "w000284"
+    },
+    {
+      "id": "expected-000285",
+      "text": "что",
+      "start_s": 148.2,
+      "end_s": 148.89999999999998,
+      "source_word_id": "w000285"
+    },
+    {
+      "id": "expected-000286",
+      "text": "я",
+      "start_s": 148.89999999999998,
+      "end_s": 149.05999999999997,
+      "source_word_id": "w000286"
+    },
+    {
+      "id": "expected-000287",
+      "text": "хотел",
+      "start_s": 149.05999999999997,
+      "end_s": 149.26,
+      "source_word_id": "w000287"
+    },
+    {
+      "id": "expected-000288",
+      "text": "сказать",
+      "start_s": 149.26,
+      "end_s": 149.6,
+      "source_word_id": "w000288"
+    },
+    {
+      "id": "expected-000289",
+      "text": "ну",
+      "start_s": 149.6,
+      "end_s": 149.88,
+      "source_word_id": "w000289"
+    },
+    {
+      "id": "expected-000290",
+      "text": "вот",
+      "start_s": 149.88,
+      "end_s": 150.04,
+      "source_word_id": "w000290"
+    },
+    {
+      "id": "expected-000291",
+      "text": "я",
+      "start_s": 150.04,
+      "end_s": 150.16,
+      "source_word_id": "w000291"
+    },
+    {
+      "id": "expected-000292",
+      "text": "рассказал",
+      "start_s": 150.16,
+      "end_s": 150.6,
+      "source_word_id": "w000292"
+    },
+    {
+      "id": "expected-000293",
+      "text": "что",
+      "start_s": 150.6,
+      "end_s": 150.71999999999997,
+      "source_word_id": "w000293"
+    },
+    {
+      "id": "expected-000294",
+      "text": "как",
+      "start_s": 150.71999999999997,
+      "end_s": 150.89999999999998,
+      "source_word_id": "w000294"
+    },
+    {
+      "id": "expected-000295",
+      "text": "это",
+      "start_s": 150.89999999999998,
+      "end_s": 151.05999999999997,
+      "source_word_id": "w000295"
+    },
+    {
+      "id": "expected-000296",
+      "text": "классно",
+      "start_s": 151.05999999999997,
+      "end_s": 151.45999999999998,
+      "source_word_id": "w000296"
+    },
+    {
+      "id": "expected-000297",
+      "text": "бла",
+      "start_s": 151.45999999999998,
+      "end_s": 151.73999999999998,
+      "source_word_id": "w000297"
+    },
+    {
+      "id": "expected-000298",
+      "text": "бла",
+      "start_s": 151.73999999999998,
+      "end_s": 151.85999999999999,
+      "source_word_id": "w000298"
+    },
+    {
+      "id": "expected-000299",
+      "text": "бла",
+      "start_s": 151.85999999999999,
+      "end_s": 151.99999999999997,
+      "source_word_id": "w000299"
+    },
+    {
+      "id": "expected-000300",
+      "text": "можно",
+      "start_s": 151.99999999999997,
+      "end_s": 153.17999999999998,
+      "source_word_id": "w000300"
+    },
+    {
+      "id": "expected-000301",
+      "text": "на",
+      "start_s": 153.17999999999998,
+      "end_s": 153.42,
+      "source_word_id": "w000301"
+    },
+    {
+      "id": "expected-000302",
+      "text": "вайп",
+      "start_s": 153.42,
+      "end_s": 153.61999999999998,
+      "source_word_id": "w000302"
+    },
+    {
+      "id": "expected-000303",
+      "text": "кодить",
+      "start_s": 153.61999999999998,
+      "end_s": 153.98,
+      "source_word_id": "w000303"
+    },
+    {
+      "id": "expected-000304",
+      "text": "окей",
+      "start_s": 153.98,
+      "end_s": 154.39999999999998,
+      "source_word_id": "w000304"
+    },
+    {
+      "id": "expected-000305",
+      "text": "круто",
+      "start_s": 154.39999999999998,
+      "end_s": 154.85999999999999,
+      "source_word_id": "w000305"
+    },
+    {
+      "id": "expected-000306",
+      "text": "в",
+      "start_s": 154.85999999999999,
+      "end_s": 159.89999999999998,
+      "source_word_id": "w000306"
+    },
+    {
+      "id": "expected-000307",
+      "text": "общем",
+      "start_s": 159.89999999999998,
+      "end_s": 160.54,
+      "source_word_id": "w000307"
+    },
+    {
+      "id": "expected-000308",
+      "text": "это",
+      "start_s": 160.54,
+      "end_s": 160.73999999999998,
+      "source_word_id": "w000308"
+    },
+    {
+      "id": "expected-000309",
+      "text": "решение",
+      "start_s": 160.73999999999998,
+      "end_s": 161.38,
+      "source_word_id": "w000309"
+    },
+    {
+      "id": "expected-000310",
+      "text": "не",
+      "start_s": 161.38,
+      "end_s": 161.6,
+      "source_word_id": "w000310"
+    },
+    {
+      "id": "expected-000311",
+      "text": "для",
+      "start_s": 161.6,
+      "end_s": 161.83999999999997,
+      "source_word_id": "w000311"
+    },
+    {
+      "id": "expected-000312",
+      "text": "какого",
+      "start_s": 161.83999999999997,
+      "end_s": 162.27999999999997,
+      "source_word_id": "w000312"
+    },
+    {
+      "id": "expected-000313",
+      "text": "то",
+      "start_s": 162.27999999999997,
+      "end_s": 162.35999999999999,
+      "source_word_id": "w000313"
+    },
+    {
+      "id": "expected-000314",
+      "text": "отдела",
+      "start_s": 162.35999999999999,
+      "end_s": 162.77999999999997,
+      "source_word_id": "w000314"
+    },
+    {
+      "id": "expected-000315",
+      "text": "продаж",
+      "start_s": 162.77999999999997,
+      "end_s": 163.17999999999998,
+      "source_word_id": "w000315"
+    },
+    {
+      "id": "expected-000316",
+      "text": "а",
+      "start_s": 163.17999999999998,
+      "end_s": 163.51999999999998,
+      "source_word_id": "w000316"
+    },
+    {
+      "id": "expected-000317",
+      "text": "исключительно",
+      "start_s": 163.51999999999998,
+      "end_s": 165.16,
+      "source_word_id": "w000317"
+    },
+    {
+      "id": "expected-000318",
+      "text": "под",
+      "start_s": 165.16,
+      "end_s": 165.32,
+      "source_word_id": "w000318"
+    },
+    {
+      "id": "expected-000319",
+      "text": "одного",
+      "start_s": 165.32,
+      "end_s": 165.85999999999999,
+      "source_word_id": "w000319"
+    },
+    {
+      "id": "expected-000320",
+      "text": "человека",
+      "start_s": 165.85999999999999,
+      "end_s": 166.64,
+      "source_word_id": "w000320"
+    },
+    {
+      "id": "expected-000321",
+      "text": "с",
+      "start_s": 166.64,
+      "end_s": 167.39999999999998,
+      "source_word_id": "w000321"
+    },
+    {
+      "id": "expected-000322",
+      "text": "одним",
+      "start_s": 167.39999999999998,
+      "end_s": 167.92,
+      "source_word_id": "w000322"
+    },
+    {
+      "id": "expected-000323",
+      "text": "телефоном",
+      "start_s": 167.92000000000002,
+      "end_s": 168.72,
+      "source_word_id": "w000323"
+    },
+    {
+      "id": "expected-000324",
+      "text": "в",
+      "start_s": 168.72,
+      "end_s": 168.8,
+      "source_word_id": "w000324"
+    },
+    {
+      "id": "expected-000325",
+      "text": "общем",
+      "start_s": 168.8,
+      "end_s": 170.54000000000002,
+      "source_word_id": "w000325"
+    },
+    {
+      "id": "expected-000326",
+      "text": "это",
+      "start_s": 170.54000000000002,
+      "end_s": 170.82000000000002,
+      "source_word_id": "w000326"
+    },
+    {
+      "id": "expected-000327",
+      "text": "решение",
+      "start_s": 170.82000000000002,
+      "end_s": 171.20000000000002,
+      "source_word_id": "w000327"
+    },
+    {
+      "id": "expected-000328",
+      "text": "не",
+      "start_s": 171.20000000000002,
+      "end_s": 171.36,
+      "source_word_id": "w000328"
+    },
+    {
+      "id": "expected-000329",
+      "text": "под",
+      "start_s": 171.36,
+      "end_s": 171.5,
+      "source_word_id": "w000329"
+    },
+    {
+      "id": "expected-000330",
+      "text": "какой",
+      "start_s": 171.5,
+      "end_s": 171.78,
+      "source_word_id": "w000330"
+    },
+    {
+      "id": "expected-000331",
+      "text": "то",
+      "start_s": 171.78,
+      "end_s": 171.88000000000002,
+      "source_word_id": "w000331"
+    },
+    {
+      "id": "expected-000332",
+      "text": "отдел",
+      "start_s": 171.88000000000002,
+      "end_s": 172.12,
+      "source_word_id": "w000332"
+    },
+    {
+      "id": "expected-000333",
+      "text": "продаж",
+      "start_s": 172.12,
+      "end_s": 172.8,
+      "source_word_id": "w000333"
+    },
+    {
+      "id": "expected-000334",
+      "text": "большую",
+      "start_s": 172.8,
+      "end_s": 173.22,
+      "source_word_id": "w000334"
+    },
+    {
+      "id": "expected-000335",
+      "text": "компанию",
+      "start_s": 173.22,
+      "end_s": 173.76000000000002,
+      "source_word_id": "w000335"
+    },
+    {
+      "id": "expected-000336",
+      "text": "ну",
+      "start_s": 173.76000000000002,
+      "end_s": 174.16000000000003,
+      "source_word_id": "w000336"
+    },
+    {
+      "id": "expected-000337",
+      "text": "а",
+      "start_s": 174.16000000000003,
+      "end_s": 174.28,
+      "source_word_id": "w000337"
+    },
+    {
+      "id": "expected-000338",
+      "text": "как",
+      "start_s": 174.28,
+      "end_s": 174.58,
+      "source_word_id": "w000338"
+    },
+    {
+      "id": "expected-000339",
+      "text": "она",
+      "start_s": 174.58,
+      "end_s": 175.3,
+      "source_word_id": "w000339"
+    },
+    {
+      "id": "expected-000340",
+      "text": "и",
+      "start_s": 175.3,
+      "end_s": 175.66000000000003,
+      "source_word_id": "w000340"
+    },
+    {
+      "id": "expected-000341",
+      "text": "было",
+      "start_s": 175.66000000000003,
+      "end_s": 176.04000000000002,
+      "source_word_id": "w000341"
+    },
+    {
+      "id": "expected-000342",
+      "text": "написано",
+      "start_s": 176.04000000000002,
+      "end_s": 176.62,
+      "source_word_id": "w000342"
+    },
+    {
+      "id": "expected-000343",
+      "text": "конкретно",
+      "start_s": 176.62,
+      "end_s": 177.52,
+      "source_word_id": "w000343"
+    },
+    {
+      "id": "expected-000344",
+      "text": "под",
+      "start_s": 177.52,
+      "end_s": 177.68,
+      "source_word_id": "w000344"
+    },
+    {
+      "id": "expected-000345",
+      "text": "одного",
+      "start_s": 177.68,
+      "end_s": 177.9,
+      "source_word_id": "w000345"
+    },
+    {
+      "id": "expected-000346",
+      "text": "человека",
+      "start_s": 177.9,
+      "end_s": 178.42000000000002,
+      "source_word_id": "w000346"
+    },
+    {
+      "id": "expected-000347",
+      "text": "с",
+      "start_s": 178.42000000000002,
+      "end_s": 178.66000000000003,
+      "source_word_id": "w000347"
+    },
+    {
+      "id": "expected-000348",
+      "text": "конкретным",
+      "start_s": 178.66000000000003,
+      "end_s": 179.20000000000002,
+      "source_word_id": "w000348"
+    },
+    {
+      "id": "expected-000349",
+      "text": "телефоном",
+      "start_s": 179.20000000000002,
+      "end_s": 179.70000000000002,
+      "source_word_id": "w000349"
+    },
+    {
+      "id": "expected-000350",
+      "text": "кто",
+      "start_s": 179.70000000000002,
+      "end_s": 180.46,
+      "source_word_id": "w000350"
+    },
+    {
+      "id": "expected-000351",
+      "text": "не",
+      "start_s": 180.46,
+      "end_s": 181.16000000000003,
+      "source_word_id": "w000351"
+    },
+    {
+      "id": "expected-000352",
+      "text": "хочет",
+      "start_s": 181.16000000000003,
+      "end_s": 181.52,
+      "source_word_id": "w000352"
+    },
+    {
+      "id": "expected-000353",
+      "text": "чтобы",
+      "start_s": 181.52,
+      "end_s": 181.92000000000002,
+      "source_word_id": "w000353"
+    },
+    {
+      "id": "expected-000354",
+      "text": "его",
+      "start_s": 181.92000000000002,
+      "end_s": 182.14000000000001,
+      "source_word_id": "w000354"
+    },
+    {
+      "id": "expected-000355",
+      "text": "переписки",
+      "start_s": 182.14000000000001,
+      "end_s": 182.72,
+      "source_word_id": "w000355"
+    },
+    {
+      "id": "expected-000356",
+      "text": "утекали",
+      "start_s": 182.72,
+      "end_s": 183.22,
+      "source_word_id": "w000356"
+    },
+    {
+      "id": "expected-000357",
+      "text": "куда",
+      "start_s": 183.22,
+      "end_s": 183.46,
+      "source_word_id": "w000357"
+    },
+    {
+      "id": "expected-000358",
+      "text": "либо",
+      "start_s": 183.46,
+      "end_s": 183.84,
+      "source_word_id": "w000358"
+    },
+    {
+      "id": "expected-000359",
+      "text": "для",
+      "start_s": 183.84,
+      "end_s": 185.46,
+      "source_word_id": "w000359"
+    },
+    {
+      "id": "expected-000360",
+      "text": "важных",
+      "start_s": 185.46,
+      "end_s": 186.04000000000002,
+      "source_word_id": "w000360"
+    },
+    {
+      "id": "expected-000361",
+      "text": "приватных",
+      "start_s": 186.04000000000002,
+      "end_s": 186.62,
+      "source_word_id": "w000361"
+    },
+    {
+      "id": "expected-000362",
+      "text": "звонков",
+      "start_s": 186.62,
+      "end_s": 187.26000000000002,
+      "source_word_id": "w000362"
+    }
+  ],
+  "utterances": [
+    {
+      "source_entry_id": "u0001",
+      "start_s": 0.0,
+      "end_s": 110.76,
+      "text": "разработчик создал crm без сервера чтобы не хранить чужие звонки какой-то чел на своем мобильном телефоне сделал проект серым системы которая слушает звонки которые происходят на телефоне но и как я понимаю еще в мессенджерах банально просто на диктофон встроенных телефон потом транскрибирует эти звонки локально на нужный язык достаточно медленно но тем не менее работает 10-минутный звонок как заявлено расшифровывает за шесть с половиной минут либо на другой модели транскрибации за 17 минут но понятное дело это все показатели настраиваемые а потом локальная моделика и и раскладывает анализирует звонок и создает markdown файлы для обсидиана короче отбрасывая техничку просто сохраняет очень просто файлики локально на телефоне при этом какие-то дукапы и облачные загрузки отключены у этого проекта офигенная идея я не так давно смотрел локальную нерунку на телефон который даже сама какой-то сервис типа разрабатывает достаточно тупенько но тем не менее может запилить прямо саску туда мы ставим уточнение звездочку что телефон должен быть достаточно мощным и не вы со временем мы будем видеть все больше и все более умные локальные модели которые будут опускаться там вплоть до часов или еще более мелких девайсов работать без зависимости от какого-то облачного железа что классно ну и если в ваших других задачах",
+      "word_ids": [
+        "expected-000001",
+        "expected-000002",
+        "expected-000003",
+        "expected-000004",
+        "expected-000005",
+        "expected-000006",
+        "expected-000007",
+        "expected-000008",
+        "expected-000009",
+        "expected-000010",
+        "expected-000011",
+        "expected-000012",
+        "expected-000013",
+        "expected-000014",
+        "expected-000015",
+        "expected-000016",
+        "expected-000017",
+        "expected-000018",
+        "expected-000019",
+        "expected-000020",
+        "expected-000021",
+        "expected-000022",
+        "expected-000023",
+        "expected-000024",
+        "expected-000025",
+        "expected-000026",
+        "expected-000027",
+        "expected-000028",
+        "expected-000029",
+        "expected-000030",
+        "expected-000031",
+        "expected-000032",
+        "expected-000033",
+        "expected-000034",
+        "expected-000035",
+        "expected-000036",
+        "expected-000037",
+        "expected-000038",
+        "expected-000039",
+        "expected-000040",
+        "expected-000041",
+        "expected-000042",
+        "expected-000043",
+        "expected-000044",
+        "expected-000045",
+        "expected-000046",
+        "expected-000047",
+        "expected-000048",
+        "expected-000049",
+        "expected-000050",
+        "expected-000051",
+        "expected-000052",
+        "expected-000053",
+        "expected-000054",
+        "expected-000055",
+        "expected-000056",
+        "expected-000057",
+        "expected-000058",
+        "expected-000059",
+        "expected-000060",
+        "expected-000061",
+        "expected-000062",
+        "expected-000063",
+        "expected-000064",
+        "expected-000065",
+        "expected-000066",
+        "expected-000067",
+        "expected-000068",
+        "expected-000069",
+        "expected-000070",
+        "expected-000071",
+        "expected-000072",
+        "expected-000073",
+        "expected-000074",
+        "expected-000075",
+        "expected-000076",
+        "expected-000077",
+        "expected-000078",
+        "expected-000079",
+        "expected-000080",
+        "expected-000081",
+        "expected-000082",
+        "expected-000083",
+        "expected-000084",
+        "expected-000085",
+        "expected-000086",
+        "expected-000087",
+        "expected-000088",
+        "expected-000089",
+        "expected-000090",
+        "expected-000091",
+        "expected-000092",
+        "expected-000093",
+        "expected-000094",
+        "expected-000095",
+        "expected-000096",
+        "expected-000097",
+        "expected-000098",
+        "expected-000099",
+        "expected-000100",
+        "expected-000101",
+        "expected-000102",
+        "expected-000103",
+        "expected-000104",
+        "expected-000105",
+        "expected-000106",
+        "expected-000107",
+        "expected-000108",
+        "expected-000109",
+        "expected-000110",
+        "expected-000111",
+        "expected-000112",
+        "expected-000113",
+        "expected-000114",
+        "expected-000115",
+        "expected-000116",
+        "expected-000117",
+        "expected-000118",
+        "expected-000119",
+        "expected-000120",
+        "expected-000121",
+        "expected-000122",
+        "expected-000123",
+        "expected-000124",
+        "expected-000125",
+        "expected-000126",
+        "expected-000127",
+        "expected-000128",
+        "expected-000129",
+        "expected-000130",
+        "expected-000131",
+        "expected-000132",
+        "expected-000133",
+        "expected-000134",
+        "expected-000135",
+        "expected-000136",
+        "expected-000137",
+        "expected-000138",
+        "expected-000139",
+        "expected-000140",
+        "expected-000141",
+        "expected-000142",
+        "expected-000143",
+        "expected-000144",
+        "expected-000145",
+        "expected-000146",
+        "expected-000147",
+        "expected-000148",
+        "expected-000149",
+        "expected-000150",
+        "expected-000151",
+        "expected-000152",
+        "expected-000153",
+        "expected-000154",
+        "expected-000155",
+        "expected-000156",
+        "expected-000157",
+        "expected-000158",
+        "expected-000159",
+        "expected-000160",
+        "expected-000161",
+        "expected-000162",
+        "expected-000163",
+        "expected-000164",
+        "expected-000165",
+        "expected-000166",
+        "expected-000167",
+        "expected-000168",
+        "expected-000169",
+        "expected-000170",
+        "expected-000171",
+        "expected-000172",
+        "expected-000173",
+        "expected-000174",
+        "expected-000175",
+        "expected-000176",
+        "expected-000177",
+        "expected-000178",
+        "expected-000179",
+        "expected-000180",
+        "expected-000181",
+        "expected-000182",
+        "expected-000183",
+        "expected-000184",
+        "expected-000185",
+        "expected-000186",
+        "expected-000187",
+        "expected-000188",
+        "expected-000189",
+        "expected-000190",
+        "expected-000191",
+        "expected-000192",
+        "expected-000193",
+        "expected-000194",
+        "expected-000195",
+        "expected-000196",
+        "expected-000197",
+        "expected-000198",
+        "expected-000199",
+        "expected-000200",
+        "expected-000201",
+        "expected-000202",
+        "expected-000203",
+        "expected-000204",
+        "expected-000205",
+        "expected-000206"
+      ],
+      "caption_timing": "source-words"
+    },
+    {
+      "source_entry_id": "u0017",
+      "start_s": 110.76,
+      "end_s": 148.2,
+      "text": "данный кейс интересен можно во-первых вызывай ходить такой себе за буквально пару дней там ничего сложного по крайней мере если у вас android циклом сложно попасть в appstore там и какие-то конские подписки что долларов в год нужно платить просто за возможность выложить приложение но если android тот целом вообще пофигу взяли собрали себе образ и пользуйтесь в общем-то если подходит под юзер кейс то классно нет хуевая подводка это мы убираем эту ветку смысла",
+      "word_ids": [
+        "expected-000207",
+        "expected-000208",
+        "expected-000209",
+        "expected-000210",
+        "expected-000211",
+        "expected-000212",
+        "expected-000213",
+        "expected-000214",
+        "expected-000215",
+        "expected-000216",
+        "expected-000217",
+        "expected-000218",
+        "expected-000219",
+        "expected-000220",
+        "expected-000221",
+        "expected-000222",
+        "expected-000223",
+        "expected-000224",
+        "expected-000225",
+        "expected-000226",
+        "expected-000227",
+        "expected-000228",
+        "expected-000229",
+        "expected-000230",
+        "expected-000231",
+        "expected-000232",
+        "expected-000233",
+        "expected-000234",
+        "expected-000235",
+        "expected-000236",
+        "expected-000237",
+        "expected-000238",
+        "expected-000239",
+        "expected-000240",
+        "expected-000241",
+        "expected-000242",
+        "expected-000243",
+        "expected-000244",
+        "expected-000245",
+        "expected-000246",
+        "expected-000247",
+        "expected-000248",
+        "expected-000249",
+        "expected-000250",
+        "expected-000251",
+        "expected-000252",
+        "expected-000253",
+        "expected-000254",
+        "expected-000255",
+        "expected-000256",
+        "expected-000257",
+        "expected-000258",
+        "expected-000259",
+        "expected-000260",
+        "expected-000261",
+        "expected-000262",
+        "expected-000263",
+        "expected-000264",
+        "expected-000265",
+        "expected-000266",
+        "expected-000267",
+        "expected-000268",
+        "expected-000269",
+        "expected-000270",
+        "expected-000271",
+        "expected-000272",
+        "expected-000273",
+        "expected-000274",
+        "expected-000275",
+        "expected-000276",
+        "expected-000277",
+        "expected-000278",
+        "expected-000279",
+        "expected-000280",
+        "expected-000281",
+        "expected-000282",
+        "expected-000283",
+        "expected-000284"
+      ],
+      "caption_timing": "source-words"
+    },
+    {
+      "source_entry_id": "u0023",
+      "start_s": 148.2,
+      "end_s": 167.92,
+      "text": "что я хотел сказать ну вот я рассказал что как это классно бла-бла-бла можно на вайп кодить окей круто в общем это решение не для какого-то отдела продаж а исключительно под одного человека с одним",
+      "word_ids": [
+        "expected-000285",
+        "expected-000286",
+        "expected-000287",
+        "expected-000288",
+        "expected-000289",
+        "expected-000290",
+        "expected-000291",
+        "expected-000292",
+        "expected-000293",
+        "expected-000294",
+        "expected-000295",
+        "expected-000296",
+        "expected-000297",
+        "expected-000298",
+        "expected-000299",
+        "expected-000300",
+        "expected-000301",
+        "expected-000302",
+        "expected-000303",
+        "expected-000304",
+        "expected-000305",
+        "expected-000306",
+        "expected-000307",
+        "expected-000308",
+        "expected-000309",
+        "expected-000310",
+        "expected-000311",
+        "expected-000312",
+        "expected-000313",
+        "expected-000314",
+        "expected-000315",
+        "expected-000316",
+        "expected-000317",
+        "expected-000318",
+        "expected-000319",
+        "expected-000320",
+        "expected-000321",
+        "expected-000322"
+      ],
+      "caption_timing": "source-words"
+    },
+    {
+      "source_entry_id": "u0025",
+      "start_s": 167.92,
+      "end_s": 187.26000000000002,
+      "text": "телефоном в общем это решение не под какой-то отдел продаж большую компанию ну а как она и было написано конкретно под одного человека с конкретным телефоном кто не хочет чтобы его переписки утекали куда-либо для важных приватных звонков",
+      "word_ids": [
+        "expected-000323",
+        "expected-000324",
+        "expected-000325",
+        "expected-000326",
+        "expected-000327",
+        "expected-000328",
+        "expected-000329",
+        "expected-000330",
+        "expected-000331",
+        "expected-000332",
+        "expected-000333",
+        "expected-000334",
+        "expected-000335",
+        "expected-000336",
+        "expected-000337",
+        "expected-000338",
+        "expected-000339",
+        "expected-000340",
+        "expected-000341",
+        "expected-000342",
+        "expected-000343",
+        "expected-000344",
+        "expected-000345",
+        "expected-000346",
+        "expected-000347",
+        "expected-000348",
+        "expected-000349",
+        "expected-000350",
+        "expected-000351",
+        "expected-000352",
+        "expected-000353",
+        "expected-000354",
+        "expected-000355",
+        "expected-000356",
+        "expected-000357",
+        "expected-000358",
+        "expected-000359",
+        "expected-000360",
+        "expected-000361",
+        "expected-000362"
+      ],
+      "caption_timing": "source-words"
+    }
+  ]
+}

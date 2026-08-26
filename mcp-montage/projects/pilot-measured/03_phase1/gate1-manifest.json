@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "kind": "gate1",
+  "project_id": "pilot-measured",
+  "revision": 1,
+  "style_version": "strokov-measured-v1",
+  "provider_versions": {
+    "transcription": "faster-whisper:large-v3",
+    "editorial": "editorial-analysis-v6",
+    "visual_planning": "visual-planner-v4",
+    "broll_search": "broll-lexical-search-v2-senses",
+    "cross_segment_takes": "cross-segment-takes-v1",
+    "film_continuity": "film-continuity-v1"
+  },
+  "review": {
+    "kind": "gate1-review",
+    "path": "03_phase1/review.md",
+    "sha256": "sha256:adcadf3a62f761397a8b0151c61abc5b1d99cb6146a209f09ec3adead249473d",
+    "size_bytes": 2927
+  },
+  "cross_segment_take_analysis": {
+    "kind": "cross-segment-take-analysis",
+    "path": "03_phase1/cross-segment-take-analysis.json",
+    "sha256": "sha256:b13da6379bac4111a8012a15c0e26b6b02c826343649ebe6ab3ad44237bbab68",
+    "size_bytes": 694
+  },
+  "film_continuity": {
+    "kind": "film-continuity",
+    "path": "03_phase1/film-continuity.json",
+    "sha256": "sha256:00f6bf48c72f324222289ad9e52db622b8f09673beb1e080836115cac4f90b28",
+    "size_bytes": 538
+  },
+  "segments": [
+    {
+      "id": "01",
+      "source_transcript": {
+        "kind": "source-transcript",
+        "path": "03_phase1/segments/01/source-transcript.json",
+        "sha256": "sha256:7133368d710ae045edeb700198ccecb7a9d18d506f7e7a0ad1685861a0332f1a",
+        "size_bytes": 12496
+      },
+      "editorial_analysis": {
+        "kind": "editorial-analysis",
+        "path": "03_phase1/segments/01/editorial-analysis.json",
+        "sha256": "sha256:229d3a24c1c138af66f5fc31f001cdac0b99a6aa4a71a78cae52e7ff0b6d7f97",
+        "size_bytes": 672
+      },
+      "transcript": {
+        "kind": "editable-transcript",
+        "path": "03_phase1/segments/01/transcript.md",
+        "sha256": "sha256:9d1e4ac374d55223d50009e2ff766bc7f06738048c9dcbd23d7525cdf493d48c",
+        "size_bytes": 1039
+      },
+      "sync_report": {
+        "kind": "sync-report",
+        "path": "03_phase1/segments/01/sync-report.json",
+        "sha256": "sha256:8dd318008a5f929419a5851bbfb89f1c0a2622bb1a938e995884640e017ec320",
+        "size_bytes": 354
+      },
+      "grade_manifest": {
+        "kind": "grade-manifest",
+        "path": "03_phase1/segments/01/grade-manifest.json",
+        "sha256": "sha256:0f257882848017c98ea1a7d44fd078d565f42b336aebff8a75db70aa372d97cf",
+        "size_bytes": 1279
+      },
+      "visual_plan": {
+        "kind": "visual-plan",
+        "path": "03_phase1/segments/01/visual-plan.json",
+        "sha256": "sha256:82a86d1bb69c053abfc8eac53e6a1f67bac6db669460b02387eab387a8c63e97",
+        "size_bytes": 563
+      },
+      "broll_assets": []
+    }
+  ]
+}

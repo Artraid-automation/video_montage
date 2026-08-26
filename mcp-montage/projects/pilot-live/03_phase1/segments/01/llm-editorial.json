@@ -1,0 +1,49 @@
+{
+  "schema_version": 2,
+  "kind": "llm-editorial-result",
+  "worker_version": "llm-editorial-v3",
+  "prompt_version": "gate1-editorial-cohesion.v2",
+  "segment_id": "01",
+  "request_block_count": 4,
+  "working_block_count": 4,
+  "splits": [],
+  "decisions": [
+    {
+      "id": "u0001",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0017",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0023",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0025",
+      "kind": "keep",
+      "reason": null
+    }
+  ],
+  "narrative_summary": "Fixture provider applied heuristic decisions with split safety-net.",
+  "risks": [
+    "fixture provider — not for production Gate 1"
+  ],
+  "coverage_end_s": 196.18,
+  "media_end_s": 196.18,
+  "source_request": {
+    "segment_id": "01",
+    "prompt_version": "gate1-editorial-cohesion.v2",
+    "block_ids": [
+      "u0001",
+      "u0017",
+      "u0023",
+      "u0025"
+    ]
+  },
+  "provider": "fixture"
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": 2,
+  "project_id": "pilot-live2",
+  "revision": 2,
+  "state": "PHASE1_RUNNING",
+  "updated_at": "2026-08-26T12:38:13.448447+00:00",
+  "run": {
+    "id": "8986593e2ed34971adefd2d085cc3ba2",
+    "phase": "phase1",
+    "attempt": 1,
+    "checkpoint": "ingested",
+    "inputs_hash": "sha256:53586f1c1e5cf9b013fb4aebf66bc95244d5c6f0336a402eb4a2824e44bcc6ed",
+    "started_at": "2026-08-26T12:38:13.442909+00:00",
+    "heartbeat_at": "2026-08-26T12:38:13.448428+00:00",
+    "evidence": {
+      "ingested": {
+        "manifest_hash": "sha256:5faf8c83f605f9d13e55e86e4ddc718e74ac455ebcee58c3bea39133a36fd3d8"
+      }
+    }
+  },
+  "gates": {},
+  "approvals": [],
+  "revision_request": null,
+  "last_error": null,
+  "events": [
+    {
+      "id": "4e7541fb8a4f42fd99eac386096cf406",
+      "at": "2026-08-26T12:38:12.020416+00:00",
+      "type": "state_created",
+      "state": "NEW",
+      "details": {}
+    },
+    {
+      "id": "fb6d7d6723e9498ab1da4f3125c83a35",
+      "at": "2026-08-26T12:38:13.442931+00:00",
+      "type": "phase1_started",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "NEW",
+        "inputs_hash": "sha256:53586f1c1e5cf9b013fb4aebf66bc95244d5c6f0336a402eb4a2824e44bcc6ed"
+      }
+    },
+    {
+      "id": "0a3dcbadd8984c5ea2ad7d558745f991",
+      "at": "2026-08-26T12:38:13.448447+00:00",
+      "type": "checkpoint",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "checkpoint": "ingested"
+      }
+    }
+  ]
+}

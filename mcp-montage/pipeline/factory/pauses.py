@@ -22,6 +22,12 @@ DEFAULT_THRESHOLD_S = 0.15
 DEFAULT_KEEP_S = 0.06
 DEFAULT_NOISE_DB = -32.0
 
+_MEAN_VOLUME = re.compile(r"mean_volume:\s*(-?[\d.]+)\s*dB")
+# `-inf` — это не мусор, а абсолютная тишина. Без него окна выпадали из выборки,
+# и время всех последующих уезжало: шкала строится по их порядковому номеру.
+_RMS_LEVEL = re.compile(r"lavfi\.astats\.Overall\.RMS_level=(-?(?:inf|[\d.]+))")
+SILENT_FLOOR_DB = -100.0
+WINDOW_S = 0.05
 _SILENCE_START = re.compile(r"silence_start:\s*(-?[\d.]+)")
 _SILENCE_END = re.compile(r"silence_end:\s*(-?[\d.]+)")
 
@@ -81,25 +87,110 @@ def word_gap_cuts(
     return cuts
 
 
+def rms_windows(audio_path: Path, *, window_s: float = WINDOW_S) -> list[tuple[float, float]]:
+    """Уровень сигнала по окнам: (время начала окна, RMS в dB)."""
+    result = subprocess.run(
+        ["ffmpeg", "-hide_banner", "-nostats", "-i", str(audio_path),
+         "-af", f"astats=metadata=1:reset=1:length={window_s},"
+                "ametadata=print:key=lavfi.astats.Overall.RMS_level:file=-",
+         "-f", "null", "-"],
+        capture_output=True, text=True,
+    )
+    levels: list[float] = []
+    for value in _RMS_LEVEL.findall(result.stdout + result.stderr):
+        levels.append(SILENT_FLOOR_DB if value.endswith("inf") else float(value))
+    return [(round(index * window_s, 6), level) for index, level in enumerate(levels)]
+
+
+def adaptive_noise_db(
+    audio_path: Path, *, below_median_db: float = 10.0, floor_db: float = -60.0
+) -> float:
+    """Порог тишины от фактического уровня записи, а не абсолютной константой.
+
+    В сведённом ролике тишина уходит под −50 dB, в сырой записи всегда есть фон комнаты.
+    У живого исходника (−23 LUFS) абсолютный порог −32 dB не нашёл ни одной паузы,
+    хотя почти четверть записи тише −45 dB.
+    """
+    levels = [level for _, level in rms_windows(audio_path)]
+    if not levels:
+        return DEFAULT_NOISE_DB
+    levels.sort()
+    median = levels[len(levels) // 2]
+    return round(max(floor_db, min(-20.0, median - float(below_median_db))), 2)
+
+
 def silence_windows(
-    audio_path: Path, *, noise_db: float = DEFAULT_NOISE_DB, min_s: float = 0.10
+    audio_path: Path,
+    *,
+    noise_db: float | None = None,
+    min_s: float = 0.10,
+    window_s: float = WINDOW_S,
 ) -> list[tuple[float, float]]:
-    """Участки тишины по энергии сигнала. Не зависит от того, верно ли распознано слово."""
-    command = [
-        "ffmpeg", "-hide_banner", "-nostats", "-i", str(audio_path),
-        "-af", f"silencedetect=noise={noise_db}dB:d={min_s}", "-f", "null", "-",
-    ]
-    result = subprocess.run(command, capture_output=True, text=True)
-    stream = f"{result.stdout}\n{result.stderr}"
-    starts = [float(value) for value in _SILENCE_START.findall(stream)]
-    ends = [float(value) for value in _SILENCE_END.findall(stream)]
+    """Участки тишины по уровню сигнала. Не зависит от того, верно ли распознано слово.
+
+    Считается по окнам, а не через `silencedetect`: тот работает по мгновенной амплитуде
+    и рвёт паузу на любом щелчке или вдохе — на живой записи он не нашёл ни одного
+    участка там, где по уровню тишины почти четверть хронометража.
+    """
+    levels = rms_windows(audio_path, window_s=window_s)
+    if not levels:
+        return []
+    threshold = adaptive_noise_db(audio_path) if noise_db is None else float(noise_db)
     windows: list[tuple[float, float]] = []
-    for index, start in enumerate(starts):
-        end = ends[index] if index < len(ends) else None
-        if end is None or end <= start:
-            continue
-        windows.append((round(start, 6), round(end, 6)))
+    run_start: float | None = None
+    for start, level in levels:
+        quiet = level < threshold
+        if quiet and run_start is None:
+            run_start = start
+        elif not quiet and run_start is not None:
+            if start - run_start >= min_s:
+                windows.append((round(run_start, 6), round(start, 6)))
+            run_start = None
+    if run_start is not None:
+        end = levels[-1][0] + window_s
+        if end - run_start >= min_s:
+            windows.append((round(run_start, 6), round(end, 6)))
     return windows
+
+
+def silence_cuts(
+    audio_path: Path,
+    *,
+    threshold_s: float = DEFAULT_THRESHOLD_S,
+    keep_s: float = DEFAULT_KEEP_S,
+    noise_db: float | None = None,
+    edge_pad_s: float = 0.03,
+) -> list[dict[str, Any]]:
+    """Резы прямо из тишины в звуке — основной источник, а не подтверждение.
+
+    Пословные тайминги ASR для этого не годятся. На живом исходнике whisper large-v3
+    растянул слова так, что речь заняла 93% хронометража и нашлось четыре паузы,
+    тогда как по уровню сигнала тишины было 55% и 149 участков. Модель тянет границу
+    слова через паузу; звук не тянет.
+
+    `edge_pad_s` отступает от краёв тишины, чтобы не срезать атаку следующего слова
+    и хвост предыдущего.
+    """
+    if keep_s >= threshold_s:
+        raise ValueError("keep_s must be shorter than the threshold, otherwise nothing is cut")
+    windows = silence_windows(audio_path, noise_db=noise_db, min_s=threshold_s)
+    cuts: list[dict[str, Any]] = []
+    for index, (start, end) in enumerate(windows, 1):
+        inner_start = start + edge_pad_s + keep_s / 2.0
+        inner_end = end - edge_pad_s - keep_s / 2.0
+        if inner_end - inner_start <= 0:
+            continue
+        cuts.append({
+            "id": f"silence-{index:04d}",
+            "gap_s": round(end - start, 6),
+            "start_s": round(inner_start, 6),
+            "end_s": round(inner_end, 6),
+            "removed_s": round(inner_end - inner_start, 6),
+            "reason": "silence-in-signal",
+            "audio_confirmed": True,
+            "audio_silence_share": 1.0,
+        })
+    return cuts
 
 
 def confirm_with_audio(
@@ -151,22 +242,64 @@ def cut_plan(
     audio_path: Path | None = None,
     threshold_s: float = DEFAULT_THRESHOLD_S,
     keep_s: float = DEFAULT_KEEP_S,
-    noise_db: float = DEFAULT_NOISE_DB,
+    noise_db: float | None = None,
 ) -> dict[str, Any]:
-    """План реза пауз с числами: сколько уходит, сколько склеек, какая плотность выйдет."""
-    cuts = word_gap_cuts(source_transcript, threshold_s=threshold_s, keep_s=keep_s)
-    windows: list[tuple[float, float]] = []
-    if audio_path is not None and Path(audio_path).is_file():
-        windows = silence_windows(Path(audio_path), noise_db=noise_db)
-        cuts = confirm_with_audio(cuts, windows)
-    words = _words(source_transcript)
-    source_duration = round(float(words[-1]["end_s"]) - float(words[0]["start_s"]), 6) if words else 0.0
+    """План реза пауз с числами: сколько уходит, сколько склеек, какая плотность выйдет.
+
+    Источник пауз — звук, если он доступен. Расшифровка используется как запасной
+    вариант и для сверки: её тайминги на сырых дублях систематически съедают паузы.
+    """
+    words: list[dict[str, Any]] = []
+    word_cuts: list[dict[str, Any]] = []
+    try:
+        words = _words(source_transcript)
+        word_cuts = word_gap_cuts(source_transcript, threshold_s=threshold_s, keep_s=keep_s)
+    except ValueError:
+        words = []
+        word_cuts = []
+
+    source = "words"
+    cuts = word_cuts
+    audio_available = audio_path is not None and Path(audio_path).is_file()
+    if audio_available:
+        cuts = silence_cuts(
+            Path(audio_path), threshold_s=threshold_s, keep_s=keep_s, noise_db=noise_db
+        )
+        source = "audio"
+    if not words and not audio_available:
+        raise ValueError("neither word timings nor audio available: nothing to plan from")
+
+    # Длительность берём из самого файла, а не из слов: на сырых дублях whisper
+    # выдал тайминги до 469-й секунды при медиа в 200 секунд.
+    source_duration = 0.0
+    if audio_available:
+        # media.duration_s принимает отчёт probe, а не путь — вызов с путём молча уходил
+        # в except и длительность оставалась ложной.
+        from .media import duration_s as _media_duration
+        from .media import probe as _media_probe
+        try:
+            source_duration = round(float(_media_duration(_media_probe(Path(audio_path)))), 6)
+        except Exception:
+            source_duration = 0.0
+    if source_duration <= 0:
+        media_end = max(
+            (float(words[-1]["end_s"]) if words else 0.0),
+            (max((float(item["end_s"]) for item in cuts), default=0.0)),
+        )
+        media_start = min(
+            (float(words[0]["start_s"]) if words else 0.0),
+            (min((float(item["start_s"]) for item in cuts), default=0.0)),
+        )
+        source_duration = round(media_end - media_start, 6)
+    # Резы за пределами медиа — след растянутых таймингов, в план они не идут.
+    cuts = [item for item in cuts if float(item["end_s"]) <= source_duration + 1e-6]
     removed = round(sum(float(item["removed_s"]) for item in cuts), 6)
-    speech = round(sum(float(item["end_s"]) - float(item["start_s"]) for item in words), 6)
     after = round(source_duration - removed, 6)
+    speech = round(source_duration - sum(float(item["gap_s"]) for item in cuts), 6)
     return {
-        "schema_version": 1,
+        "schema_version": 2,
         "kind": "pause-cut-plan",
+        "pause_source": source,
         "thresholds": {"threshold_s": threshold_s, "keep_s": keep_s, "noise_db": noise_db},
         "cuts": cuts,
         "cut_count": len(cuts),
@@ -175,5 +308,59 @@ def cut_plan(
         "duration_after_s": after,
         "speech_share_before": round(speech / source_duration, 4) if source_duration > 0 else 0.0,
         "speech_share_after": round(speech / after, 4) if after > 0 else 0.0,
-        "audio_checked": bool(windows),
+        "audio_checked": audio_available,
+        # Расхождение источников — сигнал, а не мелочь: если ASR видит на порядок меньше
+        # пауз, чем звук, его тайминги растянуты и по ним резать нельзя.
+        "word_cut_count": len(word_cuts),
     }
+
+
+def apply_cuts_to_entries(entries: list[Any], cuts: list[dict[str, Any]]) -> list[Any]:
+    """Вырезает паузы из монтажных записей, разбивая их по вырезанным окнам.
+
+    До этого план реза оставался предложением: паузы считались, но в рендер уходили
+    целиком, и самопроверка справедливо валила сегмент за «unexpected long silence».
+
+    Запись, внутри которой оказалась пауза, распадается на две — с теми же словами,
+    поделёнными по границе. Записи, целиком попавшие в вырезаемое окно, исчезают.
+    """
+    from dataclasses import replace
+
+    windows = sorted(
+        ((float(item["start_s"]), float(item["end_s"])) for item in cuts),
+        key=lambda pair: pair[0],
+    )
+    if not windows:
+        return list(entries)
+
+    result: list[Any] = []
+    for entry in entries:
+        if getattr(entry, "kind", "keep") != "keep":
+            result.append(entry)
+            continue
+        pieces = [(float(entry.start_s), float(entry.end_s))]
+        for cut_start, cut_end in windows:
+            nxt: list[tuple[float, float]] = []
+            for start, end in pieces:
+                if cut_end <= start or cut_start >= end:
+                    nxt.append((start, end))
+                    continue
+                if start < cut_start:
+                    nxt.append((start, min(cut_start, end)))
+                if end > cut_end:
+                    nxt.append((max(cut_end, start), end))
+            pieces = [(a, b) for a, b in nxt if b - a > 1e-6]
+        if not pieces:
+            continue
+        if len(pieces) == 1 and abs(pieces[0][0] - entry.start_s) < 1e-6 and abs(pieces[0][1] - entry.end_s) < 1e-6:
+            result.append(entry)
+            continue
+        for index, (start, end) in enumerate(pieces, 1):
+            suffix = "" if len(pieces) == 1 else f"-p{index}"
+            result.append(replace(
+                entry,
+                id=f"{entry.id}{suffix}",
+                start_s=round(start, 6),
+                end_s=round(end, 6),
+            ))
+    return result

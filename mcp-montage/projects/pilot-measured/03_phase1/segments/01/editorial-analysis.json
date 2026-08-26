@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "kind": "editorial-analysis",
+  "worker_version": "editorial-analysis-v6",
+  "source_transcript_sha256": "sha256:7133368d710ae045edeb700198ccecb7a9d18d506f7e7a0ad1685861a0332f1a",
+  "thresholds": {
+    "pause_s": 0.8,
+    "repetition_similarity": 0.88,
+    "block_pause_s": 5.0
+  },
+  "verdict": "NO_CANDIDATES",
+  "pause_candidates": [],
+  "repetition_candidates": [],
+  "take_candidates": [],
+  "candidates": [],
+  "word_pause_plan": {
+    "cut_count": 0,
+    "removed_s": 0,
+    "duration_after_s": 19.74,
+    "speech_share_after": 1.0,
+    "thresholds": {
+      "threshold_s": 0.15,
+      "keep_s": 0.06,
+      "noise_db": -32.0
+    }
+  }
+}

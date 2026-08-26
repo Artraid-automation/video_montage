@@ -15,7 +15,7 @@ from .film_continuity import (
     segment_continuity_input,
 )
 from .editorial import EDITORIAL_WORKER_VERSION, analyze_editorial, apply_editorial_proposals
-from .pauses import DEFAULT_KEEP_S, DEFAULT_THRESHOLD_S, cut_plan
+from .pauses import DEFAULT_KEEP_S, DEFAULT_THRESHOLD_S, apply_cuts_to_entries, cut_plan
 from .style_profile import load_style, section as style_section, style_id_from
 from .llm_editorial import LLM_EDITORIAL_WORKER_VERSION, run_llm_editorial
 from .llm_visual import LLM_VISUAL_WORKER_VERSION, run_llm_visual
@@ -113,6 +113,15 @@ def _pause_cut_kwargs(config: dict[str, Any]) -> dict[str, Any]:
         "threshold_s": float(raw.get("threshold_s", rhythm.get("pause_cut_threshold_s", DEFAULT_THRESHOLD_S))),
         "keep_s": float(raw.get("keep_s", rhythm.get("keep_pause_s", DEFAULT_KEEP_S))),
     }
+
+
+def _pause_cuts_enabled(config: dict[str, Any]) -> bool:
+    """Резать ли паузы фактически. По умолчанию нет — старые проекты не меняют поведение."""
+    raw = dict(config.get("pauses") or {})
+    if "apply" in raw:
+        return bool(raw["apply"])
+    rhythm = style_section(load_style(style_id_from(config)), "rhythm")
+    return bool(rhythm.get("apply_pause_cuts", False))
 
 
 def _editorial_analyze_kwargs(config: dict[str, Any]) -> dict[str, Any]:
@@ -393,8 +402,13 @@ def run_phase1(project_root: Path, store: StateStore | None = None, *, restart_r
                     # Паузы между словами — свой масштаб: analyze_editorial ищет провалы
                     # между высказываниями (порядка секунды), а плотность речи делается
                     # промежутками от десятых долей. План кладём кандидатом, не решением.
+                    pause_plan = None
                     try:
-                        pause_plan = cut_plan(source_transcript, **_pause_cut_kwargs(config))
+                        pause_plan = cut_plan(
+                            source_transcript,
+                            audio_path=speech_path,
+                            **_pause_cut_kwargs(config),
+                        )
                         pause_plan["source_transcript_sha256"] = source_record["sha256"]
                         editorial["word_pause_plan"] = {
                             "cut_count": pause_plan["cut_count"],
@@ -408,9 +422,20 @@ def run_phase1(project_root: Path, store: StateStore | None = None, *, restart_r
                         # Расшифровка без пословных таймингов — рез пауз недоступен,
                         # но остальная редактура работать обязана.
                         editorial["word_pause_plan"] = {"unavailable": str(exc)}
+                        pause_plan = None
                     editorial_path = segment_root / "editorial-analysis.json"
                     atomic_write_json(editorial_path, editorial)
                     entries = apply_editorial_proposals(_entries(review_source, approved_rules), editorial)
+                    # Рез пауз — механический приём стиля, а не смысловое решение:
+                    # применяем, если стиль этого требует. Смысловые KEEP/CUT по-прежнему
+                    # остаются за агентом и человеком на гейте.
+                    if pause_plan and _pause_cuts_enabled(config):
+                        before = sum(item.end_s - item.start_s for item in entries)
+                        entries = apply_cuts_to_entries(entries, pause_plan["cuts"])
+                        after = sum(item.end_s - item.start_s for item in entries)
+                        editorial["word_pause_plan"]["applied"] = True
+                        editorial["word_pause_plan"]["entry_duration_before_s"] = round(before, 3)
+                        editorial["word_pause_plan"]["entry_duration_after_s"] = round(after, 3)
                     entries, llm_editorial = run_llm_editorial(
                         segment_id,
                         entries,

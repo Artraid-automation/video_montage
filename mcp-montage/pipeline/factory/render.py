@@ -7,6 +7,8 @@ from pathlib import Path
 from typing import Any
 
 from .dependencies import segment_fingerprint
+from .camera_move import shot_plan as camera_shot_plan
+from .camera_move import zoom_filter as camera_zoom_filter
 from .framing import build_segment_framing_plan, caption_layout_at_timestamp
 from .grade import GRADE_FILTERS
 from .io import atomic_write_json, read_json, resolve_project_path, working_output
@@ -23,7 +25,7 @@ from .transcript import (
 )
 from .verification import caption_burn_words_for_entry, caption_words_for_entry, expected_render_transcript
 from .style_profile import captions as style_captions
-from .style_profile import load_style, style_id_from
+from .style_profile import load_style, section as style_section, style_id_from
 from .visual_policy import (
     CAPTION_MAX_WORDS,
     CAPTION_REQUIRED_ALIGNMENT,
@@ -243,6 +245,7 @@ def _render_entry(
     grade_name: str,
     framing_plan: dict[str, Any] | None = None,
     timed_caption_words: list[dict[str, Any]] | None = None,
+    camera_move: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     width = int(profile["width"])
     height = int(profile["height"])
@@ -408,7 +411,23 @@ def _render_entry(
     grade = GRADE_FILTERS.get(grade_name)
     if grade is None:
         raise ValueError(f"unknown grade selection: {grade_name}")
-    filters = [f"[0:v]{scale},fps={fps},format=yuv420p[base]"]
+    # Гарнитура стиля лежит в репозитории, а не в системе: без fontsdir libass молча
+    # подставит первый попавшийся шрифт, и субтитры выйдут не тем, чем задумано.
+    fonts_dir_arg = ""
+    entry_caps = style_captions(style)
+    font_file = entry_caps.get("font_file")
+    if font_file:
+        fonts_root = (Path(__file__).resolve().parents[2] / str(font_file)).parent
+        if fonts_root.is_dir():
+            fonts_dir_arg = f":fontsdir='{_filter_path(fonts_root)}'"
+
+    # Движение кадра идёт ПОСЛЕ кадрирования по лицу: zoompan работает уже с приведённым
+    # кадром, иначе наезд считался бы от исходного размера и уезжал бы мимо лица.
+    if camera_move and not loop_base:
+        move_chain = camera_zoom_filter(camera_move, width=width, height=height, fps=fps)
+        filters = [f"[0:v]{scale},{move_chain},format=yuv420p[base]"]
+    else:
+        filters = [f"[0:v]{scale},fps={fps},format=yuv420p[base]"]
     current = "base"
     if use_pip:
         pip_width = max(120, width // 4)
@@ -465,7 +484,8 @@ def _render_entry(
             timed_words=timed_caption_words,
         )
         filters.append(
-            f"[{current}]{grade},subtitles=filename='{_filter_path(caption_file)}'[v]"
+            f"[{current}]{grade},subtitles=filename='{_filter_path(caption_file)}'"
+            f"{fonts_dir_arg}[v]"
         )
     else:
         filters.append(f"[{current}]{grade}[v]")
@@ -479,6 +499,12 @@ def _render_entry(
                 "captions_suppressed_for_style": style_plate is not None,
                 "captions_suppressed_for_motion": False,
             }
+    camera_meta = {
+        "camera_zoom_pct": float(camera_move["zoom_pct"]),
+        "camera_cut_step_pct": float(camera_move["cut_step_pct"]),
+        "camera_start_scale": float(camera_move["start_scale"]),
+        "camera_end_scale": float(camera_move["end_scale"]),
+    } if camera_move else {}
     audio_filter = "aresample=48000,asetpts=PTS-STARTPTS"
     extra_audio = str(profile.get("audio_filter") or "").strip()
     if extra_audio:
@@ -514,6 +540,7 @@ def _render_entry(
         "motion_window_end_s": motion_window_end_s,
         "style_recipe": style_recipe,
         **caption_meta,
+        **camera_meta,
         **style_meta,
     }
 
@@ -587,6 +614,10 @@ def render_segment(
     grade_name = grade_manifest.get("selected") or config.get("default_grade", "neutral")
     profile = {
         "width": 640, "height": 360, "fps": 25, "crf": 20, "preset": "veryfast", "captions": True,
+        # Имя стиля обязано ехать вместе с профилем: субтитры рисуются по нему,
+        # и Gate 2 судит по нему же. Без этой строки рендер молча собирал дефолтным
+        # видом, хотя проект создан под другим стилем.
+        "style_version": config.get("style_version"),
         **config.get("render_profile", {}),
     }
     raw_records = [media[media_id] for media_id in feeds.values()]
@@ -656,6 +687,20 @@ def render_segment(
             for item in (source_transcript.get("words") or [])
             if isinstance(item, dict) and item.get("id") is not None
         }
+        # Один план движения на весь сегмент: ступень крупности считается от предыдущего
+        # плана, поэтому её нельзя решать внутри отдельного клипа.
+        segment_style = load_style(style_id_from(profile))
+        camera_settings = style_section(segment_style, "camera")
+        camera_plan: dict[str, dict[str, Any]] = {}
+        if camera_settings:
+            shots = [
+                {"id": entry.id, "duration_s": max(0.0, float(entry.end_s) - float(entry.start_s))}
+                for entry in kept
+            ]
+            camera_plan = {
+                item["shot_id"]: item
+                for item in camera_shot_plan(shots, camera=camera_settings, seed=segment_id)
+            }
         clips = []
         for index, entry in enumerate(kept, 1):
             clip = clips_dir / f"clip-{index:03d}-{entry.id}.mp4"
@@ -674,6 +719,7 @@ def render_segment(
                 grade_name=grade_name,
                 framing_plan=framing_plan,
                 timed_caption_words=caption_burn_words_for_entry(entry, words_by_id),
+                camera_move=camera_plan.get(entry.id),
             )
             clip_contracts.append(meta)
             clips.append(clip)
@@ -761,6 +807,14 @@ def render_segment(
         "caption_timing": caption_meta.get("caption_timing"),
         "style_recipes_expected": style_expected,
         "style_recipes_applied": style_applied,
+        "camera_moving_share": round(
+            sum(1 for item in clip_contracts if abs(float(item.get("camera_zoom_pct") or 0.0)) > 1e-6)
+            / len(clip_contracts), 3,
+        ) if clip_contracts else 0.0,
+        "camera_cut_steps_pct": [
+            round(float(item["camera_cut_step_pct"]), 3)
+            for item in clip_contracts if item.get("camera_cut_step_pct")
+        ],
         "hook_title_font_size": next(
             (item.get("hook_title_font_size") for item in clip_contracts if item.get("hook_title_font_size")),
             None,

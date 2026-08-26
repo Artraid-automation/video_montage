@@ -1,7 +1,25 @@
 {
-  "schema_version": 1,
-  "id": "reels-9x16-measured",
-  "title": "Reels 9:16 по измеренному стилю",
+  "schema_version": 2,
+  "id": "pilot-measured",
+  "title": "pilot-measured",
+  "transcription": {
+    "provider": "faster-whisper",
+    "model": "large-v3",
+    "language": null,
+    "vad_filter": false
+  },
+  "verification_transcription": {
+    "provider": "faster-whisper",
+    "model": "medium",
+    "language": null,
+    "vad_filter": false
+  },
+  "publishing": {
+    "title": "pilot-measured",
+    "description": "",
+    "chapter_titles": {}
+  },
+  "profile": "reels-9x16-measured",
   "format": "reels",
   "style_version": "strokov-measured-v1",
   "default_grade": "neutral",
@@ -14,8 +32,8 @@
     "captions": true
   },
   "transcript_verification": {
-    "max_wer": 0.18,
-    "min_order_ratio": 0.85,
+    "max_wer": 0.14,
+    "min_order_ratio": 0.88,
     "max_silence_s": 0.6,
     "max_timing_drift_s": 0.85,
     "max_timing_drift_ratio": 0.25,
@@ -35,6 +53,5 @@
     "height": 1920,
     "speed_factor": 1.0,
     "send_as": "document"
-  },
-  "notes": "Кадр и частота как в референсах (1080x1920, 60 fps). Допуск тишины ужат до 0.6 с: стиль не оставляет пауз. Порог WER 0.18 — это погрешность самой проверочной модели (medium на русском), а не допуск на брак: сверяется состав и порядок слов, не буквы."
+  }
 }

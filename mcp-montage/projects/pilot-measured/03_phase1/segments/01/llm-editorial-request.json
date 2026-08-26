@@ -1,0 +1,20 @@
+{
+  "schema_version": 2,
+  "kind": "llm-editorial-request",
+  "worker_version": "llm-editorial-v3",
+  "prompt_version": "gate1-editorial-cohesion.v2",
+  "segment_id": "01",
+  "media_end_s": 19.74,
+  "media_end_timecode": "0:19.740",
+  "blocks": [
+    {
+      "id": "u0001",
+      "start_s": 0.0,
+      "end_s": 19.74,
+      "text": "атаки в том же самом татарстане при этом я конечно не про уменьшаю ущерб по прежнему очень большой и огромное количество людей в ходе этих атак пострадали что становится как вы понимаете просто великолепный я бы даже сказал идеальной почвы для информационных а то ведь это не просто война это война гибридная и десятки сотни тысячи фейков закинутых из украины подхватывают любители",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    }
+  ]
+}

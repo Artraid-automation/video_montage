@@ -95,3 +95,43 @@ class AudioConfirmationTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class ApplyToEntriesTests(unittest.TestCase):
+    """План реза обязан доходить до монтажных записей, иначе паузы остаются в рендере."""
+
+    def _entry(self, entry_id, start, end):
+        from pipeline.factory.transcript import TranscriptEntry
+        return TranscriptEntry(kind="keep", id=entry_id, start_s=start, end_s=end,
+                               word_ids=(), text="речь")
+
+    def test_pause_inside_an_entry_splits_it(self) -> None:
+        from pipeline.factory.pauses import apply_cuts_to_entries
+        entries = [self._entry("u1", 0.0, 10.0)]
+        cuts = [{"start_s": 2.0, "end_s": 3.0, "removed_s": 1.0},
+                {"start_s": 6.0, "end_s": 6.5, "removed_s": 0.5}]
+        out = apply_cuts_to_entries(entries, cuts)
+        self.assertEqual([(round(x.start_s, 2), round(x.end_s, 2)) for x in out],
+                         [(0.0, 2.0), (3.0, 6.0), (6.5, 10.0)])
+        self.assertAlmostEqual(sum(x.end_s - x.start_s for x in out), 8.5, places=6)
+
+    def test_entry_fully_inside_a_cut_disappears(self) -> None:
+        from pipeline.factory.pauses import apply_cuts_to_entries
+        out = apply_cuts_to_entries([self._entry("u1", 4.0, 5.0)],
+                                    [{"start_s": 3.0, "end_s": 6.0, "removed_s": 3.0}])
+        self.assertEqual(out, [])
+
+    def test_untouched_entry_keeps_its_identity(self) -> None:
+        """Иначе смена id на каждом прогоне ломала бы привязку визуалов к записи."""
+        from pipeline.factory.pauses import apply_cuts_to_entries
+        entries = [self._entry("u1", 0.0, 2.0)]
+        out = apply_cuts_to_entries(entries, [{"start_s": 5.0, "end_s": 6.0, "removed_s": 1.0}])
+        self.assertEqual(out, entries)
+
+    def test_non_keep_entries_are_left_alone(self) -> None:
+        from pipeline.factory.pauses import apply_cuts_to_entries
+        from pipeline.factory.transcript import TranscriptEntry
+        cut_entry = TranscriptEntry(kind="cut", id="u2", start_s=0.0, end_s=9.0,
+                                    word_ids=(), text="дубль")
+        out = apply_cuts_to_entries([cut_entry], [{"start_s": 1.0, "end_s": 2.0, "removed_s": 1.0}])
+        self.assertEqual(out, [cut_entry])

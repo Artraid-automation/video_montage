@@ -45,6 +45,33 @@ def safe_slug(value: str) -> str:
     return slug
 
 
+def _asr_defaults() -> tuple[dict[str, Any], dict[str, Any]]:
+    """Настройки расшифровки из config/studio.toml.
+
+    Раньше они были вписаны прямо здесь, а toml не читал никто: поднятая в конфиге
+    модель молча не доезжала до проекта, и все проекты создавались на `small`.
+    """
+    fallback = {"provider": "faster-whisper", "model": "small", "language": None}
+    path = Path(__file__).resolve().parents[1] / "config" / "studio.toml"
+    if not path.is_file():
+        return dict(fallback), dict(fallback)
+    import tomllib
+
+    data = tomllib.loads(path.read_text(encoding="utf-8"))
+    asr = data.get("asr") or {}
+
+    def _block(name: str) -> dict[str, Any]:
+        raw = dict(asr.get(name) or {})
+        return {
+            "provider": raw.get("provider", fallback["provider"]),
+            "model": raw.get("model", fallback["model"]),
+            "language": raw.get("language"),
+            **({"vad_filter": bool(raw["vad_filter"])} if "vad_filter" in raw else {}),
+        }
+
+    return _block("primary"), _block("verification")
+
+
 def new_project(args: argparse.Namespace) -> int:
     from factory.profiles import ALLOWED_PROFILES, apply_profile_to_config
 
@@ -54,6 +81,7 @@ def new_project(args: argparse.Namespace) -> int:
         raise ValueError(f"project already exists: {root}")
     for directory in PROJECT_DIRS:
         (root / directory).mkdir(parents=True, exist_ok=True)
+    primary_asr, verification_asr = _asr_defaults()
     profile_id = str(getattr(args, "profile", None) or "reels-9x16")
     if profile_id not in ALLOWED_PROFILES:
         raise ValueError(f"profile must be one of {sorted(ALLOWED_PROFILES)}")
@@ -62,8 +90,8 @@ def new_project(args: argparse.Namespace) -> int:
             "schema_version": 2,
             "id": slug,
             "title": args.title or slug,
-            "transcription": {"provider": "faster-whisper", "model": "small", "language": None},
-            "verification_transcription": {"provider": "faster-whisper", "model": "small", "language": None},
+            "transcription": primary_asr,
+            "verification_transcription": verification_asr,
             "publishing": {"title": args.title or slug, "description": "", "chapter_titles": {}},
         },
         profile_id,
@@ -239,11 +267,14 @@ def build_parser() -> argparse.ArgumentParser:
     item.add_argument("slug")
     item.add_argument("--title")
     item.add_argument("--projects-dir", default="projects")
+    # Список профилей — один на всю систему: перечисление его здесь руками
+    # уже разъехалось с реестром и не давало выбрать новый профиль.
+    from factory.profiles import ALLOWED_PROFILES as _ALLOWED_PROFILES
     item.add_argument(
         "--profile",
         default="reels-9x16",
-        choices=("reels-9x16", "longform-16x9"),
-        help="reels vertical or long-form horizontal (Style Bible)",
+        choices=tuple(sorted(_ALLOWED_PROFILES)),
+        help="формат доставки и стиль: см. presets/profiles/",
     )
     item.set_defaults(func=new_project)
     for name, function in (("start", start), ("status", status), ("revise", revise), ("finalize", finalize), ("resume", resume), ("cleanup-plan", cleanup_plan)):

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import unittest
 
 from pipeline.factory.style_profile import DEFAULT_STYLE_ID, captions, load_style, section, style_id_from
@@ -41,7 +42,8 @@ class StyleAsDataTests(unittest.TestCase):
         measured = captions(load_style(MEASURED))
         self.assertEqual(default["color"], "#E1C445")
         self.assertEqual(measured["color"], "#FFFFFF")
-        self.assertEqual(measured["font_family"], "Rubik")
+        self.assertEqual(measured["font_family"], "Rubik ExtraBold")
+        self.assertTrue(str(measured["font_file"]).endswith("Rubik-ExtraBold.ttf"))
         self.assertEqual(measured["max_words"], 1)
 
     def test_unknown_style_falls_back_to_default(self) -> None:
@@ -84,3 +86,63 @@ class StyleAsDataTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class StyleReachesTheRenderTests(unittest.TestCase):
+    """Стиль обязан доехать от project.json до самого ASS.
+
+    Регресс, который это ловит: `render_segment` собирал профиль рендера из
+    `config["render_profile"]` и не клал туда имя стиля. Проект был создан под
+    измеренным стилем, а субтитры молча рисовались дефолтным золотым serif —
+    ошибка видна только в готовом файле.
+    """
+
+    def _run(self, style_version: str):
+        import tempfile
+        from pathlib import Path
+
+        from pipeline.factory.io import atomic_write_json
+        from pipeline.factory.phase1 import run_phase1
+        from pipeline.factory.phase2 import run_phase2
+        from pipeline.factory.state import StateStore
+        from tests.helpers import make_video
+        from tests.test_phase2_self_verify import RenderedTranscriptFake
+
+        temp = tempfile.TemporaryDirectory()
+        self.addCleanup(temp.cleanup)
+        project = Path(temp.name) / "styled"
+        for directory in ("01_raw", "02_inputs", "03_phase1", "04_phase2", "05_final", "06_state"):
+            (project / directory).mkdir(parents=True, exist_ok=True)
+        atomic_write_json(project / "project.json", {
+            "schema_version": 2, "id": "styled", "title": "styled",
+            "style_version": style_version, "default_grade": "neutral",
+            "transcription": {"provider": "sidecar"},
+            "verification_transcription": {"provider": "synthetic"},
+            "render_profile": {"width": 320, "height": 180, "fps": 25, "crf": 25, "preset": "ultrafast"},
+        })
+        source = make_video(project / "01_raw" / "01_camera.mp4", duration=2.2, with_face=True)
+        atomic_write_json(source.with_suffix(source.suffix + ".transcript.json"), {
+            "language": "ru", "duration_s": 2.2,
+            "segments": [{"id": "u1", "start": 0.2, "end": 1.9,
+                          "text": "дешёвые дроны нас победят", "decision": "keep"}],
+        })
+        store = StateStore(project)
+        run_phase1(project, store)
+        store.approve("gate1", reviewer="test-owner")
+        run_phase2(project, store, verification_transcriber=RenderedTranscriptFake())
+        contract = json.loads(
+            (project / "04_phase2" / "segments" / "01" / "render-contract.json").read_text(encoding="utf-8")
+        )
+        return contract
+
+    def test_measured_style_reaches_the_render_contract(self) -> None:
+        contract = self._run(MEASURED)
+        self.assertEqual(contract["style_id"], MEASURED)
+        self.assertEqual(contract["caption_color"], "#FFFFFF")
+        self.assertEqual(contract["caption_font_class"], "sans")
+
+    def test_default_style_still_renders_gold_serif(self) -> None:
+        contract = self._run("dankoe-mevga-v1")
+        self.assertEqual(contract["style_id"], "dankoe-mevga-v1")
+        self.assertEqual(contract["caption_color"], "#E1C445")
+        self.assertEqual(contract["caption_font_class"], "serif")

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "verdict": "PASS",
+  "selected": "neutral",
+  "samples": [
+    {
+      "kind": "grade-sample",
+      "path": "03_phase1/segments/01/grade-samples/neutral.jpg",
+      "sha256": "sha256:f672803ead3c6e664dc3a77b031a79b0ba3c86247494420f123b3842a990bce3",
+      "size_bytes": 73769
+    },
+    {
+      "kind": "grade-sample",
+      "path": "03_phase1/segments/01/grade-samples/warm.jpg",
+      "sha256": "sha256:b3bcf5d6158b1ea23b1f54532159eebd975b9f8b8d9dbdcf0c12abddaca656d4",
+      "size_bytes": 102229
+    },
+    {
+      "kind": "grade-sample",
+      "path": "03_phase1/segments/01/grade-samples/punchy.jpg",
+      "sha256": "sha256:46b38cdf2f3345aede4cca86e55867379e78998e3a2b4d46baf6ff642e2225b0",
+      "size_bytes": 81996
+    },
+    {
+      "kind": "grade-sample",
+      "path": "03_phase1/segments/01/grade-samples/dankoe.jpg",
+      "sha256": "sha256:9be50af1a2087d1b98933802cb70d7dd1eee0f8f9ea6263d44e94c945cdf1faf",
+      "size_bytes": 102011
+    }
+  ],
+  "filters": {
+    "neutral": "null",
+    "warm": "eq=contrast=1.04:saturation=1.08:gamma=1.02,colorbalance=rs=.04:bs=-.025",
+    "punchy": "eq=contrast=1.12:saturation=1.12:gamma=0.98",
+    "dankoe": "eq=contrast=1.06:saturation=0.94:gamma=1.03,colorbalance=bs=.07:rs=-.03:gs=-.015"
+  }
+}
