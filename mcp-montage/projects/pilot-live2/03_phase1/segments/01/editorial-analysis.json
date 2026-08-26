@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "kind": "editorial-analysis",
+  "worker_version": "editorial-analysis-v6",
+  "source_transcript_sha256": "sha256:1ce321e7f2f949b36090b8149b7976420e56fd0d74a564ddff9f544c5edcfb2d",
+  "thresholds": {
+    "pause_s": 0.8,
+    "repetition_similarity": 0.88,
+    "block_pause_s": 5.0
+  },
+  "verdict": "CANDIDATES_PROPOSED",
+  "pause_candidates": [
+    {
+      "id": "pause-u0001-u0017",
+      "after_utterance_id": "u0001",
+      "before_utterance_id": "u0017",
+      "start_s": 113.46000000000001,
+      "end_s": 115.86000000000001,
+      "duration_s": 2.4,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0017-u0023",
+      "after_utterance_id": "u0017",
+      "before_utterance_id": "u0023",
+      "start_s": 153.3,
+      "end_s": 154.12,
+      "duration_s": 0.82,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0023-u0025",
+      "after_utterance_id": "u0023",
+      "before_utterance_id": "u0025",
+      "start_s": 173.84,
+      "end_s": 176.83999999999997,
+      "duration_s": 3.0,
+      "reason": "inter-utterance-pause"
+    }
+  ],
+  "repetition_candidates": [],
+  "take_candidates": [],
+  "candidates": [
+    {
+      "id": "pause-u0001-u0017",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0017-u0023",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0023-u0025",
+      "kind": "pause",
+      "decision": "REVIEW"
+    }
+  ],
+  "word_pause_plan": {
+    "cut_count": 65,
+    "removed_s": 31.95,
+    "duration_after_s": 168.73,
+    "speech_share_after": 0.9538,
+    "thresholds": {
+      "threshold_s": 0.15,
+      "keep_s": 0.06,
+      "noise_db": null
+    }
+  }
+}

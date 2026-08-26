@@ -1,0 +1,25 @@
+{
+  "schema_version": 2,
+  "project_id": "pilot-live2",
+  "gate": "gate1",
+  "reviewer": "slava",
+  "approved_at": "2026-08-26T13:15:24.003761+00:00",
+  "ledger_revision": 5,
+  "manifest": {
+    "kind": "gate1-manifest",
+    "path": "03_phase1/gate1-manifest.json",
+    "sha256": "sha256:f205c07151766dcc6cd8afc514f67eb6c9d605c91a79989ed5b2f45af623a532",
+    "size_bytes": 2687
+  },
+  "manifest_content_hash": "sha256:524fff907307fb27e24a775de13a8c6e0d79680591d5e75844fdb0c97e0fc23f",
+  "style_version": "strokov-measured-v1",
+  "provider_versions": {
+    "transcription": "faster-whisper:large-v3",
+    "editorial": "editorial-analysis-v6",
+    "visual_planning": "visual-planner-v4",
+    "broll_search": "broll-lexical-search-v2-senses",
+    "cross_segment_takes": "cross-segment-takes-v1",
+    "film_continuity": "film-continuity-v1"
+  },
+  "accepted_exceptions": []
+}

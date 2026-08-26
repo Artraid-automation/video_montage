@@ -1,25 +1,49 @@
 {
   "schema_version": 2,
   "project_id": "pilot-live2",
-  "revision": 2,
-  "state": "PHASE1_RUNNING",
-  "updated_at": "2026-08-26T13:03:53.605490+00:00",
+  "revision": 7,
+  "state": "PHASE2_RUNNING",
+  "updated_at": "2026-08-26T13:15:24.083797+00:00",
   "run": {
-    "id": "eb0b47befd1a4591a427613c5696be65",
-    "phase": "phase1",
+    "id": "eb48980c240b40c5884b3f7688d1762d",
+    "phase": "phase2",
     "attempt": 1,
-    "checkpoint": "ingested",
-    "inputs_hash": "sha256:53586f1c1e5cf9b013fb4aebf66bc95244d5c6f0336a402eb4a2824e44bcc6ed",
-    "started_at": "2026-08-26T13:03:53.585226+00:00",
-    "heartbeat_at": "2026-08-26T13:03:53.605455+00:00",
-    "evidence": {
-      "ingested": {
-        "manifest_hash": "sha256:0e3a1d7d2bec783ecdb9dda103e0ccfb300523bc1723cbc34cb8c99779a6ad54"
+    "checkpoint": "started",
+    "inputs_hash": "sha256:8dee69a96de9d2e2630c58199a64277cd65509c48de92d3d482af615293e91a2",
+    "started_at": "2026-08-26T13:15:24.083765+00:00",
+    "heartbeat_at": "2026-08-26T13:15:24.083790+00:00"
+  },
+  "gates": {
+    "gate1": {
+      "status": "APPROVED",
+      "manifest": {
+        "kind": "gate1-manifest",
+        "path": "03_phase1/gate1-manifest.json",
+        "sha256": "sha256:f205c07151766dcc6cd8afc514f67eb6c9d605c91a79989ed5b2f45af623a532",
+        "size_bytes": 2687
+      },
+      "manifest_content_hash": "sha256:524fff907307fb27e24a775de13a8c6e0d79680591d5e75844fdb0c97e0fc23f",
+      "prepared_at": "2026-08-26T13:15:23.968715+00:00",
+      "approval": {
+        "kind": "approval",
+        "path": "06_state/approvals/gate1-r000005.json",
+        "sha256": "sha256:9cc8d854e2677adb183e9af06b7686ea59191b7e0ac6ea29a4f55b0492e08ae7",
+        "size_bytes": 872
       }
     }
   },
-  "gates": {},
-  "approvals": [],
+  "approvals": [
+    {
+      "gate": "gate1",
+      "record": {
+        "kind": "approval",
+        "path": "06_state/approvals/gate1-r000005.json",
+        "sha256": "sha256:9cc8d854e2677adb183e9af06b7686ea59191b7e0ac6ea29a4f55b0492e08ae7",
+        "size_bytes": 872
+      },
+      "approved_at": "2026-08-26T13:15:24.003761+00:00"
+    }
+  ],
   "revision_request": null,
   "last_error": null,
   "events": [
@@ -48,6 +72,74 @@
       "details": {
         "previous_state": "PHASE1_RUNNING",
         "checkpoint": "ingested"
+      }
+    },
+    {
+      "id": "73ebf9d111574ba4886fb3557a048ddc",
+      "at": "2026-08-26T13:15:08.341136+00:00",
+      "type": "checkpoint",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "checkpoint": "phase1-bundles"
+      }
+    },
+    {
+      "id": "94edf85dc266404da944dc64fab97618",
+      "at": "2026-08-26T13:15:08.397059+00:00",
+      "type": "gate_ready",
+      "state": "GATE1_REVIEW",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "gate": "gate1",
+        "manifest": {
+          "kind": "gate1-manifest",
+          "path": "03_phase1/gate1-manifest.json",
+          "sha256": "sha256:8dcc015f2f0842fb19efe6ecb2038b39edfdfed6698c9401755e167f2ff98986",
+          "size_bytes": 2687
+        }
+      }
+    },
+    {
+      "id": "a448eca93ef5438ba0424a30700b15c0",
+      "at": "2026-08-26T13:15:23.968748+00:00",
+      "type": "gate_ready",
+      "state": "GATE1_REVIEW",
+      "details": {
+        "previous_state": "GATE1_REVIEW",
+        "gate": "gate1",
+        "manifest": {
+          "kind": "gate1-manifest",
+          "path": "03_phase1/gate1-manifest.json",
+          "sha256": "sha256:f205c07151766dcc6cd8afc514f67eb6c9d605c91a79989ed5b2f45af623a532",
+          "size_bytes": 2687
+        }
+      }
+    },
+    {
+      "id": "db1e270dc615421ebf78493b275ca4cb",
+      "at": "2026-08-26T13:15:24.060829+00:00",
+      "type": "gate_approved",
+      "state": "PHASE2_PENDING",
+      "details": {
+        "previous_state": "GATE1_REVIEW",
+        "gate": "gate1",
+        "approval": {
+          "kind": "approval",
+          "path": "06_state/approvals/gate1-r000005.json",
+          "sha256": "sha256:9cc8d854e2677adb183e9af06b7686ea59191b7e0ac6ea29a4f55b0492e08ae7",
+          "size_bytes": 872
+        }
+      }
+    },
+    {
+      "id": "07ad5af35c04406aa3e116850cc57c9e",
+      "at": "2026-08-26T13:15:24.083797+00:00",
+      "type": "phase2_started",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_PENDING",
+        "inputs_hash": "sha256:8dee69a96de9d2e2630c58199a64277cd65509c48de92d3d482af615293e91a2"
       }
     }
   ]

@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "kind": "cross-segment-take-analysis",
+  "worker_version": "cross-segment-takes-v1",
+  "input_bindings": [
+    {
+      "segment_id": "01",
+      "source_transcript_sha256": "sha256:1ce321e7f2f949b36090b8149b7976420e56fd0d74a564ddff9f544c5edcfb2d",
+      "utterance_ids": [
+        "u0001",
+        "u0002",
+        "u0003",
+        "u0004",
+        "u0005",
+        "u0006",
+        "u0007",
+        "u0008",
+        "u0009",
+        "u0010",
+        "u0011",
+        "u0012",
+        "u0013",
+        "u0014",
+        "u0015",
+        "u0016",
+        "u0017",
+        "u0018",
+        "u0019",
+        "u0020",
+        "u0021",
+        "u0022",
+        "u0023",
+        "u0024",
+        "u0025",
+        "u0026",
+        "u0027"
+      ]
+    }
+  ],
+  "thresholds": {
+    "similarity": 0.84,
+    "recommendation": 0.92,
+    "min_tokens": 5,
+    "metric": "minimum(sequence-ratio, lexical-set-overlap)"
+  },
+  "verdict": "NO_CANDIDATES",
+  "groups": [],
+  "uncertain_matches": [],
+  "candidates": [],
+  "auto_apply": false
+}

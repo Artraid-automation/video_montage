@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "kind": "visual-plan",
+  "worker_version": "visual-planner-v4",
+  "segment_id": "01",
+  "scenes": [],
+  "searches": [],
+  "status": "NO_VISUALS_PROPOSED",
+  "transcript_sha256": "sha256:fdcbf29757107f6b614926a99b98c5f9f9552fae2e0a2b3ab015e3435f04273e"
+}

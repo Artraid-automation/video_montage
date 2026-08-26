@@ -1,0 +1,325 @@
+{
+  "schema_version": 2,
+  "kind": "llm-editorial-result",
+  "worker_version": "llm-editorial-v3",
+  "prompt_version": "gate1-editorial-cohesion.v2",
+  "segment_id": "01",
+  "request_block_count": 50,
+  "working_block_count": 50,
+  "splits": [],
+  "decisions": [
+    {
+      "id": "u0001p1",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0001p2",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0001p3",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0001p4",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0001p5",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0001p6",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0001p7",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0001p8",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0001p9",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0001p10",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0001p11",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0001p12",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0001p13",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0001p14",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0001p15",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0001p16",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0001p17",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0001p18",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0001p19",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0001p20",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0001p21",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0001p22",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0001p23",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0001p24",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0001p25",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0001p26",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0001p27",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0017p1",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0017p2",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0017p3",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0017p4",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0017p5",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0017p6",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0017p7",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0017p8",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0017p9",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0017p10",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0017p11",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0017p12",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0017p13",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0023p1",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0023p2",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0023p3",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0023p4",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0023p5",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0023p6",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0025p1",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0025p2",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0025p3",
+      "kind": "keep",
+      "reason": null
+    },
+    {
+      "id": "u0025p4",
+      "kind": "keep",
+      "reason": null
+    }
+  ],
+  "narrative_summary": "Fixture provider applied heuristic decisions with split safety-net.",
+  "risks": [
+    "fixture provider — not for production Gate 1"
+  ],
+  "coverage_end_s": 196.18,
+  "media_end_s": 196.18,
+  "source_request": {
+    "segment_id": "01",
+    "prompt_version": "gate1-editorial-cohesion.v2",
+    "block_ids": [
+      "u0001p1",
+      "u0001p2",
+      "u0001p3",
+      "u0001p4",
+      "u0001p5",
+      "u0001p6",
+      "u0001p7",
+      "u0001p8",
+      "u0001p9",
+      "u0001p10",
+      "u0001p11",
+      "u0001p12",
+      "u0001p13",
+      "u0001p14",
+      "u0001p15",
+      "u0001p16",
+      "u0001p17",
+      "u0001p18",
+      "u0001p19",
+      "u0001p20",
+      "u0001p21",
+      "u0001p22",
+      "u0001p23",
+      "u0001p24",
+      "u0001p25",
+      "u0001p26",
+      "u0001p27",
+      "u0017p1",
+      "u0017p2",
+      "u0017p3",
+      "u0017p4",
+      "u0017p5",
+      "u0017p6",
+      "u0017p7",
+      "u0017p8",
+      "u0017p9",
+      "u0017p10",
+      "u0017p11",
+      "u0017p12",
+      "u0017p13",
+      "u0023p1",
+      "u0023p2",
+      "u0023p3",
+      "u0023p4",
+      "u0023p5",
+      "u0023p6",
+      "u0025p1",
+      "u0025p2",
+      "u0025p3",
+      "u0025p4"
+    ]
+  },
+  "provider": "fixture"
+}

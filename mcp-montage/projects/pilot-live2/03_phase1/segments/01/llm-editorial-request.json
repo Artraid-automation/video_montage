@@ -1,0 +1,461 @@
+{
+  "schema_version": 2,
+  "kind": "llm-editorial-request",
+  "worker_version": "llm-editorial-v3",
+  "prompt_version": "gate1-editorial-cohesion.v2",
+  "segment_id": "01",
+  "media_end_s": 196.18,
+  "media_end_timecode": "3:16.180",
+  "blocks": [
+    {
+      "id": "u0001p1",
+      "start_s": 6.94,
+      "end_s": 11.81,
+      "text": "звонки какой -то чел на своем мобильном телефоне",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0001p2",
+      "start_s": 11.84,
+      "end_s": 17.61,
+      "text": "сделал проект серым системы которая слушает звонки которые происходят на",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0001p3",
+      "start_s": 19.49,
+      "end_s": 21.81,
+      "text": "в мессенджерах",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0001p4",
+      "start_s": 22.59,
+      "end_s": 28.21,
+      "text": "просто на диктофон встроенных телефон потом транскрибирует эти звонки локально",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0001p5",
+      "start_s": 28.69,
+      "end_s": 29.96,
+      "text": "нужный",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0001p6",
+      "start_s": 30.09,
+      "end_s": 31.71,
+      "text": "достаточно",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0001p7",
+      "start_s": 32.34,
+      "end_s": 37.76,
+      "text": "тем не менее работает 10 -минутный звонок как заявлено расшифровывает за",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0001p8",
+      "start_s": 37.89,
+      "end_s": 45.91,
+      "text": "шесть с половиной минут либо на другой модели транскрибации за 17 минут но понятное дело это все показатели настраиваемые",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0001p9",
+      "start_s": 46.34,
+      "end_s": 47.76,
+      "text": "а потом локальная",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0001p10",
+      "start_s": 47.94,
+      "end_s": 50.11,
+      "text": "моделика и и раскладывает",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0001p11",
+      "start_s": 51.94,
+      "end_s": 55.56,
+      "text": "создает markdown файлы для",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0001p12",
+      "start_s": 56.04,
+      "end_s": 58.81,
+      "text": "короче отбрасывая техничку просто сохраняет",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0001p13",
+      "start_s": 58.89,
+      "end_s": 60.36,
+      "text": "очень просто",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0001p14",
+      "start_s": 61.09,
+      "end_s": 66.71,
+      "text": "локально на телефоне при этом какие -то дукапы и облачные загрузки",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0001p15",
+      "start_s": 67.74,
+      "end_s": 71.36,
+      "text": "отключены у этого проекта офигенная",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0001p16",
+      "start_s": 72.79,
+      "end_s": 76.26,
+      "text": "я не так давно смотрел локальную",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0001p17",
+      "start_s": 76.44,
+      "end_s": 82.06,
+      "text": "нерунку на телефон который даже сама какой -то сервис типа",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0001p18",
+      "start_s": 82.29,
+      "end_s": 84.81,
+      "text": "достаточно тупенько но тем не менее может",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0001p19",
+      "start_s": 85.59,
+      "end_s": 88.61,
+      "text": "саску туда мы ставим",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0001p20",
+      "start_s": 88.74,
+      "end_s": 90.11,
+      "text": "уточнение",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0001p21",
+      "start_s": 90.64,
+      "end_s": 91.56,
+      "text": "звездочку что",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0001p22",
+      "start_s": 91.64,
+      "end_s": 93.56,
+      "text": "телефон должен быть достаточно",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0001p23",
+      "start_s": 94.14,
+      "end_s": 100.76,
+      "text": "и не вы со временем мы будем видеть все больше и все более умные локальные",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0001p24",
+      "start_s": 101.74,
+      "end_s": 104.46,
+      "text": "опускаться там вплоть до часов или еще более",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0001p25",
+      "start_s": 104.89,
+      "end_s": 108.46,
+      "text": "девайсов работать без зависимости от какого -то",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0001p26",
+      "start_s": 108.84,
+      "end_s": 111.06,
+      "text": "железа что классно ну",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0001p27",
+      "start_s": 111.69,
+      "end_s": 113.46,
+      "text": "если в ваших других задачах",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0017p1",
+      "start_s": 116.34,
+      "end_s": 121.11,
+      "text": "кейс интересен можно во -первых вызывай ходить такой себе за",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0017p2",
+      "start_s": 121.24,
+      "end_s": 121.76,
+      "text": "буквально",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0017p3",
+      "start_s": 121.99,
+      "end_s": 124.41,
+      "text": "пару дней там ничего сложного по",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0017p4",
+      "start_s": 124.49,
+      "end_s": 126.16,
+      "text": "крайней мере если у вас android",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0017p5",
+      "start_s": 126.24,
+      "end_s": 127.76,
+      "text": "циклом",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0017p6",
+      "start_s": 128.04,
+      "end_s": 129.51,
+      "text": "сложно",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0017p7",
+      "start_s": 130.14,
+      "end_s": 131.86,
+      "text": "в appstore там и какие -то конские",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0017p8",
+      "start_s": 131.94,
+      "end_s": 133.11,
+      "text": "подписки что",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0017p9",
+      "start_s": 134.09,
+      "end_s": 139.66,
+      "text": "год нужно платить просто за возможность выложить приложение но если android тот целом вообще пофигу",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0017p10",
+      "start_s": 139.94,
+      "end_s": 141.31,
+      "text": "собрали себе образ",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0017p11",
+      "start_s": 141.34,
+      "end_s": 146.06,
+      "text": "и пользуйтесь в общем -то если",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0017p12",
+      "start_s": 146.64,
+      "end_s": 148.31,
+      "text": "юзер кейс то классно",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0017p13",
+      "start_s": 149.09,
+      "end_s": 153.06,
+      "text": "нет хуевая подводка это мы убираем эту ветку",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0023p1",
+      "start_s": 154.12,
+      "end_s": 157.61,
+      "text": "что я хотел сказать ну вот я рассказал что как это классно бла",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0023p2",
+      "start_s": 159.04,
+      "end_s": 159.51,
+      "text": "на вайп",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0023p3",
+      "start_s": 159.59,
+      "end_s": 161.51,
+      "text": "кодить окей круто",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0023p4",
+      "start_s": 162.19,
+      "end_s": 164.46,
+      "text": "в",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0023p5",
+      "start_s": 165.59,
+      "end_s": 166.46,
+      "text": "общем",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0023p6",
+      "start_s": 168.54,
+      "end_s": 173.84,
+      "text": "продаж а исключительно под одного человека с одним",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0025p1",
+      "start_s": 176.84,
+      "end_s": 178.31,
+      "text": "телефоном в",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0025p2",
+      "start_s": 178.54,
+      "end_s": 184.96,
+      "text": "общем это решение не под какой -то отдел продаж большую компанию ну а как она и было",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0025p3",
+      "start_s": 185.84,
+      "end_s": 190.76,
+      "text": "конкретно под одного человека с конкретным телефоном кто не хочет чтобы",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    },
+    {
+      "id": "u0025p4",
+      "start_s": 191.44,
+      "end_s": 196.18,
+      "text": "утекали куда -либо для важных приватных звонков",
+      "heuristic_kind": "keep",
+      "heuristic_reason": null,
+      "false_cohesion": false
+    }
+  ]
+}
