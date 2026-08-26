@@ -4,13 +4,13 @@
   "jobs": {
     "phase1.segment.01": {
       "id": "phase1.segment.01",
-      "execution_id": "48699d26209749de8277d65863802a5e",
+      "execution_id": "ec719a4f3ef44b4186286c7ba7300d5d",
       "status": "RUNNING",
       "worker_version": "phase1-bundle-v5:faster-whisper:large-v3:editorial-analysis-v6:visual-planner-v4:broll-lexical-search-v2-senses",
       "fingerprint": "sha256:49929e8eafec67b30fe439eb87189f05ab97301cfea513c9521b489cfd368423",
       "attempt": 1,
-      "started_at": "2026-08-26T12:38:13.453767+00:00",
-      "updated_at": "2026-08-26T12:38:13.453767+00:00",
+      "started_at": "2026-08-26T13:03:53.614586+00:00",
+      "updated_at": "2026-08-26T13:03:53.614586+00:00",
       "outputs": {},
       "metadata": {}
     }

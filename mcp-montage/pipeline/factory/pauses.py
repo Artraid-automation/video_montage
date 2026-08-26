@@ -315,14 +315,25 @@ def cut_plan(
     }
 
 
-def apply_cuts_to_entries(entries: list[Any], cuts: list[dict[str, Any]]) -> list[Any]:
+def apply_cuts_to_entries(
+    entries: list[Any],
+    cuts: list[dict[str, Any]],
+    *,
+    words: list[dict[str, Any]] | None = None,
+    min_piece_s: float = 0.40,
+) -> list[Any]:
     """Вырезает паузы из монтажных записей, разбивая их по вырезанным окнам.
 
     До этого план реза оставался предложением: паузы считались, но в рендер уходили
     целиком, и самопроверка справедливо валила сегмент за «unexpected long silence».
 
-    Запись, внутри которой оказалась пауза, распадается на две — с теми же словами,
-    поделёнными по границе. Записи, целиком попавшие в вырезаемое окно, исчезают.
+    Две вещи, без которых разбиение выходит бессмысленным:
+
+    * **Обрывки короче `min_piece_s` не создаются.** Детектор тишины срабатывает и внутри
+      речи — на глухих согласных и микропаузах. На живом дубле 13 кусков из 63 выходили
+      короче 0.4 с: это не планы, а дёрганье. Такой рез просто не делается.
+    * **Текст и слова делятся по частям.** `replace` копирует поля целиком, и без деления
+      каждый кусок получал полный текст записи — в субтитры уходило всё сразу.
     """
     from dataclasses import replace
 
@@ -332,6 +343,15 @@ def apply_cuts_to_entries(entries: list[Any], cuts: list[dict[str, Any]]) -> lis
     )
     if not windows:
         return list(entries)
+
+    timing = {}
+    for word in (words or []):
+        word_id = str(word.get("id") or "")
+        if not word_id:
+            continue
+        start = float(word.get("start_s", word.get("start", 0.0)))
+        end = float(word.get("end_s", word.get("end", start)))
+        timing[word_id] = (start, end, str(word.get("text", word.get("word", ""))).strip())
 
     result: list[Any] = []
     for entry in entries:
@@ -345,22 +365,46 @@ def apply_cuts_to_entries(entries: list[Any], cuts: list[dict[str, Any]]) -> lis
                 if cut_end <= start or cut_start >= end:
                     nxt.append((start, end))
                     continue
-                if start < cut_start:
-                    nxt.append((start, min(cut_start, end)))
-                if end > cut_end:
-                    nxt.append((max(cut_end, start), end))
+                left = (start, min(cut_start, end))
+                right = (max(cut_end, start), end)
+                left_len = left[1] - left[0]
+                right_len = right[1] - right[0]
+                left_ok = left_len >= min_piece_s
+                right_ok = right_len >= min_piece_s
+                # Пустой остаток — это не обрывок, а отсутствие: запись целиком
+                # попала в вырезаемое окно и исчезает.
+                if left_len <= 1e-6 and right_len <= 1e-6:
+                    continue
+                # Рез, оставляющий обрывок, не делается вовсе: кусок остаётся целым.
+                if not left_ok and not right_ok:
+                    nxt.append((start, end))
+                    continue
+                if left_ok:
+                    nxt.append(left)
+                if right_ok:
+                    nxt.append(right)
             pieces = [(a, b) for a, b in nxt if b - a > 1e-6]
         if not pieces:
             continue
         if len(pieces) == 1 and abs(pieces[0][0] - entry.start_s) < 1e-6 and abs(pieces[0][1] - entry.end_s) < 1e-6:
             result.append(entry)
             continue
+        entry_words = [wid for wid in (entry.word_ids or ()) if str(wid) in timing]
         for index, (start, end) in enumerate(pieces, 1):
-            suffix = "" if len(pieces) == 1 else f"-p{index}"
+            # Формат части — `u0001p2`, без дефиса: именно так их опознаёт
+            # enrich_entries_from_source, и дефис ломает разбор round-trip.
+            suffix = "" if len(pieces) == 1 else f"p{index}"
+            piece_words = tuple(
+                wid for wid in entry_words
+                if start - 1e-6 <= (timing[str(wid)][0] + timing[str(wid)][1]) / 2.0 <= end + 1e-6
+            )
+            piece_text = " ".join(timing[str(wid)][2] for wid in piece_words).strip()
             result.append(replace(
                 entry,
                 id=f"{entry.id}{suffix}",
                 start_s=round(start, 6),
                 end_s=round(end, 6),
+                word_ids=piece_words if piece_words else entry.word_ids,
+                text=piece_text if piece_text else entry.text,
             ))
     return result

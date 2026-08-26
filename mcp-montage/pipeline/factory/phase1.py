@@ -431,7 +431,11 @@ def run_phase1(project_root: Path, store: StateStore | None = None, *, restart_r
                     # остаются за агентом и человеком на гейте.
                     if pause_plan and _pause_cuts_enabled(config):
                         before = sum(item.end_s - item.start_s for item in entries)
-                        entries = apply_cuts_to_entries(entries, pause_plan["cuts"])
+                        entries = apply_cuts_to_entries(
+                            entries,
+                            pause_plan["cuts"],
+                            words=source_transcript.get("words") or [],
+                        )
                         after = sum(item.end_s - item.start_s for item in entries)
                         editorial["word_pause_plan"]["applied"] = True
                         editorial["word_pause_plan"]["entry_duration_before_s"] = round(before, 3)

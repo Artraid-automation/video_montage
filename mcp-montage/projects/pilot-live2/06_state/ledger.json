@@ -3,18 +3,18 @@
   "project_id": "pilot-live2",
   "revision": 2,
   "state": "PHASE1_RUNNING",
-  "updated_at": "2026-08-26T12:38:13.448447+00:00",
+  "updated_at": "2026-08-26T13:03:53.605490+00:00",
   "run": {
-    "id": "8986593e2ed34971adefd2d085cc3ba2",
+    "id": "eb0b47befd1a4591a427613c5696be65",
     "phase": "phase1",
     "attempt": 1,
     "checkpoint": "ingested",
     "inputs_hash": "sha256:53586f1c1e5cf9b013fb4aebf66bc95244d5c6f0336a402eb4a2824e44bcc6ed",
-    "started_at": "2026-08-26T12:38:13.442909+00:00",
-    "heartbeat_at": "2026-08-26T12:38:13.448428+00:00",
+    "started_at": "2026-08-26T13:03:53.585226+00:00",
+    "heartbeat_at": "2026-08-26T13:03:53.605455+00:00",
     "evidence": {
       "ingested": {
-        "manifest_hash": "sha256:5faf8c83f605f9d13e55e86e4ddc718e74ac455ebcee58c3bea39133a36fd3d8"
+        "manifest_hash": "sha256:0e3a1d7d2bec783ecdb9dda103e0ccfb300523bc1723cbc34cb8c99779a6ad54"
       }
     }
   },
@@ -24,15 +24,15 @@
   "last_error": null,
   "events": [
     {
-      "id": "4e7541fb8a4f42fd99eac386096cf406",
-      "at": "2026-08-26T12:38:12.020416+00:00",
+      "id": "3b8cc993c18a40be89db204a27ae5527",
+      "at": "2026-08-26T13:03:50.932766+00:00",
       "type": "state_created",
       "state": "NEW",
       "details": {}
     },
     {
-      "id": "fb6d7d6723e9498ab1da4f3125c83a35",
-      "at": "2026-08-26T12:38:13.442931+00:00",
+      "id": "8a4322054d2341ab997e567b6b10d1f6",
+      "at": "2026-08-26T13:03:53.585261+00:00",
       "type": "phase1_started",
       "state": "PHASE1_RUNNING",
       "details": {
@@ -41,8 +41,8 @@
       }
     },
     {
-      "id": "0a3dcbadd8984c5ea2ad7d558745f991",
-      "at": "2026-08-26T12:38:13.448447+00:00",
+      "id": "19fca9cf338f44d0a33ea5f09c0d0422",
+      "at": "2026-08-26T13:03:53.605490+00:00",
       "type": "checkpoint",
       "state": "PHASE1_RUNNING",
       "details": {

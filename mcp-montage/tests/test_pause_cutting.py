@@ -135,3 +135,55 @@ class ApplyToEntriesTests(unittest.TestCase):
                                     word_ids=(), text="дубль")
         out = apply_cuts_to_entries([cut_entry], [{"start_s": 1.0, "end_s": 2.0, "removed_s": 1.0}])
         self.assertEqual(out, [cut_entry])
+
+    def test_split_ids_match_the_round_trip_format(self) -> None:
+        """`u0001p2`, без дефиса: иначе enrich_entries_from_source не признаёт часть своей."""
+        import re
+
+        from pipeline.factory.pauses import apply_cuts_to_entries
+        out = apply_cuts_to_entries([self._entry("u0001", 0.0, 10.0)],
+                                    [{"start_s": 4.0, "end_s": 5.0, "removed_s": 1.0}])
+        self.assertEqual([x.id for x in out], ["u0001p1", "u0001p2"])
+        for entry in out:
+            self.assertRegex(entry.id, r"^(u0*[0-9]+)((?:p[0-9]+|x[0-9]+)+)$")
+
+    def test_short_leftover_goes_away_with_the_pause(self) -> None:
+        """Обрывок в 0.2 с — это не речь, а вдох перед ней: уходит вместе с паузой."""
+        from pipeline.factory.pauses import apply_cuts_to_entries
+        out = apply_cuts_to_entries(
+            [self._entry("u0001", 0.0, 5.0)],
+            [{"start_s": 0.2, "end_s": 0.5, "removed_s": 0.3}],  # слева остался бы кусок 0.2 с
+            min_piece_s=0.4,
+        )
+        self.assertEqual([(round(x.start_s, 2), round(x.end_s, 2)) for x in out], [(0.5, 5.0)])
+
+    def test_cut_that_would_leave_only_scraps_is_skipped(self) -> None:
+        """Если обрывки с обеих сторон — рез не делается вовсе, кусок остаётся целым."""
+        from pipeline.factory.pauses import apply_cuts_to_entries
+        out = apply_cuts_to_entries(
+            [self._entry("u0001", 0.0, 0.9)],
+            [{"start_s": 0.3, "end_s": 0.6, "removed_s": 0.3}],
+            min_piece_s=0.4,
+        )
+        self.assertEqual([(round(x.start_s, 2), round(x.end_s, 2)) for x in out], [(0.0, 0.9)])
+
+    def test_text_and_words_are_split_between_the_pieces(self) -> None:
+        """Без деления каждый кусок уносил полный текст записи — и всё уезжало в субтитры."""
+        from pipeline.factory.pauses import apply_cuts_to_entries
+        from pipeline.factory.transcript import TranscriptEntry
+        entry = TranscriptEntry(kind="keep", id="u0001", start_s=0.0, end_s=6.0,
+                                word_ids=("w1", "w2", "w3", "w4"), text="первое второе третье четвёртое")
+        words = [
+            {"id": "w1", "start_s": 0.1, "end_s": 0.6, "text": "первое"},
+            {"id": "w2", "start_s": 0.7, "end_s": 1.2, "text": "второе"},
+            {"id": "w3", "start_s": 4.1, "end_s": 4.6, "text": "третье"},
+            {"id": "w4", "start_s": 4.7, "end_s": 5.4, "text": "четвёртое"},
+        ]
+        out = apply_cuts_to_entries(
+            [entry], [{"start_s": 1.5, "end_s": 3.9, "removed_s": 2.4}], words=words,
+        )
+        self.assertEqual([x.id for x in out], ["u0001p1", "u0001p2"])
+        self.assertEqual(out[0].text, "первое второе")
+        self.assertEqual(out[1].text, "третье четвёртое")
+        self.assertEqual(out[0].word_ids, ("w1", "w2"))
+        self.assertEqual(out[1].word_ids, ("w3", "w4"))
