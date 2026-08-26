@@ -1,0 +1,464 @@
+[
+  {
+    "font": "Rubik",
+    "weight": 800,
+    "shape_iou": 0.7325,
+    "width_err": 0.015,
+    "ink_err": 0.099
+  },
+  {
+    "font": "Montserrat",
+    "weight": 700,
+    "shape_iou": 0.6974,
+    "width_err": 0.013,
+    "ink_err": 0.091
+  },
+  {
+    "font": "Montserrat",
+    "weight": 800,
+    "shape_iou": 0.6962,
+    "width_err": 0.02,
+    "ink_err": 0.044
+  },
+  {
+    "font": "Nunito",
+    "weight": 900,
+    "shape_iou": 0.6669,
+    "width_err": 0.023,
+    "ink_err": 0.03
+  },
+  {
+    "font": "Rubik",
+    "weight": 700,
+    "shape_iou": 0.6573,
+    "width_err": 0.026,
+    "ink_err": 0.022
+  },
+  {
+    "font": "Rubik",
+    "weight": 900,
+    "shape_iou": 0.6123,
+    "width_err": 0.032,
+    "ink_err": 0.194
+  },
+  {
+    "font": "Exo2",
+    "weight": 900,
+    "shape_iou": 0.6122,
+    "width_err": 0.029,
+    "ink_err": 0.135
+  },
+  {
+    "font": "Montserrat",
+    "weight": 900,
+    "shape_iou": 0.6117,
+    "width_err": 0.038,
+    "ink_err": 0.159
+  },
+  {
+    "font": "Geologica",
+    "weight": 900,
+    "shape_iou": 0.6083,
+    "width_err": 0.032,
+    "ink_err": 0.053
+  },
+  {
+    "font": "Geologica",
+    "weight": 800,
+    "shape_iou": 0.6024,
+    "width_err": 0.034,
+    "ink_err": 0.024
+  },
+  {
+    "font": "Exo2",
+    "weight": 800,
+    "shape_iou": 0.5677,
+    "width_err": 0.036,
+    "ink_err": 0.04
+  },
+  {
+    "font": "Nunito",
+    "weight": 800,
+    "shape_iou": 0.5566,
+    "width_err": 0.042,
+    "ink_err": 0.114
+  },
+  {
+    "font": "Jost",
+    "weight": 900,
+    "shape_iou": 0.5446,
+    "width_err": 0.055,
+    "ink_err": 0.041
+  },
+  {
+    "font": "Raleway",
+    "weight": 900,
+    "shape_iou": 0.541,
+    "width_err": 0.046,
+    "ink_err": 0.078
+  },
+  {
+    "font": "GolosText",
+    "weight": 900,
+    "shape_iou": 0.5174,
+    "width_err": 0.07,
+    "ink_err": 0.211
+  },
+  {
+    "font": "Stolzl",
+    "weight": 900,
+    "shape_iou": 0.5174,
+    "width_err": 0.07,
+    "ink_err": 0.211
+  },
+  {
+    "font": "Geologica",
+    "weight": 700,
+    "shape_iou": 0.4976,
+    "width_err": 0.057,
+    "ink_err": 0.069
+  },
+  {
+    "font": "Commissioner",
+    "weight": 900,
+    "shape_iou": 0.4939,
+    "width_err": 0.091,
+    "ink_err": 0.208
+  },
+  {
+    "font": "GolosText",
+    "weight": 800,
+    "shape_iou": 0.4825,
+    "width_err": 0.082,
+    "ink_err": 0.1
+  },
+  {
+    "font": "Stolzl",
+    "weight": 800,
+    "shape_iou": 0.4825,
+    "width_err": 0.082,
+    "ink_err": 0.1
+  },
+  {
+    "font": "OpenSans",
+    "weight": 900,
+    "shape_iou": 0.4816,
+    "width_err": 0.057,
+    "ink_err": 0.025
+  },
+  {
+    "font": "OpenSans",
+    "weight": 800,
+    "shape_iou": 0.4816,
+    "width_err": 0.057,
+    "ink_err": 0.025
+  },
+  {
+    "font": "Onest",
+    "weight": 900,
+    "shape_iou": 0.473,
+    "width_err": 0.089,
+    "ink_err": 0.059
+  },
+  {
+    "font": "Jost",
+    "weight": 800,
+    "shape_iou": 0.4715,
+    "width_err": 0.075,
+    "ink_err": 0.067
+  },
+  {
+    "font": "Raleway",
+    "weight": 800,
+    "shape_iou": 0.4679,
+    "width_err": 0.065,
+    "ink_err": 0.037
+  },
+  {
+    "font": "Commissioner",
+    "weight": 800,
+    "shape_iou": 0.4541,
+    "width_err": 0.104,
+    "ink_err": 0.086
+  },
+  {
+    "font": "Play",
+    "weight": 900,
+    "shape_iou": 0.4531,
+    "width_err": 0.053,
+    "ink_err": 0.126
+  },
+  {
+    "font": "Play",
+    "weight": 800,
+    "shape_iou": 0.4531,
+    "width_err": 0.053,
+    "ink_err": 0.126
+  },
+  {
+    "font": "Play",
+    "weight": 700,
+    "shape_iou": 0.4531,
+    "width_err": 0.053,
+    "ink_err": 0.126
+  },
+  {
+    "font": "Alegreya",
+    "weight": 900,
+    "shape_iou": 0.4453,
+    "width_err": 0.115,
+    "ink_err": 0.125
+  },
+  {
+    "font": "Alegreya",
+    "weight": 800,
+    "shape_iou": 0.4453,
+    "width_err": 0.115,
+    "ink_err": 0.125
+  },
+  {
+    "font": "Alegreya",
+    "weight": 700,
+    "shape_iou": 0.4453,
+    "width_err": 0.115,
+    "ink_err": 0.125
+  },
+  {
+    "font": "Onest",
+    "weight": 800,
+    "shape_iou": 0.4358,
+    "width_err": 0.101,
+    "ink_err": 0.031
+  },
+  {
+    "font": "GolosText",
+    "weight": 700,
+    "shape_iou": 0.434,
+    "width_err": 0.096,
+    "ink_err": 0.044
+  },
+  {
+    "font": "Stolzl",
+    "weight": 700,
+    "shape_iou": 0.434,
+    "width_err": 0.096,
+    "ink_err": 0.044
+  },
+  {
+    "font": "Nunito",
+    "weight": 700,
+    "shape_iou": 0.429,
+    "width_err": 0.063,
+    "ink_err": 0.223
+  },
+  {
+    "font": "Exo2",
+    "weight": 700,
+    "shape_iou": 0.4256,
+    "width_err": 0.067,
+    "ink_err": 0.105
+  },
+  {
+    "font": "FiraSans",
+    "weight": 900,
+    "shape_iou": 0.4131,
+    "width_err": 0.181,
+    "ink_err": 0.106
+  },
+  {
+    "font": "FiraSans",
+    "weight": 800,
+    "shape_iou": 0.4131,
+    "width_err": 0.181,
+    "ink_err": 0.106
+  },
+  {
+    "font": "FiraSans",
+    "weight": 700,
+    "shape_iou": 0.4131,
+    "width_err": 0.181,
+    "ink_err": 0.106
+  },
+  {
+    "font": "Jost",
+    "weight": 700,
+    "shape_iou": 0.4126,
+    "width_err": 0.105,
+    "ink_err": 0.133
+  },
+  {
+    "font": "Commissioner",
+    "weight": 700,
+    "shape_iou": 0.4029,
+    "width_err": 0.121,
+    "ink_err": 0.068
+  },
+  {
+    "font": "Unbounded",
+    "weight": 700,
+    "shape_iou": 0.3985,
+    "width_err": 0.171,
+    "ink_err": 0.055
+  },
+  {
+    "font": "Unbounded",
+    "weight": 800,
+    "shape_iou": 0.3944,
+    "width_err": 0.193,
+    "ink_err": 0.117
+  },
+  {
+    "font": "Raleway",
+    "weight": 700,
+    "shape_iou": 0.3944,
+    "width_err": 0.08,
+    "ink_err": 0.154
+  },
+  {
+    "font": "Onest",
+    "weight": 700,
+    "shape_iou": 0.3937,
+    "width_err": 0.107,
+    "ink_err": 0.095
+  },
+  {
+    "font": "Unbounded",
+    "weight": 900,
+    "shape_iou": 0.3874,
+    "width_err": 0.218,
+    "ink_err": 0.192
+  },
+  {
+    "font": "AlumniSans",
+    "weight": 900,
+    "shape_iou": 0.3783,
+    "width_err": 0.262,
+    "ink_err": 0.354
+  },
+  {
+    "font": "OpenSans",
+    "weight": 700,
+    "shape_iou": 0.3738,
+    "width_err": 0.082,
+    "ink_err": 0.162
+  },
+  {
+    "font": "PTSans",
+    "weight": 900,
+    "shape_iou": 0.3601,
+    "width_err": 0.191,
+    "ink_err": 0.106
+  },
+  {
+    "font": "PTSans",
+    "weight": 800,
+    "shape_iou": 0.3601,
+    "width_err": 0.191,
+    "ink_err": 0.106
+  },
+  {
+    "font": "PTSans",
+    "weight": 700,
+    "shape_iou": 0.3601,
+    "width_err": 0.191,
+    "ink_err": 0.106
+  },
+  {
+    "font": "Manrope",
+    "weight": 900,
+    "shape_iou": 0.359,
+    "width_err": 0.125,
+    "ink_err": 0.158
+  },
+  {
+    "font": "Manrope",
+    "weight": 800,
+    "shape_iou": 0.359,
+    "width_err": 0.125,
+    "ink_err": 0.158
+  },
+  {
+    "font": "AlumniSans",
+    "weight": 800,
+    "shape_iou": 0.3509,
+    "width_err": 0.28,
+    "ink_err": 0.239
+  },
+  {
+    "font": "Oswald",
+    "weight": 900,
+    "shape_iou": 0.34,
+    "width_err": 0.293,
+    "ink_err": 0.063
+  },
+  {
+    "font": "Oswald",
+    "weight": 800,
+    "shape_iou": 0.34,
+    "width_err": 0.293,
+    "ink_err": 0.063
+  },
+  {
+    "font": "Oswald",
+    "weight": 700,
+    "shape_iou": 0.34,
+    "width_err": 0.293,
+    "ink_err": 0.063
+  },
+  {
+    "font": "Manrope",
+    "weight": 700,
+    "shape_iou": 0.3328,
+    "width_err": 0.138,
+    "ink_err": 0.22
+  },
+  {
+    "font": "AlumniSans",
+    "weight": 700,
+    "shape_iou": 0.3299,
+    "width_err": 0.297,
+    "ink_err": 0.114
+  },
+  {
+    "font": "Inter",
+    "weight": 900,
+    "shape_iou": 0.2768,
+    "width_err": 0.159,
+    "ink_err": 0.367
+  },
+  {
+    "font": "Inter",
+    "weight": 800,
+    "shape_iou": 0.2768,
+    "width_err": 0.159,
+    "ink_err": 0.367
+  },
+  {
+    "font": "Inter",
+    "weight": 700,
+    "shape_iou": 0.2768,
+    "width_err": 0.159,
+    "ink_err": 0.367
+  },
+  {
+    "font": "Anton",
+    "weight": 900,
+    "shape_iou": 0.2485,
+    "width_err": 0.331,
+    "ink_err": 0.342
+  },
+  {
+    "font": "Anton",
+    "weight": 800,
+    "shape_iou": 0.2485,
+    "width_err": 0.331,
+    "ink_err": 0.342
+  },
+  {
+    "font": "Anton",
+    "weight": 700,
+    "shape_iou": 0.2485,
+    "width_err": 0.331,
+    "ink_err": 0.342
+  }
+]

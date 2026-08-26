@@ -301,5 +301,35 @@
       "words_per_min": 99,
       "single_line_share": 0.95
     }
+  },
+  "typography": {
+    "speech": {
+      "font": "Rubik",
+      "weight": 800,
+      "license": "SIL OFL",
+      "shape_iou": 0.733,
+      "width_err": 0.015,
+      "ink_err": 0.099,
+      "case": "as spoken",
+      "color": "white",
+      "outline": "black, soft edge",
+      "note": "ближайшее свободное совпадение; в референсе вероятно платный гротеск"
+    },
+    "hook": {
+      "font": null,
+      "best_candidate": "Unbounded",
+      "shape_iou": 0.334,
+      "aspect_ratio_of_line": 10.1,
+      "case": "uppercase",
+      "note": "не опознан: узкий жирный гротеск, свободных аналогов с кириллицей нет"
+    }
+  },
+  "speech": {
+    "verified_on": "whisper large-v3 (ref4)",
+    "pause_p90_s": 0.04,
+    "pause_p99_s": 0.14,
+    "speech_share": 0.97,
+    "cuts_on_word_boundary_share": 0.78,
+    "note": "сильная модель показывает монтаж плотнее, чем small — вывод устоял"
   }
 }
