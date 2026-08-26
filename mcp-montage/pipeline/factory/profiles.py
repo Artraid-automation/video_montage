@@ -7,7 +7,7 @@ from typing import Any
 
 from .io import read_json
 
-ALLOWED_PROFILES = frozenset({"reels-9x16", "longform-16x9"})
+ALLOWED_PROFILES = frozenset({"reels-9x16", "reels-9x16-measured", "longform-16x9"})
 PROFILE_KEYS = (
     "style_version",
     "default_grade",

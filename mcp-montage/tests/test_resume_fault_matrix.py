@@ -26,7 +26,7 @@ def base_config(project: Path, archive: Path) -> dict:
 
 
 def source_fixture(project: Path) -> None:
-    source = make_video(project / "01_raw" / "01_camera.mp4", duration=1.4)
+    source = make_video(project / "01_raw" / "01_camera.mp4", duration=1.4, with_face=True)
     atomic_write_json(source.with_suffix(source.suffix + ".transcript.json"), {
         "language": "en", "duration_s": 1.4,
         "segments": [{"id": "u1", "start": 0.2, "end": 1.1, "text": "resume keeps decisions", "decision": "keep"}],

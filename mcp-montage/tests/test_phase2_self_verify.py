@@ -26,7 +26,7 @@ def prepare_project(root: Path, *, transcript_fault: str | None = None) -> tuple
     if transcript_fault:
         config["fault_injection"] = {"transcript": {"01": transcript_fault}}
     atomic_write_json(project / "project.json", config)
-    source = make_video(project / "01_raw" / "01_camera.mp4", duration=2.2)
+    source = make_video(project / "01_raw" / "01_camera.mp4", duration=2.2, with_face=True)
     atomic_write_json(source.with_suffix(source.suffix + ".transcript.json"), {
         "language": "en", "duration_s": 2.2,
         "segments": [

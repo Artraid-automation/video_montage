@@ -26,7 +26,7 @@ class Phase3DeliveryTests(unittest.TestCase):
                 "publishing": {"title": "Verified Delivery", "description": "Synthetic acceptance.", "chapter_titles": {"01": "Intro"}},
                 "telegram_delivery": {"enabled": False},
             })
-            source = make_video(project / "01_raw" / "01_camera.mp4", duration=1.5)
+            source = make_video(project / "01_raw" / "01_camera.mp4", duration=1.5, with_face=True)
             atomic_write_json(source.with_suffix(source.suffix + ".transcript.json"), {
                 "language": "en", "duration_s": 1.5,
                 "segments": [{"id": "u1", "start": 0.2, "end": 1.2, "text": "verified final sentence", "decision": "keep"}],

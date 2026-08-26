@@ -15,6 +15,8 @@ from .film_continuity import (
     segment_continuity_input,
 )
 from .editorial import EDITORIAL_WORKER_VERSION, analyze_editorial, apply_editorial_proposals
+from .pauses import DEFAULT_KEEP_S, DEFAULT_THRESHOLD_S, cut_plan
+from .style_profile import load_style, section as style_section, style_id_from
 from .llm_editorial import LLM_EDITORIAL_WORKER_VERSION, run_llm_editorial
 from .llm_visual import LLM_VISUAL_WORKER_VERSION, run_llm_visual
 from .utterances import coalesce_source_transcript
@@ -97,6 +99,20 @@ def _broll_records(project_root: Path, visual_plan: dict[str, Any]) -> list[dict
             raise ValueError(f"library scene {scene.get('id')} staged asset hash is stale")
         records.append(record)
     return records
+
+
+def _pause_cut_kwargs(config: dict[str, Any]) -> dict[str, Any]:
+    """Порог реза пауз берётся из стиля: плотность речи — часть вида, а не настройка кода.
+
+    Явная настройка в `config["pauses"]` перебивает стиль — так пилотный проект можно
+    провести на другом пороге, не заводя ради этого новый стиль.
+    """
+    rhythm = style_section(load_style(style_id_from(config)), "rhythm")
+    raw = dict(config.get("pauses") or {})
+    return {
+        "threshold_s": float(raw.get("threshold_s", rhythm.get("pause_cut_threshold_s", DEFAULT_THRESHOLD_S))),
+        "keep_s": float(raw.get("keep_s", rhythm.get("keep_pause_s", DEFAULT_KEEP_S))),
+    }
 
 
 def _editorial_analyze_kwargs(config: dict[str, Any]) -> dict[str, Any]:
@@ -374,6 +390,24 @@ def run_phase1(project_root: Path, store: StateStore | None = None, *, restart_r
                     review_source = coalesce_source_transcript(source_transcript)
                     editorial = analyze_editorial(review_source, **_editorial_analyze_kwargs(config))
                     editorial["source_transcript_sha256"] = source_record["sha256"]
+                    # Паузы между словами — свой масштаб: analyze_editorial ищет провалы
+                    # между высказываниями (порядка секунды), а плотность речи делается
+                    # промежутками от десятых долей. План кладём кандидатом, не решением.
+                    try:
+                        pause_plan = cut_plan(source_transcript, **_pause_cut_kwargs(config))
+                        pause_plan["source_transcript_sha256"] = source_record["sha256"]
+                        editorial["word_pause_plan"] = {
+                            "cut_count": pause_plan["cut_count"],
+                            "removed_s": pause_plan["removed_s"],
+                            "duration_after_s": pause_plan["duration_after_s"],
+                            "speech_share_after": pause_plan["speech_share_after"],
+                            "thresholds": pause_plan["thresholds"],
+                        }
+                        atomic_write_json(segment_root / "pause-cut-plan.json", pause_plan)
+                    except ValueError as exc:
+                        # Расшифровка без пословных таймингов — рез пауз недоступен,
+                        # но остальная редактура работать обязана.
+                        editorial["word_pause_plan"] = {"unavailable": str(exc)}
                     editorial_path = segment_root / "editorial-analysis.json"
                     atomic_write_json(editorial_path, editorial)
                     entries = apply_editorial_proposals(_entries(review_source, approved_rules), editorial)

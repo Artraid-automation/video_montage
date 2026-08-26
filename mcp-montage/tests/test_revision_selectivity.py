@@ -26,7 +26,7 @@ class RevisionSelectivityTests(unittest.TestCase):
                 "render_profile": {"width": 320, "height": 180, "fps": 25, "crf": 26, "preset": "ultrafast"},
             })
             for number, color, text in ((1, "blue", "first useful sentence"), (2, "red", "second stable sentence")):
-                source = make_video(project / "01_raw" / f"{number:02d}_camera.mp4", duration=1.4, color=color)
+                source = make_video(project / "01_raw" / f"{number:02d}_camera.mp4", duration=1.4, color=color, with_face=True)
                 atomic_write_json(source.with_suffix(source.suffix + ".transcript.json"), {
                     "language": "en", "duration_s": 1.4,
                     "segments": [{"id": f"u{number}", "start": 0.2, "end": 1.1, "text": text, "decision": "keep"}],

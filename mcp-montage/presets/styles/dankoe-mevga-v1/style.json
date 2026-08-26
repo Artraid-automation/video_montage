@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "dankoe-mevga-v1",
+  "title": "Dan Koe / MeVGa — золотой serif, фразовые субтитры",
+  "provenance": "Tanya reel pilot, принят автором 2026-07-21",
+  "captions": {
+    "font_family": "Times New Roman",
+    "font_class": "serif",
+    "color": "#E1C445",
+    "font_ratio": 0.045,
+    "max_font_ratio": 0.18,
+    "min_font_px": 16,
+    "alignment": 5,
+    "max_words": 6,
+    "max_lines": 2,
+    "case": "soft-lower",
+    "gap_below_chin_ratio": 0.15,
+    "hold_s": null,
+    "appear": "none",
+    "advance_em": 0.48
+  },
+  "hook": {
+    "font_ratio": 0.072,
+    "min_top_ratio": 0.48,
+    "y_center_ratio": 0.64,
+    "color": "#EAC225"
+  }
+}

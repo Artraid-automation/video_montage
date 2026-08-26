@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "id": "strokov-measured-v1",
+  "title": "Измеренный стиль: белый Rubik пословно, под подбородком",
+  "provenance": "Четыре референса, измерены 2026-08-25 (см. style/REFERENCE_TEARDOWN.md и style/measured-v1.json)",
+  "captions": {
+    "font_family": "Rubik",
+    "font_weight": 800,
+    "font_class": "sans",
+    "color": "#FFFFFF",
+    "outline_color": "#000000",
+    "outline_ratio": 0.075,
+    "font_ratio": 0.0411,
+    "max_font_ratio": 0.09,
+    "min_font_px": 24,
+    "alignment": 5,
+    "max_words": 1,
+    "max_lines": 1,
+    "case": "as-spoken",
+    "gap_below_chin_ratio": 0.10,
+    "hold_s": 0.35,
+    "appear": "none",
+    "advance_em": 0.62,
+    "measured": {
+      "glyph_height_ratio": 0.0214,
+      "line_bottom_ratio": 0.53,
+      "block_width_ratio": 0.31,
+      "single_line_share": 0.90,
+      "font_shape_iou": 0.733
+    }
+  },
+  "hook": {
+    "font_ratio": 0.058,
+    "min_top_ratio": 0.30,
+    "y_center_ratio": 0.36,
+    "color": "#FFFFFF",
+    "accent_color": "#E8C223",
+    "case": "upper",
+    "note": "гарнитура референса не опознана (потолок совпадения 0.334) — узкий гротеск выбираем свой"
+  },
+  "framing": {
+    "eye_line_ratio": 0.30,
+    "face_cx_ratio": 0.53,
+    "face_height_ratio": 0.25,
+    "chin_ratio": 0.46
+  },
+  "rhythm": {
+    "pause_cut_threshold_s": 0.15,
+    "keep_pause_s": 0.06,
+    "shot_len_target_s": 2.5,
+    "short_shot_share": 0.23
+  },
+  "camera": {
+    "zoom_share": 0.70,
+    "zoom_rate_pct_per_s": 2.5,
+    "zoom_in_share": 0.80,
+    "zoom_max_pct": 12.0,
+    "cut_scale_step_pct": 15.0,
+    "cut_scale_step_min_pct": 9.0,
+    "cut_scale_step_max_pct": 25.0
+  },
+  "audio": {
+    "target_lufs": -14.0,
+    "target_tp": -1.5,
+    "target_lra": 1.5,
+    "compressor": {"threshold_db": -18.0, "ratio": 4.0, "attack_ms": 5.0, "release_ms": 90.0}
+  }
+}

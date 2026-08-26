@@ -25,7 +25,7 @@ class FinalRevisionTests(unittest.TestCase):
                 "render_profile": {"width": 320, "height": 180, "fps": 25, "crf": 26, "preset": "ultrafast"},
                 "telegram_delivery": {"enabled": False},
             })
-            source = make_video(project / "01_raw" / "01_camera.mp4", duration=1.2)
+            source = make_video(project / "01_raw" / "01_camera.mp4", duration=1.2, with_face=True)
             atomic_write_json(source.with_suffix(source.suffix + ".transcript.json"), {
                 "language": "en", "duration_s": 1.2,
                 "segments": [{"id": "u1", "start": 0.1, "end": 1.0, "text": "final review metadata", "decision": "keep"}],

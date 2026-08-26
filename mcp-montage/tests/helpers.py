@@ -43,6 +43,9 @@ def make_video(path: Path, duration: float = 0.6, color: str = "blue", *, with_f
             "-loop", "1", "-i", str(face),
             "-f", "lavfi", "-i", f"sine=frequency=440:sample_rate=48000:duration={duration}",
             "-t", str(duration), "-s", "720x1280", "-r", "25",
+            # Метка цветом в углу: без неё несколько сегментов с одним лицом дают одинаковый
+            # SHA-256, и ingest справедливо отвергает их как дубликат содержимого.
+            "-vf", f"drawbox=x=0:y=0:w=48:h=48:color={color}:t=fill",
             "-shortest", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-c:a", "aac", str(path),
         ]
     else:

@@ -4,13 +4,22 @@ projects_dir = "projects"
 library_dir = "library/broll"
 default_language = "ru"
 
+# Текст первичной расшифровки уходит на экран субтитрами — экономить на модели здесь
+# нельзя. large-v3 на процессоре идёт примерно вчетверо дольше реального времени;
+# для длинных исходников имеет смысл вынести расшифровку на машину с GPU.
+# vad_filter выключен намеренно: он выбрасывает тишину до расшифровки и смазывает
+# границы слов, а на них держится рез пауз.
 [asr.primary]
 provider = "faster-whisper"
-model = "small"
+model = "large-v3"
+vad_filter = false
 
+# Проверочная расшифровка сравнивает порядок и состав слов с ожидаемым — здесь
+# достаточно medium, и она не должна стоить столько же, сколько первичная.
 [asr.verification]
 provider = "faster-whisper"
-model = "small"
+model = "medium"
+vad_filter = false
 max_wer = 0.12
 min_order_ratio = 0.90
 max_silence_s = 2.5

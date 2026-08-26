@@ -100,8 +100,11 @@ class SidecarTranscriber:
 class FasterWhisperTranscriber:
     name = "faster-whisper"
 
-    def __init__(self, model: str = "small", language: str | None = None):
+    def __init__(self, model: str = "small", language: str | None = None, vad_filter: bool = False):
         self.model = model
+        # Встроенный VAD выбрасывает тишину ДО расшифровки и тем самым смазывает
+        # границы слов. Для реза пауз нужны честные тайминги, поэтому по умолчанию выключен.
+        self.vad_filter = bool(vad_filter)
         self.language = language
         self.version = model
         self._loaded_model = None
@@ -113,7 +116,9 @@ class FasterWhisperTranscriber:
             raise RuntimeError("faster-whisper provider selected but the package is not installed") from exc
         if self._loaded_model is None:
             self._loaded_model = WhisperModel(self.model, device="cpu", compute_type="int8")
-        segments, info = self._loaded_model.transcribe(str(media_path), language=self.language, word_timestamps=True, vad_filter=True)
+        segments, info = self._loaded_model.transcribe(
+            str(media_path), language=self.language, word_timestamps=True, vad_filter=self.vad_filter
+        )
         payload_segments = []
         for segment in segments:
             payload_segments.append({
@@ -155,7 +160,9 @@ def build_transcriber(config: dict[str, Any]) -> Transcriber:
     if provider == "sidecar":
         return SidecarTranscriber()
     if provider == "faster-whisper":
-        return FasterWhisperTranscriber(config.get("model", "small"), config.get("language"))
+        return FasterWhisperTranscriber(
+            config.get("model", "small"), config.get("language"), bool(config.get("vad_filter", False))
+        )
     if provider == "external-command":
         return CommandTranscriber(config.get("command", []), str(config.get("version", "")))
     raise ValueError(f"unknown transcription provider: {provider}")

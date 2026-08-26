@@ -6,9 +6,13 @@ import re
 from typing import Any
 
 from .style_guard import style_recipes_policy
+from .style_profile import captions as style_captions
+from .style_profile import hook as style_hook
+from .style_profile import load_style, style_id_from
 
 
-# Dan Koe / MeVGa body captions: gold serif, mid-frame (chest), not bottom TikTok bar.
+# Значения ниже — дефолт стиля dankoe-mevga-v1. Живой источник вида — presets/styles/<id>/style.json
+# (см. style_profile.py): код здесь механика, а конкретный вид приходит данными.
 CAPTION_MAX_FONT_RATIO = 0.18  # longform 16:9 needs larger type than vertical reels
 CAPTION_MIN_FONT_PX = 16
 CAPTION_TARGET_FONT_RATIO = 0.045
@@ -23,6 +27,8 @@ HOOK_TITLE_FONT_RATIO = 0.072
 HOOK_TITLE_MIN_TOP_RATIO = 0.48
 HOOK_TITLE_Y_CENTER_RATIO = 0.64
 HOOK_TITLE_COLOR = "#EAC225"
+
+DEFAULT_STYLE_ID_FOR_REPORT = "dankoe-mevga-v1"
 
 MOTION_MODE_OVERLAY = "overlay"
 MOTION_MODE_REPLACE = "replace"  # legacy / forbidden in production Gate 2
@@ -100,23 +106,32 @@ def motion_on_screen_text(brief: str) -> str:
         return ""
     return text
 
-def caption_font_size(height: int, *, font_ratio: float | None = None) -> int:
-    ratio = float(font_ratio) if font_ratio is not None else CAPTION_TARGET_FONT_RATIO
-    ratio = max(0.02, min(CAPTION_MAX_FONT_RATIO, ratio))
-    return max(CAPTION_MIN_FONT_PX, round(int(height) * ratio))
+def caption_font_size(
+    height: int, *, font_ratio: float | None = None, style: dict[str, Any] | None = None
+) -> int:
+    caps = style_captions(style)
+    ratio = float(font_ratio) if font_ratio is not None else float(caps["font_ratio"])
+    ratio = max(0.02, min(float(caps["max_font_ratio"]), ratio))
+    return max(int(caps["min_font_px"]), round(int(height) * ratio))
 
 
-def resolve_caption_font_ratio(profile: dict[str, Any] | None) -> float:
+def resolve_caption_font_ratio(
+    profile: dict[str, Any] | None, *, style: dict[str, Any] | None = None
+) -> float:
+    caps = style_captions(style)
     raw = (profile or {}).get("caption_font_ratio")
     if raw is None:
-        return CAPTION_TARGET_FONT_RATIO
-    return max(0.02, min(CAPTION_MAX_FONT_RATIO, float(raw)))
+        return float(caps["font_ratio"])
+    return max(0.02, min(float(caps["max_font_ratio"]), float(raw)))
 
 
-def resolve_hook_title_font_ratio(profile: dict[str, Any] | None) -> float:
+def resolve_hook_title_font_ratio(
+    profile: dict[str, Any] | None, *, style: dict[str, Any] | None = None
+) -> float:
     """Hook must stay larger than body captions (Gate 2 / Style Bible)."""
-    body = resolve_caption_font_ratio(profile)
-    return max(HOOK_TITLE_FONT_RATIO, round(body * 1.25, 4))
+    body = resolve_caption_font_ratio(profile, style=style)
+    floor = float(style_hook(style)["font_ratio"])
+    return max(floor, round(body * 1.25, 4))
 
 
 def caption_margin_v(height: int) -> int:
@@ -134,7 +149,11 @@ def hex_to_ass_colour(hex_color: str) -> str:
     return f"&H00{blue:02X}{green:02X}{red:02X}"
 
 
-def phrase_chunks(text: str, *, max_words: int = CAPTION_MAX_WORDS) -> list[str]:
+def phrase_chunks(
+    text: str, *, max_words: int | None = None, style: dict[str, Any] | None = None
+) -> list[str]:
+    if max_words is None:
+        max_words = int(style_captions(style)["max_words"])
     words = " ".join(str(text or "").split()).split(" ")
     if not words or words == [""]:
         return []
@@ -142,16 +161,23 @@ def phrase_chunks(text: str, *, max_words: int = CAPTION_MAX_WORDS) -> list[str]
     return [" ".join(words[index:index + limit]) for index in range(0, len(words), limit)]
 
 
-def caption_wrap_width_chars(font_size: int, max_width_px: int | None) -> int:
+def caption_wrap_width_chars(
+    font_size: int, max_width_px: int | None, *, style: dict[str, Any] | None = None
+) -> int:
     """Approx ASS line budget so wrapped phrases stay inside the torso envelope."""
     if max_width_px is None or max_width_px <= 0:
         return 28
-    # Times-like serif: average advance ≈ 0.48em for mixed Cyrillic/Latin.
-    advance = max(8.0, float(font_size) * 0.48)
+    # Средняя ширина знака в долях кегля — своя у каждой гарнитуры (в стиле: advance_em).
+    advance = max(8.0, float(font_size) * float(style_captions(style)["advance_em"]))
     return max(8, min(28, int(max_width_px / advance)))
 
 
-def wrap_caption_lines(text: str, *, width_chars: int = 28, max_lines: int = CAPTION_MAX_LINES) -> str:
+def wrap_caption_lines(
+    text: str, *, width_chars: int = 28, max_lines: int | None = None,
+    style: dict[str, Any] | None = None,
+) -> str:
+    if max_lines is None:
+        max_lines = int(style_captions(style)["max_lines"])
     protected = str(text or "")
     placeholders: dict[str, str] = {}
     for index, brand in enumerate(_CAPTION_ATOMIC_BRANDS):
@@ -195,33 +221,40 @@ def caption_style_policy(
     margin_v: int,
     color: str | None = None,
     font_class: str | None = None,
+    style: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
+    """Соответствие субтитра активному стилю. Требования берутся из стиля, не из кода."""
+    caps = style_captions(style)
     reasons: list[str] = []
-    max_px = max(CAPTION_MIN_FONT_PX, round(int(height) * CAPTION_MAX_FONT_RATIO))
+    max_px = max(int(caps["min_font_px"]), round(int(height) * float(caps["max_font_ratio"])))
     if font_size > max_px:
         reasons.append(f"caption font_size {font_size}px exceeds policy max {max_px}px")
-    allowed_alignments = {CAPTION_REQUIRED_ALIGNMENT, 8}  # 8 = top-center with face \pos
+    required_alignment = int(caps["alignment"])
+    allowed_alignments = {required_alignment, 8}  # 8 = top-center with face \pos
     if alignment not in allowed_alignments:
         reasons.append(
-            f"caption alignment must be mid-center (5) or face-pos top-center (8), got {alignment}"
+            f"caption alignment must be {required_alignment} or face-pos top-center (8), got {alignment}"
         )
-    if alignment == 2:
-        reasons.append("bottom TikTok-bar captions are forbidden for dankoe body style")
-    if color is not None and str(color).upper() != CAPTION_REQUIRED_COLOR.upper():
-        reasons.append(f"caption color must be {CAPTION_REQUIRED_COLOR}, got {color!r}")
-    if font_class is not None and str(font_class).casefold() != CAPTION_REQUIRED_FONT_CLASS:
-        reasons.append(f"caption font_class must be {CAPTION_REQUIRED_FONT_CLASS}, got {font_class!r}")
+    if alignment == 2 and 2 not in allowed_alignments:
+        reasons.append("bottom TikTok-bar captions are forbidden for this style")
+    required_color = str(caps["color"])
+    if color is not None and str(color).upper() != required_color.upper():
+        reasons.append(f"caption color must be {required_color}, got {color!r}")
+    required_class = str(caps["font_class"]).casefold()
+    if font_class is not None and str(font_class).casefold() != required_class:
+        reasons.append(f"caption font_class must be {required_class}, got {font_class!r}")
     _ = (width, margin_v)  # reserved for future safe-area checks
     return {
         "verdict": "FAIL" if reasons else "PASS",
         "reasons": reasons,
         "thresholds": {
-            "max_font_ratio": CAPTION_MAX_FONT_RATIO,
-            "target_font_ratio": CAPTION_TARGET_FONT_RATIO,
+            "style_id": str((style or {}).get("id", DEFAULT_STYLE_ID_FOR_REPORT)),
+            "max_font_ratio": float(caps["max_font_ratio"]),
+            "target_font_ratio": float(caps["font_ratio"]),
             "max_font_px": max_px,
-            "alignment": CAPTION_REQUIRED_ALIGNMENT,
-            "color": CAPTION_REQUIRED_COLOR,
-            "font_class": CAPTION_REQUIRED_FONT_CLASS,
+            "alignment": required_alignment,
+            "color": required_color,
+            "font_class": required_class,
             "frame": {"width": width, "height": height},
         },
     }
@@ -259,8 +292,11 @@ def motion_compose_policy(motion_mode: str | None, *, motion_count: int) -> dict
     }
 
 
-def hook_title_policy(contract: dict[str, Any]) -> dict[str, Any]:
+def hook_title_policy(contract: dict[str, Any], *, style: dict[str, Any] | None = None) -> dict[str, Any]:
     """Hook must be larger / lower than body captions — MeVGa cold-open, not mid-face ribbon."""
+    hook_style = style_hook(style)
+    hook_ratio = float(hook_style["font_ratio"])
+    hook_min_top = float(hook_style["min_top_ratio"])
     expected = [str(item) for item in (contract.get("style_recipes_expected") or [])]
     reasons: list[str] = []
     if "hook_title" not in expected:
@@ -277,23 +313,23 @@ def hook_title_policy(contract: dict[str, Any]) -> dict[str, Any]:
     height = int(contract.get("height") or 0)
     if hook_fs is not None and height > 0:
         ratio = int(hook_fs) / height
-        if ratio + 1e-9 < HOOK_TITLE_FONT_RATIO * 0.85:
+        if ratio + 1e-9 < hook_ratio * 0.85:
             reasons.append(
-                f"hook_title font_ratio {ratio:.3f} below MeVGa target ~{HOOK_TITLE_FONT_RATIO:.3f}"
+                f"hook_title font_ratio {ratio:.3f} below style target ~{hook_ratio:.3f}"
             )
     y_center = contract.get("hook_title_y_center_ratio")
-    if y_center is not None and float(y_center) < HOOK_TITLE_MIN_TOP_RATIO:
+    if y_center is not None and float(y_center) < hook_min_top:
         reasons.append(
             f"hook_title y_center_ratio {float(y_center):.3f} too high "
-            f"(covers upper face; min ~{HOOK_TITLE_MIN_TOP_RATIO})"
+            f"(covers upper face; min ~{hook_min_top})"
         )
     return {
         "verdict": "FAIL" if reasons else "PASS",
         "reasons": reasons,
         "applicable": True,
         "thresholds": {
-            "hook_font_ratio": HOOK_TITLE_FONT_RATIO,
-            "min_y_center_ratio": HOOK_TITLE_MIN_TOP_RATIO,
+            "hook_font_ratio": hook_ratio,
+            "min_y_center_ratio": hook_min_top,
         },
     }
 
@@ -302,6 +338,8 @@ def evaluate_render_contract(contract: dict[str, Any]) -> dict[str, Any]:
     """Blocking Gate 2 check from render-contract.json written by the compositor."""
     if not isinstance(contract, dict):
         return {"verdict": "FAIL", "reasons": ["missing render-contract.json"], "components": {}}
+    # Контракт называет свой стиль; без имени действует дефолт — старые проекты не ломаются.
+    style = load_style(style_id_from(contract))
     caption = caption_style_policy(
         width=int(contract.get("width", 0)),
         height=int(contract.get("height", 0)),
@@ -310,6 +348,7 @@ def evaluate_render_contract(contract: dict[str, Any]) -> dict[str, Any]:
         margin_v=int(contract.get("caption_margin_v", 0)),
         color=str(contract.get("caption_color") or ""),
         font_class=str(contract.get("caption_font_class") or ""),
+        style=style,
     )
     on_screen = [str(item) for item in contract.get("motion_on_screen_texts", [])]
     brief_check = motion_brief_policy(on_screen)
@@ -321,7 +360,7 @@ def evaluate_render_contract(contract: dict[str, Any]) -> dict[str, Any]:
         expected_recipes=list(contract.get("style_recipes_expected") or []),
         applied_recipes=list(contract.get("style_recipes_applied") or []),
     )
-    hook_check = hook_title_policy(contract)
+    hook_check = hook_title_policy(contract, style=style)
     components = {
         "caption_style": caption,
         "motion_brief": brief_check,
@@ -333,6 +372,7 @@ def evaluate_render_contract(contract: dict[str, Any]) -> dict[str, Any]:
     return {
         "schema_version": 3,
         "kind": "visual-render-policy",
+        "style_id": str(style.get("id")),
         "verdict": "FAIL" if reasons else "PASS",
         "reasons": reasons,
         "components": components,

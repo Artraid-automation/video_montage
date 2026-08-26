@@ -22,6 +22,8 @@ from .transcript import (
     resolve_visual_start,
 )
 from .verification import caption_burn_words_for_entry, caption_words_for_entry, expected_render_transcript
+from .style_profile import captions as style_captions
+from .style_profile import load_style, style_id_from
 from .visual_policy import (
     CAPTION_MAX_WORDS,
     CAPTION_REQUIRED_ALIGNMENT,
@@ -125,15 +127,25 @@ def _write_caption_ass(
     font_ratio: float | None = None,
     suppress_windows: list[tuple[float, float]] | None = None,
     timed_words: list[dict[str, Any]] | None = None,
+    style: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
-    font_size = caption_font_size(height, font_ratio=font_ratio)
+    caps = style_captions(style)
+    font_size = caption_font_size(height, font_ratio=font_ratio, style=style)
     margin_v = caption_margin_v(height)
     right_margin = max(40, width // 4 + 48) if pip_enabled else 40
-    primary = hex_to_ass_colour(CAPTION_REQUIRED_COLOR)
+    primary = hex_to_ass_colour(str(caps["color"]))
+    outline_colour = hex_to_ass_colour(str(caps.get("outline_color") or "#000000"))
+    outline_px = max(1, round(font_size * float(caps.get("outline_ratio") or 0.025)))
+    font_family = str(caps["font_family"])
+    style_max_words = int(caps["max_words"])
     windows = list(suppress_windows or [])
-    wrap_chars = caption_wrap_width_chars(font_size, max_width_px)
-    # Fewer words per beat when the torso envelope is narrow (longform left-third).
-    phrase_words = 2 if wrap_chars <= 16 else max(3, min(CAPTION_MAX_WORDS, wrap_chars // 4))
+    wrap_chars = caption_wrap_width_chars(font_size, max_width_px, style=style)
+    if style_max_words <= 1:
+        # Пословный стиль: ширина конверта роли не играет, в кадре всегда одно слово.
+        phrase_words = 1
+    else:
+        # Fewer words per beat when the torso envelope is narrow (longform left-third).
+        phrase_words = 2 if wrap_chars <= 16 else max(3, min(style_max_words, wrap_chars // 4))
     word_events = _caption_events_from_words(
         timed_words or [], duration_s=duration_s, max_words=phrase_words,
     )
@@ -143,7 +155,7 @@ def _write_caption_ass(
         phrase_events = word_events
     else:
         chunks = phrase_chunks(
-            text.replace("{", "(").replace("}", ")"), max_words=phrase_words,
+            text.replace("{", "(").replace("}", ")"), max_words=phrase_words, style=style,
         )
         if not chunks:
             chunks = [""]
@@ -163,7 +175,8 @@ def _write_caption_ass(
         # block above pos_y and landed the first phrases on the neck.
         pos_prefix = "{\\an8\\pos(" + f"{int(pos_x)},{int(pos_y)}" + ")}"
     for start, end, chunk in phrase_events:
-        safe = wrap_caption_lines(caption_display_text(chunk), width_chars=wrap_chars)
+        display = chunk if str(caps.get("case")) == "as-spoken" else caption_display_text(chunk)
+        safe = wrap_caption_lines(display, width_chars=wrap_chars, style=style)
         if not safe:
             continue
         for event_start, event_end in _subtract_suppress_windows(start, end, windows):
@@ -171,7 +184,7 @@ def _write_caption_ass(
                 f"Dialogue: 0,{_ass_time(event_start)},{_ass_time(event_end)},Caption,,0,0,0,,{pos_prefix}{safe}"
             )
     # Face-anchored: Style alignment must match \an8 or libass ignores \pos.
-    style_alignment = 8 if pos_x is not None and pos_y is not None else CAPTION_REQUIRED_ALIGNMENT
+    style_alignment = 8 if pos_x is not None and pos_y is not None else int(caps["alignment"])
     body = f"""[Script Info]
 ScriptType: v4.00+
 PlayResX: {width}
@@ -180,7 +193,7 @@ WrapStyle: 0
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Caption,Times New Roman,{font_size},{primary},{primary},&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,1,{style_alignment},40,{right_margin},{margin_v},1
+Style: Caption,{font_family},{font_size},{primary},{primary},{outline_colour},&H80000000,{1 if int(caps.get("font_weight") or 0) >= 700 else 0},0,0,0,100,100,0,0,1,{outline_px},1,{style_alignment},40,{right_margin},{margin_v},1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
@@ -192,9 +205,10 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         "caption_alignment": CAPTION_REQUIRED_ALIGNMENT if pos_x is None else style_alignment,
         "caption_margin_v": margin_v,
         "caption_font_ratio": round(font_size / max(height, 1), 4),
-        "caption_color": CAPTION_REQUIRED_COLOR,
-        "caption_font_class": CAPTION_REQUIRED_FONT_CLASS,
-        "caption_font_family": "Times New Roman",
+        "caption_color": str(caps["color"]),
+        "caption_font_class": str(caps["font_class"]),
+        "caption_font_family": font_family,
+        "caption_max_words": style_max_words,
         "caption_phrase_count": len(phrase_events),
         "caption_timing": timing_mode,
         "caption_pos_x": pos_x,
@@ -233,8 +247,9 @@ def _render_entry(
     width = int(profile["width"])
     height = int(profile["height"])
     fps = int(profile["fps"])
-    caption_ratio = resolve_caption_font_ratio(profile)
-    hook_ratio = resolve_hook_title_font_ratio(profile)
+    style = load_style(style_id_from(profile))
+    caption_ratio = resolve_caption_font_ratio(profile, style=style)
+    hook_ratio = resolve_hook_title_font_ratio(profile, style=style)
     duration = entry.end_s - entry.start_s
     generated_motion: Path | None = None
     style_plate: Path | None = None
@@ -445,6 +460,7 @@ def _render_entry(
             pos_y=caption_pos.get("caption_pos_y"),
             max_width_px=caption_pos.get("caption_max_width_px"),
             font_ratio=caption_ratio,
+            style=style,
             suppress_windows=suppress_windows,
             timed_words=timed_caption_words,
         )
@@ -679,14 +695,18 @@ def render_segment(
     # If cache hit without contract, force FAIL-closed defaults that policies will catch
     # unless a prior contract exists — rewrite from profile policy for cache-only path.
     if cache_hit and not caption_meta:
+        cache_style = load_style(style_id_from(profile))
+        cache_caps = style_captions(cache_style)
         caption_meta = {
             "caption_font_size": caption_font_size(
-                int(profile["height"]), font_ratio=resolve_caption_font_ratio(profile),
+                int(profile["height"]),
+                font_ratio=resolve_caption_font_ratio(profile, style=cache_style),
+                style=cache_style,
             ),
-            "caption_alignment": CAPTION_REQUIRED_ALIGNMENT,
+            "caption_alignment": int(cache_caps["alignment"]),
             "caption_margin_v": caption_margin_v(int(profile["height"])),
-            "caption_color": CAPTION_REQUIRED_COLOR,
-            "caption_font_class": CAPTION_REQUIRED_FONT_CLASS,
+            "caption_color": str(cache_caps["color"]),
+            "caption_font_class": str(cache_caps["font_class"]),
         }
     motion_modes = {item.get("motion_mode") for item in clip_contracts if item.get("motion_mode")}
     motion_mode = MOTION_MODE_OVERLAY if MOTION_MODE_OVERLAY in motion_modes or motion_texts else (
@@ -709,9 +729,12 @@ def render_segment(
                 if str(recipe):
                     style_applied.append(str(recipe))
         style_applied = sorted(set(style_applied))
+    segment_style = load_style(style_id_from(profile))
+    segment_caps = style_captions(segment_style)
     contract = {
         "schema_version": 1,
         "kind": "render-contract",
+        "style_id": str(segment_style.get("id")),
         "worker_version": "ffmpeg-overlay-v25-brand-atomic",
         "segment_id": segment_id,
         "width": int(profile["width"]),
@@ -722,12 +745,16 @@ def render_segment(
         "motion_raw_briefs": motion_raw,
         "caption_font_size": int(caption_meta.get(
             "caption_font_size",
-            caption_font_size(int(profile["height"]), font_ratio=resolve_caption_font_ratio(profile)),
+            caption_font_size(
+                int(profile["height"]),
+                font_ratio=resolve_caption_font_ratio(profile, style=segment_style),
+                style=segment_style,
+            ),
         )),
-        "caption_alignment": int(caption_meta.get("caption_alignment", CAPTION_REQUIRED_ALIGNMENT)),
+        "caption_alignment": int(caption_meta.get("caption_alignment", int(segment_caps["alignment"]))),
         "caption_margin_v": int(caption_meta.get("caption_margin_v", caption_margin_v(int(profile["height"])))),
-        "caption_color": str(caption_meta.get("caption_color", CAPTION_REQUIRED_COLOR)),
-        "caption_font_class": str(caption_meta.get("caption_font_class", CAPTION_REQUIRED_FONT_CLASS)),
+        "caption_color": str(caption_meta.get("caption_color", str(segment_caps["color"]))),
+        "caption_font_class": str(caption_meta.get("caption_font_class", str(segment_caps["font_class"]))),
         "caption_pos_x": caption_meta.get("caption_pos_x"),
         "caption_pos_y": caption_meta.get("caption_pos_y"),
         "caption_placement": caption_meta.get("caption_placement"),

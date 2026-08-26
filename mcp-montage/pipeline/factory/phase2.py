@@ -182,7 +182,13 @@ def run_phase2(project_root: Path, store: StateStore | None = None, *, segment_s
                     })
                     verification_path = output_root / "verification.json"
                     atomic_write_json(verification_path, verification)
-                    profile = {"width": 640, "height": 360, "fps": 25, **config.get("render_profile", {})}
+                    profile = {
+                        "width": 640, "height": 360, "fps": 25,
+                        # Имя стиля едет вместе с профилем рендера: субтитры и политика Gate 2
+                        # обязаны судить один и тот же вид.
+                        "style_version": config.get("style_version"),
+                        **config.get("render_profile", {}),
+                    }
                     phase1_root = project_root / "03_phase1" / "segments" / segment_id
                     source_transcript = read_json(phase1_root / "source-transcript.json")
                     entries, visuals = load_transcript(phase1_root / "transcript.md", source_transcript)
