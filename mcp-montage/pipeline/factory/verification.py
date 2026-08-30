@@ -167,9 +167,22 @@ def caption_words_for_entry(
 def caption_burn_words_for_entry(
     entry: TranscriptEntry,
     words_by_id: dict[str, dict[str, Any]],
+    rewrites: dict[str, str] | None = None,
 ) -> list[dict[str, Any]]:
-    """Timed caption words with brand spellings for on-screen burn (not verification)."""
+    """Timed caption words with brand spellings for on-screen burn (not verification).
+
+    `rewrites` — исправления распознавания, сделанные человеком на монтажном столе.
+    Они меняют ТОЛЬКО надпись на экране: звук остаётся прежним, поэтому в сверку
+    смонтированного с планом эти слова уходить не должны — иначе проверка начнёт
+    ждать от речи то, чего в ней не звучало.
+    """
     local = caption_words_for_entry(entry, words_by_id)
+    if rewrites:
+        local = [
+            {**item, "text": rewrites[str(item["id"])], "verbatim": True}
+            if str(item["id"]) in rewrites else item
+            for item in local
+        ]
     burned: list[dict[str, Any]] = []
     index = 0
     while index < len(local):
@@ -185,7 +198,13 @@ def caption_burn_words_for_entry(
             })
             index += 2
             continue
-        burned.append({**current, "text": caption_display_text(str(current["text"]))})
+        # Написание, заданное человеком, на экран идёт дословно: он поправил
+        # ослышку распознавания, и приводить её к строчным нельзя — «Apple» не
+        # должно превращаться в «apple».
+        burned.append(
+            {**current} if current.get("verbatim")
+            else {**current, "text": caption_display_text(str(current["text"]))}
+        )
         index += 1
     return burned
 

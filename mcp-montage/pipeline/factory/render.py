@@ -638,6 +638,13 @@ def render_segment(
     )
     sync = read_json(phase1_root / "sync-report.json")
     audio_offset = float(sync.get("offset_s", 0.0)) if audio_record else 0.0
+    # Исправления распознавания со стола: меняют написание в субтитре, но не звук
+    # и не сверку — файла может не быть, это норма для проекта без ручных правок.
+    rewrites_path = phase1_root / "caption-rewrites.json"
+    caption_rewrites = (
+        {str(key): str(value) for key, value in read_json(rewrites_path).items()}
+        if rewrites_path.is_file() else {}
+    )
     grade_manifest = read_json(phase1_root / "grade-manifest.json")
     grade_name = grade_manifest.get("selected") or config.get("default_grade", "neutral")
     profile = {
@@ -754,7 +761,7 @@ def render_segment(
                 profile=profile,
                 grade_name=grade_name,
                 framing_plan=framing_plan,
-                timed_caption_words=caption_burn_words_for_entry(entry, words_by_id),
+                timed_caption_words=caption_burn_words_for_entry(entry, words_by_id, caption_rewrites),
                 camera_move=camera_plan.get(entry.id),
             )
             clip_contracts.append(meta)

@@ -22,6 +22,8 @@
     --keep: #1F6F5C;
     --cut: #A34A34;
     --cut-soft: #F4EBE7;
+    --edit: #7A5C1E;
+    --edit-soft: #F6F0DF;
     --shadow: 0 1px 2px rgba(22, 25, 29, .06);
   }
   @media (prefers-color-scheme: dark) {
@@ -34,6 +36,8 @@
       --keep: #5FBFA5;
       --cut: #E08D72;
       --cut-soft: #251F1C;
+      --edit: #D9BE7A;
+      --edit-soft: #23201A;
       --shadow: 0 1px 2px rgba(0, 0, 0, .45);
     }
   }
@@ -46,6 +50,8 @@
     --keep: #5FBFA5;
     --cut: #E08D72;
     --cut-soft: #251F1C;
+    --edit: #D9BE7A;
+    --edit-soft: #23201A;
     --shadow: 0 1px 2px rgba(0, 0, 0, .45);
   }
 
@@ -60,7 +66,7 @@
     margin: 0 auto;
     padding: 2.5rem 1.25rem 7rem;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 20rem;
+    grid-template-columns: minmax(0, 1fr) 21rem;
     gap: 2.5rem;
     align-items: start;
   }
@@ -71,7 +77,7 @@
     margin: 0 0 .4rem;
     text-wrap: balance;
   }
-  .lead { margin: 0 0 1.75rem; color: var(--ink-soft); max-width: 52ch; }
+  .lead { margin: 0 0 1.75rem; color: var(--ink-soft); max-width: 54ch; }
 
   .facts {
     display: flex;
@@ -128,14 +134,14 @@
   .text {
     font-family: Literata, Georgia, serif;
     font-size: 1.1rem;
-    line-height: 1.75;
+    line-height: 1.8;
     user-select: none;
     -webkit-user-select: none;
   }
   .w {
     cursor: pointer;
     border-radius: 3px;
-    padding: .02em .06em;
+    padding: .02em .08em;
     transition: color .1s ease, background .1s ease;
   }
   .w:hover { background: var(--cut-soft); }
@@ -143,16 +149,43 @@
     text-decoration: line-through;
     text-decoration-thickness: 2px;
     color: var(--ink-soft);
-    opacity: .65;
+    opacity: .6;
   }
-  .w[data-marking="true"] { background: var(--cut-soft); }
+  .w[data-edited="true"] {
+    color: var(--edit);
+    background: var(--edit-soft);
+    border-bottom: 1px dashed var(--edit);
+  }
+  .w.editing {
+    background: var(--edit-soft);
+    outline: 1px solid var(--edit);
+    cursor: text;
+  }
+
+  /* Свёрнутый кусок: подряд вырезанное прячется, чтобы читался чистовой текст. */
+  .folded {
+    display: inline-flex;
+    align-items: center;
+    gap: .3rem;
+    margin: 0 .15rem;
+    padding: .05rem .5rem;
+    border: 1px dashed var(--rule);
+    border-radius: 999px;
+    background: var(--cut-soft);
+    color: var(--cut);
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-size: .78rem;
+    cursor: pointer;
+    vertical-align: baseline;
+  }
+  .folded:hover { border-color: var(--cut); }
 
   aside {
     position: sticky;
     top: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: .9rem;
     background: var(--card);
     border: 1px solid var(--rule);
     border-radius: 6px;
@@ -167,9 +200,12 @@
     font-weight: 600;
     margin: 0;
   }
+  .history { display: flex; gap: .5rem; align-items: center; }
+  .history button { flex: 0 0 auto; min-width: 2.6rem; font-size: 1rem; line-height: 1; padding: .45rem .6rem; }
+  .history .steps { font-size: .8rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
   textarea {
     width: 100%;
-    min-height: 9rem;
+    min-height: 8rem;
     resize: vertical;
     font: inherit;
     color: var(--ink);
@@ -188,8 +224,8 @@
     color: var(--ink);
     padding: .5rem .85rem;
   }
+  button[disabled] { opacity: .4; cursor: default; }
   button.primary { background: var(--ink); color: var(--paper); border-color: var(--ink); font-weight: 500; }
-  button.primary[disabled] { opacity: .45; cursor: default; }
   button.rec[data-on="true"] { border-color: var(--cut); color: var(--cut); }
   .status { margin: 0; font-size: .85rem; color: var(--ink-soft); min-height: 1.2rem; }
   .hint { margin: 0; font-size: .82rem; color: var(--ink-soft); }
@@ -197,10 +233,9 @@
   .risks li { margin-bottom: .35rem; }
   :focus-visible { outline: 2px solid var(--keep); outline-offset: 2px; }
 
-  @media (max-width: 60rem) {
+  @media (max-width: 62rem) {
     .layout { grid-template-columns: minmax(0, 1fr); }
     aside { position: static; }
-    .sentence { padding-left: 2rem; }
     .sentence .kill { opacity: 1; }
   }
 </style>
@@ -209,28 +244,43 @@
 <div class="layout">
   <main>
     <h1 id="title">Монтажный стол</h1>
-    <p class="lead">Нажимайте на слова — они вычёркиваются. Проведите по строке, чтобы убрать фразу. Кнопка слева от предложения снимает его целиком. Повторное нажатие возвращает.</p>
+    <p class="lead">Нажмите на слово — оно вычеркнется. Проведите по строке, чтобы убрать фразу. Двойное нажатие (на телефоне — долгое) правит распознанное слово: текст в ролике останется, а в субтитре появится ваш вариант.</p>
 
     <div class="facts">
       <div class="fact"><b id="factKept">—</b><span>останется</span></div>
       <div class="fact"><b id="factSource">—</b><span>снято</span></div>
       <div class="fact"><b id="factWords">—</b><span>слов в ролике</span></div>
       <div class="fact"><b id="factCut">—</b><span>вычеркнуто</span></div>
+      <div class="fact"><b id="factEdited">—</b><span>исправлено</span></div>
     </div>
 
     <div class="text" id="text"></div>
   </main>
 
   <aside>
+    <h2>История</h2>
+    <div class="history">
+      <button type="button" id="undo" title="Шаг назад (Ctrl+Z)">←</button>
+      <button type="button" id="redo" title="Шаг вперёд (Ctrl+Shift+Z)">→</button>
+      <span class="steps" id="steps">шагов нет</span>
+    </div>
+
+    <h2>Вырезанное</h2>
+    <div class="row">
+      <button type="button" id="foldAll">Свернуть всё</button>
+      <button type="button" id="unfoldAll">Показать всё</button>
+    </div>
+
     <h2>Пожелания к монтажу</h2>
     <textarea id="note" placeholder="Например: начать сразу с новости, а рассуждение про Android убрать совсем"></textarea>
     <div class="row">
       <button type="button" class="rec" id="mic" data-on="false">Надиктовать</button>
-      <button type="button" id="undo">Снять пометки</button>
+      <button type="button" id="reset">Сбросить всё</button>
     </div>
     <button type="button" class="primary" id="send">Отправить в монтаж</button>
     <p class="status" id="status"></p>
     <p class="hint">Правки сохраняются сами — можно закрыть и вернуться с другого устройства.</p>
+
     <div id="summaryBox" hidden>
       <h2>О чём рассказ</h2>
       <p class="hint" id="summary"></p>
@@ -244,10 +294,33 @@
 
 <script>
   const DATA = __DESK_DATA__;
-  const cut = new Set(DATA.words.filter((word) => word.cut).map((word) => word.i));
-  if (DATA.draft && Array.isArray(DATA.draft.cut_words)) {
-    cut.clear();
-    DATA.draft.cut_words.forEach((index) => cut.add(index));
+
+  const state = {
+    cut: new Set(DATA.words.filter((word) => word.cut).map((word) => word.i)),
+    rewrites: new Map(),
+  };
+  if (DATA.draft) {
+    if (Array.isArray(DATA.draft.cut_words)) {
+      state.cut = new Set(DATA.draft.cut_words);
+    }
+    if (DATA.draft.rewrites) {
+      Object.entries(DATA.draft.rewrites).forEach(([index, value]) => {
+        state.rewrites.set(Number(index), String(value));
+      });
+    }
+  }
+  // Что вырезал редактор до человека: сворачиваем только эти куски, иначе слово,
+  // которое человек только что вычеркнул, пропадало бы у него из-под пальца.
+  const originalCut = new Set(DATA.words.filter((word) => word.cut).map((word) => word.i));
+
+  const history = { past: [], future: [] };
+  const snapshot = () => ({ cut: new Set(state.cut), rewrites: new Map(state.rewrites) });
+  const restore = (shot) => { state.cut = new Set(shot.cut); state.rewrites = new Map(shot.rewrites); };
+
+  function commit() {
+    history.past.push(snapshot());
+    if (history.past.length > 200) history.past.shift();
+    history.future.length = 0;
   }
 
   const textBox = document.getElementById("text");
@@ -271,7 +344,73 @@
     document.getElementById("risksBox").hidden = false;
   }
 
-  const wordNodes = new Map();
+  const unfolded = new Set();
+
+  function wordText(index) {
+    return state.rewrites.has(index) ? state.rewrites.get(index) : DATA.words[index].text;
+  }
+
+  function foldedRuns(from, to) {
+    // Собираем подряд идущие исходно вырезанные слова, которые человек не трогал.
+    const runs = [];
+    let start = null;
+    for (let index = from; index <= to + 1; index += 1) {
+      const foldable = index <= to
+        && originalCut.has(index)
+        && state.cut.has(index)
+        && !unfolded.has(index)
+        && !state.rewrites.has(index);
+      if (foldable && start === null) start = index;
+      if (!foldable && start !== null) {
+        if (index - start >= 3) runs.push([start, index - 1]);
+        start = null;
+      }
+    }
+    return runs;
+  }
+
+  function renderSentence(sentence) {
+    const wrap = document.querySelector(`.sentence[data-id="${sentence.id}"]`);
+    if (!wrap) return;
+    wrap.querySelectorAll(".w, .folded, .sp").forEach((node) => node.remove());
+    const runs = foldedRuns(sentence.from, sentence.to);
+    let index = sentence.from;
+    while (index <= sentence.to) {
+      const run = runs.find((item) => item[0] === index);
+      if (run) {
+        const chip = document.createElement("button");
+        chip.type = "button";
+        chip.className = "folded";
+        chip.textContent = `вырезано ${run[1] - run[0] + 1} сл.`;
+        chip.title = "Показать вырезанное";
+        chip.addEventListener("click", () => {
+          for (let i = run[0]; i <= run[1]; i += 1) unfolded.add(i);
+          renderSentence(sentence);
+        });
+        wrap.appendChild(chip);
+        wrap.appendChild(Object.assign(document.createElement("span"), { className: "sp", textContent: " " }));
+        index = run[1] + 1;
+        continue;
+      }
+      const word = DATA.words[index];
+      const node = document.createElement("span");
+      node.className = "w";
+      node.dataset.i = String(index);
+      node.textContent = wordText(index);
+      node.dataset.cut = state.cut.has(index) ? "true" : "false";
+      node.dataset.edited = state.rewrites.has(index) ? "true" : "false";
+      if (state.rewrites.has(index)) node.title = `Было распознано: ${word.text}`;
+      wrap.appendChild(node);
+      wrap.appendChild(Object.assign(document.createElement("span"), { className: "sp", textContent: " " }));
+      index += 1;
+    }
+    let all = true;
+    for (let i = sentence.from; i <= sentence.to; i += 1) {
+      if (!state.cut.has(i)) { all = false; break; }
+    }
+    wrap.dataset.allCut = all ? "true" : "false";
+  }
+
   DATA.sentences.forEach((sentence) => {
     const wrap = document.createElement("span");
     wrap.className = "sentence";
@@ -283,19 +422,14 @@
     kill.textContent = "×";
     kill.addEventListener("click", () => toggleSentence(sentence));
     wrap.appendChild(kill);
-    for (let index = sentence.from; index <= sentence.to; index += 1) {
-      const word = DATA.words[index];
-      if (!word) continue;
-      const node = document.createElement("span");
-      node.className = "w";
-      node.dataset.i = String(index);
-      node.textContent = word.text;
-      wordNodes.set(index, node);
-      wrap.appendChild(node);
-      wrap.appendChild(document.createTextNode(" "));
-    }
     textBox.appendChild(wrap);
+    renderSentence(sentence);
   });
+
+  function renderAll() {
+    DATA.sentences.forEach(renderSentence);
+    refresh();
+  }
 
   function duration(seconds) {
     const total = Math.round(seconds);
@@ -303,13 +437,13 @@
   }
 
   function keptSeconds() {
-    // Хронометраж считается по словам: подряд идущие оставленные слова звучат
-    // вместе с паузой между ними, пока она короче порога непрерывности.
+    // Подряд оставленные слова звучат вместе с паузой между ними, пока она короче
+    // порога непрерывности — по нему же режет и сама фабрика.
     const gapLimit = DATA.continuity_gap_s || 1.5;
     let total = 0;
     let previousEnd = null;
     DATA.words.forEach((word) => {
-      if (cut.has(word.i)) { previousEnd = null; return; }
+      if (state.cut.has(word.i)) { previousEnd = null; return; }
       total += word.end_s - word.start_s;
       if (previousEnd !== null) {
         const gap = word.start_s - previousEnd;
@@ -320,110 +454,241 @@
     return total;
   }
 
-  function paint(index) {
-    const node = wordNodes.get(index);
-    if (node) node.dataset.cut = cut.has(index) ? "true" : "false";
-  }
-
   function refresh() {
-    DATA.sentences.forEach((sentence) => {
-      let all = true;
-      for (let index = sentence.from; index <= sentence.to; index += 1) {
-        if (!cut.has(index)) { all = false; break; }
-      }
-      const node = textBox.querySelector(`.sentence[data-id="${sentence.id}"]`);
-      if (node) node.dataset.allCut = all ? "true" : "false";
-    });
     document.getElementById("factKept").textContent = duration(keptSeconds());
     document.getElementById("factSource").textContent = duration(DATA.source_duration_s || 0);
-    document.getElementById("factWords").textContent = String(DATA.words.length - cut.size);
-    document.getElementById("factCut").textContent = String(cut.size);
+    document.getElementById("factWords").textContent = String(DATA.words.length - state.cut.size);
+    document.getElementById("factCut").textContent = String(state.cut.size);
+    document.getElementById("factEdited").textContent = String(state.rewrites.size);
+    document.getElementById("undo").disabled = history.past.length === 0;
+    document.getElementById("redo").disabled = history.future.length === 0;
+    const steps = history.past.length;
+    document.getElementById("steps").textContent = steps ? `${steps} шаг(ов) назад` : "шагов нет";
+  }
+
+  function sentenceOf(index) {
+    return DATA.sentences.find((item) => index >= item.from && index <= item.to);
   }
 
   function toggle(index, force) {
-    const value = force === undefined ? !cut.has(index) : force;
-    if (value) cut.add(index); else cut.delete(index);
-    paint(index);
+    const value = force === undefined ? !state.cut.has(index) : force;
+    if (value) state.cut.add(index); else state.cut.delete(index);
   }
 
   function toggleSentence(sentence) {
+    commit();
     let all = true;
     for (let index = sentence.from; index <= sentence.to; index += 1) {
-      if (!cut.has(index)) { all = false; break; }
+      if (!state.cut.has(index)) { all = false; break; }
     }
     for (let index = sentence.from; index <= sentence.to; index += 1) toggle(index, !all);
+    renderSentence(sentence);
     refresh();
     saveDraft();
   }
 
   let dragging = false;
+  let dragMoved = false;
   let dragValue = true;
   let dragTouched = new Set();
+  let pressTimer = null;
+  let pressIndex = null;
 
   function indexFromEvent(event) {
-    const target = event.target instanceof Element
-      ? event.target.closest(".w")
-      : null;
+    const target = event.target instanceof Element ? event.target.closest(".w") : null;
     return target ? Number(target.dataset.i) : null;
   }
 
-  function pointFromTouch(touch) {
-    const element = document.elementFromPoint(touch.clientX, touch.clientY);
+  function pointIndex(event) {
+    const element = document.elementFromPoint(event.clientX, event.clientY);
     const word = element && element.closest ? element.closest(".w") : null;
     return word ? Number(word.dataset.i) : null;
   }
 
+  function startEditing(index) {
+    const node = textBox.querySelector(`.w[data-i="${index}"]`);
+    if (!node) return;
+    node.classList.add("editing");
+    node.contentEditable = "true";
+    node.focus();
+    const range = document.createRange();
+    range.selectNodeContents(node);
+    const selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+
+    const finish = (save) => {
+      node.contentEditable = "false";
+      node.classList.remove("editing");
+      const value = node.textContent.trim();
+      if (save && value && value !== DATA.words[index].text) {
+        commit();
+        state.rewrites.set(index, value);
+        // Исправленное слово остаётся в ролике: правка меняет субтитр, а не рез.
+        state.cut.delete(index);
+      } else if (save && value === DATA.words[index].text) {
+        commit();
+        state.rewrites.delete(index);
+      }
+      renderSentence(sentenceOf(index));
+      refresh();
+      saveDraft();
+    };
+    node.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") { event.preventDefault(); finish(true); }
+      if (event.key === "Escape") { event.preventDefault(); finish(false); }
+    });
+    node.addEventListener("blur", () => finish(true), { once: true });
+  }
+
+  // Один клик вычёркивает, двойной — правит слово. Поэтому одиночный клик
+  // применяется с задержкой: иначе двойной успевал вычеркнуть слово дважды,
+  // и правка открывалась поверх уже испорченного состояния.
+  const CLICK_DELAY_MS = 240;
+  const LONG_PRESS_MS = 550;
+  let clickTimer = null;
+
+  function applySingle(index) {
+    commit();
+    toggle(index);
+    renderSentence(sentenceOf(index));
+    refresh();
+    saveDraft();
+  }
+
   textBox.addEventListener("pointerdown", (event) => {
     const index = indexFromEvent(event);
-    if (index === null) return;
+    if (index === null || event.target.isContentEditable) return;
     event.preventDefault();
+    pressIndex = index;
     dragging = true;
-    dragValue = !cut.has(index);
+    dragMoved = false;
+    dragValue = !state.cut.has(index);
     dragTouched = new Set([index]);
-    toggle(index, dragValue);
-    refresh();
+    clearTimeout(pressTimer);
+    // Долгое нажатие правит слово — на телефоне двойного клика нет.
+    pressTimer = setTimeout(() => {
+      pressTimer = null;
+      dragging = false;
+      clearTimeout(clickTimer);
+      clickTimer = null;
+      startEditing(index);
+    }, LONG_PRESS_MS);
   });
 
   textBox.addEventListener("pointermove", (event) => {
     if (!dragging) return;
-    const index = event.pointerType === "touch"
-      ? pointFromTouch(event)
-      : indexFromEvent(event);
+    const index = event.pointerType === "touch" ? pointIndex(event) : indexFromEvent(event);
     if (index === null || dragTouched.has(index)) return;
+    clearTimeout(pressTimer);
+    pressTimer = null;
+    clearTimeout(clickTimer);
+    clickTimer = null;
+    if (!dragMoved) {
+      // Протяжка началась — вычёркиваем сразу, включая слово, с которого начали.
+      dragMoved = true;
+      commit();
+      toggle(pressIndex, dragValue);
+      renderSentence(sentenceOf(pressIndex));
+    }
     dragTouched.add(index);
     toggle(index, dragValue);
+    renderSentence(sentenceOf(index));
     refresh();
   });
 
   function endDrag() {
+    clearTimeout(pressTimer);
+    pressTimer = null;
     if (!dragging) return;
     dragging = false;
-    saveDraft();
+    if (dragMoved) {
+      saveDraft();
+      return;
+    }
+    const index = pressIndex;
+    if (index === null) return;
+    clearTimeout(clickTimer);
+    clickTimer = setTimeout(() => {
+      clickTimer = null;
+      applySingle(index);
+    }, CLICK_DELAY_MS);
   }
   window.addEventListener("pointerup", endDrag);
   window.addEventListener("pointercancel", endDrag);
 
+  textBox.addEventListener("dblclick", (event) => {
+    const index = indexFromEvent(event);
+    if (index === null) return;
+    event.preventDefault();
+    clearTimeout(clickTimer);
+    clickTimer = null;
+    startEditing(index);
+  });
+
+  function undo() {
+    if (!history.past.length) return;
+    history.future.push(snapshot());
+    restore(history.past.pop());
+    renderAll();
+    saveDraft();
+  }
+
+  function redo() {
+    if (!history.future.length) return;
+    history.past.push(snapshot());
+    restore(history.future.pop());
+    renderAll();
+    saveDraft();
+  }
+
+  document.getElementById("undo").addEventListener("click", undo);
+  document.getElementById("redo").addEventListener("click", redo);
+  window.addEventListener("keydown", (event) => {
+    if (!(event.ctrlKey || event.metaKey) || event.key.toLowerCase() !== "z") return;
+    if (event.target instanceof HTMLElement && (event.target.isContentEditable || event.target.tagName === "TEXTAREA")) return;
+    event.preventDefault();
+    if (event.shiftKey) redo(); else undo();
+  });
+
+  document.getElementById("foldAll").addEventListener("click", () => {
+    unfolded.clear();
+    renderAll();
+  });
+  document.getElementById("unfoldAll").addEventListener("click", () => {
+    DATA.words.forEach((word) => unfolded.add(word.i));
+    renderAll();
+  });
+
+  document.getElementById("reset").addEventListener("click", () => {
+    commit();
+    state.cut = new Set(originalCut);
+    state.rewrites.clear();
+    unfolded.clear();
+    renderAll();
+    saveDraft();
+    statusBox.textContent = "Вернул предложение редактора.";
+  });
+
   let saveTimer = null;
+  function payload() {
+    return {
+      cut_words: [...state.cut],
+      rewrites: Object.fromEntries(state.rewrites),
+      note: noteBox.value,
+    };
+  }
   function saveDraft() {
     clearTimeout(saveTimer);
     saveTimer = setTimeout(() => {
       fetch(`/montage/${DATA.project_id}/draft`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ cut_words: [...cut], note: noteBox.value }),
-      }).catch(() => { /* черновик не критичен: правки живут и в открытой вкладке */ });
+        body: JSON.stringify(payload()),
+      }).catch(() => { /* черновик не критичен: правки живут в открытой вкладке */ });
     }, 900);
   }
-
   noteBox.addEventListener("input", saveDraft);
-
-  document.getElementById("undo").addEventListener("click", () => {
-    cut.clear();
-    DATA.words.forEach((word) => paint(word.i));
-    refresh();
-    saveDraft();
-    statusBox.textContent = "Все пометки сняты.";
-  });
 
   const sendButton = document.getElementById("send");
   sendButton.addEventListener("click", async () => {
@@ -433,7 +698,7 @@
       const response = await fetch(`/montage/${DATA.project_id}/submit`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ cut_words: [...cut], note: noteBox.value }),
+        body: JSON.stringify(payload()),
       });
       if (!response.ok) throw new Error(String(response.status));
       statusBox.textContent = "Принято. Новый вариант придёт в Telegram.";
@@ -482,7 +747,6 @@
     });
   }
 
-  DATA.words.forEach((word) => paint(word.i));
   refresh();
 </script>
 </body>

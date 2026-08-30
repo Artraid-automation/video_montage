@@ -108,6 +108,13 @@ class Handler(BaseHTTPRequestHandler):
             "desk_id": desk_id,
             "at": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
             "cut_words": [int(index) for index in body.get("cut_words") or [] if str(index).lstrip("-").isdigit()],
+            # Исправления распознанных слов: слово остаётся в ролике, меняется только
+            # его написание в субтитре. Поэтому это отдельный словарь, а не рез.
+            "rewrites": {
+                str(int(index)): str(value)[:120]
+                for index, value in (body.get("rewrites") or {}).items()
+                if str(index).lstrip("-").isdigit() and str(value).strip()
+            },
             "note": str(body.get("note") or "")[:8000],
         }
         EDITS_DIR.mkdir(parents=True, exist_ok=True)

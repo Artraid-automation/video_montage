@@ -108,8 +108,25 @@ def main() -> int:
         render_transcript(updated, visuals, segment_id=args.segment, media_end_s=media_end),
         encoding="utf-8",
     )
+    # Исправления распознавания живут отдельным файлом: они не меняют разметку речи,
+    # только надпись на экране, и переживают любую пересборку сценария.
+    rewrites = {}
+    by_index = {int(word["i"]): word for word in desk["words"]}
+    for index, value in (submit.get("rewrites") or {}).items():
+        word = by_index.get(int(index))
+        if word and word.get("wid") and str(value).strip():
+            rewrites[str(word["wid"])] = str(value).strip()
+    rewrites_path = phase1 / "caption-rewrites.json"
+    if rewrites:
+        existing = json.loads(rewrites_path.read_text(encoding="utf-8")) if rewrites_path.is_file() else {}
+        existing.update(rewrites)
+        rewrites_path.write_text(json.dumps(existing, ensure_ascii=False, indent=2), encoding="utf-8")
+
     kept = sum(1 for item in updated if item.kind == "keep")
-    print(f"применено: реплик оставлено {kept} из {len(updated)}, вычеркнуто слов {len(cut_words)}")
+    print(
+        f"применено: реплик оставлено {kept} из {len(updated)}, "
+        f"вычеркнуто слов {len(cut_words)}, исправлено написаний {len(rewrites)}"
+    )
     if submit.get("note"):
         print(f"пожелание: {submit['note']}")
     return 0
