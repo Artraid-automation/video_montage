@@ -103,7 +103,16 @@ def _segments_from_monologues(monologues: list[dict[str, Any]]) -> list[dict[str
     for monologue in monologues:
         previous_end: float | None = None
         for element in monologue.get("elements") or []:
-            if element.get("type") != "text":
+            kind = element.get("type")
+            if kind == "punct":
+                # Знаки препинания приезжают отдельными элементами без времени.
+                # Без них сценарий читается сплошным потоком, а человек этот текст
+                # читает и правит — поэтому знак приклеивается к предыдущему слову.
+                mark = str(element.get("value") or "")
+                if mark.strip() and current is not None and current["words"]:
+                    current["words"][-1]["word"] += mark.strip()
+                continue
+            if kind != "text":
                 continue
             word = str(element.get("value") or "").strip()
             start = float(element.get("ts", 0.0))

@@ -109,10 +109,23 @@ def build_script_page(
     )
 
 
-PAGE_TEMPLATE = """<title>{title}</title>
+# Страница уходит человеку файлом, а не ссылкой, поэтому документ обязан быть
+# самодостаточным: со своей кодировкой и обнулением полей. Без явного charset
+# кириллица при открытии файла с диска зависит от догадки браузера.
+PAGE_TEMPLATE = """<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{title}</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <style>
+  * {{ box-sizing: border-box; }}
+  html {{ color-scheme: light dark; }}
+  body {{ margin: 0; }}
+  img {{ max-width: 100%; }}
+  [hidden] {{ display: none !important; }}
   :root {{
     --paper: #FAFAF7;
     --card: #FFFFFF;
@@ -309,6 +322,8 @@ PAGE_TEMPLATE = """<title>{title}</title>
     .flip {{ grid-column: 2; justify-self: start; opacity: 1; }}
   }}
 </style>
+</head>
+<body>
 
 <div class="wrap">
   <header>
@@ -421,4 +436,6 @@ PAGE_TEMPLATE = """<title>{title}</title>
 
   refresh();
 </script>
+</body>
+</html>
 """

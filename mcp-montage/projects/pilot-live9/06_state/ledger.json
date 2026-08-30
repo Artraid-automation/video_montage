@@ -1,0 +1,79 @@
+{
+  "schema_version": 2,
+  "project_id": "pilot-live9",
+  "revision": 4,
+  "state": "GATE1_REVIEW",
+  "updated_at": "2026-08-30T21:12:48.505034+00:00",
+  "run": null,
+  "gates": {
+    "gate1": {
+      "status": "READY",
+      "manifest": {
+        "kind": "gate1-manifest",
+        "path": "03_phase1/gate1-manifest.json",
+        "sha256": "sha256:eadb1910abb54914dddffe76c114595dae95ade7254855a6a564b74c31cf6635",
+        "size_bytes": 2671
+      },
+      "manifest_content_hash": "sha256:2cec73a933f466109aa1bf23a1e2239c52d16c043fa6a6a8d95f375437603b6f",
+      "prepared_at": "2026-08-30T21:12:48.504992+00:00"
+    }
+  },
+  "approvals": [],
+  "revision_request": null,
+  "last_error": null,
+  "events": [
+    {
+      "id": "4afaae6bf1c54146b72a8f4bead852b2",
+      "at": "2026-08-30T21:09:37.271760+00:00",
+      "type": "state_created",
+      "state": "NEW",
+      "details": {}
+    },
+    {
+      "id": "f235fba703464acc970348b57cf9b15c",
+      "at": "2026-08-30T21:09:38.625534+00:00",
+      "type": "phase1_started",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "NEW",
+        "inputs_hash": "sha256:dd5c8df25c2800bcebed8d15e726f6851464d41e1f180deceb4a291b7e6dba43"
+      }
+    },
+    {
+      "id": "ce20b55d605847a88065677a9326366d",
+      "at": "2026-08-30T21:09:38.633007+00:00",
+      "type": "checkpoint",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "checkpoint": "ingested"
+      }
+    },
+    {
+      "id": "7708ffd48d17401c930e0d71327ffe35",
+      "at": "2026-08-30T21:12:48.466959+00:00",
+      "type": "checkpoint",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "checkpoint": "phase1-bundles"
+      }
+    },
+    {
+      "id": "76eb07f1308e4122af685f1a6612be39",
+      "at": "2026-08-30T21:12:48.505034+00:00",
+      "type": "gate_ready",
+      "state": "GATE1_REVIEW",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "gate": "gate1",
+        "manifest": {
+          "kind": "gate1-manifest",
+          "path": "03_phase1/gate1-manifest.json",
+          "sha256": "sha256:eadb1910abb54914dddffe76c114595dae95ade7254855a6a564b74c31cf6635",
+          "size_bytes": 2671
+        }
+      }
+    }
+  ]
+}

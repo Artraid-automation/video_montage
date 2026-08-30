@@ -1,0 +1,2519 @@
+{
+  "schema_version": 1,
+  "project_id": "mnt-7-rJ-TISzwV9YpWu",
+  "title": "Локальная расшифровка звонков",
+  "summary": "Ролик рассказывает о разработчике, который сделал полностью локальную CRM без сервера для собственного телефона: она слушает звонки, транскрибирует их локально и с помощью ИИ раскладывает их в заметки для Obsidian, без облачных бэкапов. Далее автор коротко замечает, что нечто подобное можно собрать самому на вайб-кодинге, и завершает мыслью, что решение сделано не для отдела продаж, а для конкретного человека, который не хочет, чтобы его приватные звонки и переписки утекали куда-либо.",
+  "risks": [
+    "Вырезана целая ветка u0008–u0015 (похожий локальный ИИ-сервис, будущее локальных моделей, сложности с App Store у iOS) — сам автор назвал это 'хреновой подводкой' и попросил убрать, но по содержанию там было интересное сравнение Android/iOS, стоит перепроверить, не жалко ли терять.",
+    "После реза стык u0007 → u0018 получился резким: от 'отключены у этого проекта' сразу к 'Можно на вайб-коде, таки, круто' — рекомендуется прослушать склейку вживую на предмет резкости перехода.",
+    "u0009 'Тут да, мы стапим' похоже на ошибку распознавания речи (вероятно 'мы ставим') — блок всё равно вырезан, но при ручной проверке ветки имейте это в виду."
+  ],
+  "source_duration_s": 200.68,
+  "continuity_gap_s": 1.5,
+  "words": [
+    {
+      "i": 0,
+      "text": "Разработчик",
+      "start_s": 2.67,
+      "end_s": 3.63,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0001"
+    },
+    {
+      "i": 1,
+      "text": "создал",
+      "start_s": 3.63,
+      "end_s": 4.09,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0001"
+    },
+    {
+      "i": 2,
+      "text": "CRM",
+      "start_s": 4.09,
+      "end_s": 4.43,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0001"
+    },
+    {
+      "i": 3,
+      "text": "без",
+      "start_s": 4.43,
+      "end_s": 4.77,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0001"
+    },
+    {
+      "i": 4,
+      "text": "сервера",
+      "start_s": 4.77,
+      "end_s": 5.65,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0001"
+    },
+    {
+      "i": 5,
+      "text": "чтобы",
+      "start_s": 5.65,
+      "end_s": 5.85,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0001"
+    },
+    {
+      "i": 6,
+      "text": "не",
+      "start_s": 5.85,
+      "end_s": 6.01,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0001"
+    },
+    {
+      "i": 7,
+      "text": "хранить",
+      "start_s": 6.01,
+      "end_s": 6.39,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0001"
+    },
+    {
+      "i": 8,
+      "text": "чужие",
+      "start_s": 6.39,
+      "end_s": 6.77,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0001"
+    },
+    {
+      "i": 9,
+      "text": "звонки.",
+      "start_s": 6.77,
+      "end_s": 7.41,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0001"
+    },
+    {
+      "i": 10,
+      "text": "Какой-то",
+      "start_s": 7.75,
+      "end_s": 8.67,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0001"
+    },
+    {
+      "i": 11,
+      "text": "чел",
+      "start_s": 8.67,
+      "end_s": 9.09,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0001"
+    },
+    {
+      "i": 12,
+      "text": "на",
+      "start_s": 9.09,
+      "end_s": 9.69,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0001"
+    },
+    {
+      "i": 13,
+      "text": "своем",
+      "start_s": 9.69,
+      "end_s": 10.69,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0001"
+    },
+    {
+      "i": 14,
+      "text": "мобильном",
+      "start_s": 10.69,
+      "end_s": 11.19,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0001"
+    },
+    {
+      "i": 15,
+      "text": "телефоне",
+      "start_s": 11.19,
+      "end_s": 11.77,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0001"
+    },
+    {
+      "i": 16,
+      "text": "сделал",
+      "start_s": 11.77,
+      "end_s": 12.43,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0001"
+    },
+    {
+      "i": 17,
+      "text": "проект",
+      "start_s": 12.43,
+      "end_s": 13.21,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0001"
+    },
+    {
+      "i": 18,
+      "text": "CRM-системы,",
+      "start_s": 13.21,
+      "end_s": 14.77,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0001"
+    },
+    {
+      "i": 19,
+      "text": "которая",
+      "start_s": 14.77,
+      "end_s": 15.03,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0001"
+    },
+    {
+      "i": 20,
+      "text": "слушает",
+      "start_s": 15.03,
+      "end_s": 15.71,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0001"
+    },
+    {
+      "i": 21,
+      "text": "звонки,",
+      "start_s": 15.71,
+      "end_s": 16.61,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0001"
+    },
+    {
+      "i": 22,
+      "text": "которые",
+      "start_s": 16.61,
+      "end_s": 16.85,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0001"
+    },
+    {
+      "i": 23,
+      "text": "происходят",
+      "start_s": 16.85,
+      "end_s": 17.43,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0001"
+    },
+    {
+      "i": 24,
+      "text": "на",
+      "start_s": 17.43,
+      "end_s": 17.59,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0001"
+    },
+    {
+      "i": 25,
+      "text": "телефоне,",
+      "start_s": 17.59,
+      "end_s": 18.21,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0001"
+    },
+    {
+      "i": 26,
+      "text": "ну",
+      "start_s": 18.21,
+      "end_s": 18.31,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0001"
+    },
+    {
+      "i": 27,
+      "text": "и,",
+      "start_s": 18.31,
+      "end_s": 18.49,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0001"
+    },
+    {
+      "i": 28,
+      "text": "как",
+      "start_s": 18.49,
+      "end_s": 18.63,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0001"
+    },
+    {
+      "i": 29,
+      "text": "я",
+      "start_s": 18.63,
+      "end_s": 18.75,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0001"
+    },
+    {
+      "i": 30,
+      "text": "понимаю,",
+      "start_s": 18.75,
+      "end_s": 19.25,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0001"
+    },
+    {
+      "i": 31,
+      "text": "еще",
+      "start_s": 19.25,
+      "end_s": 19.97,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0001"
+    },
+    {
+      "i": 32,
+      "text": "в",
+      "start_s": 19.97,
+      "end_s": 20.27,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0001"
+    },
+    {
+      "i": 33,
+      "text": "мессенджерах,",
+      "start_s": 20.27,
+      "end_s": 21.35,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0001"
+    },
+    {
+      "i": 34,
+      "text": "Офигенная",
+      "start_s": 71.63,
+      "end_s": 72.35,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0008"
+    },
+    {
+      "i": 35,
+      "text": "идея",
+      "start_s": 72.35,
+      "end_s": 72.87,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0008"
+    },
+    {
+      "i": 36,
+      "text": "Я",
+      "start_s": 72.87,
+      "end_s": 73.05,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0008"
+    },
+    {
+      "i": 37,
+      "text": "не",
+      "start_s": 73.05,
+      "end_s": 73.15,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0008"
+    },
+    {
+      "i": 38,
+      "text": "так",
+      "start_s": 73.15,
+      "end_s": 73.37,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0008"
+    },
+    {
+      "i": 39,
+      "text": "давно",
+      "start_s": 73.37,
+      "end_s": 73.71,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0008"
+    },
+    {
+      "i": 40,
+      "text": "смотрел",
+      "start_s": 73.71,
+      "end_s": 75.43,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0008"
+    },
+    {
+      "i": 41,
+      "text": "локальную",
+      "start_s": 75.43,
+      "end_s": 76.77,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0008"
+    },
+    {
+      "i": 42,
+      "text": "нейронку",
+      "start_s": 76.77,
+      "end_s": 77.37,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0008"
+    },
+    {
+      "i": 43,
+      "text": "на",
+      "start_s": 77.37,
+      "end_s": 77.49,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0008"
+    },
+    {
+      "i": 44,
+      "text": "телефон,",
+      "start_s": 77.49,
+      "end_s": 78.03,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0008"
+    },
+    {
+      "i": 45,
+      "text": "который",
+      "start_s": 78.03,
+      "end_s": 78.33,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0008"
+    },
+    {
+      "i": 46,
+      "text": "даже",
+      "start_s": 78.33,
+      "end_s": 78.71,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0008"
+    },
+    {
+      "i": 47,
+      "text": "сама",
+      "start_s": 78.71,
+      "end_s": 79.91,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0008"
+    },
+    {
+      "i": 48,
+      "text": "какой-то",
+      "start_s": 79.91,
+      "end_s": 80.69,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0008"
+    },
+    {
+      "i": 49,
+      "text": "сервис",
+      "start_s": 80.69,
+      "end_s": 81.15,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0008"
+    },
+    {
+      "i": 50,
+      "text": "типа",
+      "start_s": 81.15,
+      "end_s": 81.77,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0008"
+    },
+    {
+      "i": 51,
+      "text": "разрабатывает,",
+      "start_s": 81.77,
+      "end_s": 82.65,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0008"
+    },
+    {
+      "i": 52,
+      "text": "достаточно",
+      "start_s": 82.65,
+      "end_s": 82.97,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0008"
+    },
+    {
+      "i": 53,
+      "text": "тупенько",
+      "start_s": 82.97,
+      "end_s": 83.87,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0008"
+    },
+    {
+      "i": 54,
+      "text": "но",
+      "start_s": 83.87,
+      "end_s": 84.03,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0008"
+    },
+    {
+      "i": 55,
+      "text": "тем",
+      "start_s": 84.03,
+      "end_s": 84.17,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0008"
+    },
+    {
+      "i": 56,
+      "text": "не",
+      "start_s": 84.17,
+      "end_s": 84.31,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0008"
+    },
+    {
+      "i": 57,
+      "text": "менее",
+      "start_s": 84.31,
+      "end_s": 84.55,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0008"
+    },
+    {
+      "i": 58,
+      "text": "может",
+      "start_s": 84.55,
+      "end_s": 84.77,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0008"
+    },
+    {
+      "i": 59,
+      "text": "запилить",
+      "start_s": 84.77,
+      "end_s": 85.39,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0008"
+    },
+    {
+      "i": 60,
+      "text": "прямо",
+      "start_s": 85.39,
+      "end_s": 85.53,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0008"
+    },
+    {
+      "i": 61,
+      "text": "саску.",
+      "start_s": 85.53,
+      "end_s": 86.25,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0008"
+    },
+    {
+      "i": 62,
+      "text": "Тут",
+      "start_s": 86.87,
+      "end_s": 87.59,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0009"
+    },
+    {
+      "i": 63,
+      "text": "да,",
+      "start_s": 87.59,
+      "end_s": 87.83,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0009"
+    },
+    {
+      "i": 64,
+      "text": "мы",
+      "start_s": 87.83,
+      "end_s": 87.95,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0009"
+    },
+    {
+      "i": 65,
+      "text": "стапим",
+      "start_s": 87.95,
+      "end_s": 88.43,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0009"
+    },
+    {
+      "i": 66,
+      "text": "уточнение",
+      "start_s": 89.41,
+      "end_s": 90.75,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 67,
+      "text": "звездочку,",
+      "start_s": 90.75,
+      "end_s": 91.49,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 68,
+      "text": "что",
+      "start_s": 91.49,
+      "end_s": 91.67,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 69,
+      "text": "телефон",
+      "start_s": 91.67,
+      "end_s": 92.37,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 70,
+      "text": "должен",
+      "start_s": 92.37,
+      "end_s": 92.65,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 71,
+      "text": "быть",
+      "start_s": 92.65,
+      "end_s": 93.35,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 72,
+      "text": "достаточно",
+      "start_s": 93.35,
+      "end_s": 93.65,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 73,
+      "text": "мощным.",
+      "start_s": 93.65,
+      "end_s": 94.51,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 74,
+      "text": "Anyway,",
+      "start_s": 94.87,
+      "end_s": 95.45,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 75,
+      "text": "со",
+      "start_s": 95.45,
+      "end_s": 96.59,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 76,
+      "text": "временем",
+      "start_s": 96.59,
+      "end_s": 97.09,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 77,
+      "text": "мы",
+      "start_s": 97.09,
+      "end_s": 97.19,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 78,
+      "text": "будем",
+      "start_s": 97.19,
+      "end_s": 97.45,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 79,
+      "text": "видеть",
+      "start_s": 97.45,
+      "end_s": 97.75,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 80,
+      "text": "все",
+      "start_s": 97.75,
+      "end_s": 97.87,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 81,
+      "text": "больше",
+      "start_s": 97.87,
+      "end_s": 98.21,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 82,
+      "text": "и",
+      "start_s": 98.21,
+      "end_s": 98.63,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 83,
+      "text": "все",
+      "start_s": 98.63,
+      "end_s": 98.83,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 84,
+      "text": "более",
+      "start_s": 98.83,
+      "end_s": 99.13,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 85,
+      "text": "умные",
+      "start_s": 99.13,
+      "end_s": 99.71,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 86,
+      "text": "локальные",
+      "start_s": 99.71,
+      "end_s": 100.71,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 87,
+      "text": "модели,",
+      "start_s": 100.71,
+      "end_s": 101.33,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 88,
+      "text": "которые",
+      "start_s": 101.33,
+      "end_s": 101.59,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 89,
+      "text": "будут",
+      "start_s": 101.59,
+      "end_s": 101.81,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 90,
+      "text": "опускаться",
+      "start_s": 101.81,
+      "end_s": 102.29,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 91,
+      "text": "там",
+      "start_s": 102.29,
+      "end_s": 102.49,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 92,
+      "text": "вплоть",
+      "start_s": 102.49,
+      "end_s": 102.83,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 93,
+      "text": "до",
+      "start_s": 102.83,
+      "end_s": 102.97,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 94,
+      "text": "часов",
+      "start_s": 102.97,
+      "end_s": 103.29,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 95,
+      "text": "или",
+      "start_s": 103.29,
+      "end_s": 103.65,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 96,
+      "text": "еще",
+      "start_s": 103.65,
+      "end_s": 103.99,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 97,
+      "text": "более",
+      "start_s": 103.99,
+      "end_s": 104.27,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 98,
+      "text": "мелких",
+      "start_s": 104.27,
+      "end_s": 104.67,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 99,
+      "text": "девайсов.",
+      "start_s": 104.67,
+      "end_s": 105.29,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 100,
+      "text": "Работать",
+      "start_s": 105.33,
+      "end_s": 106.01,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 101,
+      "text": "без",
+      "start_s": 106.01,
+      "end_s": 106.59,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 102,
+      "text": "зависимости",
+      "start_s": 106.59,
+      "end_s": 107.51,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 103,
+      "text": "от",
+      "start_s": 107.51,
+      "end_s": 107.77,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 104,
+      "text": "какого-то",
+      "start_s": 107.77,
+      "end_s": 108.25,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 105,
+      "text": "облачного",
+      "start_s": 108.25,
+      "end_s": 108.95,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 106,
+      "text": "железа,",
+      "start_s": 108.95,
+      "end_s": 109.69,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 107,
+      "text": "что",
+      "start_s": 109.69,
+      "end_s": 109.89,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 108,
+      "text": "классно.",
+      "start_s": 109.89,
+      "end_s": 110.79,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 109,
+      "text": "Ну",
+      "start_s": 111.03,
+      "end_s": 111.37,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 110,
+      "text": "и",
+      "start_s": 111.37,
+      "end_s": 111.59,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 111,
+      "text": "если",
+      "start_s": 111.59,
+      "end_s": 112.09,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 112,
+      "text": "в",
+      "start_s": 112.09,
+      "end_s": 112.65,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 113,
+      "text": "ваших",
+      "start_s": 112.65,
+      "end_s": 113.19,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 114,
+      "text": "вдруг,",
+      "start_s": 113.19,
+      "end_s": 113.39,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 115,
+      "text": "задачах",
+      "start_s": 113.39,
+      "end_s": 114.09,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 116,
+      "text": "данный",
+      "start_s": 114.09,
+      "end_s": 116.53,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 117,
+      "text": "кейс",
+      "start_s": 116.53,
+      "end_s": 116.89,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 118,
+      "text": "интересен",
+      "start_s": 116.89,
+      "end_s": 118.19,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 119,
+      "text": "Можно,",
+      "start_s": 118.19,
+      "end_s": 118.49,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 120,
+      "text": "во-первых...",
+      "start_s": 118.49,
+      "end_s": 119.39,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 121,
+      "text": "...вызывать",
+      "start_s": 119.41,
+      "end_s": 119.65,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 122,
+      "text": "кодик",
+      "start_s": 119.65,
+      "end_s": 120.19,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 123,
+      "text": "такой",
+      "start_s": 120.19,
+      "end_s": 120.45,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 124,
+      "text": "себе",
+      "start_s": 120.45,
+      "end_s": 120.77,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 125,
+      "text": "за",
+      "start_s": 120.77,
+      "end_s": 121.17,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 126,
+      "text": "буквально",
+      "start_s": 121.17,
+      "end_s": 122.25,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 127,
+      "text": "пару",
+      "start_s": 122.25,
+      "end_s": 122.47,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 128,
+      "text": "дней,",
+      "start_s": 122.47,
+      "end_s": 122.87,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 129,
+      "text": "там",
+      "start_s": 122.87,
+      "end_s": 123.01,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 130,
+      "text": "ничего",
+      "start_s": 123.01,
+      "end_s": 123.23,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 131,
+      "text": "сложного.",
+      "start_s": 123.23,
+      "end_s": 124.01,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 132,
+      "text": "По",
+      "start_s": 124.03,
+      "end_s": 124.51,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 133,
+      "text": "крайней",
+      "start_s": 124.51,
+      "end_s": 124.79,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 134,
+      "text": "мере,",
+      "start_s": 124.79,
+      "end_s": 124.95,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 135,
+      "text": "если",
+      "start_s": 124.95,
+      "end_s": 125.13,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 136,
+      "text": "у",
+      "start_s": 125.13,
+      "end_s": 125.25,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 137,
+      "text": "вас",
+      "start_s": 125.25,
+      "end_s": 125.37,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 138,
+      "text": "Android.",
+      "start_s": 125.37,
+      "end_s": 126.05,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0010"
+    },
+    {
+      "i": 139,
+      "text": "С",
+      "start_s": 126.91,
+      "end_s": 127.39,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 140,
+      "text": "цеплом",
+      "start_s": 127.39,
+      "end_s": 127.87,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 141,
+      "text": "сложно",
+      "start_s": 127.87,
+      "end_s": 129.53,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 142,
+      "text": "попасть",
+      "start_s": 129.53,
+      "end_s": 130.13,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 143,
+      "text": "в",
+      "start_s": 130.13,
+      "end_s": 130.21,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 144,
+      "text": "App",
+      "start_s": 130.21,
+      "end_s": 130.35,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 145,
+      "text": "Store,",
+      "start_s": 130.35,
+      "end_s": 130.69,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 146,
+      "text": "там",
+      "start_s": 130.69,
+      "end_s": 130.85,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 147,
+      "text": "у",
+      "start_s": 130.85,
+      "end_s": 130.95,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 148,
+      "text": "них",
+      "start_s": 130.95,
+      "end_s": 131.07,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 149,
+      "text": "какие-то",
+      "start_s": 131.07,
+      "end_s": 131.43,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 150,
+      "text": "гонские",
+      "start_s": 131.43,
+      "end_s": 131.83,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 151,
+      "text": "подписки,",
+      "start_s": 131.83,
+      "end_s": 132.51,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 152,
+      "text": "что",
+      "start_s": 133.03,
+      "end_s": 133.31,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 153,
+      "text": "долларов",
+      "start_s": 133.31,
+      "end_s": 133.75,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 154,
+      "text": "в",
+      "start_s": 133.75,
+      "end_s": 134.13,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 155,
+      "text": "год",
+      "start_s": 134.13,
+      "end_s": 134.37,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 156,
+      "text": "нужно",
+      "start_s": 134.37,
+      "end_s": 134.61,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 157,
+      "text": "платить",
+      "start_s": 134.61,
+      "end_s": 135.03,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 158,
+      "text": "просто",
+      "start_s": 135.03,
+      "end_s": 135.25,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 159,
+      "text": "за",
+      "start_s": 135.25,
+      "end_s": 135.41,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 160,
+      "text": "возможность",
+      "start_s": 135.41,
+      "end_s": 135.73,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 161,
+      "text": "выложить",
+      "start_s": 135.73,
+      "end_s": 136.37,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 162,
+      "text": "приложение.",
+      "start_s": 136.37,
+      "end_s": 137.07,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 163,
+      "text": "Ну",
+      "start_s": 137.07,
+      "end_s": 137.21,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 164,
+      "text": "если",
+      "start_s": 137.21,
+      "end_s": 137.37,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 165,
+      "text": "Android,",
+      "start_s": 137.37,
+      "end_s": 138.01,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 166,
+      "text": "то",
+      "start_s": 138.01,
+      "end_s": 138.25,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 167,
+      "text": "в",
+      "start_s": 138.25,
+      "end_s": 138.39,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 168,
+      "text": "целом",
+      "start_s": 138.39,
+      "end_s": 138.73,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 169,
+      "text": "вообще",
+      "start_s": 138.73,
+      "end_s": 138.93,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 170,
+      "text": "пофигу",
+      "start_s": 138.93,
+      "end_s": 139.51,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 171,
+      "text": "взяли,",
+      "start_s": 139.51,
+      "end_s": 139.91,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 172,
+      "text": "собрали",
+      "start_s": 139.91,
+      "end_s": 140.67,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 173,
+      "text": "себе",
+      "start_s": 140.67,
+      "end_s": 140.85,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 174,
+      "text": "образ",
+      "start_s": 140.85,
+      "end_s": 141.33,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 175,
+      "text": "и",
+      "start_s": 141.33,
+      "end_s": 141.53,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 176,
+      "text": "пользуйтесь.",
+      "start_s": 141.53,
+      "end_s": 142.49,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0013"
+    },
+    {
+      "i": 177,
+      "text": "В",
+      "start_s": 144.63,
+      "end_s": 145.11,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0015"
+    },
+    {
+      "i": 178,
+      "text": "общем,",
+      "start_s": 145.11,
+      "end_s": 145.43,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0015"
+    },
+    {
+      "i": 179,
+      "text": "если",
+      "start_s": 145.43,
+      "end_s": 145.85,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0015"
+    },
+    {
+      "i": 180,
+      "text": "подходит",
+      "start_s": 145.85,
+      "end_s": 146.47,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0015"
+    },
+    {
+      "i": 181,
+      "text": "под",
+      "start_s": 146.47,
+      "end_s": 146.61,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0015"
+    },
+    {
+      "i": 182,
+      "text": "юзеркейс,",
+      "start_s": 146.61,
+      "end_s": 147.37,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0015"
+    },
+    {
+      "i": 183,
+      "text": "то",
+      "start_s": 147.37,
+      "end_s": 147.71,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0015"
+    },
+    {
+      "i": 184,
+      "text": "классно.",
+      "start_s": 147.71,
+      "end_s": 148.39,
+      "cut": true,
+      "reason": "не по теме",
+      "entry_id": "u0015"
+    },
+    {
+      "i": 185,
+      "text": "Нет,",
+      "start_s": 149.95,
+      "end_s": 150.43,
+      "cut": true,
+      "reason": "команда",
+      "entry_id": "u0016"
+    },
+    {
+      "i": 186,
+      "text": "хуёвая",
+      "start_s": 150.43,
+      "end_s": 150.95,
+      "cut": true,
+      "reason": "команда",
+      "entry_id": "u0016"
+    },
+    {
+      "i": 187,
+      "text": "подводка,",
+      "start_s": 150.95,
+      "end_s": 151.55,
+      "cut": true,
+      "reason": "команда",
+      "entry_id": "u0016"
+    },
+    {
+      "i": 188,
+      "text": "это",
+      "start_s": 151.55,
+      "end_s": 151.67,
+      "cut": true,
+      "reason": "команда",
+      "entry_id": "u0016"
+    },
+    {
+      "i": 189,
+      "text": "мы",
+      "start_s": 151.67,
+      "end_s": 151.81,
+      "cut": true,
+      "reason": "команда",
+      "entry_id": "u0016"
+    },
+    {
+      "i": 190,
+      "text": "убираем",
+      "start_s": 151.81,
+      "end_s": 152.35,
+      "cut": true,
+      "reason": "команда",
+      "entry_id": "u0016"
+    },
+    {
+      "i": 191,
+      "text": "эту",
+      "start_s": 152.35,
+      "end_s": 152.57,
+      "cut": true,
+      "reason": "команда",
+      "entry_id": "u0016"
+    },
+    {
+      "i": 192,
+      "text": "ветку",
+      "start_s": 152.57,
+      "end_s": 152.93,
+      "cut": true,
+      "reason": "команда",
+      "entry_id": "u0016"
+    },
+    {
+      "i": 193,
+      "text": "смысла.",
+      "start_s": 152.93,
+      "end_s": 153.43,
+      "cut": true,
+      "reason": "команда",
+      "entry_id": "u0016"
+    },
+    {
+      "i": 194,
+      "text": "Чё",
+      "start_s": 154.49,
+      "end_s": 154.93,
+      "cut": true,
+      "reason": "команда",
+      "entry_id": "u0017"
+    },
+    {
+      "i": 195,
+      "text": "я",
+      "start_s": 154.93,
+      "end_s": 154.99,
+      "cut": true,
+      "reason": "команда",
+      "entry_id": "u0017"
+    },
+    {
+      "i": 196,
+      "text": "хотел",
+      "start_s": 154.99,
+      "end_s": 155.17,
+      "cut": true,
+      "reason": "команда",
+      "entry_id": "u0017"
+    },
+    {
+      "i": 197,
+      "text": "сказать-то",
+      "start_s": 155.17,
+      "end_s": 155.75,
+      "cut": true,
+      "reason": "команда",
+      "entry_id": "u0017"
+    },
+    {
+      "i": 198,
+      "text": "Ну",
+      "start_s": 155.75,
+      "end_s": 155.85,
+      "cut": true,
+      "reason": "команда",
+      "entry_id": "u0017"
+    },
+    {
+      "i": 199,
+      "text": "вот",
+      "start_s": 155.85,
+      "end_s": 155.99,
+      "cut": true,
+      "reason": "команда",
+      "entry_id": "u0017"
+    },
+    {
+      "i": 200,
+      "text": "я",
+      "start_s": 155.99,
+      "end_s": 156.07,
+      "cut": true,
+      "reason": "команда",
+      "entry_id": "u0017"
+    },
+    {
+      "i": 201,
+      "text": "рассказал",
+      "start_s": 156.07,
+      "end_s": 156.55,
+      "cut": true,
+      "reason": "команда",
+      "entry_id": "u0017"
+    },
+    {
+      "i": 202,
+      "text": "что",
+      "start_s": 156.55,
+      "end_s": 156.65,
+      "cut": true,
+      "reason": "команда",
+      "entry_id": "u0017"
+    },
+    {
+      "i": 203,
+      "text": "как",
+      "start_s": 156.65,
+      "end_s": 156.83,
+      "cut": true,
+      "reason": "команда",
+      "entry_id": "u0017"
+    },
+    {
+      "i": 204,
+      "text": "это",
+      "start_s": 156.83,
+      "end_s": 156.97,
+      "cut": true,
+      "reason": "команда",
+      "entry_id": "u0017"
+    },
+    {
+      "i": 205,
+      "text": "классно",
+      "start_s": 156.97,
+      "end_s": 157.39,
+      "cut": true,
+      "reason": "команда",
+      "entry_id": "u0017"
+    },
+    {
+      "i": 206,
+      "text": "бла-бла-бла.",
+      "start_s": 157.39,
+      "end_s": 158.03,
+      "cut": true,
+      "reason": "команда",
+      "entry_id": "u0017"
+    },
+    {
+      "i": 207,
+      "text": "Можно",
+      "start_s": 158.69,
+      "end_s": 159.13,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0018"
+    },
+    {
+      "i": 208,
+      "text": "на",
+      "start_s": 159.13,
+      "end_s": 159.33,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0018"
+    },
+    {
+      "i": 209,
+      "text": "вайп-коде,",
+      "start_s": 159.33,
+      "end_s": 159.89,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0018"
+    },
+    {
+      "i": 210,
+      "text": "таки,",
+      "start_s": 159.89,
+      "end_s": 160.27,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0018"
+    },
+    {
+      "i": 211,
+      "text": "круто.",
+      "start_s": 160.27,
+      "end_s": 161.03,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0018"
+    },
+    {
+      "i": 212,
+      "text": "В",
+      "start_s": 165.81,
+      "end_s": 166.25,
+      "cut": true,
+      "reason": "дубль",
+      "entry_id": "u0019"
+    },
+    {
+      "i": 213,
+      "text": "общем,",
+      "start_s": 166.25,
+      "end_s": 166.53,
+      "cut": true,
+      "reason": "дубль",
+      "entry_id": "u0019"
+    },
+    {
+      "i": 214,
+      "text": "это",
+      "start_s": 166.53,
+      "end_s": 166.67,
+      "cut": true,
+      "reason": "дубль",
+      "entry_id": "u0019"
+    },
+    {
+      "i": 215,
+      "text": "решение",
+      "start_s": 166.67,
+      "end_s": 167.31,
+      "cut": true,
+      "reason": "дубль",
+      "entry_id": "u0019"
+    },
+    {
+      "i": 216,
+      "text": "не",
+      "start_s": 167.31,
+      "end_s": 167.55,
+      "cut": true,
+      "reason": "дубль",
+      "entry_id": "u0019"
+    },
+    {
+      "i": 217,
+      "text": "для",
+      "start_s": 167.55,
+      "end_s": 167.77,
+      "cut": true,
+      "reason": "дубль",
+      "entry_id": "u0019"
+    },
+    {
+      "i": 218,
+      "text": "какого-то",
+      "start_s": 167.77,
+      "end_s": 168.29,
+      "cut": true,
+      "reason": "дубль",
+      "entry_id": "u0019"
+    },
+    {
+      "i": 219,
+      "text": "отдела",
+      "start_s": 168.29,
+      "end_s": 168.69,
+      "cut": true,
+      "reason": "дубль",
+      "entry_id": "u0019"
+    },
+    {
+      "i": 220,
+      "text": "продаж,",
+      "start_s": 168.69,
+      "end_s": 169.13,
+      "cut": true,
+      "reason": "дубль",
+      "entry_id": "u0019"
+    },
+    {
+      "i": 221,
+      "text": "а",
+      "start_s": 169.13,
+      "end_s": 169.49,
+      "cut": true,
+      "reason": "дубль",
+      "entry_id": "u0019"
+    },
+    {
+      "i": 222,
+      "text": "исключительно",
+      "start_s": 169.49,
+      "end_s": 171.05,
+      "cut": true,
+      "reason": "дубль",
+      "entry_id": "u0019"
+    },
+    {
+      "i": 223,
+      "text": "под",
+      "start_s": 171.05,
+      "end_s": 171.25,
+      "cut": true,
+      "reason": "дубль",
+      "entry_id": "u0019"
+    },
+    {
+      "i": 224,
+      "text": "одного",
+      "start_s": 171.25,
+      "end_s": 171.87,
+      "cut": true,
+      "reason": "дубль",
+      "entry_id": "u0019"
+    },
+    {
+      "i": 225,
+      "text": "человека",
+      "start_s": 171.87,
+      "end_s": 172.59,
+      "cut": true,
+      "reason": "дубль",
+      "entry_id": "u0019"
+    },
+    {
+      "i": 226,
+      "text": "с",
+      "start_s": 172.59,
+      "end_s": 173.33,
+      "cut": true,
+      "reason": "дубль",
+      "entry_id": "u0019"
+    },
+    {
+      "i": 227,
+      "text": "одним...",
+      "start_s": 173.33,
+      "end_s": 174.19,
+      "cut": true,
+      "reason": "дубль",
+      "entry_id": "u0019"
+    },
+    {
+      "i": 228,
+      "text": "Погоди-ка.",
+      "start_s": 177.01,
+      "end_s": 177.65,
+      "cut": true,
+      "reason": "команда",
+      "entry_id": "u0020"
+    },
+    {
+      "i": 229,
+      "text": "В",
+      "start_s": 178.93,
+      "end_s": 179.37,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 230,
+      "text": "общем,",
+      "start_s": 179.37,
+      "end_s": 179.61,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 231,
+      "text": "это",
+      "start_s": 179.61,
+      "end_s": 179.73,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 232,
+      "text": "решение",
+      "start_s": 179.73,
+      "end_s": 180.13,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 233,
+      "text": "не",
+      "start_s": 180.13,
+      "end_s": 180.27,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 234,
+      "text": "под",
+      "start_s": 180.27,
+      "end_s": 180.43,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 235,
+      "text": "какой-то",
+      "start_s": 180.43,
+      "end_s": 180.81,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 236,
+      "text": "отдел",
+      "start_s": 180.81,
+      "end_s": 181.03,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 237,
+      "text": "продаж",
+      "start_s": 181.03,
+      "end_s": 181.71,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 238,
+      "text": "большую",
+      "start_s": 181.71,
+      "end_s": 182.13,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 239,
+      "text": "компанию,",
+      "start_s": 182.13,
+      "end_s": 182.71,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 240,
+      "text": "ну,",
+      "start_s": 182.87,
+      "end_s": 183.19,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 241,
+      "text": "а",
+      "start_s": 183.19,
+      "end_s": 183.27,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 242,
+      "text": "как",
+      "start_s": 183.27,
+      "end_s": 183.51,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 243,
+      "text": "оно",
+      "start_s": 183.51,
+      "end_s": 184.25,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 244,
+      "text": "и",
+      "start_s": 184.25,
+      "end_s": 184.57,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 245,
+      "text": "было",
+      "start_s": 184.57,
+      "end_s": 184.97,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 246,
+      "text": "написано",
+      "start_s": 184.97,
+      "end_s": 185.63,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 247,
+      "text": "конкретно",
+      "start_s": 185.63,
+      "end_s": 186.45,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 248,
+      "text": "под",
+      "start_s": 186.45,
+      "end_s": 186.59,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 249,
+      "text": "одного",
+      "start_s": 186.59,
+      "end_s": 186.85,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 250,
+      "text": "человека",
+      "start_s": 186.85,
+      "end_s": 187.33,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 251,
+      "text": "с",
+      "start_s": 187.33,
+      "end_s": 187.57,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 252,
+      "text": "конкретным",
+      "start_s": 187.57,
+      "end_s": 188.09,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 253,
+      "text": "телефоном.",
+      "start_s": 188.09,
+      "end_s": 188.71,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 254,
+      "text": "Кто",
+      "start_s": 188.89,
+      "end_s": 189.69,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 255,
+      "text": "не",
+      "start_s": 189.69,
+      "end_s": 190.09,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 256,
+      "text": "хочет,",
+      "start_s": 190.09,
+      "end_s": 190.53,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 257,
+      "text": "чтобы",
+      "start_s": 190.53,
+      "end_s": 190.85,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 258,
+      "text": "его",
+      "start_s": 190.85,
+      "end_s": 191.07,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 259,
+      "text": "переписки",
+      "start_s": 191.07,
+      "end_s": 191.69,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 260,
+      "text": "утекали",
+      "start_s": 191.69,
+      "end_s": 192.13,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 261,
+      "text": "куда-либо",
+      "start_s": 192.13,
+      "end_s": 192.93,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 262,
+      "text": "для",
+      "start_s": 192.93,
+      "end_s": 194.35,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 263,
+      "text": "важных",
+      "start_s": 194.35,
+      "end_s": 194.97,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 264,
+      "text": "приватных",
+      "start_s": 194.97,
+      "end_s": 195.53,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    },
+    {
+      "i": 265,
+      "text": "звонков.",
+      "start_s": 195.53,
+      "end_s": 196.39,
+      "cut": false,
+      "reason": null,
+      "entry_id": "u0021"
+    }
+  ],
+  "sentences": [
+    {
+      "id": "s001",
+      "from": 0,
+      "to": 9,
+      "start_s": 2.67
+    },
+    {
+      "id": "s002",
+      "from": 10,
+      "to": 61,
+      "start_s": 7.75
+    },
+    {
+      "id": "s003",
+      "from": 62,
+      "to": 73,
+      "start_s": 86.87
+    },
+    {
+      "id": "s004",
+      "from": 74,
+      "to": 99,
+      "start_s": 94.87
+    },
+    {
+      "id": "s005",
+      "from": 100,
+      "to": 108,
+      "start_s": 105.33
+    },
+    {
+      "id": "s006",
+      "from": 109,
+      "to": 120,
+      "start_s": 111.03
+    },
+    {
+      "id": "s007",
+      "from": 121,
+      "to": 131,
+      "start_s": 119.41
+    },
+    {
+      "id": "s008",
+      "from": 132,
+      "to": 138,
+      "start_s": 124.03
+    },
+    {
+      "id": "s009",
+      "from": 139,
+      "to": 162,
+      "start_s": 126.91
+    },
+    {
+      "id": "s010",
+      "from": 163,
+      "to": 176,
+      "start_s": 137.07
+    },
+    {
+      "id": "s011",
+      "from": 177,
+      "to": 184,
+      "start_s": 144.63
+    },
+    {
+      "id": "s012",
+      "from": 185,
+      "to": 193,
+      "start_s": 149.95
+    },
+    {
+      "id": "s013",
+      "from": 194,
+      "to": 206,
+      "start_s": 154.49
+    },
+    {
+      "id": "s014",
+      "from": 207,
+      "to": 211,
+      "start_s": 158.69
+    },
+    {
+      "id": "s015",
+      "from": 212,
+      "to": 227,
+      "start_s": 165.81
+    },
+    {
+      "id": "s016",
+      "from": 228,
+      "to": 228,
+      "start_s": 177.01
+    },
+    {
+      "id": "s017",
+      "from": 229,
+      "to": 253,
+      "start_s": 178.93
+    },
+    {
+      "id": "s018",
+      "from": 254,
+      "to": 265,
+      "start_s": 188.89
+    }
+  ]
+}

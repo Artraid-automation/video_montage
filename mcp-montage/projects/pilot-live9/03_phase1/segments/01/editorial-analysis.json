@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "kind": "editorial-analysis",
+  "worker_version": "editorial-analysis-v6",
+  "source_transcript_sha256": "sha256:15dc1775332fe12be43794a3ac188dfcec6c3bdb2a62868fc4b8f221653ee039",
+  "thresholds": {
+    "pause_s": 0.8,
+    "repetition_similarity": 0.88,
+    "block_pause_s": 5.0
+  },
+  "verdict": "CANDIDATES_PROPOSED",
+  "pause_candidates": [
+    {
+      "id": "pause-u0001-u0003",
+      "after_utterance_id": "u0001",
+      "before_utterance_id": "u0003",
+      "start_s": 21.35,
+      "end_s": 22.19,
+      "duration_s": 0.84,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0003-u0007",
+      "after_utterance_id": "u0003",
+      "before_utterance_id": "u0007",
+      "start_s": 66.97,
+      "end_s": 67.99,
+      "duration_s": 1.02,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0007-u0008",
+      "after_utterance_id": "u0007",
+      "before_utterance_id": "u0008",
+      "start_s": 70.27,
+      "end_s": 71.63,
+      "duration_s": 1.36,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0009-u0010",
+      "after_utterance_id": "u0009",
+      "before_utterance_id": "u0010",
+      "start_s": 88.43,
+      "end_s": 89.41,
+      "duration_s": 0.98,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0010-u0013",
+      "after_utterance_id": "u0010",
+      "before_utterance_id": "u0013",
+      "start_s": 126.05,
+      "end_s": 126.91,
+      "duration_s": 0.86,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0013-u0015",
+      "after_utterance_id": "u0013",
+      "before_utterance_id": "u0015",
+      "start_s": 142.49,
+      "end_s": 144.63,
+      "duration_s": 2.14,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0015-u0016",
+      "after_utterance_id": "u0015",
+      "before_utterance_id": "u0016",
+      "start_s": 148.39,
+      "end_s": 149.95,
+      "duration_s": 1.56,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0016-u0017",
+      "after_utterance_id": "u0016",
+      "before_utterance_id": "u0017",
+      "start_s": 153.43,
+      "end_s": 154.49,
+      "duration_s": 1.06,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0018-u0019",
+      "after_utterance_id": "u0018",
+      "before_utterance_id": "u0019",
+      "start_s": 161.03,
+      "end_s": 165.81,
+      "duration_s": 4.78,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0019-u0020",
+      "after_utterance_id": "u0019",
+      "before_utterance_id": "u0020",
+      "start_s": 174.19,
+      "end_s": 177.01,
+      "duration_s": 2.82,
+      "reason": "inter-utterance-pause"
+    },
+    {
+      "id": "pause-u0020-u0021",
+      "after_utterance_id": "u0020",
+      "before_utterance_id": "u0021",
+      "start_s": 177.65,
+      "end_s": 178.93,
+      "duration_s": 1.28,
+      "reason": "inter-utterance-pause"
+    }
+  ],
+  "repetition_candidates": [],
+  "take_candidates": [],
+  "candidates": [
+    {
+      "id": "pause-u0001-u0003",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0003-u0007",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0007-u0008",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0009-u0010",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0010-u0013",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0013-u0015",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0015-u0016",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0016-u0017",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0018-u0019",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0019-u0020",
+      "kind": "pause",
+      "decision": "REVIEW"
+    },
+    {
+      "id": "pause-u0020-u0021",
+      "kind": "pause",
+      "decision": "REVIEW"
+    }
+  ],
+  "word_pause_plan": {
+    "cut_count": 65,
+    "removed_s": 31.95,
+    "duration_after_s": 168.73,
+    "speech_share_after": 0.9538,
+    "thresholds": {
+      "threshold_s": 0.15,
+      "keep_s": 0.06,
+      "noise_db": null
+    }
+  }
+}

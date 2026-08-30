@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Монтажный стол</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+  * { box-sizing: border-box; }
+  html { color-scheme: light dark; }
+  body { margin: 0; }
+  [hidden] { display: none !important; }
+
+  :root {
+    --paper: #FAFAF7;
+    --card: #FFFFFF;
+    --ink: #16191D;
+    --ink-soft: #5C6470;
+    --rule: #E3E4DF;
+    --keep: #1F6F5C;
+    --cut: #A34A34;
+    --cut-soft: #F4EBE7;
+    --shadow: 0 1px 2px rgba(22, 25, 29, .06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #14161A;
+      --card: #1B1E23;
+      --ink: #E7E8E4;
+      --ink-soft: #99A0AB;
+      --rule: #2A2E35;
+      --keep: #5FBFA5;
+      --cut: #E08D72;
+      --cut-soft: #251F1C;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .45);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #14161A;
+    --card: #1B1E23;
+    --ink: #E7E8E4;
+    --ink-soft: #99A0AB;
+    --rule: #2A2E35;
+    --keep: #5FBFA5;
+    --cut: #E08D72;
+    --cut-soft: #251F1C;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .45);
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    line-height: 1.5;
+  }
+  .layout {
+    max-width: 78rem;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem 7rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 20rem;
+    gap: 2.5rem;
+    align-items: start;
+  }
+  h1 {
+    font-family: Literata, Georgia, serif;
+    font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
+    font-weight: 600;
+    margin: 0 0 .4rem;
+    text-wrap: balance;
+  }
+  .lead { margin: 0 0 1.75rem; color: var(--ink-soft); max-width: 52ch; }
+
+  .facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.75rem;
+    padding: 1rem 1.25rem;
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.75rem;
+  }
+  .fact { display: flex; flex-direction: column; }
+  .fact b {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 1.3rem;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+  }
+  .fact span {
+    font-size: .72rem;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .sentence {
+    display: block;
+    position: relative;
+    padding: .3rem 0 .3rem 2.2rem;
+    border-radius: 5px;
+  }
+  .sentence:hover { background: var(--card); }
+  .sentence .kill {
+    position: absolute;
+    left: .35rem;
+    top: .45rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    background: none;
+    color: var(--ink-soft);
+    cursor: pointer;
+    font: inherit;
+    font-size: .85rem;
+    line-height: 1;
+    opacity: 0;
+    transition: opacity .12s ease;
+  }
+  .sentence:hover .kill, .kill:focus-visible { opacity: 1; }
+  .sentence[data-all-cut="true"] .kill { opacity: 1; color: var(--keep); border-color: var(--keep); }
+
+  .text {
+    font-family: Literata, Georgia, serif;
+    font-size: 1.1rem;
+    line-height: 1.75;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  .w {
+    cursor: pointer;
+    border-radius: 3px;
+    padding: .02em .06em;
+    transition: color .1s ease, background .1s ease;
+  }
+  .w:hover { background: var(--cut-soft); }
+  .w[data-cut="true"] {
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+    color: var(--ink-soft);
+    opacity: .65;
+  }
+  .w[data-marking="true"] { background: var(--cut-soft); }
+
+  aside {
+    position: sticky;
+    top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 1.25rem;
+    box-shadow: var(--shadow);
+  }
+  aside h2 {
+    font-size: .72rem;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-weight: 600;
+    margin: 0;
+  }
+  textarea {
+    width: 100%;
+    min-height: 9rem;
+    resize: vertical;
+    font: inherit;
+    color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 5px;
+    padding: .6rem .7rem;
+  }
+  .row { display: flex; gap: .5rem; flex-wrap: wrap; }
+  button {
+    font: inherit;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid var(--rule);
+    background: none;
+    color: var(--ink);
+    padding: .5rem .85rem;
+  }
+  button.primary { background: var(--ink); color: var(--paper); border-color: var(--ink); font-weight: 500; }
+  button.primary[disabled] { opacity: .45; cursor: default; }
+  button.rec[data-on="true"] { border-color: var(--cut); color: var(--cut); }
+  .status { margin: 0; font-size: .85rem; color: var(--ink-soft); min-height: 1.2rem; }
+  .hint { margin: 0; font-size: .82rem; color: var(--ink-soft); }
+  .risks { margin: 0; padding-left: 1.1rem; font-size: .85rem; color: var(--ink-soft); }
+  .risks li { margin-bottom: .35rem; }
+  :focus-visible { outline: 2px solid var(--keep); outline-offset: 2px; }
+
+  @media (max-width: 60rem) {
+    .layout { grid-template-columns: minmax(0, 1fr); }
+    aside { position: static; }
+    .sentence { padding-left: 2rem; }
+    .sentence .kill { opacity: 1; }
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+  <main>
+    <h1 id="title">Монтажный стол</h1>
+    <p class="lead">Нажимайте на слова — они вычёркиваются. Проведите по строке, чтобы убрать фразу. Кнопка слева от предложения снимает его целиком. Повторное нажатие возвращает.</p>
+
+    <div class="facts">
+      <div class="fact"><b id="factKept">—</b><span>останется</span></div>
+      <div class="fact"><b id="factSource">—</b><span>снято</span></div>
+      <div class="fact"><b id="factWords">—</b><span>слов в ролике</span></div>
+      <div class="fact"><b id="factCut">—</b><span>вычеркнуто</span></div>
+    </div>
+
+    <div class="text" id="text"></div>
+  </main>
+
+  <aside>
+    <h2>Пожелания к монтажу</h2>
+    <textarea id="note" placeholder="Например: начать сразу с новости, а рассуждение про Android убрать совсем"></textarea>
+    <div class="row">
+      <button type="button" class="rec" id="mic" data-on="false">Надиктовать</button>
+      <button type="button" id="undo">Снять пометки</button>
+    </div>
+    <button type="button" class="primary" id="send">Отправить в монтаж</button>
+    <p class="status" id="status"></p>
+    <p class="hint">Правки сохраняются сами — можно закрыть и вернуться с другого устройства.</p>
+    <div id="summaryBox" hidden>
+      <h2>О чём рассказ</h2>
+      <p class="hint" id="summary"></p>
+    </div>
+    <div id="risksBox" hidden>
+      <h2>Проверить на слух</h2>
+      <ul class="risks" id="risks"></ul>
+    </div>
+  </aside>
+</div>
+
+<script>
+  const DATA = __DESK_DATA__;
+  const cut = new Set(DATA.words.filter((word) => word.cut).map((word) => word.i));
+  if (DATA.draft && Array.isArray(DATA.draft.cut_words)) {
+    cut.clear();
+    DATA.draft.cut_words.forEach((index) => cut.add(index));
+  }
+
+  const textBox = document.getElementById("text");
+  const statusBox = document.getElementById("status");
+  const noteBox = document.getElementById("note");
+  if (DATA.draft && DATA.draft.note) noteBox.value = DATA.draft.note;
+  document.getElementById("title").textContent = DATA.title || "Монтажный стол";
+  document.title = DATA.title || "Монтажный стол";
+
+  if (DATA.summary) {
+    document.getElementById("summary").textContent = DATA.summary;
+    document.getElementById("summaryBox").hidden = false;
+  }
+  if (DATA.risks && DATA.risks.length) {
+    const list = document.getElementById("risks");
+    DATA.risks.forEach((risk) => {
+      const item = document.createElement("li");
+      item.textContent = risk;
+      list.appendChild(item);
+    });
+    document.getElementById("risksBox").hidden = false;
+  }
+
+  const wordNodes = new Map();
+  DATA.sentences.forEach((sentence) => {
+    const wrap = document.createElement("span");
+    wrap.className = "sentence";
+    wrap.dataset.id = sentence.id;
+    const kill = document.createElement("button");
+    kill.type = "button";
+    kill.className = "kill";
+    kill.title = "Убрать предложение целиком";
+    kill.textContent = "×";
+    kill.addEventListener("click", () => toggleSentence(sentence));
+    wrap.appendChild(kill);
+    for (let index = sentence.from; index <= sentence.to; index += 1) {
+      const word = DATA.words[index];
+      if (!word) continue;
+      const node = document.createElement("span");
+      node.className = "w";
+      node.dataset.i = String(index);
+      node.textContent = word.text;
+      wordNodes.set(index, node);
+      wrap.appendChild(node);
+      wrap.appendChild(document.createTextNode(" "));
+    }
+    textBox.appendChild(wrap);
+  });
+
+  function duration(seconds) {
+    const total = Math.round(seconds);
+    return `${Math.floor(total / 60)}:${String(total % 60).padStart(2, "0")}`;
+  }
+
+  function keptSeconds() {
+    // Хронометраж считается по словам: подряд идущие оставленные слова звучат
+    // вместе с паузой между ними, пока она короче порога непрерывности.
+    const gapLimit = DATA.continuity_gap_s || 1.5;
+    let total = 0;
+    let previousEnd = null;
+    DATA.words.forEach((word) => {
+      if (cut.has(word.i)) { previousEnd = null; return; }
+      total += word.end_s - word.start_s;
+      if (previousEnd !== null) {
+        const gap = word.start_s - previousEnd;
+        if (gap > 0 && gap <= gapLimit) total += gap;
+      }
+      previousEnd = word.end_s;
+    });
+    return total;
+  }
+
+  function paint(index) {
+    const node = wordNodes.get(index);
+    if (node) node.dataset.cut = cut.has(index) ? "true" : "false";
+  }
+
+  function refresh() {
+    DATA.sentences.forEach((sentence) => {
+      let all = true;
+      for (let index = sentence.from; index <= sentence.to; index += 1) {
+        if (!cut.has(index)) { all = false; break; }
+      }
+      const node = textBox.querySelector(`.sentence[data-id="${sentence.id}"]`);
+      if (node) node.dataset.allCut = all ? "true" : "false";
+    });
+    document.getElementById("factKept").textContent = duration(keptSeconds());
+    document.getElementById("factSource").textContent = duration(DATA.source_duration_s || 0);
+    document.getElementById("factWords").textContent = String(DATA.words.length - cut.size);
+    document.getElementById("factCut").textContent = String(cut.size);
+  }
+
+  function toggle(index, force) {
+    const value = force === undefined ? !cut.has(index) : force;
+    if (value) cut.add(index); else cut.delete(index);
+    paint(index);
+  }
+
+  function toggleSentence(sentence) {
+    let all = true;
+    for (let index = sentence.from; index <= sentence.to; index += 1) {
+      if (!cut.has(index)) { all = false; break; }
+    }
+    for (let index = sentence.from; index <= sentence.to; index += 1) toggle(index, !all);
+    refresh();
+    saveDraft();
+  }
+
+  let dragging = false;
+  let dragValue = true;
+  let dragTouched = new Set();
+
+  function indexFromEvent(event) {
+    const target = event.target instanceof Element
+      ? event.target.closest(".w")
+      : null;
+    return target ? Number(target.dataset.i) : null;
+  }
+
+  function pointFromTouch(touch) {
+    const element = document.elementFromPoint(touch.clientX, touch.clientY);
+    const word = element && element.closest ? element.closest(".w") : null;
+    return word ? Number(word.dataset.i) : null;
+  }
+
+  textBox.addEventListener("pointerdown", (event) => {
+    const index = indexFromEvent(event);
+    if (index === null) return;
+    event.preventDefault();
+    dragging = true;
+    dragValue = !cut.has(index);
+    dragTouched = new Set([index]);
+    toggle(index, dragValue);
+    refresh();
+  });
+
+  textBox.addEventListener("pointermove", (event) => {
+    if (!dragging) return;
+    const index = event.pointerType === "touch"
+      ? pointFromTouch(event)
+      : indexFromEvent(event);
+    if (index === null || dragTouched.has(index)) return;
+    dragTouched.add(index);
+    toggle(index, dragValue);
+    refresh();
+  });
+
+  function endDrag() {
+    if (!dragging) return;
+    dragging = false;
+    saveDraft();
+  }
+  window.addEventListener("pointerup", endDrag);
+  window.addEventListener("pointercancel", endDrag);
+
+  let saveTimer = null;
+  function saveDraft() {
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(() => {
+      fetch(`/montage/${DATA.project_id}/draft`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ cut_words: [...cut], note: noteBox.value }),
+      }).catch(() => { /* черновик не критичен: правки живут и в открытой вкладке */ });
+    }, 900);
+  }
+
+  noteBox.addEventListener("input", saveDraft);
+
+  document.getElementById("undo").addEventListener("click", () => {
+    cut.clear();
+    DATA.words.forEach((word) => paint(word.i));
+    refresh();
+    saveDraft();
+    statusBox.textContent = "Все пометки сняты.";
+  });
+
+  const sendButton = document.getElementById("send");
+  sendButton.addEventListener("click", async () => {
+    sendButton.disabled = true;
+    statusBox.textContent = "Отправляю…";
+    try {
+      const response = await fetch(`/montage/${DATA.project_id}/submit`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ cut_words: [...cut], note: noteBox.value }),
+      });
+      if (!response.ok) throw new Error(String(response.status));
+      statusBox.textContent = "Принято. Новый вариант придёт в Telegram.";
+    } catch (error) {
+      statusBox.textContent = "Не отправилось — проверьте связь и нажмите ещё раз.";
+    } finally {
+      sendButton.disabled = false;
+    }
+  });
+
+  const Recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  const mic = document.getElementById("mic");
+  if (!Recognition) {
+    mic.disabled = true;
+    mic.title = "Браузер не умеет диктовку — напишите текстом";
+  } else {
+    const recognizer = new Recognition();
+    recognizer.lang = "ru-RU";
+    recognizer.continuous = true;
+    recognizer.interimResults = false;
+    let listening = false;
+    recognizer.addEventListener("result", (event) => {
+      let chunk = "";
+      for (let index = event.resultIndex; index < event.results.length; index += 1) {
+        chunk += event.results[index][0].transcript;
+      }
+      noteBox.value = (noteBox.value ? noteBox.value.trim() + " " : "") + chunk.trim();
+      saveDraft();
+    });
+    recognizer.addEventListener("end", () => {
+      listening = false;
+      mic.dataset.on = "false";
+      mic.textContent = "Надиктовать";
+    });
+    mic.addEventListener("click", () => {
+      if (listening) { recognizer.stop(); return; }
+      try {
+        recognizer.start();
+        listening = true;
+        mic.dataset.on = "true";
+        mic.textContent = "Стоп";
+        statusBox.textContent = "Слушаю…";
+      } catch (error) {
+        statusBox.textContent = "Диктовка не запустилась — напишите текстом.";
+      }
+    });
+  }
+
+  DATA.words.forEach((word) => paint(word.i));
+  refresh();
+</script>
+</body>
+</html>

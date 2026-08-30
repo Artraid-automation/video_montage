@@ -1,0 +1,67 @@
+{
+  "schema_version": 2,
+  "id": "pilot-live7",
+  "title": "Локальная расшифровка звонков",
+  "transcription": {
+    "provider": "rev.ai",
+    "model": null,
+    "language": "ru",
+    "vad_filter": false
+  },
+  "verification_transcription": {
+    "provider": "rev.ai",
+    "model": null,
+    "language": "ru",
+    "vad_filter": false
+  },
+  "publishing": {
+    "title": "Локальная расшифровка звонков",
+    "description": "",
+    "chapter_titles": {}
+  },
+  "profile": "reels-9x16-measured",
+  "format": "reels",
+  "style_version": "strokov-measured-v1",
+  "default_grade": "neutral",
+  "render_profile": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 60,
+    "crf": 20,
+    "preset": "veryfast",
+    "captions": true
+  },
+  "transcript_verification": {
+    "max_wer": 0.18,
+    "min_order_ratio": 0.85,
+    "max_silence_s": 0.6,
+    "max_timing_drift_s": 0.85,
+    "max_timing_drift_ratio": 0.25,
+    "max_lead_in_silence_s": 0.4,
+    "reject_adjacent_echoes": true,
+    "reject_repeated_openers": true
+  },
+  "visual_planning": {
+    "enabled": false,
+    "cadence_seconds": 30.0,
+    "max_per_segment": 6
+  },
+  "visual_probe_interval_s": 2.0,
+  "telegram_delivery": {
+    "enabled": true,
+    "width": 1080,
+    "height": 1920,
+    "speed_factor": 1.0,
+    "send_as": "document"
+  },
+  "editorial": {
+    "llm": {
+      "provider": "claude-cli",
+      "model": "claude-sonnet-5",
+      "prompt_version": "gate1-editorial-cohesion.v3"
+    }
+  },
+  "pauses": {
+    "apply": false
+  }
+}

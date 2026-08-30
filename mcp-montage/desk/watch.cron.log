@@ -1,0 +1,6 @@
+2026-08-30 21:14:03 mnt-7-rJ-TISzwV9YpWu.20260831-001354.submit.json: проект pilot-live7, вычеркнуто слов 258
+2026-08-30 21:14:03 mnt-7-rJ-TISzwV9YpWu.20260831-001354.submit.json: правки не применились: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/clwduser1/video_montage/mcp-montage/pipeline/factory/transcript.py", line 587, in enrich_entries_from_source
+    raise ValueError(
+ValueError: split entry u0001x1 requires start—end timecodes in transcript.md (round-trip must preserve part bounds)
+

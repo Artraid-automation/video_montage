@@ -285,6 +285,13 @@ def build_parser() -> argparse.ArgumentParser:
     item.add_argument("--title")
     item.add_argument("--output")
     item.set_defaults(func=script_page)
+    item = commands.add_parser("desk-export")
+    item.add_argument("project_root")
+    item.add_argument("--segment", default="01")
+    item.add_argument("--title")
+    item.add_argument("--desk-id")
+    item.add_argument("--output")
+    item.set_defaults(func=desk_export)
     item = commands.add_parser("rerun-phase1"); item.add_argument("project_root"); item.add_argument("--reason", required=True); item.set_defaults(func=rerun_phase1)
     item = commands.add_parser("approve"); item.add_argument("project_root"); item.add_argument("gate", choices=("gate1", "gate2")); item.add_argument("--reviewer", default="user"); item.set_defaults(func=approve)
     item = commands.add_parser("accept-final"); item.add_argument("project_root"); item.add_argument("--reviewer", default="user"); item.set_defaults(func=accept_final)
@@ -321,6 +328,34 @@ def script_page(args: argparse.Namespace) -> int:
     )
     output = Path(args.output) if args.output else root / "03_phase1" / "script.html"
     output.write_text(page, encoding="utf-8")
+    print(str(output))
+    return 0
+
+
+
+def desk_export(args: argparse.Namespace) -> int:
+    """Выгрузить сценарий для монтажного стола (пословная правка в браузере)."""
+    from factory.desk_export import build_desk_payload
+    from factory.transcript import load_transcript
+
+    root = Path(args.project_root).resolve(strict=True)
+    segment_id = str(args.segment)
+    phase1 = root / "03_phase1" / "segments" / segment_id
+    source = read_json(phase1 / "source-transcript.json")
+    entries, _visuals = load_transcript(phase1 / "transcript.md", source)
+    editorial_path = phase1 / "llm-editorial.json"
+    editorial = read_json(editorial_path) if editorial_path.is_file() else {}
+    config = read_json(root / "project.json")
+    payload = build_desk_payload(
+        entries,
+        source,
+        project_id=str(args.desk_id or root.name),
+        title=str(args.title or config.get("title") or root.name),
+        summary=editorial.get("narrative_summary"),
+        risks=list(editorial.get("risks") or []),
+    )
+    output = Path(args.output) if args.output else root / "03_phase1" / "desk.json"
+    atomic_write_json(output, payload)
     print(str(output))
     return 0
 

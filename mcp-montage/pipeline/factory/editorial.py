@@ -313,8 +313,14 @@ def merge_adjacent_keeps(
         if gap < 0 or gap > max_gap_s:
             merged.append(entry)
             continue
+        # Склеенной реплике даём составной id (суффикс `x`): по нему разметка
+        # печатает и перечитывает СВОИ границы. С исходным id обратное чтение
+        # берёт времена из расшифровки по этому id и сжимает реплику до первой
+        # склеенной части — замер 30.08: 123 слова вместо 347.
+        merged_id = previous.id if previous.id.endswith("x1") else f"{previous.id}x1"
         merged[-1] = replace(
             previous,
+            id=merged_id,
             end_s=entry.end_s,
             text=f"{previous.text} {entry.text}".strip(),
             word_ids=tuple(previous.word_ids) + tuple(entry.word_ids),

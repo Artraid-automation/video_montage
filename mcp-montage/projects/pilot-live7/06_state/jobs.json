@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "revision": 4,
+  "jobs": {
+    "phase1.segment.01": {
+      "id": "phase1.segment.01",
+      "execution_id": "9a33d201593a4445afa4580bd12badac",
+      "status": "COMPLETED",
+      "worker_version": "phase1-bundle-v5:rev.ai:v1:editorial-analysis-v6:visual-planner-v4:broll-lexical-search-v2-senses",
+      "fingerprint": "sha256:d2daa646b408283ed512516f94b37f0cbb1bf362332e65349d13b17c31efcf67",
+      "attempt": 1,
+      "started_at": "2026-08-30T20:50:50.572866+00:00",
+      "updated_at": "2026-08-30T20:55:04.079336+00:00",
+      "outputs": {
+        "source_transcript": {
+          "kind": "source-transcript",
+          "path": "03_phase1/segments/01/source-transcript.json",
+          "sha256": "sha256:5031cada5f9dec620d5b31cd42618f8764fbf4418d530fc45aa15bc853bfed3b",
+          "size_bytes": 62731
+        },
+        "editorial_analysis": {
+          "kind": "editorial-analysis",
+          "path": "03_phase1/segments/01/editorial-analysis.json",
+          "sha256": "sha256:fb7256c3230e55fc1a9cc0cc38ad1fd2a13618a343db238049d223f49c1dbd90",
+          "size_bytes": 4323
+        },
+        "llm_editorial": {
+          "kind": "llm-editorial",
+          "path": "03_phase1/segments/01/llm-editorial.json",
+          "sha256": "sha256:0c1dfa0c62ddcbb6a297a913f9cfdf5002f157f1c8c8e6e3ef37305984826499",
+          "size_bytes": 3932
+        },
+        "llm_visual": {
+          "kind": "llm-visual",
+          "path": "03_phase1/segments/01/llm-visual.json",
+          "sha256": "sha256:f655194b8d6ca67242e903269567a20095115989a471771854d8b72d960b2612",
+          "size_bytes": 365
+        },
+        "transcript": {
+          "kind": "editable-transcript",
+          "path": "03_phase1/segments/01/transcript.md",
+          "sha256": "sha256:912c777cb5c882e7531a1b7ff0689394e31b12d8f8021a6b962a1e5986d71b7d",
+          "size_bytes": 4979
+        },
+        "sync_report": {
+          "kind": "sync-report",
+          "path": "03_phase1/segments/01/sync-report.json",
+          "sha256": "sha256:5c83d40fd27297f787bff60f55ab9f223700414f2bb0722e4e36ae2bd02956ee",
+          "size_bytes": 354
+        },
+        "grade_manifest": {
+          "kind": "grade-manifest",
+          "path": "03_phase1/segments/01/grade-manifest.json",
+          "sha256": "sha256:352d2e3f85a5ee32ec0bddc5fa1056aafd945b1c8220925432e4b652e520dc80",
+          "size_bytes": 1277
+        },
+        "visual_plan": {
+          "kind": "visual-plan",
+          "path": "03_phase1/segments/01/visual-plan.json",
+          "sha256": "sha256:4d20c591fb7277e30613d4b4d4749d3bb66fceedc0fcf1a0d0ec26cec9c31233",
+          "size_bytes": 563
+        },
+        "grade_sample_0": {
+          "kind": "grade-sample",
+          "path": "03_phase1/segments/01/grade-samples/neutral.jpg",
+          "sha256": "sha256:21471b8f1b3d6ecc22b3d9b895a184b7a13eed58c088a961da73640e540528cc",
+          "size_bytes": 71964
+        },
+        "grade_sample_1": {
+          "kind": "grade-sample",
+          "path": "03_phase1/segments/01/grade-samples/warm.jpg",
+          "sha256": "sha256:22826740f0d4ee7cc4182da4b8bda184b51600195941a72548a3106f06ecc53a",
+          "size_bytes": 101416
+        },
+        "grade_sample_2": {
+          "kind": "grade-sample",
+          "path": "03_phase1/segments/01/grade-samples/punchy.jpg",
+          "sha256": "sha256:a4db95ef0082c7e743187a48c77564cb61a80ec7bd72e6e7fab3c1706f8f3be0",
+          "size_bytes": 80092
+        },
+        "grade_sample_3": {
+          "kind": "grade-sample",
+          "path": "03_phase1/segments/01/grade-samples/dankoe.jpg",
+          "sha256": "sha256:542f79eebfa784767bad47649d3418443e9a7608050876f8f7252fd56c6f3874",
+          "size_bytes": 100996
+        }
+      },
+      "metadata": {
+        "review_row": {
+          "id": "01",
+          "source": "01_raw/01_camera.mp4",
+          "sync": "NOT_REQUIRED",
+          "visual_count": 0,
+          "editorial_candidate_count": 11,
+          "broll_match_count": 0,
+          "motion_fallback_count": 0
+        }
+      },
+      "completed_at": "2026-08-30T20:55:04.079336+00:00"
+    },
+    "phase1.cross-segment-takes": {
+      "id": "phase1.cross-segment-takes",
+      "execution_id": "ddc4d197525c471a9e8dcece3e7d44d7",
+      "status": "COMPLETED",
+      "worker_version": "cross-segment-takes-v1",
+      "fingerprint": "sha256:174ff8c2241d6a90165d5e67b1c8c7f0d0fc4313b54fb134f68b800d1988aa08",
+      "attempt": 1,
+      "started_at": "2026-08-30T20:55:04.104575+00:00",
+      "updated_at": "2026-08-30T20:55:04.120237+00:00",
+      "outputs": {
+        "analysis": {
+          "kind": "cross-segment-take-analysis",
+          "path": "03_phase1/cross-segment-take-analysis.json",
+          "sha256": "sha256:5f9603519f0fc84a5d12faf18845a819c08444afda2b9f71a8453ad1e9c425fd",
+          "size_bytes": 966
+        }
+      },
+      "metadata": {
+        "candidate_count": 0
+      },
+      "completed_at": "2026-08-30T20:55:04.120237+00:00"
+    }
+  }
+}
