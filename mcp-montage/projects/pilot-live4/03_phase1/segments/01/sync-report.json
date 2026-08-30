@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "verdict": "NOT_REQUIRED",
+  "reason": "no external audio feed",
+  "bindings": {
+    "source_transcript_sha256": "sha256:b9033a4d66de37762fd9aab06c0ca9b3da1b476e6a0ec15d6da15509f0a40f48",
+    "speech_media_sha256": "sha256:06eb6ef8cc0e12551448d6d4ebfd3a05f7edf2dcc3e93330e9abc40988d49944",
+    "audio_media_sha256": null
+  }
+}

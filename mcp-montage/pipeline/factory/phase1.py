@@ -14,7 +14,12 @@ from .film_continuity import (
     keeps_from_entries,
     segment_continuity_input,
 )
-from .editorial import EDITORIAL_WORKER_VERSION, analyze_editorial, apply_editorial_proposals
+from .editorial import (
+    EDITORIAL_WORKER_VERSION,
+    analyze_editorial,
+    apply_editorial_proposals,
+    merge_adjacent_keeps,
+)
 from .pauses import DEFAULT_KEEP_S, DEFAULT_THRESHOLD_S, apply_cuts_to_entries, cut_plan
 from .style_profile import load_style, section as style_section, style_id_from
 from .llm_editorial import LLM_EDITORIAL_WORKER_VERSION, run_llm_editorial
@@ -446,6 +451,10 @@ def run_phase1(project_root: Path, store: StateStore | None = None, *, restart_r
                         output_dir=segment_root,
                         config=_editorial_llm_config(config),
                     )
+                    # Цельность речи собирается ПОСЛЕ решений редактора: соседние KEEP
+                    # склеиваются в одну реплику вместе с паузой между ними, иначе монтаж
+                    # выбросит промежуток и предложение прозвучит рублеными кусками.
+                    entries = merge_adjacent_keeps(entries)
                     llm_path = segment_root / "llm-editorial.json"
                     visual_plan, llm_visual = run_llm_visual(
                         segment_id,

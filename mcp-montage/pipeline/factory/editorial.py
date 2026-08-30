@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from dataclasses import replace
+
 import math
 import re
 from difflib import SequenceMatcher
@@ -280,6 +282,44 @@ def analyze_editorial(
         "take_candidates": takes,
         "candidates": candidates,
     }
+
+
+
+# Пауза длиннее этой считается самостоятельной тишиной и может быть вырезана;
+# всё, что короче, — дыхание внутри мысли, и рвать по нему речь нельзя
+# (правило 1 заказчика, 30.08.26: внутри предложения не режем).
+SPEECH_CONTINUITY_GAP_S = 1.5
+
+
+def merge_adjacent_keeps(
+    entries: list[TranscriptEntry],
+    *,
+    max_gap_s: float = SPEECH_CONTINUITY_GAP_S,
+) -> list[TranscriptEntry]:
+    """Склеить соседние KEEP в одну непрерывную реплику.
+
+    Расшифровка делит речь по дыханию, а не по смыслу: одно предложение приезжает
+    тремя блоками. Пока они остаются раздельными, монтаж выбрасывает промежутки
+    между ними — речь звучит рублеными кусками, хотя ни одного CUT между ними нет.
+    Склейка возвращает цельность: между двумя KEEP звук остаётся нетронутым.
+    """
+    merged: list[TranscriptEntry] = []
+    for entry in entries:
+        if entry.kind != "keep" or not merged or merged[-1].kind != "keep":
+            merged.append(entry)
+            continue
+        previous = merged[-1]
+        gap = float(entry.start_s) - float(previous.end_s)
+        if gap < 0 or gap > max_gap_s:
+            merged.append(entry)
+            continue
+        merged[-1] = replace(
+            previous,
+            end_s=entry.end_s,
+            text=f"{previous.text} {entry.text}".strip(),
+            word_ids=tuple(previous.word_ids) + tuple(entry.word_ids),
+        )
+    return merged
 
 
 def apply_editorial_proposals(

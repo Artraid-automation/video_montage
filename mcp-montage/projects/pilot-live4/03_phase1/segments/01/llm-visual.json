@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "kind": "llm-visual-result",
+  "worker_version": "llm-visual-v1",
+  "prompt_version": "gate1-visual-producer.v1",
+  "segment_id": "01",
+  "proposals": [],
+  "style_scenes": [],
+  "narrative_summary": "Fixture visual provider (tests only).",
+  "risks": [
+    "fixture provider — not for production Gate 1"
+  ],
+  "provider": "fixture"
+}

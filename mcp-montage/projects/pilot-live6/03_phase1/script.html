@@ -1,0 +1,321 @@
+<title>Локальная расшифровка звонков</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --paper: #FAFAF7;
+    --card: #FFFFFF;
+    --ink: #16191D;
+    --ink-soft: #5C6470;
+    --rule: #E3E4DF;
+    --keep: #1F6F5C;
+    --cut: #A34A34;
+    --cut-soft: #F3EAE6;
+    --shadow: 0 1px 2px rgba(22, 25, 29, .06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #14161A;
+      --card: #1B1E23;
+      --ink: #E7E8E4;
+      --ink-soft: #99A0AB;
+      --rule: #2A2E35;
+      --keep: #5FBFA5;
+      --cut: #E08D72;
+      --cut-soft: #24211F;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .45);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #14161A;
+    --card: #1B1E23;
+    --ink: #E7E8E4;
+    --ink-soft: #99A0AB;
+    --rule: #2A2E35;
+    --keep: #5FBFA5;
+    --cut: #E08D72;
+    --cut-soft: #24211F;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .45);
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    line-height: 1.5;
+  }
+  .wrap {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  header h1 {
+    font-family: Literata, Georgia, serif;
+    font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.3rem);
+    font-weight: 600;
+    margin: 0 0 .5rem;
+    text-wrap: balance;
+  }
+  header p {
+    margin: 0;
+    color: var(--ink-soft);
+    max-width: 48ch;
+  }
+  .facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    box-shadow: var(--shadow);
+  }
+  .fact { display: flex; flex-direction: column; gap: .15rem; }
+  .fact b {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 1.35rem;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+  }
+  .fact span {
+    font-size: .78rem;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .aside {
+    border-left: 2px solid var(--rule);
+    padding-left: 1.25rem;
+  }
+  .aside h2 {
+    font-size: .78rem;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-weight: 600;
+    margin: 0 0 .5rem;
+  }
+  .aside p, .aside li { margin: 0 0 .4rem; max-width: 68ch; }
+  .aside ul { margin: 0; padding-left: 1.1rem; }
+
+  .script { display: flex; flex-direction: column; gap: .35rem; }
+  .block {
+    display: grid;
+    grid-template-columns: 4.5rem 1fr auto;
+    align-items: baseline;
+    gap: 1rem;
+    padding: .55rem .75rem;
+    border-radius: 5px;
+  }
+  .block:hover { background: var(--card); }
+  .tc {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .8rem;
+    color: var(--ink-soft);
+    font-variant-numeric: tabular-nums;
+  }
+  .speech {
+    font-family: Literata, Georgia, serif;
+    font-size: 1.06rem;
+    margin: 0;
+    max-width: 68ch;
+  }
+  .struck { text-decoration: line-through; color: var(--ink-soft); }
+  .cutbody { display: flex; flex-direction: column; gap: .35rem; }
+  .reveal {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    background: none;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    color: var(--ink-soft);
+    font: inherit;
+    font-size: .9rem;
+    text-align: left;
+  }
+  .tag {
+    color: var(--cut);
+    background: var(--cut-soft);
+    border-radius: 3px;
+    padding: .05rem .4rem;
+    font-size: .8rem;
+    font-weight: 500;
+  }
+  .hint { font-size: .85rem; }
+  .reveal[aria-expanded="true"] .hint::after { content: " ▴"; }
+  .reveal[aria-expanded="false"] .hint::after { content: " ▾"; }
+  .flip {
+    font: inherit;
+    font-size: .8rem;
+    color: var(--ink-soft);
+    background: none;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: .15rem .55rem;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity .12s ease;
+  }
+  .block:hover .flip, .flip:focus-visible { opacity: 1; }
+  .block[data-changed="true"] { background: var(--card); box-shadow: inset 3px 0 0 var(--keep); }
+  .block[data-changed="true"] .flip { opacity: 1; color: var(--keep); border-color: var(--keep); }
+  .block[data-kind="cut"] .speech { text-decoration: line-through; color: var(--ink-soft); }
+
+  .tray {
+    position: sticky;
+    bottom: 0;
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: .9rem 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    box-shadow: var(--shadow);
+  }
+  .tray p { margin: 0; color: var(--ink-soft); flex: 1 1 16rem; }
+  .tray button {
+    font: inherit;
+    font-weight: 500;
+    background: var(--ink);
+    color: var(--paper);
+    border: 0;
+    border-radius: 4px;
+    padding: .5rem 1rem;
+    cursor: pointer;
+  }
+  .tray button.ghost { background: none; color: var(--ink-soft); border: 1px solid var(--rule); }
+  :focus-visible { outline: 2px solid var(--keep); outline-offset: 2px; }
+  @media (max-width: 40rem) {
+    .block { grid-template-columns: 3.5rem 1fr; }
+    .flip { grid-column: 2; justify-self: start; opacity: 1; }
+  }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Локальная расшифровка звонков</h1>
+    <p>Читайте подряд — это то, что прозвучит в ролике. Вырезанное свёрнуто: разверните, чтобы увидеть текст и причину. Нужное верните кнопкой, а список правок скопируйте внизу.</p>
+  </header>
+
+  <div class="facts">
+    <div class="fact"><b>1:15</b><span>останется</span></div>
+    <div class="fact"><b>3:21</b><span>снято</span></div>
+    <div class="fact"><b>4</b><span>реплик в сценарии</span></div>
+    <div class="fact"><b>6</b><span>предложено вырезать</span></div>
+    <div class="fact"><b>296</b><span>слов</span></div>
+  </div>
+
+  <section class="aside"><h2>О чём получился рассказ</h2><p>Рассказ о разработчике, который сделал локальный инструмент на телефоне: он слушает и офлайн-транскрибирует звонки, локальная модель ИИ анализирует их и сохраняет заметки в Obsidian без облака и бэкапов. Автор восхищается идеей, рассуждает о будущем локальных моделей на слабых устройствах и о том, что повторить такое решение несложно (особенно на Android, сложнее с App Store) — и подчёркивает, что инструмент сделан под одного конкретного человека, который не хочет, чтобы его звонки и переписки утекали куда-либо.</p></section>
+
+  <section class="script">
+    <article class="block" data-id="u0001" data-kind="keep"><span class="tc">0:02.670</span><p class="speech">Разработчик создал CRM без сервера чтобы не хранить чужие звонки Какой-то чел на своем мобильном телефоне сделал проект CRM-системы которая слушает звонки которые происходят на телефоне ну и, как я понимаю еще в мессенджерах банально просто на диктофон встроенный в телефон потом транскрибирует эти звонки локально на нужный язык как достаточно медленно но тем не менее работает 10-минутный звонок как заявлено расшифровывает за 6,5 минут либо на другой модели транскрибации за 17 минут Ну понятное дело это все показатели настраиваемые А потом локальная моделика ИИ раскладывает анализирует звонок и создает маркдаун-файлы для обсидиана Короче отбрасывая техничку просто сохраняет очень... просто файлики локально на телефоне При этом какие-то дукапы и облачные загрузки отключены у этого проекта Офигенная идея Я не так давно смотрел локальную нейронку на телефон который даже сама какой-то сервис типа разрабатывает достаточно тупенько но тем не менее может запилить прямо саску</p><button class="flip" type="button">вырезать</button></article>
+<article class="block" data-id="u0009" data-kind="cut"><span class="tc">1:26.870</span><div class="cutbody"><button class="reveal" type="button" aria-expanded="false"><span class="tag">обрубок</span><span class="hint">фраза оборвана</span></button><p class="speech struck" hidden>Тут да мы стапим</p></div><button class="flip" type="button">вернуть</button></article>
+<article class="block" data-id="u0010" data-kind="keep"><span class="tc">1:29.410</span><p class="speech">уточнение звездочку что телефон должен быть достаточно мощным Anyway со временем мы будем видеть все больше и все более умные локальные модели которые будут опускаться там вплоть до часов или еще более мелких девайсов Работать без зависимости от какого-то облачного железа что классно Ну и если в ваших вдруг задачах данный кейс интересен Можно во-первых... ...вызывать кодик такой себе за буквально пару дней там ничего сложного По крайней мере если у вас Android С цеплом сложно попасть в App Store там у них какие-то гонские подписки что долларов в год нужно платить просто за возможность выложить приложение Ну если Android то в целом вообще пофигу взяли собрали себе образ и пользуйтесь</p><button class="flip" type="button">вырезать</button></article>
+<article class="block" data-id="u0015" data-kind="cut"><span class="tc">2:24.630</span><div class="cutbody"><button class="reveal" type="button" aria-expanded="false"><span class="tag">команда</span><span class="hint">команда себе или монтажёру</span></button><p class="speech struck" hidden>В общем если подходит под юзеркейс то классно</p></div><button class="flip" type="button">вернуть</button></article>
+<article class="block" data-id="u0016" data-kind="cut"><span class="tc">2:29.950</span><div class="cutbody"><button class="reveal" type="button" aria-expanded="false"><span class="tag">команда</span><span class="hint">команда себе или монтажёру</span></button><p class="speech struck" hidden>Нет хуёвая подводка это мы убираем эту ветку смысла</p></div><button class="flip" type="button">вернуть</button></article>
+<article class="block" data-id="u0017" data-kind="cut"><span class="tc">2:34.490</span><div class="cutbody"><button class="reveal" type="button" aria-expanded="false"><span class="tag">команда</span><span class="hint">команда себе или монтажёру</span></button><p class="speech struck" hidden>Чё я хотел сказать-то Ну вот я рассказал что как это классно бла-бла-бла</p></div><button class="flip" type="button">вернуть</button></article>
+<article class="block" data-id="u0018" data-kind="keep"><span class="tc">2:38.690</span><p class="speech">Можно на вайп-коде таки круто</p><button class="flip" type="button">вырезать</button></article>
+<article class="block" data-id="u0019" data-kind="cut"><span class="tc">2:45.810</span><div class="cutbody"><button class="reveal" type="button" aria-expanded="false"><span class="tag">дубль</span><span class="hint">та же мысль сказана ещё раз</span></button><p class="speech struck" hidden>В общем это решение не для какого-то отдела продаж а исключительно под одного человека с одним...</p></div><button class="flip" type="button">вернуть</button></article>
+<article class="block" data-id="u0020" data-kind="cut"><span class="tc">2:57.010</span><div class="cutbody"><button class="reveal" type="button" aria-expanded="false"><span class="tag">команда</span><span class="hint">команда себе или монтажёру</span></button><p class="speech struck" hidden>Погоди-ка</p></div><button class="flip" type="button">вернуть</button></article>
+<article class="block" data-id="u0021" data-kind="keep"><span class="tc">2:58.930</span><p class="speech">В общем это решение не под какой-то отдел продаж большую компанию ну а как оно и было написано конкретно под одного человека с конкретным телефоном Кто не хочет чтобы его переписки утекали куда-либо для важных приватных звонков</p><button class="flip" type="button">вырезать</button></article>
+  </section>
+
+  <section class="aside"><h2>Редактор просит перепроверить</h2><ul><li>Вырезаны u0009, u0015–u0017 и u0020 — стоит на слух проверить склейки в этих местах, не появился ли резкий скачок мысли между u0008→u0010 и u0013→u0018→u0021.</li><li>Финальная фраза берётся из дубля u0021, а не из оборванного u0019 (&quot;...с одним...&quot;) — проверить, что переход от u0018 к u0021 звучит цельно, раз между ними в оригинале была реплика &quot;Погоди-ка&quot;.</li><li>В u0003 и u0008 оставлены дословные оговорки/невнятные слова (&quot;сохраняет очень... просто файлики&quot;, &quot;запилить прямо саску&quot;) по правилу цельности речи — стоит переслушать, не режут ли они слух в готовом ролике.</li></ul></section>
+
+  <div class="tray">
+    <p id="trayText">Правок нет — сценарий принимается как есть.</p>
+    <button type="button" id="copy">Скопировать правки</button>
+    <button type="button" class="ghost" id="reset">Сбросить</button>
+  </div>
+</div>
+
+<script>
+  const STORE = "script-edits";
+  const blocks = [...document.querySelectorAll(".block")];
+  const trayText = document.getElementById("trayText");
+
+  const load = () => {
+    try { return JSON.parse(localStorage.getItem(STORE) || "{}"); }
+    catch (error) { return {}; }
+  };
+  const save = (state) => {
+    try { localStorage.setItem(STORE, JSON.stringify(state)); } catch (error) { /* приватный режим */ }
+  };
+  let state = load();
+
+  function label(block) {
+    const kind = block.dataset.kind;
+    const changed = state[block.dataset.id];
+    const button = block.querySelector(".flip");
+    if (kind === "keep") button.textContent = changed ? "оставлено вырезать" : "вырезать";
+    else button.textContent = changed ? "возвращено" : "вернуть";
+    block.dataset.changed = changed ? "true" : "false";
+  }
+
+  function edits() {
+    return blocks
+      .filter((block) => state[block.dataset.id])
+      .map((block) => {
+        const time = block.querySelector(".tc").textContent;
+        const text = block.querySelector(".speech").textContent.trim();
+        const verb = block.dataset.kind === "cut" ? "вернуть" : "вырезать";
+        return `${verb} ${time} — ${text.slice(0, 90)}`;
+      });
+  }
+
+  function refresh() {
+    const list = edits();
+    trayText.textContent = list.length
+      ? `Правок: ${list.length}. Скопируйте список и пришлите — соберу монтаж по нему.`
+      : "Правок нет — сценарий принимается как есть.";
+  }
+
+  blocks.forEach((block) => {
+    label(block);
+    block.querySelector(".flip").addEventListener("click", () => {
+      const id = block.dataset.id;
+      if (state[id]) delete state[id]; else state[id] = true;
+      save(state);
+      label(block);
+      refresh();
+    });
+    const reveal = block.querySelector(".reveal");
+    if (reveal) {
+      const speech = block.querySelector(".speech");
+      reveal.addEventListener("click", () => {
+        const open = reveal.getAttribute("aria-expanded") === "true";
+        reveal.setAttribute("aria-expanded", String(!open));
+        speech.hidden = open;
+      });
+    }
+  });
+
+  document.getElementById("copy").addEventListener("click", async () => {
+    const list = edits();
+    const text = list.length ? list.join("\n") : "Сценарий принят без правок.";
+    try {
+      await navigator.clipboard.writeText(text);
+      trayText.textContent = "Скопировано.";
+      setTimeout(refresh, 1600);
+    } catch (error) {
+      trayText.textContent = text;
+    }
+  });
+
+  document.getElementById("reset").addEventListener("click", () => {
+    state = {};
+    save(state);
+    blocks.forEach(label);
+    refresh();
+  });
+
+  refresh();
+</script>

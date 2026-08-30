@@ -1,0 +1,126 @@
+{
+  "schema_version": 2,
+  "project_id": "pilot-live5",
+  "revision": 8,
+  "state": "GATE1_REVIEW",
+  "updated_at": "2026-08-30T13:43:59.742559+00:00",
+  "run": null,
+  "gates": {
+    "gate1": {
+      "status": "READY",
+      "manifest": {
+        "kind": "gate1-manifest",
+        "path": "03_phase1/gate1-manifest.json",
+        "sha256": "sha256:809f59a1380adb3bec77d4d56ea272a93ec540215b3f3c3d74783d68825b1844",
+        "size_bytes": 2671
+      },
+      "manifest_content_hash": "sha256:7801a66b280481d86e69680f624bbc6043a749bfb17afa46eba0c4829affae1f",
+      "prepared_at": "2026-08-30T13:43:59.742527+00:00"
+    }
+  },
+  "approvals": [],
+  "revision_request": null,
+  "last_error": null,
+  "events": [
+    {
+      "id": "2d145e5dac014b26812e844856e1ef78",
+      "at": "2026-08-30T13:38:12.910243+00:00",
+      "type": "state_created",
+      "state": "NEW",
+      "details": {}
+    },
+    {
+      "id": "767ef8fd1eac4a08b26c6e404d1bc4b2",
+      "at": "2026-08-30T13:38:14.544429+00:00",
+      "type": "phase1_started",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "NEW",
+        "inputs_hash": "sha256:48c30fbfb57b490633eaf8460d235cb801ba5826e1bf071f73691a0e131986b3"
+      }
+    },
+    {
+      "id": "23ff9808078f414ba5a79a9c9938875c",
+      "at": "2026-08-30T13:38:14.554715+00:00",
+      "type": "checkpoint",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "checkpoint": "ingested"
+      }
+    },
+    {
+      "id": "2641b5d2bc3a4f43872e90df87fc29d6",
+      "at": "2026-08-30T13:42:23.930070+00:00",
+      "type": "checkpoint",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "checkpoint": "phase1-bundles"
+      }
+    },
+    {
+      "id": "274b30d324244f35a41f0cd717ed4c34",
+      "at": "2026-08-30T13:42:23.971424+00:00",
+      "type": "gate_ready",
+      "state": "GATE1_REVIEW",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "gate": "gate1",
+        "manifest": {
+          "kind": "gate1-manifest",
+          "path": "03_phase1/gate1-manifest.json",
+          "sha256": "sha256:809f59a1380adb3bec77d4d56ea272a93ec540215b3f3c3d74783d68825b1844",
+          "size_bytes": 2671
+        }
+      }
+    },
+    {
+      "id": "a89196b4398c495a98227fe7038cfa6a",
+      "at": "2026-08-30T13:43:59.657721+00:00",
+      "type": "gate1_superseded",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "GATE1_REVIEW",
+        "reason": "правило CEO: внутри предложения не режем",
+        "inputs_hash": "sha256:fd9cfd0df592c647f85f39b710e693b8ad9cfa1b6afdd65818c105a65f2b5eaf"
+      }
+    },
+    {
+      "id": "ef73dc6005e04342ad773f05e63dd2a3",
+      "at": "2026-08-30T13:43:59.670303+00:00",
+      "type": "checkpoint",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "checkpoint": "ingested"
+      }
+    },
+    {
+      "id": "2a7bc37ce90f4aa19351f5f6bf50d589",
+      "at": "2026-08-30T13:43:59.703627+00:00",
+      "type": "checkpoint",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "checkpoint": "phase1-bundles"
+      }
+    },
+    {
+      "id": "f10b1b9ae13d439cb5d8de445614e234",
+      "at": "2026-08-30T13:43:59.742559+00:00",
+      "type": "gate_ready",
+      "state": "GATE1_REVIEW",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "gate": "gate1",
+        "manifest": {
+          "kind": "gate1-manifest",
+          "path": "03_phase1/gate1-manifest.json",
+          "sha256": "sha256:809f59a1380adb3bec77d4d56ea272a93ec540215b3f3c3d74783d68825b1844",
+          "size_bytes": 2671
+        }
+      }
+    }
+  ]
+}

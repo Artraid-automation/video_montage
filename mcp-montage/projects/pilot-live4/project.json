@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "id": "pilot-live3",
-  "title": "pilot-live3 (субтитры по центру, кегль по эталону, Rev.ai)",
+  "id": "pilot-live4",
+  "title": "pilot-live4 (сценарий по смыслу)",
   "transcription": {
     "provider": "rev.ai",
     "model": null,
@@ -15,7 +15,7 @@
     "vad_filter": false
   },
   "publishing": {
-    "title": "pilot-live3 (субтитры по центру, кегль по эталону, Rev.ai)",
+    "title": "pilot-live4 (сценарий по смыслу)",
     "description": "",
     "chapter_titles": {}
   },

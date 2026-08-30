@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "kind": "visual-plan",
+  "worker_version": "visual-planner-v4",
+  "segment_id": "01",
+  "status": "NO_VISUALS_PROPOSED",
+  "scenes": [],
+  "searches": [],
+  "style_scenes": [],
+  "llm_visual": {
+    "prompt_version": "gate1-visual-producer.v1",
+    "narrative_summary": "Fixture visual provider (tests only).",
+    "risks": [
+      "fixture provider — not for production Gate 1"
+    ],
+    "proposals": [],
+    "style_scenes": []
+  },
+  "transcript_sha256": "sha256:9ea17ded2acf58b9681db7a9181092ff17d2c0672836f443bd5a64cd27bb77ef"
+}

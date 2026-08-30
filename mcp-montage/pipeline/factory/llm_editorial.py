@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import os
+import subprocess
 import re
 import urllib.error
 import urllib.request
@@ -16,7 +17,9 @@ from .utterances import RETAKE_MARKER_RE
 
 
 LLM_EDITORIAL_WORKER_VERSION = "llm-editorial-v3"
-PROMPT_VERSION = "gate1-editorial-cohesion.v2"
+# v3 — правила реза, утверждённые заказчиком 30.08.26: единица решения — законченная
+# мысль, режем только по названной причине, сомнение трактуется в пользу keep.
+PROMPT_VERSION = "gate1-editorial-cohesion.v3"
 PROMPT_PATH = Path(__file__).resolve().parents[2] / "prompts" / f"{PROMPT_VERSION}.md"
 SUFFIX_RE = re.compile(r"^[A-Za-z0-9]{1,8}$")
 
@@ -442,10 +445,58 @@ def _provider_openai(request: dict[str, Any], config: dict[str, Any]) -> dict[st
     return json.loads(payload["choices"][0]["message"]["content"])
 
 
+
+def _provider_claude_cli(request: dict[str, Any], config: dict[str, Any]) -> dict[str, Any]:
+    """Редактура через Claude Code CLI — по подписке, без ключа API.
+
+    Модель называется явно: без `--model` автоматика уедет на модель по умолчанию,
+    а цена и качество редактуры перестанут быть предсказуемыми. Настройки штаба в
+    вызов не тянем (`--setting-sources ''`): каталог запуска не изолирует агента.
+    """
+    model = str(config.get("model") or "claude-sonnet-5")
+    timeout_s = float(config.get("timeout_s", 600))
+    prompt = load_editorial_prompt()
+    payload = json.dumps(request, ensure_ascii=False, indent=2)
+    stdin = f"{prompt}\n\n## Расшифровка на разбор\n\n{payload}\n"
+    command = [
+        str(config.get("cli", "claude")), "-p",
+        "--model", model,
+        "--setting-sources", "",
+        "--output-format", "text",
+    ]
+    try:
+        result = subprocess.run(
+            command, input=stdin, capture_output=True, text=True, timeout=timeout_s,
+        )
+    except FileNotFoundError as exc:
+        raise ValueError("claude CLI not found for llm editorial provider") from exc
+    except subprocess.TimeoutExpired as exc:
+        raise ValueError(f"claude editorial timed out after {timeout_s:.0f}s") from exc
+    if result.returncode != 0:
+        raise ValueError(f"claude editorial failed ({result.returncode}): {result.stderr[-500:]}")
+    return _parse_json_answer(result.stdout)
+
+
+def _parse_json_answer(raw: str) -> dict[str, Any]:
+    """Ответ модели может приехать в ограждении ```json — достаём объект честно."""
+    text = raw.strip()
+    fence = re.search(r"```(?:json)?\s*(\{.*?\})\s*```", text, re.DOTALL)
+    if fence:
+        text = fence.group(1)
+    else:
+        start = text.find("{")
+        end = text.rfind("}")
+        if start == -1 or end <= start:
+            raise ValueError(f"claude editorial returned no JSON object: {raw[:300]}")
+        text = text[start:end + 1]
+    return json.loads(text)
+
+
 PROVIDER_REGISTRY: dict[str, Callable[[dict[str, Any], dict[str, Any]], dict[str, Any]]] = {
     "fixture": _provider_fixture,
     "file": _provider_file,
     "openai": _provider_openai,
+    "claude-cli": _provider_claude_cli,
     "agent": _provider_file,
 }
 

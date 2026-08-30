@@ -279,6 +279,12 @@ def build_parser() -> argparse.ArgumentParser:
     item.set_defaults(func=new_project)
     for name, function in (("start", start), ("status", status), ("revise", revise), ("finalize", finalize), ("resume", resume), ("cleanup-plan", cleanup_plan)):
         item = commands.add_parser(name); item.add_argument("project_root"); item.set_defaults(func=function)
+    item = commands.add_parser("script-page")
+    item.add_argument("project_root")
+    item.add_argument("--segment", default="01")
+    item.add_argument("--title")
+    item.add_argument("--output")
+    item.set_defaults(func=script_page)
     item = commands.add_parser("rerun-phase1"); item.add_argument("project_root"); item.add_argument("--reason", required=True); item.set_defaults(func=rerun_phase1)
     item = commands.add_parser("approve"); item.add_argument("project_root"); item.add_argument("gate", choices=("gate1", "gate2")); item.add_argument("--reviewer", default="user"); item.set_defaults(func=approve)
     item = commands.add_parser("accept-final"); item.add_argument("project_root"); item.add_argument("--reviewer", default="user"); item.set_defaults(func=accept_final)
@@ -290,6 +296,33 @@ def build_parser() -> argparse.ArgumentParser:
     item = commands.add_parser("cleanup"); item.add_argument("project_root"); item.add_argument("--confirmation-hash", required=True); item.set_defaults(func=cleanup_execute)
     item = commands.add_parser("promote-rule"); item.add_argument("project_root"); item.add_argument("proposal_id"); item.add_argument("regression_fixture"); item.add_argument("--reviewer", default="user"); item.set_defaults(func=promote_rule_command)
     return parser
+
+
+
+def script_page(args: argparse.Namespace) -> int:
+    """Собрать страницу сценария на утверждение из результата фазы 1."""
+    from factory.script_page import build_script_page
+    from factory.transcript import load_transcript
+
+    root = Path(args.project_root).resolve(strict=True)
+    segment_id = str(args.segment)
+    phase1 = root / "03_phase1" / "segments" / segment_id
+    source = read_json(phase1 / "source-transcript.json")
+    entries, _visuals = load_transcript(phase1 / "transcript.md", source)
+    editorial_path = phase1 / "llm-editorial.json"
+    editorial = read_json(editorial_path) if editorial_path.is_file() else {}
+    config = read_json(root / "project.json")
+    page = build_script_page(
+        entries,
+        title=str(args.title or config.get("title") or root.name),
+        summary=editorial.get("narrative_summary"),
+        risks=list(editorial.get("risks") or []),
+        source_duration_s=float(source.get("duration_s") or 0.0),
+    )
+    output = Path(args.output) if args.output else root / "03_phase1" / "script.html"
+    output.write_text(page, encoding="utf-8")
+    print(str(output))
+    return 0
 
 
 def main() -> int:
