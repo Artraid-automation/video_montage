@@ -334,6 +334,36 @@ def hook_title_policy(contract: dict[str, Any], *, style: dict[str, Any] | None 
     }
 
 
+
+def caption_centering_policy(contract: dict[str, Any], *, style: dict[str, Any] | None = None) -> dict[str, Any]:
+    """Строка субтитра обязана стоять по вертикальной оси кадра.
+
+    Прежний якорь вёл X от бокса лица и сносил текст вправо на ~15% ширины кадра,
+    а между планами позиция ещё и гуляла. Ни один блок Gate 2 этого не мерил:
+    layout_policy проверял только поля безопасности, а в них снесённый текст влезает.
+    """
+    width = int(contract.get("width") or 0)
+    pos_x = contract.get("caption_pos_x")
+    tolerance = max(2, round(width * 0.01))
+    reasons: list[str] = []
+    offset = None
+    if width > 0 and pos_x is not None:
+        offset = int(pos_x) - width // 2
+        if abs(offset) > tolerance:
+            reasons.append(
+                f"caption drifts {offset:+d}px from frame centre "
+                f"({abs(offset) / width:.1%} of width, tolerance {tolerance}px)"
+            )
+    return {
+        "verdict": "FAIL" if reasons else "PASS",
+        "frame_center_x": width // 2 if width else None,
+        "caption_pos_x": int(pos_x) if pos_x is not None else None,
+        "offset_px": offset,
+        "tolerance_px": tolerance,
+        "reasons": reasons,
+    }
+
+
 def evaluate_render_contract(contract: dict[str, Any]) -> dict[str, Any]:
     """Blocking Gate 2 check from render-contract.json written by the compositor."""
     if not isinstance(contract, dict):
@@ -363,6 +393,7 @@ def evaluate_render_contract(contract: dict[str, Any]) -> dict[str, Any]:
     hook_check = hook_title_policy(contract, style=style)
     components = {
         "caption_style": caption,
+        "caption_centering": caption_centering_policy(contract, style=style),
         "motion_brief": brief_check,
         "motion_compose": compose,
         "style_recipes": style_check,

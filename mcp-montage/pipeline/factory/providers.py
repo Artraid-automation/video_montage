@@ -163,6 +163,12 @@ def build_transcriber(config: dict[str, Any]) -> Transcriber:
         return FasterWhisperTranscriber(
             config.get("model", "small"), config.get("language"), bool(config.get("vad_filter", False))
         )
+    if provider == "rev.ai":
+        # Импорт внутри ветки: облачный провайдер не должен тянуться в проектах,
+        # которые работают на локальном ASR.
+        from .revai import RevAiTranscriber
+
+        return RevAiTranscriber(config.get("language"))
     if provider == "external-command":
         return CommandTranscriber(config.get("command", []), str(config.get("version", "")))
     raise ValueError(f"unknown transcription provider: {provider}")

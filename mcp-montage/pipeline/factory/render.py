@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import shutil
+from fractions import Fraction
 from pathlib import Path
 from typing import Any
 
@@ -272,15 +273,20 @@ def _render_entry(
     style_recipe = None
     style_meta: dict[str, Any] = {}
     caption_pos = dict((framing_plan or {}).get("caption") or {})
-    # Preserve-source: speaker walks inside the frame — refresh chest X/Y per KEEP.
-    # Hook title sits on the opening beat → sample near clip start, not mid.
-    if framing_plan and camera is not None and camera.is_file():
-        if style_scene and style_scene.get("recipe") == "hook_title":
-            sample_t = float(entry.start_s) + min(0.45, max(0.2, duration * 0.12))
-        else:
-            sample_t = float(entry.start_s) + min(
-                max(0.35, duration * 0.4), max(0.35, duration - 0.15),
-            )
+    # Строка субтитра стоит НЕПОДВИЖНО весь сегмент: позиция берётся из плана
+    # кадрирования (медиана лица), а не пересчитывается на каждом плане. Покадровый
+    # пересчёт заставлял субтитр прыгать между склейками — это читается как брак.
+    # Плашка-заголовок — другое дело: она привязана к подбородку на своём плане,
+    # поэтому для неё лицо замеряется живьём.
+    live_pos: dict[str, Any] = {}
+    if (
+        framing_plan
+        and camera is not None
+        and camera.is_file()
+        and style_scene
+        and style_scene.get("recipe") == "hook_title"
+    ):
+        sample_t = float(entry.start_s) + min(0.45, max(0.2, duration * 0.12))
         live = caption_layout_at_timestamp(
             camera,
             sample_t,
@@ -290,7 +296,7 @@ def _render_entry(
             cache_dir=output.parent / "caption-face-samples",
         )
         if live:
-            caption_pos = live
+            live_pos = live
     layout_center_x = None
     if caption_pos.get("caption_pos_x") is not None:
         layout_center_x = int(caption_pos["caption_pos_x"])
@@ -326,10 +332,11 @@ def _render_entry(
     if style_scene and style_scene.get("recipe") == "hook_title":
         style_plate = output.with_suffix(".style.mov")
         face_bottom = None
-        if caption_pos.get("face_bottom_max") is not None:
-            face_bottom = int(caption_pos["face_bottom_max"])
-        elif caption_pos.get("face"):
-            face_box = caption_pos["face"]
+        hook_pos = live_pos or caption_pos
+        if hook_pos.get("face_bottom_max") is not None:
+            face_bottom = int(hook_pos["face_bottom_max"])
+        elif hook_pos.get("face"):
+            face_box = hook_pos["face"]
             face_bottom = int(face_box.get("y", 0)) + int(face_box.get("h", 0))
         elif framing_plan:
             face_bottom = framing_plan.get("face_bottom_max")
@@ -545,6 +552,27 @@ def _render_entry(
     }
 
 
+
+def _source_fps(record: dict[str, Any] | None) -> float:
+    """Объявленная частота кадров исходника — по ней ограничивается рендер."""
+    if not record:
+        return 0.0
+    for stream in record.get("streams") or []:
+        if stream.get("codec_type") != "video":
+            continue
+        for key in ("r_frame_rate", "avg_frame_rate"):
+            raw = stream.get(key)
+            if not raw or raw == "0/0":
+                continue
+            try:
+                value = float(Fraction(str(raw)))
+            except (ValueError, ZeroDivisionError):
+                continue
+            if value > 0:
+                return value
+    return 0.0
+
+
 def concat_clips(clips: list[Path], output: Path, *, profile: dict[str, Any] | None = None) -> None:
     """Concatenate clip MP4s into one review file.
 
@@ -620,6 +648,14 @@ def render_segment(
         "style_version": config.get("style_version"),
         **config.get("render_profile", {}),
     }
+    # Частота кадров рендера не может быть выше исходной. Апскейл 25→60 не добавляет
+    # плавности — он дублирует кадры; а когда часть планов вышла в 25, часть в 60,
+    # склейка в режиме CFR затыкает разрывы стоп-кадрами и растягивает картинку
+    # относительно звука (замер 30.08 на pilot-live2: 61,8 с застываний на 181,6 с,
+    # видеодорожка длиннее звуковой на 25,5 с).
+    source_fps = _source_fps(camera_record or screen_record)
+    if source_fps > 0 and float(profile.get("fps") or 0) > source_fps + 0.01:
+        profile["fps"] = int(round(source_fps))
     raw_records = [media[media_id] for media_id in feeds.values()]
     fingerprint = segment_fingerprint(
         project_root,
@@ -785,6 +821,13 @@ def render_segment(
         "segment_id": segment_id,
         "width": int(profile["width"]),
         "height": int(profile["height"]),
+        # Частота едет в контракте: гейт обязан судить по тому, что реально собрано.
+        # Профиль просит 60, но потолок ставится по исходнику уже на прогоне, и без
+        # этой строки техпроверка валила сборку за «frame rate mismatch».
+        "fps": int(profile["fps"]),
+        # Число планов нужно гейту длительности: каждый план не может быть точнее
+        # одного кадра, и на пятидесяти стыках округление копится в полсекунды.
+        "clip_count": len(clip_contracts),
         "motion_mode": motion_mode,
         "motion_count": sum(1 for item in visuals if item.type == "motion"),
         "motion_on_screen_texts": motion_texts,

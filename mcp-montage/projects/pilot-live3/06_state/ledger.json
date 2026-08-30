@@ -1,0 +1,201 @@
+{
+  "schema_version": 2,
+  "project_id": "pilot-live3",
+  "revision": 12,
+  "state": "FAILED_RECOVERABLE",
+  "updated_at": "2026-08-30T12:44:59.544312+00:00",
+  "run": {
+    "id": "978bdcf5cc974b70bec33724dd08ca26",
+    "phase": "phase2",
+    "attempt": 3,
+    "checkpoint": "started",
+    "inputs_hash": "sha256:3b8c7bbcd3a8967c7325f229ea6e486f87c5b48d54545642dc1b71ffb2182431",
+    "started_at": "2026-08-30T11:37:28.361601+00:00",
+    "heartbeat_at": "2026-08-30T12:33:05.782323+00:00"
+  },
+  "gates": {
+    "gate1": {
+      "status": "APPROVED",
+      "manifest": {
+        "kind": "gate1-manifest",
+        "path": "03_phase1/gate1-manifest.json",
+        "sha256": "sha256:ace736d1069f2f4cfecfd804c9eac8dd0f9cac137cda071e294b3ff6fd530d4c",
+        "size_bytes": 2672
+      },
+      "manifest_content_hash": "sha256:1ea1be306a0075939a2993d172232c3ba2774fe41bcf02f69d467fa10e788465",
+      "prepared_at": "2026-08-30T11:37:28.285831+00:00",
+      "approval": {
+        "kind": "approval",
+        "path": "06_state/approvals/gate1-r000005.json",
+        "sha256": "sha256:cf3934f076f613b797d94b4936445283d1248b7977e6c597267acd2e3447b0a0",
+        "size_bytes": 858
+      }
+    }
+  },
+  "approvals": [
+    {
+      "gate": "gate1",
+      "record": {
+        "kind": "approval",
+        "path": "06_state/approvals/gate1-r000005.json",
+        "sha256": "sha256:cf3934f076f613b797d94b4936445283d1248b7977e6c597267acd2e3447b0a0",
+        "size_bytes": 858
+      },
+      "approved_at": "2026-08-30T11:37:28.322031+00:00"
+    }
+  ],
+  "revision_request": null,
+  "last_error": {
+    "message": "segment 01 self-verification failed: word error rate exceeds threshold; unexpected long silence; leading silence inside keep clip; speech timing drift exceeds threshold",
+    "retryable": true,
+    "at": "2026-08-30T12:44:59.544263+00:00"
+  },
+  "events": [
+    {
+      "id": "9748b4b6084d4863ba53653e33676471",
+      "at": "2026-08-30T11:32:58.289102+00:00",
+      "type": "state_created",
+      "state": "NEW",
+      "details": {}
+    },
+    {
+      "id": "2fc4ba7dad0d4e628c670fceef3f3dc8",
+      "at": "2026-08-30T11:35:43.991534+00:00",
+      "type": "phase1_started",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "NEW",
+        "inputs_hash": "sha256:b69bfda80effc293a260ef12258c77e1aa0693f633ffcb83964ebf78e663db03"
+      }
+    },
+    {
+      "id": "d8f21c3db7814ec7b1ee608ada3ada5b",
+      "at": "2026-08-30T11:35:44.028982+00:00",
+      "type": "checkpoint",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "checkpoint": "ingested"
+      }
+    },
+    {
+      "id": "9d10a44c4e1849289fccaa8d0014088c",
+      "at": "2026-08-30T11:37:27.298717+00:00",
+      "type": "checkpoint",
+      "state": "PHASE1_RUNNING",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "checkpoint": "phase1-bundles"
+      }
+    },
+    {
+      "id": "957cf12da4814554ae5ea3fb3d48598f",
+      "at": "2026-08-30T11:37:27.344762+00:00",
+      "type": "gate_ready",
+      "state": "GATE1_REVIEW",
+      "details": {
+        "previous_state": "PHASE1_RUNNING",
+        "gate": "gate1",
+        "manifest": {
+          "kind": "gate1-manifest",
+          "path": "03_phase1/gate1-manifest.json",
+          "sha256": "sha256:05b77863a84d31c92fbf720a96db844f72e9822d705275568de8b60eb47680e2",
+          "size_bytes": 2672
+        }
+      }
+    },
+    {
+      "id": "d176971ea5c24165ab39a76771b04478",
+      "at": "2026-08-30T11:37:28.285876+00:00",
+      "type": "gate_ready",
+      "state": "GATE1_REVIEW",
+      "details": {
+        "previous_state": "GATE1_REVIEW",
+        "gate": "gate1",
+        "manifest": {
+          "kind": "gate1-manifest",
+          "path": "03_phase1/gate1-manifest.json",
+          "sha256": "sha256:ace736d1069f2f4cfecfd804c9eac8dd0f9cac137cda071e294b3ff6fd530d4c",
+          "size_bytes": 2672
+        }
+      }
+    },
+    {
+      "id": "e89469a5a4bf40bf862283088b83076e",
+      "at": "2026-08-30T11:37:28.341966+00:00",
+      "type": "gate_approved",
+      "state": "PHASE2_PENDING",
+      "details": {
+        "previous_state": "GATE1_REVIEW",
+        "gate": "gate1",
+        "approval": {
+          "kind": "approval",
+          "path": "06_state/approvals/gate1-r000005.json",
+          "sha256": "sha256:cf3934f076f613b797d94b4936445283d1248b7977e6c597267acd2e3447b0a0",
+          "size_bytes": 858
+        }
+      }
+    },
+    {
+      "id": "d9ec3359023e4629829a4111b8126a07",
+      "at": "2026-08-30T11:37:28.361638+00:00",
+      "type": "phase2_started",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "PHASE2_PENDING",
+        "inputs_hash": "sha256:3b8c7bbcd3a8967c7325f229ea6e486f87c5b48d54545642dc1b71ffb2182431"
+      }
+    },
+    {
+      "id": "525d191dccb246b6addc231547c56a68",
+      "at": "2026-08-30T11:51:35.993668+00:00",
+      "type": "worker_failed",
+      "state": "FAILED_RECOVERABLE",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "message": "segment 01 self-verification failed: word error rate exceeds threshold; ordered token coverage below threshold; unexpected long silence; speech timing drift exceeds threshold; frame rate mismatch; duration mismatch",
+        "retryable": true
+      }
+    },
+    {
+      "id": "97d8a16e083f41139294aefa72feb40d",
+      "at": "2026-08-30T11:51:37.226768+00:00",
+      "type": "worker_resumed",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "FAILED_RECOVERABLE"
+      }
+    },
+    {
+      "id": "457f4efb4b854bc4ab65de49eaab08af",
+      "at": "2026-08-30T12:23:54.788430+00:00",
+      "type": "worker_failed",
+      "state": "FAILED_RECOVERABLE",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "message": "segment 01 self-verification failed: word error rate exceeds threshold; unexpected long silence; leading silence inside keep clip; speech timing drift exceeds threshold",
+        "retryable": true
+      }
+    },
+    {
+      "id": "016286e7afa145de9641b6f7415c80e0",
+      "at": "2026-08-30T12:33:05.782361+00:00",
+      "type": "worker_resumed",
+      "state": "PHASE2_RUNNING",
+      "details": {
+        "previous_state": "FAILED_RECOVERABLE"
+      }
+    },
+    {
+      "id": "2eb3652febec41d893d6b2cfa178dc0d",
+      "at": "2026-08-30T12:44:59.544312+00:00",
+      "type": "worker_failed",
+      "state": "FAILED_RECOVERABLE",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "message": "segment 01 self-verification failed: word error rate exceeds threshold; unexpected long silence; leading silence inside keep clip; speech timing drift exceeds threshold",
+        "retryable": true
+      }
+    }
+  ]
+}

@@ -36,7 +36,11 @@ class FramingGeometryTests(unittest.TestCase):
         self.assertEqual(pos["placement"], "below-face-chest")
         self.assertGreaterEqual(pos["caption_pos_y"], face[1] + face[3] + 8)
         self.assertIn("caption_max_width_px", pos)
-        self.assertLessEqual(pos["caption_max_width_px"], int(720 * 0.42) + 8)
+        # Ширину держат поля кадра, а не плечи: прежний конверт 42% ужимал кегль на
+        # длинных словах, хотя в эталоне такое слово идёт одной строкой во всю грудь.
+        self.assertLessEqual(pos["caption_max_width_px"], int(720 * 0.86) + 8)
+        # Строка стоит по вертикальной оси кадра, а не по телу говорящего.
+        self.assertEqual(pos["caption_pos_x"], 360)
         self.assertFalse(
             face_caption_overlap(
                 face,

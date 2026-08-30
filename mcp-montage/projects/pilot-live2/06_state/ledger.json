@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
   "project_id": "pilot-live2",
-  "revision": 7,
-  "state": "PHASE2_RUNNING",
-  "updated_at": "2026-08-26T13:15:24.083797+00:00",
+  "revision": 8,
+  "state": "FAILED_RECOVERABLE",
+  "updated_at": "2026-08-26T13:43:12.448164+00:00",
   "run": {
     "id": "eb48980c240b40c5884b3f7688d1762d",
     "phase": "phase2",
@@ -45,7 +45,11 @@
     }
   ],
   "revision_request": null,
-  "last_error": null,
+  "last_error": {
+    "message": "segment 01 self-verification failed",
+    "retryable": true,
+    "at": "2026-08-26T13:43:12.448119+00:00"
+  },
   "events": [
     {
       "id": "3b8cc993c18a40be89db204a27ae5527",
@@ -140,6 +144,17 @@
       "details": {
         "previous_state": "PHASE2_PENDING",
         "inputs_hash": "sha256:8dee69a96de9d2e2630c58199a64277cd65509c48de92d3d482af615293e91a2"
+      }
+    },
+    {
+      "id": "ccab0bcb7af549989fa3e70ada7ca5e7",
+      "at": "2026-08-26T13:43:12.448164+00:00",
+      "type": "worker_failed",
+      "state": "FAILED_RECOVERABLE",
+      "details": {
+        "previous_state": "PHASE2_RUNNING",
+        "message": "segment 01 self-verification failed",
+        "retryable": true
       }
     }
   ]

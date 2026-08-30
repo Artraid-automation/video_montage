@@ -22,16 +22,24 @@ HEADROOM_MAX = 0.18
 HEADROOM_AUDIT_MAX = 0.40  # moving speaker: only extreme empty sky fails
 FACE_EDGE_MARGIN_PX = 24
 FACE_CENTER_TOLERANCE_RATIO = 0.20
-CAPTION_GAP_RATIO = 0.15  # clear chin + chunky necklace before chest text
+# Отступ под подбородком и полоса груди — по замеру референса, а не на глаз.
+# style/measured-v1.json: caption_gap_below_chin_pct = 9,97%; прямой замер кадра
+# эталона 30.08 дал низ строки на 68,9% высоты кадра. Прежние 0.15 и потолок 0.80
+# уводили строку на 78% высоты — на 9 пунктов ниже эталона.
+CAPTION_GAP_RATIO = 0.10
 CAPTION_SAFETY_PX = 48
-CHEST_BAND_MIN_RATIO = 0.62
-CHEST_BAND_MAX_RATIO = 0.80
-# Stronger right bias: YuNet box includes hair on viewer's left; sternum/buttons sit right of face-cx.
-CAPTION_TORSO_X_RATIO = 0.78
-# Keep phrase width inside the shoulder envelope so lines don't overhang left bg.
+CHEST_BAND_MIN_RATIO = 0.60
+CHEST_BAND_MAX_RATIO = 0.66
+# Субтитр стоит по вертикальной оси КАДРА, а не по телу говорящего: в референсах
+# строка центрирована по кадру и не ездит вслед за плечами (style/measured-v1.json).
+# Привязка к боксу лица давала снос вправо на ~15% ширины и «плавание» между планами.
+CAPTION_X_ANCHOR = "frame-center"
+# Ширину строки держат поля кадра, а не плечи говорящего: строка центрирована по
+# кадру, и «конверт по торсу» только ужимал кегль на длинных словах. Замер эталона
+# 30.08: слово «количеством» занимает 50,1% ширины кадра одной строкой.
 CAPTION_TORSO_WIDTH_FACE_RATIO = 2.2
 CAPTION_TORSO_WIDTH_MIN_PX = 280
-CAPTION_TORSO_WIDTH_MAX_FRAME_RATIO = 0.42
+CAPTION_TORSO_WIDTH_MAX_FRAME_RATIO = 0.86
 FACE_HEIGHT_MIN_RATIO = 0.10
 FACE_HEIGHT_MAX_RATIO = 0.40
 
@@ -250,11 +258,12 @@ def caption_pos_from_face(
     height: int,
     face_bottom_max: int | None = None,
 ) -> dict[str, Any]:
-    """Place caption top on the chest, centered on the torso midline.
+    """Строка субтитра: X — центр кадра, Y — грудная полоса под подбородком.
 
-    Y is the TOP of the ASS block (``\\an8``) so text grows down the chest and
-    never climbs onto the neck/necklace. Max line width is capped to ~shoulder
-    span so centered phrases look symmetric on the body (not left-overhang).
+    X НЕ привязан к лицу: строка центрируется по кадру, как в референсах. Кривой
+    кадр правится кадрированием, а не сносом текста вслед за телом.
+    Y — это ВЕРХ блока (``\\an8``), поэтому текст растёт вниз по груди и не
+    залезает на шею.
     """
     x, y, w, h = face
     face_bottom = int(face_bottom_max if face_bottom_max is not None else y + h)
@@ -267,7 +276,7 @@ def caption_pos_from_face(
     if pos_y + 40 > height:
         pos_y = max(40, height - 80)
     margin = max(48, int(width * 0.12))
-    pos_x = int(x + w * CAPTION_TORSO_X_RATIO)
+    pos_x = width // 2
     pos_x = min(max(margin, pos_x), width - margin)
     max_width = int(w * CAPTION_TORSO_WIDTH_FACE_RATIO)
     max_width = max(CAPTION_TORSO_WIDTH_MIN_PX, max_width)
@@ -279,7 +288,7 @@ def caption_pos_from_face(
         "face": {"x": int(x), "y": int(y), "w": int(w), "h": int(h)},
         "face_bottom_max": int(face_bottom),
         "placement": "below-face-chest",
-        "torso_x_ratio": CAPTION_TORSO_X_RATIO,
+        "x_anchor": CAPTION_X_ANCHOR,
     }
 
 

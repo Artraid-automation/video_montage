@@ -1,0 +1,2485 @@
+{
+  "schema_version": 1,
+  "provider": "rev.ai",
+  "provider_version": "v1",
+  "language": "ru",
+  "media_path": "/home/clwduser1/video_montage/mcp-montage/projects/pilot-live3/04_phase2/segments/01/review.mp4",
+  "duration_s": 148.222,
+  "words": [
+    {
+      "id": "w000001",
+      "start_s": 0.0,
+      "end_s": 0.46,
+      "text": "Звонки",
+      "confidence": 0.74
+    },
+    {
+      "id": "w000002",
+      "start_s": 0.56,
+      "end_s": 1.74,
+      "text": "Какой-то",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000003",
+      "start_s": 1.74,
+      "end_s": 2.14,
+      "text": "чел",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000004",
+      "start_s": 2.14,
+      "end_s": 2.76,
+      "text": "на",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000005",
+      "start_s": 2.76,
+      "end_s": 3.76,
+      "text": "своем",
+      "confidence": 0.92
+    },
+    {
+      "id": "w000006",
+      "start_s": 3.76,
+      "end_s": 4.26,
+      "text": "мобильном",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000007",
+      "start_s": 4.26,
+      "end_s": 4.82,
+      "text": "телефоне",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000008",
+      "start_s": 4.82,
+      "end_s": 5.48,
+      "text": "сделал",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000009",
+      "start_s": 5.48,
+      "end_s": 6.28,
+      "text": "проект",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000010",
+      "start_s": 6.28,
+      "end_s": 6.86,
+      "text": "с",
+      "confidence": 0.68
+    },
+    {
+      "id": "w000011",
+      "start_s": 6.86,
+      "end_s": 7.28,
+      "text": "серверной",
+      "confidence": 0.58
+    },
+    {
+      "id": "w000012",
+      "start_s": 7.28,
+      "end_s": 7.86,
+      "text": "системой",
+      "confidence": 0.98
+    },
+    {
+      "id": "w000013",
+      "start_s": 7.86,
+      "end_s": 8.08,
+      "text": "которая",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000014",
+      "start_s": 8.08,
+      "end_s": 8.76,
+      "text": "слушает",
+      "confidence": 1.0
+    },
+    {
+      "id": "w000015",
+      "start_s": 8.76,
+      "end_s": 9.66,
+      "text": "звонки",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000016",
+      "start_s": 9.66,
+      "end_s": 9.94,
+      "text": "которые",
+      "confidence": 1.0
+    },
+    {
+      "id": "w000017",
+      "start_s": 9.94,
+      "end_s": 10.52,
+      "text": "происходят",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000018",
+      "start_s": 10.52,
+      "end_s": 11.06,
+      "text": "еще",
+      "confidence": 0.96
+    },
+    {
+      "id": "w000019",
+      "start_s": 11.06,
+      "end_s": 11.46,
+      "text": "в",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000020",
+      "start_s": 11.46,
+      "end_s": 12.5,
+      "text": "мессенджерах",
+      "confidence": 0.77
+    },
+    {
+      "id": "w000021",
+      "start_s": 12.5,
+      "end_s": 12.84,
+      "text": "Просто",
+      "confidence": 0.03
+    },
+    {
+      "id": "w000022",
+      "start_s": 12.84,
+      "end_s": 13.38,
+      "text": "на",
+      "confidence": 0.98
+    },
+    {
+      "id": "w000023",
+      "start_s": 13.38,
+      "end_s": 14.46,
+      "text": "диктофон",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000024",
+      "start_s": 14.46,
+      "end_s": 14.84,
+      "text": "встроенный",
+      "confidence": 0.83
+    },
+    {
+      "id": "w000025",
+      "start_s": 14.84,
+      "end_s": 14.98,
+      "text": "в",
+      "confidence": 0.98
+    },
+    {
+      "id": "w000026",
+      "start_s": 14.98,
+      "end_s": 15.62,
+      "text": "телефон",
+      "confidence": 0.62
+    },
+    {
+      "id": "w000027",
+      "start_s": 15.62,
+      "end_s": 16.16,
+      "text": "потом",
+      "confidence": 0.98
+    },
+    {
+      "id": "w000028",
+      "start_s": 16.16,
+      "end_s": 17.12,
+      "text": "транскрибирует",
+      "confidence": 0.97
+    },
+    {
+      "id": "w000029",
+      "start_s": 17.12,
+      "end_s": 17.26,
+      "text": "эти",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000030",
+      "start_s": 17.26,
+      "end_s": 17.68,
+      "text": "звонки",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000031",
+      "start_s": 17.68,
+      "end_s": 18.16,
+      "text": "локально",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000032",
+      "start_s": 18.16,
+      "end_s": 18.56,
+      "text": "на",
+      "confidence": 0.79
+    },
+    {
+      "id": "w000033",
+      "start_s": 18.56,
+      "end_s": 19.3,
+      "text": "нужный",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000034",
+      "start_s": 19.3,
+      "end_s": 19.78,
+      "text": "язык",
+      "confidence": 0.86
+    },
+    {
+      "id": "w000035",
+      "start_s": 20.18,
+      "end_s": 21.08,
+      "text": "Достаточно",
+      "confidence": 0.83
+    },
+    {
+      "id": "w000036",
+      "start_s": 21.08,
+      "end_s": 21.4,
+      "text": "тем",
+      "confidence": 0.93
+    },
+    {
+      "id": "w000037",
+      "start_s": 21.4,
+      "end_s": 21.42,
+      "text": "не",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000038",
+      "start_s": 21.42,
+      "end_s": 21.62,
+      "text": "менее",
+      "confidence": 1.0
+    },
+    {
+      "id": "w000039",
+      "start_s": 21.62,
+      "end_s": 21.96,
+      "text": "работает",
+      "confidence": 0.97
+    },
+    {
+      "id": "w000040",
+      "start_s": 21.96,
+      "end_s": 22.9,
+      "text": "10-минутный",
+      "confidence": 0.73
+    },
+    {
+      "id": "w000041",
+      "start_s": 22.9,
+      "end_s": 23.34,
+      "text": "звонок",
+      "confidence": 1.0
+    },
+    {
+      "id": "w000042",
+      "start_s": 23.34,
+      "end_s": 23.9,
+      "text": "Как",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000043",
+      "start_s": 23.9,
+      "end_s": 24.78,
+      "text": "заявлено",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000044",
+      "start_s": 24.78,
+      "end_s": 26.34,
+      "text": "расшифровывает",
+      "confidence": 0.98
+    },
+    {
+      "id": "w000045",
+      "start_s": 26.34,
+      "end_s": 26.6,
+      "text": "за",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000046",
+      "start_s": 26.6,
+      "end_s": 27.88,
+      "text": "6,5",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000047",
+      "start_s": 27.88,
+      "end_s": 28.4,
+      "text": "минут",
+      "confidence": 0.98
+    },
+    {
+      "id": "w000048",
+      "start_s": 28.4,
+      "end_s": 28.98,
+      "text": "либо",
+      "confidence": 1.0
+    },
+    {
+      "id": "w000049",
+      "start_s": 28.98,
+      "end_s": 29.16,
+      "text": "на",
+      "confidence": 1.0
+    },
+    {
+      "id": "w000050",
+      "start_s": 29.16,
+      "end_s": 29.4,
+      "text": "другой",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000051",
+      "start_s": 29.4,
+      "end_s": 29.84,
+      "text": "модели",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000052",
+      "start_s": 29.84,
+      "end_s": 30.48,
+      "text": "транскрибации",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000053",
+      "start_s": 30.48,
+      "end_s": 30.64,
+      "text": "за",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000054",
+      "start_s": 30.64,
+      "end_s": 31.0,
+      "text": "17",
+      "confidence": 1.0
+    },
+    {
+      "id": "w000055",
+      "start_s": 31.0,
+      "end_s": 31.7,
+      "text": "минут",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000056",
+      "start_s": 31.7,
+      "end_s": 32.16,
+      "text": "Ну",
+      "confidence": 0.93
+    },
+    {
+      "id": "w000057",
+      "start_s": 32.16,
+      "end_s": 32.54,
+      "text": "понятное",
+      "confidence": 0.98
+    },
+    {
+      "id": "w000058",
+      "start_s": 32.54,
+      "end_s": 32.8,
+      "text": "дело",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000059",
+      "start_s": 32.8,
+      "end_s": 32.94,
+      "text": "это",
+      "confidence": 1.0
+    },
+    {
+      "id": "w000060",
+      "start_s": 32.94,
+      "end_s": 33.14,
+      "text": "все",
+      "confidence": 0.84
+    },
+    {
+      "id": "w000061",
+      "start_s": 33.14,
+      "end_s": 33.84,
+      "text": "показатели",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000062",
+      "start_s": 33.84,
+      "end_s": 34.62,
+      "text": "настраивают",
+      "confidence": 0.91
+    },
+    {
+      "id": "w000063",
+      "start_s": 34.62,
+      "end_s": 35.04,
+      "text": "А",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000064",
+      "start_s": 35.04,
+      "end_s": 35.36,
+      "text": "потом",
+      "confidence": 1.0
+    },
+    {
+      "id": "w000065",
+      "start_s": 35.36,
+      "end_s": 36.06,
+      "text": "локальная",
+      "confidence": 0.9
+    },
+    {
+      "id": "w000066",
+      "start_s": 36.06,
+      "end_s": 36.56,
+      "text": "модель",
+      "confidence": 0.87
+    },
+    {
+      "id": "w000067",
+      "start_s": 36.56,
+      "end_s": 36.64,
+      "text": "и",
+      "confidence": 0.2
+    },
+    {
+      "id": "w000068",
+      "start_s": 36.64,
+      "end_s": 39.04,
+      "text": "создает",
+      "confidence": 0.52
+    },
+    {
+      "id": "w000069",
+      "start_s": 39.04,
+      "end_s": 39.88,
+      "text": "маркдаун",
+      "confidence": 0.86
+    },
+    {
+      "id": "w000070",
+      "start_s": 39.88,
+      "end_s": 40.5,
+      "text": "файлы",
+      "confidence": 0.89
+    },
+    {
+      "id": "w000071",
+      "start_s": 40.5,
+      "end_s": 41.22,
+      "text": "для...",
+      "confidence": 0.76
+    },
+    {
+      "id": "w000072",
+      "start_s": 41.22,
+      "end_s": 42.38,
+      "text": "Короче",
+      "confidence": 0.91
+    },
+    {
+      "id": "w000073",
+      "start_s": 42.5,
+      "end_s": 43.48,
+      "text": "Отбрасывая",
+      "confidence": 0.72
+    },
+    {
+      "id": "w000074",
+      "start_s": 43.48,
+      "end_s": 44.02,
+      "text": "техничку",
+      "confidence": 0.8
+    },
+    {
+      "id": "w000075",
+      "start_s": 44.02,
+      "end_s": 44.22,
+      "text": "просто",
+      "confidence": 0.81
+    },
+    {
+      "id": "w000076",
+      "start_s": 44.22,
+      "end_s": 44.78,
+      "text": "сохраняет",
+      "confidence": 0.94
+    },
+    {
+      "id": "w000077",
+      "start_s": 44.78,
+      "end_s": 45.02,
+      "text": "очень",
+      "confidence": 0.83
+    },
+    {
+      "id": "w000078",
+      "start_s": 45.02,
+      "end_s": 46.26,
+      "text": "файлики",
+      "confidence": 0.73
+    },
+    {
+      "id": "w000079",
+      "start_s": 46.26,
+      "end_s": 46.78,
+      "text": "локально",
+      "confidence": 0.98
+    },
+    {
+      "id": "w000080",
+      "start_s": 46.78,
+      "end_s": 47.02,
+      "text": "на",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000081",
+      "start_s": 47.02,
+      "end_s": 48.1,
+      "text": "телефоне",
+      "confidence": 0.8
+    },
+    {
+      "id": "w000082",
+      "start_s": 48.1,
+      "end_s": 48.58,
+      "text": "При",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000083",
+      "start_s": 48.58,
+      "end_s": 48.82,
+      "text": "этом",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000084",
+      "start_s": 48.82,
+      "end_s": 49.3,
+      "text": "какие-то",
+      "confidence": 0.93
+    },
+    {
+      "id": "w000085",
+      "start_s": 49.3,
+      "end_s": 49.96,
+      "text": "дукапы",
+      "confidence": 0.88
+    },
+    {
+      "id": "w000086",
+      "start_s": 49.96,
+      "end_s": 50.22,
+      "text": "и",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000087",
+      "start_s": 50.22,
+      "end_s": 51.26,
+      "text": "облачные",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000088",
+      "start_s": 51.26,
+      "end_s": 51.66,
+      "text": "загрузки",
+      "confidence": 0.85
+    },
+    {
+      "id": "w000089",
+      "start_s": 51.66,
+      "end_s": 52.4,
+      "text": "отключены",
+      "confidence": 0.95
+    },
+    {
+      "id": "w000090",
+      "start_s": 52.4,
+      "end_s": 52.9,
+      "text": "у",
+      "confidence": 0.98
+    },
+    {
+      "id": "w000091",
+      "start_s": 52.9,
+      "end_s": 53.14,
+      "text": "этого",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000092",
+      "start_s": 53.14,
+      "end_s": 53.8,
+      "text": "проекта",
+      "confidence": 0.97
+    },
+    {
+      "id": "w000093",
+      "start_s": 53.8,
+      "end_s": 54.02,
+      "text": "Я",
+      "confidence": 0.79
+    },
+    {
+      "id": "w000094",
+      "start_s": 54.02,
+      "end_s": 54.3,
+      "text": "не",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000095",
+      "start_s": 54.3,
+      "end_s": 54.52,
+      "text": "так",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000096",
+      "start_s": 54.52,
+      "end_s": 54.86,
+      "text": "давно",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000097",
+      "start_s": 54.86,
+      "end_s": 56.74,
+      "text": "смотрел",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000098",
+      "start_s": 56.74,
+      "end_s": 57.76,
+      "text": "локальную",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000099",
+      "start_s": 57.76,
+      "end_s": 58.36,
+      "text": "нейронку",
+      "confidence": 0.98
+    },
+    {
+      "id": "w000100",
+      "start_s": 58.36,
+      "end_s": 58.5,
+      "text": "на",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000101",
+      "start_s": 58.5,
+      "end_s": 59.04,
+      "text": "телефон",
+      "confidence": 0.98
+    },
+    {
+      "id": "w000102",
+      "start_s": 59.04,
+      "end_s": 59.38,
+      "text": "которая",
+      "confidence": 0.47
+    },
+    {
+      "id": "w000103",
+      "start_s": 59.38,
+      "end_s": 59.74,
+      "text": "даже",
+      "confidence": 0.98
+    },
+    {
+      "id": "w000104",
+      "start_s": 59.74,
+      "end_s": 60.86,
+      "text": "сама",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000105",
+      "start_s": 60.86,
+      "end_s": 61.68,
+      "text": "какой-то",
+      "confidence": 0.94
+    },
+    {
+      "id": "w000106",
+      "start_s": 61.68,
+      "end_s": 62.14,
+      "text": "сервис",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000107",
+      "start_s": 62.14,
+      "end_s": 62.78,
+      "text": "типа",
+      "confidence": 0.39
+    },
+    {
+      "id": "w000108",
+      "start_s": 62.78,
+      "end_s": 63.38,
+      "text": "разрабатывает",
+      "confidence": 0.97
+    },
+    {
+      "id": "w000109",
+      "start_s": 63.38,
+      "end_s": 63.72,
+      "text": "достаточно",
+      "confidence": 0.74
+    },
+    {
+      "id": "w000110",
+      "start_s": 63.72,
+      "end_s": 64.64,
+      "text": "тупенько",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000111",
+      "start_s": 64.64,
+      "end_s": 64.8,
+      "text": "но",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000112",
+      "start_s": 64.8,
+      "end_s": 64.96,
+      "text": "тем",
+      "confidence": 0.94
+    },
+    {
+      "id": "w000113",
+      "start_s": 64.96,
+      "end_s": 65.08,
+      "text": "не",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000114",
+      "start_s": 65.08,
+      "end_s": 65.34,
+      "text": "менее",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000115",
+      "start_s": 65.34,
+      "end_s": 65.54,
+      "text": "можно",
+      "confidence": 0.98
+    },
+    {
+      "id": "w000116",
+      "start_s": 65.54,
+      "end_s": 66.16,
+      "text": "сразу",
+      "confidence": 0.75
+    },
+    {
+      "id": "w000117",
+      "start_s": 66.22,
+      "end_s": 66.96,
+      "text": "Тут",
+      "confidence": 0.8
+    },
+    {
+      "id": "w000118",
+      "start_s": 66.96,
+      "end_s": 67.22,
+      "text": "да",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000119",
+      "start_s": 67.22,
+      "end_s": 67.36,
+      "text": "мы",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000120",
+      "start_s": 67.36,
+      "end_s": 67.8,
+      "text": "ставим",
+      "confidence": 0.97
+    },
+    {
+      "id": "w000121",
+      "start_s": 67.8,
+      "end_s": 69.34,
+      "text": "звездочку",
+      "confidence": 0.97
+    },
+    {
+      "id": "w000122",
+      "start_s": 69.34,
+      "end_s": 69.54,
+      "text": "что",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000123",
+      "start_s": 69.54,
+      "end_s": 70.2,
+      "text": "телефон",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000124",
+      "start_s": 70.2,
+      "end_s": 70.5,
+      "text": "должен",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000125",
+      "start_s": 70.5,
+      "end_s": 71.22,
+      "text": "быть",
+      "confidence": 1.0
+    },
+    {
+      "id": "w000126",
+      "start_s": 71.22,
+      "end_s": 71.76,
+      "text": "мощным",
+      "confidence": 0.9
+    },
+    {
+      "id": "w000127",
+      "start_s": 71.76,
+      "end_s": 72.32,
+      "text": "И",
+      "confidence": 0.87
+    },
+    {
+      "id": "w000128",
+      "start_s": 72.32,
+      "end_s": 72.48,
+      "text": "нет",
+      "confidence": 0.24
+    },
+    {
+      "id": "w000129",
+      "start_s": 72.5,
+      "end_s": 73.04,
+      "text": "Со",
+      "confidence": 0.02
+    },
+    {
+      "id": "w000130",
+      "start_s": 73.04,
+      "end_s": 74.34,
+      "text": "временем",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000131",
+      "start_s": 74.34,
+      "end_s": 74.44,
+      "text": "мы",
+      "confidence": 0.89
+    },
+    {
+      "id": "w000132",
+      "start_s": 74.44,
+      "end_s": 74.7,
+      "text": "будем",
+      "confidence": 0.79
+    },
+    {
+      "id": "w000133",
+      "start_s": 74.7,
+      "end_s": 75.02,
+      "text": "видеть",
+      "confidence": 0.97
+    },
+    {
+      "id": "w000134",
+      "start_s": 75.02,
+      "end_s": 75.14,
+      "text": "все",
+      "confidence": 0.71
+    },
+    {
+      "id": "w000135",
+      "start_s": 75.14,
+      "end_s": 75.48,
+      "text": "больше",
+      "confidence": 0.92
+    },
+    {
+      "id": "w000136",
+      "start_s": 75.48,
+      "end_s": 75.76,
+      "text": "и",
+      "confidence": 0.85
+    },
+    {
+      "id": "w000137",
+      "start_s": 75.76,
+      "end_s": 76.08,
+      "text": "все",
+      "confidence": 0.9
+    },
+    {
+      "id": "w000138",
+      "start_s": 76.08,
+      "end_s": 76.38,
+      "text": "более",
+      "confidence": 0.96
+    },
+    {
+      "id": "w000139",
+      "start_s": 76.38,
+      "end_s": 76.98,
+      "text": "умные",
+      "confidence": 0.97
+    },
+    {
+      "id": "w000140",
+      "start_s": 76.98,
+      "end_s": 77.92,
+      "text": "локали",
+      "confidence": 0.71
+    },
+    {
+      "id": "w000141",
+      "start_s": 77.92,
+      "end_s": 78.08,
+      "text": "будут",
+      "confidence": 0.47
+    },
+    {
+      "id": "w000142",
+      "start_s": 78.08,
+      "end_s": 78.56,
+      "text": "опускаться",
+      "confidence": 0.97
+    },
+    {
+      "id": "w000143",
+      "start_s": 78.56,
+      "end_s": 78.78,
+      "text": "там",
+      "confidence": 0.29
+    },
+    {
+      "id": "w000144",
+      "start_s": 78.78,
+      "end_s": 79.14,
+      "text": "вплоть",
+      "confidence": 0.98
+    },
+    {
+      "id": "w000145",
+      "start_s": 79.14,
+      "end_s": 79.28,
+      "text": "до",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000146",
+      "start_s": 79.28,
+      "end_s": 79.58,
+      "text": "часов",
+      "confidence": 0.98
+    },
+    {
+      "id": "w000147",
+      "start_s": 79.58,
+      "end_s": 79.96,
+      "text": "или",
+      "confidence": 0.86
+    },
+    {
+      "id": "w000148",
+      "start_s": 79.96,
+      "end_s": 80.3,
+      "text": "еще",
+      "confidence": 0.92
+    },
+    {
+      "id": "w000149",
+      "start_s": 80.3,
+      "end_s": 80.7,
+      "text": "более",
+      "confidence": 0.56
+    },
+    {
+      "id": "w000150",
+      "start_s": 81.24,
+      "end_s": 81.88,
+      "text": "Работать",
+      "confidence": 0.92
+    },
+    {
+      "id": "w000151",
+      "start_s": 81.88,
+      "end_s": 82.46,
+      "text": "без",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000152",
+      "start_s": 82.46,
+      "end_s": 83.38,
+      "text": "зависимости",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000153",
+      "start_s": 83.38,
+      "end_s": 83.66,
+      "text": "от",
+      "confidence": 0.98
+    },
+    {
+      "id": "w000154",
+      "start_s": 83.66,
+      "end_s": 84.12,
+      "text": "какого-то",
+      "confidence": 0.92
+    },
+    {
+      "id": "w000155",
+      "start_s": 84.12,
+      "end_s": 85.22,
+      "text": "железа",
+      "confidence": 0.87
+    },
+    {
+      "id": "w000156",
+      "start_s": 85.22,
+      "end_s": 85.44,
+      "text": "что",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000157",
+      "start_s": 85.44,
+      "end_s": 86.32,
+      "text": "классно",
+      "confidence": 0.96
+    },
+    {
+      "id": "w000158",
+      "start_s": 86.32,
+      "end_s": 86.6,
+      "text": "И",
+      "confidence": 0.8
+    },
+    {
+      "id": "w000159",
+      "start_s": 86.6,
+      "end_s": 87.0,
+      "text": "если",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000160",
+      "start_s": 87.0,
+      "end_s": 87.54,
+      "text": "в",
+      "confidence": 0.98
+    },
+    {
+      "id": "w000161",
+      "start_s": 87.54,
+      "end_s": 88.08,
+      "text": "ваших",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000162",
+      "start_s": 88.08,
+      "end_s": 88.22,
+      "text": "двух",
+      "confidence": 0.26
+    },
+    {
+      "id": "w000163",
+      "start_s": 88.22,
+      "end_s": 89.06,
+      "text": "задачах",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000164",
+      "start_s": 89.06,
+      "end_s": 90.96,
+      "text": "данный",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000165",
+      "start_s": 90.96,
+      "end_s": 91.38,
+      "text": "кейс",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000166",
+      "start_s": 91.38,
+      "end_s": 92.66,
+      "text": "интересен",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000167",
+      "start_s": 92.66,
+      "end_s": 93.0,
+      "text": "можно",
+      "confidence": 0.96
+    },
+    {
+      "id": "w000168",
+      "start_s": 93.0,
+      "end_s": 93.96,
+      "text": "во-первых",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000169",
+      "start_s": 93.96,
+      "end_s": 94.64,
+      "text": "завайп-кодить",
+      "confidence": 0.77
+    },
+    {
+      "id": "w000170",
+      "start_s": 94.64,
+      "end_s": 94.9,
+      "text": "такой",
+      "confidence": 0.93
+    },
+    {
+      "id": "w000171",
+      "start_s": 94.9,
+      "end_s": 95.26,
+      "text": "себе",
+      "confidence": 0.98
+    },
+    {
+      "id": "w000172",
+      "start_s": 95.26,
+      "end_s": 95.58,
+      "text": "за",
+      "confidence": 0.49
+    },
+    {
+      "id": "w000173",
+      "start_s": 95.58,
+      "end_s": 96.38,
+      "text": "буквально",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000174",
+      "start_s": 96.38,
+      "end_s": 96.62,
+      "text": "пару",
+      "confidence": 1.0
+    },
+    {
+      "id": "w000175",
+      "start_s": 96.62,
+      "end_s": 96.98,
+      "text": "дней",
+      "confidence": 0.84
+    },
+    {
+      "id": "w000176",
+      "start_s": 96.98,
+      "end_s": 97.18,
+      "text": "там",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000177",
+      "start_s": 97.18,
+      "end_s": 97.38,
+      "text": "ничего",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000178",
+      "start_s": 97.38,
+      "end_s": 98.16,
+      "text": "сложного",
+      "confidence": 0.98
+    },
+    {
+      "id": "w000179",
+      "start_s": 98.16,
+      "end_s": 98.58,
+      "text": "По",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000180",
+      "start_s": 98.58,
+      "end_s": 98.88,
+      "text": "крайней",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000181",
+      "start_s": 98.88,
+      "end_s": 98.98,
+      "text": "мере",
+      "confidence": 1.0
+    },
+    {
+      "id": "w000182",
+      "start_s": 98.98,
+      "end_s": 99.2,
+      "text": "если",
+      "confidence": 1.0
+    },
+    {
+      "id": "w000183",
+      "start_s": 99.2,
+      "end_s": 99.32,
+      "text": "у",
+      "confidence": 1.0
+    },
+    {
+      "id": "w000184",
+      "start_s": 99.32,
+      "end_s": 99.44,
+      "text": "вас",
+      "confidence": 1.0
+    },
+    {
+      "id": "w000185",
+      "start_s": 99.44,
+      "end_s": 100.08,
+      "text": "Android",
+      "confidence": 0.8
+    },
+    {
+      "id": "w000186",
+      "start_s": 100.32,
+      "end_s": 101.24,
+      "text": "Сыплый",
+      "confidence": 0.48
+    },
+    {
+      "id": "w000187",
+      "start_s": 101.84,
+      "end_s": 102.48,
+      "text": "Сыплый",
+      "confidence": 0.76
+    },
+    {
+      "id": "w000188",
+      "start_s": 102.5,
+      "end_s": 102.62,
+      "text": "Если",
+      "confidence": 0.0
+    },
+    {
+      "id": "w000189",
+      "start_s": 102.62,
+      "end_s": 102.68,
+      "text": "App",
+      "confidence": 0.25
+    },
+    {
+      "id": "w000190",
+      "start_s": 102.68,
+      "end_s": 103.04,
+      "text": "Store",
+      "confidence": 0.56
+    },
+    {
+      "id": "w000191",
+      "start_s": 103.04,
+      "end_s": 103.16,
+      "text": "там",
+      "confidence": 0.63
+    },
+    {
+      "id": "w000192",
+      "start_s": 103.16,
+      "end_s": 103.28,
+      "text": "у",
+      "confidence": 0.66
+    },
+    {
+      "id": "w000193",
+      "start_s": 103.28,
+      "end_s": 103.38,
+      "text": "них",
+      "confidence": 0.95
+    },
+    {
+      "id": "w000194",
+      "start_s": 103.38,
+      "end_s": 103.76,
+      "text": "какие-то",
+      "confidence": 0.96
+    },
+    {
+      "id": "w000195",
+      "start_s": 103.76,
+      "end_s": 104.12,
+      "text": "конские",
+      "confidence": 0.56
+    },
+    {
+      "id": "w000196",
+      "start_s": 104.12,
+      "end_s": 104.76,
+      "text": "подписки",
+      "confidence": 0.74
+    },
+    {
+      "id": "w000197",
+      "start_s": 104.96,
+      "end_s": 105.4,
+      "text": "В",
+      "confidence": 0.98
+    },
+    {
+      "id": "w000198",
+      "start_s": 105.4,
+      "end_s": 105.66,
+      "text": "год",
+      "confidence": 0.98
+    },
+    {
+      "id": "w000199",
+      "start_s": 105.66,
+      "end_s": 105.84,
+      "text": "нужно",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000200",
+      "start_s": 105.84,
+      "end_s": 106.32,
+      "text": "платить",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000201",
+      "start_s": 106.32,
+      "end_s": 106.54,
+      "text": "просто",
+      "confidence": 0.97
+    },
+    {
+      "id": "w000202",
+      "start_s": 106.54,
+      "end_s": 106.7,
+      "text": "за",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000203",
+      "start_s": 106.7,
+      "end_s": 107.02,
+      "text": "возможность",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000204",
+      "start_s": 107.02,
+      "end_s": 107.64,
+      "text": "вывозить",
+      "confidence": 0.77
+    },
+    {
+      "id": "w000205",
+      "start_s": 107.64,
+      "end_s": 108.36,
+      "text": "приложение",
+      "confidence": 0.98
+    },
+    {
+      "id": "w000206",
+      "start_s": 108.36,
+      "end_s": 108.5,
+      "text": "Ну",
+      "confidence": 0.72
+    },
+    {
+      "id": "w000207",
+      "start_s": 108.5,
+      "end_s": 108.66,
+      "text": "если",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000208",
+      "start_s": 108.66,
+      "end_s": 109.28,
+      "text": "Android",
+      "confidence": 0.85
+    },
+    {
+      "id": "w000209",
+      "start_s": 109.28,
+      "end_s": 109.52,
+      "text": "то",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000210",
+      "start_s": 109.52,
+      "end_s": 109.68,
+      "text": "в",
+      "confidence": 0.67
+    },
+    {
+      "id": "w000211",
+      "start_s": 109.68,
+      "end_s": 110.02,
+      "text": "целом",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000212",
+      "start_s": 110.02,
+      "end_s": 110.22,
+      "text": "вообще",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000213",
+      "start_s": 110.22,
+      "end_s": 110.82,
+      "text": "пофигу",
+      "confidence": 0.94
+    },
+    {
+      "id": "w000214",
+      "start_s": 111.24,
+      "end_s": 111.68,
+      "text": "Собрали",
+      "confidence": 0.92
+    },
+    {
+      "id": "w000215",
+      "start_s": 111.68,
+      "end_s": 111.88,
+      "text": "себе",
+      "confidence": 1.0
+    },
+    {
+      "id": "w000216",
+      "start_s": 111.88,
+      "end_s": 112.32,
+      "text": "образ",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000217",
+      "start_s": 112.32,
+      "end_s": 112.52,
+      "text": "и",
+      "confidence": 0.7
+    },
+    {
+      "id": "w000218",
+      "start_s": 112.52,
+      "end_s": 113.48,
+      "text": "пользуйтесь",
+      "confidence": 0.94
+    },
+    {
+      "id": "w000219",
+      "start_s": 113.54,
+      "end_s": 113.98,
+      "text": "В",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000220",
+      "start_s": 113.98,
+      "end_s": 114.3,
+      "text": "общем",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000221",
+      "start_s": 114.3,
+      "end_s": 114.66,
+      "text": "если",
+      "confidence": 0.93
+    },
+    {
+      "id": "w000222",
+      "start_s": 114.66,
+      "end_s": 114.94,
+      "text": "вот",
+      "confidence": 0.27
+    },
+    {
+      "id": "w000223",
+      "start_s": 114.94,
+      "end_s": 115.68,
+      "text": "юзер-кейс",
+      "confidence": 0.91
+    },
+    {
+      "id": "w000224",
+      "start_s": 115.68,
+      "end_s": 116.0,
+      "text": "то",
+      "confidence": 1.0
+    },
+    {
+      "id": "w000225",
+      "start_s": 116.0,
+      "end_s": 116.6,
+      "text": "классно",
+      "confidence": 0.89
+    },
+    {
+      "id": "w000226",
+      "start_s": 116.64,
+      "end_s": 117.12,
+      "text": "Нет",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000227",
+      "start_s": 117.12,
+      "end_s": 117.68,
+      "text": "хуёвая",
+      "confidence": 0.94
+    },
+    {
+      "id": "w000228",
+      "start_s": 117.68,
+      "end_s": 118.22,
+      "text": "подводка",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000229",
+      "start_s": 118.22,
+      "end_s": 118.34,
+      "text": "это",
+      "confidence": 0.9
+    },
+    {
+      "id": "w000230",
+      "start_s": 118.34,
+      "end_s": 118.48,
+      "text": "мы",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000231",
+      "start_s": 118.48,
+      "end_s": 119.04,
+      "text": "убираем",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000232",
+      "start_s": 119.04,
+      "end_s": 119.24,
+      "text": "эту",
+      "confidence": 0.98
+    },
+    {
+      "id": "w000233",
+      "start_s": 119.24,
+      "end_s": 119.62,
+      "text": "ветку",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000234",
+      "start_s": 119.62,
+      "end_s": 120.06,
+      "text": "смысла",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000235",
+      "start_s": 120.06,
+      "end_s": 120.48,
+      "text": "Что",
+      "confidence": 0.51
+    },
+    {
+      "id": "w000236",
+      "start_s": 120.48,
+      "end_s": 120.62,
+      "text": "я",
+      "confidence": 1.0
+    },
+    {
+      "id": "w000237",
+      "start_s": 120.62,
+      "end_s": 120.82,
+      "text": "хотел",
+      "confidence": 1.0
+    },
+    {
+      "id": "w000238",
+      "start_s": 120.82,
+      "end_s": 121.34,
+      "text": "сказать",
+      "confidence": 0.96
+    },
+    {
+      "id": "w000239",
+      "start_s": 121.34,
+      "end_s": 121.5,
+      "text": "Ну",
+      "confidence": 0.77
+    },
+    {
+      "id": "w000240",
+      "start_s": 121.5,
+      "end_s": 121.62,
+      "text": "вот",
+      "confidence": 1.0
+    },
+    {
+      "id": "w000241",
+      "start_s": 121.62,
+      "end_s": 121.7,
+      "text": "я",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000242",
+      "start_s": 121.7,
+      "end_s": 122.18,
+      "text": "рассказал",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000243",
+      "start_s": 122.18,
+      "end_s": 122.3,
+      "text": "что",
+      "confidence": 0.97
+    },
+    {
+      "id": "w000244",
+      "start_s": 122.3,
+      "end_s": 122.48,
+      "text": "как",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000245",
+      "start_s": 122.48,
+      "end_s": 122.62,
+      "text": "это",
+      "confidence": 0.98
+    },
+    {
+      "id": "w000246",
+      "start_s": 122.62,
+      "end_s": 123.04,
+      "text": "классно",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000247",
+      "start_s": 123.04,
+      "end_s": 123.62,
+      "text": "бла-бла-бла",
+      "confidence": 0.98
+    },
+    {
+      "id": "w000248",
+      "start_s": 123.62,
+      "end_s": 123.8,
+      "text": "Можно",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000249",
+      "start_s": 123.8,
+      "end_s": 124.48,
+      "text": "навыкодить",
+      "confidence": 0.68
+    },
+    {
+      "id": "w000250",
+      "start_s": 124.48,
+      "end_s": 124.88,
+      "text": "окей",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000251",
+      "start_s": 124.88,
+      "end_s": 125.48,
+      "text": "круто",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000252",
+      "start_s": 125.8,
+      "end_s": 126.26,
+      "text": "Вообще",
+      "confidence": 0.87
+    },
+    {
+      "id": "w000253",
+      "start_s": 126.26,
+      "end_s": 126.38,
+      "text": "вот",
+      "confidence": 0.93
+    },
+    {
+      "id": "w000254",
+      "start_s": 126.38,
+      "end_s": 126.88,
+      "text": "продаж",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000255",
+      "start_s": 126.88,
+      "end_s": 127.18,
+      "text": "а",
+      "confidence": 0.91
+    },
+    {
+      "id": "w000256",
+      "start_s": 127.18,
+      "end_s": 128.82,
+      "text": "исключительно",
+      "confidence": 0.98
+    },
+    {
+      "id": "w000257",
+      "start_s": 128.82,
+      "end_s": 128.96,
+      "text": "под",
+      "confidence": 0.98
+    },
+    {
+      "id": "w000258",
+      "start_s": 128.96,
+      "end_s": 129.54,
+      "text": "одного",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000259",
+      "start_s": 129.54,
+      "end_s": 130.3,
+      "text": "человека",
+      "confidence": 1.0
+    },
+    {
+      "id": "w000260",
+      "start_s": 130.3,
+      "end_s": 131.06,
+      "text": "с",
+      "confidence": 0.78
+    },
+    {
+      "id": "w000261",
+      "start_s": 131.06,
+      "end_s": 131.72,
+      "text": "одним...",
+      "confidence": 0.52
+    },
+    {
+      "id": "w000262",
+      "start_s": 131.72,
+      "end_s": 132.42,
+      "text": "В",
+      "confidence": 0.73
+    },
+    {
+      "id": "w000263",
+      "start_s": 132.42,
+      "end_s": 133.06,
+      "text": "общем",
+      "confidence": 0.85
+    },
+    {
+      "id": "w000264",
+      "start_s": 133.06,
+      "end_s": 133.18,
+      "text": "это",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000265",
+      "start_s": 133.18,
+      "end_s": 133.6,
+      "text": "решение",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000266",
+      "start_s": 133.6,
+      "end_s": 133.74,
+      "text": "не",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000267",
+      "start_s": 133.74,
+      "end_s": 133.9,
+      "text": "под",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000268",
+      "start_s": 133.9,
+      "end_s": 134.32,
+      "text": "какой-то",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000269",
+      "start_s": 134.32,
+      "end_s": 134.5,
+      "text": "отдел",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000270",
+      "start_s": 134.5,
+      "end_s": 135.16,
+      "text": "продаж",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000271",
+      "start_s": 135.16,
+      "end_s": 135.64,
+      "text": "большую",
+      "confidence": 0.92
+    },
+    {
+      "id": "w000272",
+      "start_s": 135.64,
+      "end_s": 136.24,
+      "text": "компанию",
+      "confidence": 0.98
+    },
+    {
+      "id": "w000273",
+      "start_s": 136.24,
+      "end_s": 136.62,
+      "text": "ну",
+      "confidence": 0.22
+    },
+    {
+      "id": "w000274",
+      "start_s": 136.62,
+      "end_s": 136.76,
+      "text": "а",
+      "confidence": 0.91
+    },
+    {
+      "id": "w000275",
+      "start_s": 136.76,
+      "end_s": 136.96,
+      "text": "как",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000276",
+      "start_s": 136.96,
+      "end_s": 137.7,
+      "text": "оно",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000277",
+      "start_s": 137.7,
+      "end_s": 138.08,
+      "text": "и",
+      "confidence": 0.93
+    },
+    {
+      "id": "w000278",
+      "start_s": 138.08,
+      "end_s": 139.04,
+      "text": "конкретно",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000279",
+      "start_s": 139.04,
+      "end_s": 139.18,
+      "text": "под",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000280",
+      "start_s": 139.18,
+      "end_s": 139.44,
+      "text": "одного",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000281",
+      "start_s": 139.44,
+      "end_s": 139.9,
+      "text": "человека",
+      "confidence": 1.0
+    },
+    {
+      "id": "w000282",
+      "start_s": 139.9,
+      "end_s": 140.16,
+      "text": "с",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000283",
+      "start_s": 140.16,
+      "end_s": 140.68,
+      "text": "конкретным",
+      "confidence": 1.0
+    },
+    {
+      "id": "w000284",
+      "start_s": 140.68,
+      "end_s": 141.3,
+      "text": "телефоном",
+      "confidence": 0.88
+    },
+    {
+      "id": "w000285",
+      "start_s": 141.54,
+      "end_s": 142.3,
+      "text": "Кто",
+      "confidence": 0.97
+    },
+    {
+      "id": "w000286",
+      "start_s": 142.3,
+      "end_s": 142.7,
+      "text": "не",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000287",
+      "start_s": 142.7,
+      "end_s": 143.14,
+      "text": "хочет",
+      "confidence": 0.98
+    },
+    {
+      "id": "w000288",
+      "start_s": 143.14,
+      "end_s": 143.6,
+      "text": "списки",
+      "confidence": 0.61
+    },
+    {
+      "id": "w000289",
+      "start_s": 143.6,
+      "end_s": 144.04,
+      "text": "утекали",
+      "confidence": 0.95
+    },
+    {
+      "id": "w000290",
+      "start_s": 144.04,
+      "end_s": 144.9,
+      "text": "куда-либо",
+      "confidence": 0.67
+    },
+    {
+      "id": "w000291",
+      "start_s": 145.46,
+      "end_s": 146.22,
+      "text": "Для",
+      "confidence": 0.84
+    },
+    {
+      "id": "w000292",
+      "start_s": 146.22,
+      "end_s": 146.9,
+      "text": "важных",
+      "confidence": 0.99
+    },
+    {
+      "id": "w000293",
+      "start_s": 146.9,
+      "end_s": 147.44,
+      "text": "приватных",
+      "confidence": 0.97
+    },
+    {
+      "id": "w000294",
+      "start_s": 147.44,
+      "end_s": 148.24,
+      "text": "звонков",
+      "confidence": 1.0
+    }
+  ],
+  "utterances": [
+    {
+      "id": "u0001",
+      "start_s": 0.0,
+      "end_s": 14.98,
+      "text": "Звонки Какой-то чел на своем мобильном телефоне сделал проект с серверной системой которая слушает звонки которые происходят еще в мессенджерах Просто на диктофон встроенный в",
+      "word_ids": [
+        "w000001",
+        "w000002",
+        "w000003",
+        "w000004",
+        "w000005",
+        "w000006",
+        "w000007",
+        "w000008",
+        "w000009",
+        "w000010",
+        "w000011",
+        "w000012",
+        "w000013",
+        "w000014",
+        "w000015",
+        "w000016",
+        "w000017",
+        "w000018",
+        "w000019",
+        "w000020",
+        "w000021",
+        "w000022",
+        "w000023",
+        "w000024",
+        "w000025"
+      ],
+      "decision": "keep",
+      "reason": null,
+      "take_group": null
+    },
+    {
+      "id": "u0002",
+      "start_s": 14.98,
+      "end_s": 29.84,
+      "text": "телефон потом транскрибирует эти звонки локально на нужный язык Достаточно тем не менее работает 10-минутный звонок Как заявлено расшифровывает за 6,5 минут либо на другой модели",
+      "word_ids": [
+        "w000026",
+        "w000027",
+        "w000028",
+        "w000029",
+        "w000030",
+        "w000031",
+        "w000032",
+        "w000033",
+        "w000034",
+        "w000035",
+        "w000036",
+        "w000037",
+        "w000038",
+        "w000039",
+        "w000040",
+        "w000041",
+        "w000042",
+        "w000043",
+        "w000044",
+        "w000045",
+        "w000046",
+        "w000047",
+        "w000048",
+        "w000049",
+        "w000050",
+        "w000051"
+      ],
+      "decision": "keep",
+      "reason": null,
+      "take_group": null
+    },
+    {
+      "id": "u0003",
+      "start_s": 29.84,
+      "end_s": 44.78,
+      "text": "транскрибации за 17 минут Ну понятное дело это все показатели настраивают А потом локальная модель и создает маркдаун файлы для... Короче Отбрасывая техничку просто сохраняет",
+      "word_ids": [
+        "w000052",
+        "w000053",
+        "w000054",
+        "w000055",
+        "w000056",
+        "w000057",
+        "w000058",
+        "w000059",
+        "w000060",
+        "w000061",
+        "w000062",
+        "w000063",
+        "w000064",
+        "w000065",
+        "w000066",
+        "w000067",
+        "w000068",
+        "w000069",
+        "w000070",
+        "w000071",
+        "w000072",
+        "w000073",
+        "w000074",
+        "w000075",
+        "w000076"
+      ],
+      "decision": "keep",
+      "reason": null,
+      "take_group": null
+    },
+    {
+      "id": "u0004",
+      "start_s": 44.78,
+      "end_s": 59.74,
+      "text": "очень файлики локально на телефоне При этом какие-то дукапы и облачные загрузки отключены у этого проекта Я не так давно смотрел локальную нейронку на телефон которая даже",
+      "word_ids": [
+        "w000077",
+        "w000078",
+        "w000079",
+        "w000080",
+        "w000081",
+        "w000082",
+        "w000083",
+        "w000084",
+        "w000085",
+        "w000086",
+        "w000087",
+        "w000088",
+        "w000089",
+        "w000090",
+        "w000091",
+        "w000092",
+        "w000093",
+        "w000094",
+        "w000095",
+        "w000096",
+        "w000097",
+        "w000098",
+        "w000099",
+        "w000100",
+        "w000101",
+        "w000102",
+        "w000103"
+      ],
+      "decision": "keep",
+      "reason": null,
+      "take_group": null
+    },
+    {
+      "id": "u0005",
+      "start_s": 59.74,
+      "end_s": 74.7,
+      "text": "сама какой-то сервис типа разрабатывает достаточно тупенько но тем не менее можно сразу Тут да мы ставим звездочку что телефон должен быть мощным И нет Со временем мы будем",
+      "word_ids": [
+        "w000104",
+        "w000105",
+        "w000106",
+        "w000107",
+        "w000108",
+        "w000109",
+        "w000110",
+        "w000111",
+        "w000112",
+        "w000113",
+        "w000114",
+        "w000115",
+        "w000116",
+        "w000117",
+        "w000118",
+        "w000119",
+        "w000120",
+        "w000121",
+        "w000122",
+        "w000123",
+        "w000124",
+        "w000125",
+        "w000126",
+        "w000127",
+        "w000128",
+        "w000129",
+        "w000130",
+        "w000131",
+        "w000132"
+      ],
+      "decision": "keep",
+      "reason": null,
+      "take_group": null
+    },
+    {
+      "id": "u0006",
+      "start_s": 74.7,
+      "end_s": 89.06,
+      "text": "видеть все больше и все более умные локали будут опускаться там вплоть до часов или еще более Работать без зависимости от какого-то железа что классно И если в ваших двух задачах",
+      "word_ids": [
+        "w000133",
+        "w000134",
+        "w000135",
+        "w000136",
+        "w000137",
+        "w000138",
+        "w000139",
+        "w000140",
+        "w000141",
+        "w000142",
+        "w000143",
+        "w000144",
+        "w000145",
+        "w000146",
+        "w000147",
+        "w000148",
+        "w000149",
+        "w000150",
+        "w000151",
+        "w000152",
+        "w000153",
+        "w000154",
+        "w000155",
+        "w000156",
+        "w000157",
+        "w000158",
+        "w000159",
+        "w000160",
+        "w000161",
+        "w000162",
+        "w000163"
+      ],
+      "decision": "keep",
+      "reason": null,
+      "take_group": null
+    },
+    {
+      "id": "u0007",
+      "start_s": 89.06,
+      "end_s": 101.24,
+      "text": "данный кейс интересен можно во-первых завайп-кодить такой себе за буквально пару дней там ничего сложного По крайней мере если у вас Android Сыплый",
+      "word_ids": [
+        "w000164",
+        "w000165",
+        "w000166",
+        "w000167",
+        "w000168",
+        "w000169",
+        "w000170",
+        "w000171",
+        "w000172",
+        "w000173",
+        "w000174",
+        "w000175",
+        "w000176",
+        "w000177",
+        "w000178",
+        "w000179",
+        "w000180",
+        "w000181",
+        "w000182",
+        "w000183",
+        "w000184",
+        "w000185",
+        "w000186"
+      ],
+      "decision": "keep",
+      "reason": null,
+      "take_group": null
+    },
+    {
+      "id": "u0008",
+      "start_s": 101.84,
+      "end_s": 116.6,
+      "text": "Сыплый Если App Store там у них какие-то конские подписки В год нужно платить просто за возможность вывозить приложение Ну если Android то в целом вообще пофигу Собрали себе образ и пользуйтесь В общем если вот юзер-кейс то классно",
+      "word_ids": [
+        "w000187",
+        "w000188",
+        "w000189",
+        "w000190",
+        "w000191",
+        "w000192",
+        "w000193",
+        "w000194",
+        "w000195",
+        "w000196",
+        "w000197",
+        "w000198",
+        "w000199",
+        "w000200",
+        "w000201",
+        "w000202",
+        "w000203",
+        "w000204",
+        "w000205",
+        "w000206",
+        "w000207",
+        "w000208",
+        "w000209",
+        "w000210",
+        "w000211",
+        "w000212",
+        "w000213",
+        "w000214",
+        "w000215",
+        "w000216",
+        "w000217",
+        "w000218",
+        "w000219",
+        "w000220",
+        "w000221",
+        "w000222",
+        "w000223",
+        "w000224",
+        "w000225"
+      ],
+      "decision": "keep",
+      "reason": null,
+      "take_group": null
+    },
+    {
+      "id": "u0009",
+      "start_s": 116.64,
+      "end_s": 131.06,
+      "text": "Нет хуёвая подводка это мы убираем эту ветку смысла Что я хотел сказать Ну вот я рассказал что как это классно бла-бла-бла Можно навыкодить окей круто Вообще вот продаж а исключительно под одного человека с",
+      "word_ids": [
+        "w000226",
+        "w000227",
+        "w000228",
+        "w000229",
+        "w000230",
+        "w000231",
+        "w000232",
+        "w000233",
+        "w000234",
+        "w000235",
+        "w000236",
+        "w000237",
+        "w000238",
+        "w000239",
+        "w000240",
+        "w000241",
+        "w000242",
+        "w000243",
+        "w000244",
+        "w000245",
+        "w000246",
+        "w000247",
+        "w000248",
+        "w000249",
+        "w000250",
+        "w000251",
+        "w000252",
+        "w000253",
+        "w000254",
+        "w000255",
+        "w000256",
+        "w000257",
+        "w000258",
+        "w000259",
+        "w000260"
+      ],
+      "decision": "keep",
+      "reason": null,
+      "take_group": null
+    },
+    {
+      "id": "u0010",
+      "start_s": 131.06,
+      "end_s": 144.9,
+      "text": "одним... В общем это решение не под какой-то отдел продаж большую компанию ну а как оно и конкретно под одного человека с конкретным телефоном Кто не хочет списки утекали куда-либо",
+      "word_ids": [
+        "w000261",
+        "w000262",
+        "w000263",
+        "w000264",
+        "w000265",
+        "w000266",
+        "w000267",
+        "w000268",
+        "w000269",
+        "w000270",
+        "w000271",
+        "w000272",
+        "w000273",
+        "w000274",
+        "w000275",
+        "w000276",
+        "w000277",
+        "w000278",
+        "w000279",
+        "w000280",
+        "w000281",
+        "w000282",
+        "w000283",
+        "w000284",
+        "w000285",
+        "w000286",
+        "w000287",
+        "w000288",
+        "w000289",
+        "w000290"
+      ],
+      "decision": "keep",
+      "reason": null,
+      "take_group": null
+    },
+    {
+      "id": "u0011",
+      "start_s": 145.46,
+      "end_s": 148.24,
+      "text": "Для важных приватных звонков",
+      "word_ids": [
+        "w000291",
+        "w000292",
+        "w000293",
+        "w000294"
+      ],
+      "decision": "keep",
+      "reason": null,
+      "take_group": null
+    }
+  ]
+}

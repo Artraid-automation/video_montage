@@ -1,34 +1,34 @@
 {
   "schema_version": 1,
-  "revision": 6,
+  "revision": 12,
   "jobs": {
     "phase1.segment.01": {
       "id": "phase1.segment.01",
-      "execution_id": "ec719a4f3ef44b4186286c7ba7300d5d",
+      "execution_id": "bf1be2dae0eb4ead9c5a200360675309",
       "status": "COMPLETED",
-      "worker_version": "phase1-bundle-v5:faster-whisper:large-v3:editorial-analysis-v6:visual-planner-v4:broll-lexical-search-v2-senses",
-      "fingerprint": "sha256:49929e8eafec67b30fe439eb87189f05ab97301cfea513c9521b489cfd368423",
+      "worker_version": "phase1-bundle-v5:rev.ai:v1:editorial-analysis-v6:visual-planner-v4:broll-lexical-search-v2-senses",
+      "fingerprint": "sha256:4fda3eaf7f40d887b964bb75243ccfc1712a0d62299beaf3f7744f1bbe6eb797",
       "attempt": 1,
-      "started_at": "2026-08-26T13:03:53.614586+00:00",
-      "updated_at": "2026-08-26T13:15:08.293138+00:00",
+      "started_at": "2026-08-30T11:35:44.042963+00:00",
+      "updated_at": "2026-08-30T11:37:27.270898+00:00",
       "outputs": {
         "source_transcript": {
           "kind": "source-transcript",
           "path": "03_phase1/segments/01/source-transcript.json",
-          "sha256": "sha256:1ce321e7f2f949b36090b8149b7976420e56fd0d74a564ddff9f544c5edcfb2d",
-          "size_bytes": 70844
+          "sha256": "sha256:db445d9ec3f3177fb78d06d79e3ec2ab420da886b06bcb2bffd68ff88c3250c3",
+          "size_bytes": 62609
         },
         "editorial_analysis": {
           "kind": "editorial-analysis",
           "path": "03_phase1/segments/01/editorial-analysis.json",
-          "sha256": "sha256:86def92abf8882ba2e9d4e111f6dd8cfe538559fc66a11632ea330b27d530928",
-          "size_bytes": 1716
+          "sha256": "sha256:d6c5966cfac14ae47ec765ad17cc21caf1d3bc00bda35b9ace3e068cac5e0034",
+          "size_bytes": 4323
         },
         "llm_editorial": {
           "kind": "llm-editorial",
           "path": "03_phase1/segments/01/llm-editorial.json",
-          "sha256": "sha256:16047211c4237b87145eefd46f0547b31a5447cb3f7cac41732e3eef84a82eb7",
-          "size_bytes": 5483
+          "sha256": "sha256:a732a552c1dbed403f63855c170692d9f675cb4c15677c10f69b4d8259ab5742",
+          "size_bytes": 5623
         },
         "llm_visual": {
           "kind": "llm-visual",
@@ -39,13 +39,13 @@
         "transcript": {
           "kind": "editable-transcript",
           "path": "03_phase1/segments/01/transcript.md",
-          "sha256": "sha256:fdcbf29757107f6b614926a99b98c5f9f9552fae2e0a2b3ab015e3435f04273e",
-          "size_bytes": 5878
+          "sha256": "sha256:f8f5876575321bbb426f7e367752d105bf61490699c8f6ba926ebfcc15c6d9a6",
+          "size_bytes": 5860
         },
         "sync_report": {
           "kind": "sync-report",
           "path": "03_phase1/segments/01/sync-report.json",
-          "sha256": "sha256:5343e7bdd24e676d50ca988925ba0818f21988ddfd80fe10cfdde9714873de8b",
+          "sha256": "sha256:6960a333fc04dbaa18d72eb9bd5c3235210e3bc1874c69520207edcbd1e27787",
           "size_bytes": 354
         },
         "grade_manifest": {
@@ -57,7 +57,7 @@
         "visual_plan": {
           "kind": "visual-plan",
           "path": "03_phase1/segments/01/visual-plan.json",
-          "sha256": "sha256:a6398f84d9f9da37c1c0ef72b4950e522177ba761af04a1c7797269ceaefb43f",
+          "sha256": "sha256:ee33b48ffc75f73478c3b4cdc3a3b48a6441c9408939a4d6b8450cd62499cd1a",
           "size_bytes": 563
         },
         "grade_sample_0": {
@@ -91,47 +91,47 @@
           "source": "01_raw/01_camera.mp4",
           "sync": "NOT_REQUIRED",
           "visual_count": 0,
-          "editorial_candidate_count": 3,
+          "editorial_candidate_count": 11,
           "broll_match_count": 0,
           "motion_fallback_count": 0
         }
       },
-      "completed_at": "2026-08-26T13:15:08.293138+00:00"
+      "completed_at": "2026-08-30T11:37:27.270898+00:00"
     },
     "phase1.cross-segment-takes": {
       "id": "phase1.cross-segment-takes",
-      "execution_id": "8e9b1775910e4e36ba682a122177523c",
+      "execution_id": "7d0e1ec987454e869807d41467ed36fb",
       "status": "COMPLETED",
       "worker_version": "cross-segment-takes-v1",
-      "fingerprint": "sha256:3687cf948d7a98d81b298fa68dc35b1b40ab7bdebf88c3ee86a7026ec508c730",
+      "fingerprint": "sha256:1881b089e877451d7c66f0a2639f19754c73050c97860cf9c11200a25745503a",
       "attempt": 1,
-      "started_at": "2026-08-26T13:15:08.323165+00:00",
-      "updated_at": "2026-08-26T13:15:08.336753+00:00",
+      "started_at": "2026-08-30T11:37:27.286517+00:00",
+      "updated_at": "2026-08-30T11:37:27.294523+00:00",
       "outputs": {
         "analysis": {
           "kind": "cross-segment-take-analysis",
           "path": "03_phase1/cross-segment-take-analysis.json",
-          "sha256": "sha256:85df589b9c99c63577e8e218bd7fb95365486f3298b723d794463721db4184d7",
-          "size_bytes": 1051
+          "sha256": "sha256:925fe217ece6531b41a279669b23f5c43fb4d88b8429c5d590063218beb1f42f",
+          "size_bytes": 966
         }
       },
       "metadata": {
         "candidate_count": 0
       },
-      "completed_at": "2026-08-26T13:15:08.336753+00:00"
+      "completed_at": "2026-08-30T11:37:27.294523+00:00"
     },
     "phase2.segment.01": {
       "id": "phase2.segment.01",
-      "execution_id": "7afa6dc6f3af43a48cfcf3ae5aee5555",
+      "execution_id": "390992a90fcb48a89f8c4f72b5d83faf",
       "status": "FAILED",
       "worker_version": "segment-compose-asr-verify-qc-v16",
-      "fingerprint": "sha256:7a30d1f01cce3a2bf46d7f043badd8981efe30d1200dcb71388b00902291102f",
-      "attempt": 1,
-      "started_at": "2026-08-26T13:15:24.091583+00:00",
-      "updated_at": "2026-08-26T13:43:12.443959+00:00",
+      "fingerprint": "sha256:691c7fd7191730333cea3216cde868cf1bcb3b92fa972f35578736203a4411fa",
+      "attempt": 5,
+      "started_at": "2026-08-30T12:33:05.811059+00:00",
+      "updated_at": "2026-08-30T12:44:59.538748+00:00",
       "outputs": {},
       "metadata": {},
-      "error": "worker verdicts: verification=FAIL, qc=FAIL"
+      "error": "worker verdicts: verification=FAIL, qc=PASS"
     }
   }
 }

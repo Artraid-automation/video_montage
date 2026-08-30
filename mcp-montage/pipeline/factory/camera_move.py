@@ -130,12 +130,15 @@ def zoom_filter(
     ss = max(1, int(supersample))
     if abs(end - start) < 1e-6:
         # Статичный план: обычный кроп по центру, без покадрового пересчёта.
+        # `fps` обязателен и здесь: без него неподвижный план выходил в частоте
+        # исходника, движущийся — в частоте профиля, и склейка разнородных частот
+        # затыкала стыки стоп-кадрами (замер 30.08: 21 план из 50 шёл в 25 к/с).
         if abs(start - 1.0) < 1e-6:
-            return f"scale={width}:{height}"
+            return f"scale={width}:{height},fps={fps}"
         return (
             f"scale={width * ss}:{height * ss},"
             f"crop=w=iw/{start:.5f}:h=ih/{start:.5f},"
-            f"scale={width}:{height}"
+            f"scale={width}:{height},fps={fps}"
         )
     per_frame = (end - start) / float(frames)
     # `fps` ДО zoompan обязателен: счётчик `on` идёт по входным кадрам, и без приведения

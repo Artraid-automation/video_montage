@@ -86,7 +86,10 @@ class ZoomFilterTests(unittest.TestCase):
 
     def test_untouched_shot_is_a_plain_scale(self) -> None:
         entry = {"shot_id": "s03", "duration_s": 2.0, "start_scale": 1.0, "end_scale": 1.0, "zoom_pct": 0.0, "moves": False}
-        self.assertEqual(zoom_filter(entry, width=1080, height=1920, fps=60), "scale=1080:1920")
+        # Частота приводится и на неподвижном плане: иначе часть планов уходит в
+        # частоте исходника, часть — в частоте профиля, и склейка затыкает стыки
+        # стоп-кадрами (замер 30.08 на pilot-live2).
+        self.assertEqual(zoom_filter(entry, width=1080, height=1920, fps=60), "scale=1080:1920,fps=60")
 
     def test_invalid_frame_fails_closed(self) -> None:
         entry = {"shot_id": "s04", "duration_s": 1.0, "start_scale": 1.0, "end_scale": 1.05, "moves": True}

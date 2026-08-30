@@ -10,7 +10,7 @@
     "color": "#FFFFFF",
     "outline_color": "#000000",
     "outline_ratio": 0.075,
-    "font_ratio": 0.0411,
+    "font_ratio": 0.065,
     "max_font_ratio": 0.09,
     "min_font_px": 24,
     "alignment": 5,
@@ -28,7 +28,15 @@
       "single_line_share": 0.9,
       "font_shape_iou": 0.733
     },
-    "font_file": "assets/fonts/Rubik-ExtraBold.ttf"
+    "font_file": "assets/fonts/Rubik-ExtraBold.ttf",
+    "font_ratio_derivation": {
+      "target_glyph_height_ratio": 0.0214,
+      "glyph_to_font_ratio": 0.3291,
+      "measured_on": "2026-08-30",
+      "method": "рендер строки в 1080x1920 гарнитурой Rubik ExtraBold, замер высоты строчных пикселями",
+      "previous_font_ratio": 0.0411,
+      "note": "кегль ≠ высота глифа: прежнее значение давало глиф 1.35% вместо эталонных 2.14%"
+    }
   },
   "hook": {
     "font_ratio": 0.058,

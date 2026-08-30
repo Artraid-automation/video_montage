@@ -139,7 +139,15 @@ def caption_words_for_entry(
             continue
         start = float(raw["start_s"])
         end = float(raw["end_s"])
-        if end <= float(entry.start_s) or start >= float(entry.end_s):
+        overlap = min(end, float(entry.end_s)) - max(start, float(entry.start_s))
+        if overlap <= 0:
+            continue
+        # Слово принадлежит ровно одному фрагменту — тому, где звучит его большая
+        # часть. Прежний фильтр «хоть немного пересеклись» отдавал слово на границе
+        # реза ОБОИМ соседям, и ожидаемая расшифровка ждала его дважды, тогда как в
+        # ролике оно звучит один раз. Замер 30.08 на pilot-live3: так задвоились
+        # слова на 17 стыках из 51, и самопроверка валила сборку за чужой брак.
+        if overlap < 0.5 * max(end - start, 1e-6):
             continue
         local_start = max(0.0, start - float(entry.start_s))
         local_end = min(duration, max(local_start + 0.04, end - float(entry.start_s)))

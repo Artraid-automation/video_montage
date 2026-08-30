@@ -66,8 +66,11 @@ class StyleAsDataTests(unittest.TestCase):
 
     def test_font_size_follows_the_style_ratio(self) -> None:
         measured = load_style(MEASURED)
-        # 0.0411 * 1920 = 79 px — кегль, при котором строчная буква выходит 41 px (замер референса)
-        self.assertEqual(caption_font_size(1920, style=measured), 79)
+        # 0.065 * 1920 = 125 px. Прежние 79 px выводились из ошибочного допущения,
+        # будто кегль равен высоте глифа: замер рендера 30.08 дал строчную 26 px
+        # вместо эталонных 41 px (2.14% высоты кадра), то есть шрифт был мельче
+        # референса в полтора раза.
+        self.assertEqual(caption_font_size(1920, style=measured), 125)
         self.assertEqual(caption_font_size(1920), 86)  # дефолтный стиль: 0.045
 
     def test_word_by_word_captions_come_from_the_style(self) -> None:

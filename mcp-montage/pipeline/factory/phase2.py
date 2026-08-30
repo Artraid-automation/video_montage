@@ -7,7 +7,7 @@ from typing import Any, Callable
 
 from .artifacts import artifact_record
 from .film_continuity import write_phase2_film_continuity
-from .io import atomic_write_json, canonical_json_hash, read_json, sha256_file
+from .io import atomic_write_json, canonical_json_hash, read_json, resolve_project_path, sha256_file
 from .jobs import JobLedger
 from .providers import Transcriber, build_transcriber
 from .qc import combined_qc
@@ -92,6 +92,33 @@ def _write_review(project_root: Path, results: list[dict[str, Any]], *, continui
     path = project_root / "04_phase2" / "review.md"
     path.write_text("\n".join(lines), encoding="utf-8")
     return path
+
+
+
+def _segment_source_media(project_root: Path, raw_manifest: dict[str, Any], group: dict[str, Any]) -> Path | None:
+    """Исходник сегмента — опора для гейта застываний: с ним сравнивается рендер."""
+    media = {item["id"]: item for item in raw_manifest.get("files", [])}
+    feeds = group.get("feeds") or {}
+    record = media.get(feeds.get("camera")) or media.get(feeds.get("screen"))
+    if not record:
+        return None
+    path = resolve_project_path(project_root, record["path"])
+    return path if path.is_file() else None
+
+
+
+def _duration_tolerance(contract: dict[str, Any], *, base_s: float = 0.35) -> float:
+    """Допуск по длительности с поправкой на покадровое округление планов.
+
+    Длина плана кратна кадру, поэтому на 52 планах при 25 к/с сборка законно
+    оказывается на полсекунды длиннее плана монтажа. Судить это как брак нельзя,
+    но и открывать допуск настежь тоже: он растёт ровно на половину кадра за план.
+    """
+    fps = float(contract.get("fps") or 0)
+    clips = float(contract.get("clip_count") or 0)
+    if fps <= 0 or clips <= 0:
+        return base_s
+    return base_s + clips * 0.5 / fps
 
 
 def run_phase2(project_root: Path, store: StateStore | None = None, *, segment_scope: set[str] | None = None, verification_transcriber: Transcriber | None = None, test_hook: Callable[[str], None] | None = None) -> Path:
@@ -199,7 +226,8 @@ def run_phase2(project_root: Path, store: StateStore | None = None, *, segment_s
                         expected_duration_s=result["expected"]["duration_s"],
                         width=int(profile["width"]),
                         height=int(profile["height"]),
-                        fps=int(profile["fps"]),
+                        fps=int((result.get("contract") or {}).get("fps") or profile["fps"]),
+                        duration_tolerance_s=_duration_tolerance(result.get("contract") or {}),
                         pip_enabled=bool(group["feeds"].get("camera") and group["feeds"].get("screen")),
                         captions_enabled=bool(profile.get("captions", True)),
                         interval_s=float(config.get("visual_probe_interval_s", 2.0)),
@@ -209,6 +237,7 @@ def run_phase2(project_root: Path, store: StateStore | None = None, *, segment_s
                         visuals=visuals,
                         require_visual_audit=True,
                         random_audit_count=int(config.get("gate2_random_probe_count", 5)),
+                        source_media_path=_segment_source_media(project_root, raw_manifest, group),
                     )
                     qc_path = output_root / "qc.json"
                     atomic_write_json(qc_path, qc)
@@ -219,7 +248,11 @@ def run_phase2(project_root: Path, store: StateStore | None = None, *, segment_s
             if result["verification"]["verdict"] != "PASS" or result["qc"]["verdict"] != "PASS":
                 if not reusable:
                     jobs.fail(job_id, f"worker verdicts: verification={result['verification']['verdict']}, qc={result['qc']['verdict']}")
-                raise ValueError(f"segment {segment_id} self-verification failed")
+                # Причина обязана ехать в сообщении: «self-verification failed» без
+                # списка претензий заставляет лезть в JSON руками при каждом падении.
+                failed_reasons = list(result["verification"].get("reasons") or []) + list(result["qc"].get("reasons") or [])
+                detail = "; ".join(str(item) for item in failed_reasons[:6]) or "no reasons recorded"
+                raise ValueError(f"segment {segment_id} self-verification failed: {detail}")
             fixes = output_root / "fixes.md"
             if fixes.exists() and segment_scope is not None:
                 history = project_root / "04_phase2" / "revision-history"
